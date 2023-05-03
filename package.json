@@ -1,10 +1,10 @@
 {
-		"name": "micmetz.github.io",
+		"name": "micmetz.porfolio.github.io",
 		"version": "0.1.0",
 		"private": true,
 		"repository": {
 				"type": "git",
-				"url": "https://github.com/MicMetz/micmetz.github.io.git",
+				"url": "https://github.com/MicMetz/Porfolio.git",
 				"private": true
 		},
 		"scripts": {
