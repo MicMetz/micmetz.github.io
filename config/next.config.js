@@ -4,9 +4,9 @@
 
 module.exports = {
 	reactStrictMode: true,
-	assetPrefix    : process.env.NODE_ENV === 'production' ? 'micmetz.github.io' : '',
-	baseUrl        : process.env.NODE_ENV === 'production' ? 'micmetz.github.io' : './',
-	url            : process.env.NODE_ENV === 'production' ? 'micmetz.github.io' : './',
+	assetPrefix    : process.env.NODE_ENV === 'production' ? 'micmetz.github.io/Porfolio' : '',
+	baseUrl        : process.env.NODE_ENV === 'production' ? 'micmetz.github.io/Porfolio' : '',
+	url            : process.env.NODE_ENV === 'production' ? 'micmetz.github.io/Porfolio' : '',
 	hostnames      : [ 'micmetz.github.io', 'localhost', 'raw.githubusercontent.com', 'github.com' ],
 	types          : [ 'png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff', 'glb', 'gltf' ],
 
