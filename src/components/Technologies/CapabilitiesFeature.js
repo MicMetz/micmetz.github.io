@@ -20,8 +20,9 @@ export const CapabilitiesFeature = () => (
 					<DiReact size = "3rem" />
 				</picture >
 				<ListContainer >
-					<ListTitle >Front-End</ListTitle >
+					<ListTitle >Web Development</ListTitle >
 					<ListParagraph >
+
 
 					</ListParagraph >
 				</ListContainer >
@@ -31,9 +32,9 @@ export const CapabilitiesFeature = () => (
 					<DiFirebase size = "3rem" />
 				</picture >
 				<ListContainer >
-					<ListTitle >Back-End</ListTitle >
+					<ListTitle >Database Management</ListTitle >
 					<ListParagraph >
-						Node and Databases
+
 					</ListParagraph >
 				</ListContainer >
 			</ListItem >
@@ -42,7 +43,7 @@ export const CapabilitiesFeature = () => (
 					<DiZend size = "3rem" />
 				</picture >
 				<ListContainer >
-					<ListTitle >UI/UX</ListTitle >
+					<ListTitle >Computer Graphics</ListTitle >
 					<ListParagraph >
 
 					</ListParagraph >
