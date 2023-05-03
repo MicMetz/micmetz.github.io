@@ -125,7 +125,7 @@ export const GalleryData = [
     id   : 20,
     slug : "gallery-20",
     title: "20",
-    image: "./images/gall/IMG_0772.jpg",
+    image: "./images/gall/IMG_0019.jpg",
   },
   {
     id   : 21,
@@ -150,5 +150,48 @@ export const GalleryData = [
     slug : "gallery-24",
     title: "24",
     image: "./images/gall/IMG_0197.jpg",
-  }
+  },
+  {
+    id   : 25,
+    slug : "gallery-25",
+    title: "25",
+    image: "./images/gall/IMG_0020.jpg",
+  },
+  {
+    id   : 26,
+    slug : "gallery-26",
+    title: "26",
+    image: "./images/gall/IMG_0021.jpg",
+  },
+  {
+    id   : 27,
+    slug : "gallery-27",
+    title: "27",
+    image: "./images/gall/IMG_0022.jpg",
+  },
+  {
+    id   : 28,
+    slug : "gallery-28",
+    title: "28",
+    image: "./images/gall/IMG_0023.jpg",
+  },
+  {
+    id   : 29,
+    slug : "gallery-29",
+    title: "29",
+    image: "./images/gall/IMG_0024.jpg",
+  },
+  {
+    id   : 30,
+    slug : "gallery-30",
+    title: "30",
+    image: "./images/gall/IMG_0025.jpg",
+  },
+  {
+    id   : 31,
+    slug : "gallery-31",
+    title: "31",
+    image: "./images/gall/IMG_0026.jpg",
+  },
+
 ];
