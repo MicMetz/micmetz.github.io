@@ -142,6 +142,10 @@ export const SectionTitle = styled.h2`
 
 export const SectionText = styled.p`
   min-width: 50vw;
+  //max-width: 45vw;
+  //width:  100%;
+  position: relative;
+  max-font-size: 2.2rem;
   font-size: 2.2rem;
   line-height: 3.2rem;
   font-weight: 300;
@@ -149,16 +153,25 @@ export const SectionText = styled.p`
   color: black;
 
   @media ${( props ) => props.theme.breakpoints.md} {
-    max-width: 670px;
-    font-size: 2rem;
+    //max-width: 670px;
+    font-size: 50%;
     line-height: 2.8rem;
     padding-bottom: 3.6rem;
   }
 
   @media ${( props ) => props.theme.breakpoints.sm} {
-    font-size: 1.8rem;
+    //max-width: 500px;
+    font-size: 50%;
     line-height: 2.4rem;
     padding-bottom: 3.6rem;
+  }
+  
+  @media ${( props ) => props.theme.breakpoints.lg} {
+    //max-width: 700px;
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+    padding-bottom: 3.6rem;
+    
   }
 `
 

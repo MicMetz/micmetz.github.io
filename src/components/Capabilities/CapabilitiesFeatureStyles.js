@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ImageContainer = styled.div`
   text-align: center;
-  background-image: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.75)53.8%, rgba(79, 108, 176, 0) 100%);
+  background-image: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.75), 53.8%, rgba(79, 108, 176, 0) 100%);
   //background: linear-gradient(121.57deg, #171748 18.77%, rgba(0, 0, 0, 0.75) 60.15%);
 
   width: 100%;

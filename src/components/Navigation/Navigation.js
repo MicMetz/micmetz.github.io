@@ -24,7 +24,7 @@ const Navigation = () => (
   <Container >
     <Div1 >
       <Link href = "/" >
-        <a style = {{ display: 'flex', alignItems: 'center', color: "rgba(0, 0, 0, 0.75);" }} >
+        <a style = {{ display: 'flex', alignItems: 'center', color: "rgba(0, 0, 0, 0.75)" }} >
           <TiChartPie size = "3rem" /> <span >Michael Metzjer</span >
         </a >
       </Link >
