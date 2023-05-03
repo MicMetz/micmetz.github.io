@@ -26,15 +26,15 @@ export const GridContainer = styled.section`
 
 
 export const Card = styled.div`
-	display: block;
+  display: block;
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;
   max-width: 450px;
-	max-height: 850px;
-	width: 100%;
-	height: 100%;
-	background: #171748;
+  max-height: 850px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
   @media ${( props ) => props.theme.breakpoints.sm} {
     width: 100%;
   }
@@ -70,6 +70,7 @@ export const Hr = styled.hr`
 export const Intro = styled.div`
   width: 98%;
   margin: 0 auto;
+  padding: 2rem 1rem;
   color: #dce3e7;
   font-family: 'Droid Serif', serif;
   font-size: 2rem;
@@ -118,7 +119,7 @@ export const ExternalLinks = styled.a`
 export const TagList = styled.ul`
   display: flex;
   justify-content: space-around;
-  padding: 2rem;
+  padding: 1rem;
 `;
 
 export const Tag = styled.li`

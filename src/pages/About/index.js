@@ -33,14 +33,23 @@ export default function AboutPage() {
               could ascribe myself would be as a perpetual
               student.
 
+              <br />
+              <br />
+
               For the last few years, I've been studying computer science at the University of
               Colorado at Boulder (CU Boulder).
+
+              <br />
+              <br />
 
               Not too long ago, I was studying how groups interact and how human social
               relationships form as a Sociology and Information Science focused student at
               multiple New York universities, and colleges, for both my
               undergraduate degrees,
               associate's degrees, and certificates.
+
+              <br />
+              <br />
 
               Next, who knows? I'm open to anything, and never satisfied with just sitting idle,
               I’m always scouring for something.
@@ -76,6 +85,7 @@ export default function AboutPage() {
                   For about a year now, I've been developing a steady addiction to 3D graphics, and game
                   development.
                 </p >
+                <br />
                 <p >
                   So far I've explored a few different libraries, and frameworks. And I've used almost
                   every single one of the most popular engines from Unity and Unreal, to Godot and

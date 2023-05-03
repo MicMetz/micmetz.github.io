@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React from "react";
 import Headshot from "../components/Headshot/Headshot.js";
 import NotableFeature from "../components/Notable/NotableFeature.js";
@@ -10,27 +11,32 @@ import { Section } from "../styles/GlobalComponents/StyledComponents.js";
 
 
 
+
 const Home = () => {
-		return (
-				<Layout >
-						<Section grid >
-								<Headshot />
-						</Section >
-						<br />
-						<br />
-						<br />
-						<ProjectsFeature />
-						<br />
-						<br />
-						<br />
-						<CapabilitiesFeature />
-						<br />
-						<br />
-						<br />
-						<TimelineFeature />
-						{/* <NotableFeature /> */}
-				</Layout >
-		);
+  return (
+    <Layout >
+      <Head >
+        <title >Michael Metz | Portfolio</title >
+      </Head >
+      <Section grid >
+        <Headshot />
+      </Section >
+        <BgAnimation />
+      <br />
+      <br />
+      <br />
+      <ProjectsFeature />
+      <br />
+      <br />
+      <br />
+      <CapabilitiesFeature />
+      <br />
+      <br />
+      <br />
+      <TimelineFeature />
+      {/* <NotableFeature /> */}
+    </Layout >
+  );
 };
 
 export default Home;
