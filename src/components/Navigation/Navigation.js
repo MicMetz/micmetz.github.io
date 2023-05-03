@@ -2,7 +2,6 @@ import Link from 'next/link';
 import React from 'react';
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillTwitterSquare } from 'react-icons/ai';
 import { TiChartPie } from "react-icons/ti";
-
 import { Container, Div1, Div2, Div3, NavLink, SocialIcons } from './NavigationStyles';
 
 
