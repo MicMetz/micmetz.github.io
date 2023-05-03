@@ -15,11 +15,11 @@ export default function AboutPage() {
       <Section nopadding id = "AboutPage" >
 
 
-        <Section row nopadding >
-          <Img src = "https://raw.githubusercontent.com/MicMetz/micmetz.github.io/master/public/images/avatar.jpg" />
-        </Section >
-
         <Section flex >
+
+          <Section row nopadding >
+            <Img src = "https://raw.githubusercontent.com/MicMetz/micmetz.github.io/master/public/images/avatar.jpg" />
+          </Section >
 
           <Section row nopadding >
             <SectionTitle main >WhoAmI</SectionTitle >
@@ -27,7 +27,7 @@ export default function AboutPage() {
 
           <Section row >
             <SectionText >
-              <h3 >"I am a perpetual learner."</h3 >
+              <SectionTitle >"I am a perpetual learner."</SectionTitle >
               My name is Michael Metz, and as of right now, I would consider myself, a perpetual
               learner. Or, if the last few years are any indication, a more accurately status I
               could ascribe myself would be as a perpetual
@@ -50,8 +50,6 @@ export default function AboutPage() {
         </Section >
 
         <SectionDivider />
-
-
 
 
         <Section flex >
