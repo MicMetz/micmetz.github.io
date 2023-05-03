@@ -21,7 +21,7 @@ const Home = () => {
       <Section grid >
         <Headshot />
       </Section >
-        <BgAnimation />
+      <BgAnimation />
       <br />
       <br />
       <br />
@@ -29,10 +29,12 @@ const Home = () => {
       <br />
       <br />
       <br />
+      <BgAnimation />
       <CapabilitiesFeature />
       <br />
       <br />
       <br />
+      <BgAnimation />
       <TimelineFeature />
       {/* <NotableFeature /> */}
     </Layout >

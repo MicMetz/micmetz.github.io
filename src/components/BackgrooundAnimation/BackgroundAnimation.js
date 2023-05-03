@@ -1,7 +1,7 @@
 import React from 'react';
 
 const BackgroundAnimation = () => (
-  <div style = {{ zIndex: -1, display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'absolute', width: '100%', height: '100vh', top: 0, left: 0, opacity: 0.2 }}>
+  <div style = {{ zIndex: -1, display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'absolute', width: '100%', height: '100vh', left: 0, opacity: 0.2 }}>
     <svg
     /* <svg version = "1.1" id = "Layer_1" x = "0px" y = "0px" */
          // viewBox = "0 0 193.3 129.7"

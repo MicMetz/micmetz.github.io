@@ -70,7 +70,7 @@ export const ProjectsData = [
         demo        : /* "../projects/spyderhound" */"/",
         code        : "https://github.com/MicMetz/SpyderHound",
         tags        : [ "Desktop Application", "Experiment" ],
-        image       : "./images/SpyderhoundSplash.PNG",
+        image       : "./images/SpyderhoundSplash.png",
         dateCreated : "2023-01-01",
         id          : 5
       }
@@ -246,7 +246,7 @@ export const ProjectsData = [
         demo        : /* "../projects/spyderhound" */"/",
         code        : "https://github.com/MicMetz/SpyderHound",
         tags        : [ "Desktop Application", "Experiment" ],
-        image       : "./images/SpyderhoundSplash.PNG",
+        image       : "./images/SpyderhoundSplash.png",
         dateCreated : "2023-01-01",
         id          : 3
       },
