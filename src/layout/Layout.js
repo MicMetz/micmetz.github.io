@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Footer from '../components/Footer/Footer'
-import Navigation from '../components/Header/Navigation.js'
+import Navigation from '../components/Navigation/Navigation.js'
 import { Container } from './LayoutStyles'
 
 

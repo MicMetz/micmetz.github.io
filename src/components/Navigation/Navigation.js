@@ -42,19 +42,17 @@ const Navigation = () => (
         </Link >
       </li >
       <li >
-        {/* <Link> */}
-        <NavLink >
-          <a href = "https://micmetz.github.io/resume/#/" _target = "blank" >
+        <Link href = "https://micmetz.github.io/resume/#/" passHref = {true} blank = {true} >
+          <NavLink >
             Resume
-          </a >
-        </NavLink >
-        {/* </Link > */}
-      </li >
-      <li >
-        <Link href = "/Cartesian" >
-          <NavLink >Cartesian</NavLink >
+          </NavLink >
         </Link >
       </li >
+      {/* <li > */}
+      {/*   <Link href = "/Cartesian" > */}
+      {/*     <NavLink >Cartesian</NavLink > */}
+      {/*   </Link > */}
+      {/* </li > */}
       <li >
         <Link href = "/Gallery" >
           <NavLink >Gallery</NavLink >
