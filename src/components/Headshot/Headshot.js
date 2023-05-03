@@ -20,8 +20,7 @@ const Headshot = ( props ) => (
 				<SectionText >
 					I am a perpetual student. As of right now, I'm studying computer science at the University of Colorado at Boulder (CU Boulder).
 					Before, and not too long ago, I was studying how groups interact and how human social relationships form as a
-					Sociology and Information Science focused student at multiple New York universities over a few years. Next, who knows?
-					I'm open to anything, and never satisfied with just sitting idle, I’m always scouring for something.
+					Sociology and Information Science focused student at multiple New York universities over a few years.
 				</SectionText >
 
 			</LeftSection >
