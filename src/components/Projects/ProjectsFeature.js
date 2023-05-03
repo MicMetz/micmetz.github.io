@@ -10,7 +10,7 @@ import { ProjectsData } from '../../constants/constants';
 export const ProjectsFeature = () => (
 	<Section nopadding id = "projects" >
 		<SectionDivider />
-		<SectionTitle main >Projects</SectionTitle >
+		<SectionTitle main >Featured Work</SectionTitle >
 		<GridContainer >
 			{ProjectsData[ 0 ].recent.map( ( value, idx ) => {
 				return (
