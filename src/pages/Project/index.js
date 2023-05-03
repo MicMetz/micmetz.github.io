@@ -1,7 +1,7 @@
 import { Img, Card, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Intro, TitleContent, UtilityList } from "../../components/Projects/ProjectsFeatureStyles.js";
-import { Layout } from "../../layout/Layout.js";
-import { Section, SectionDivider, SectionTitle, Tag, TagList } from '../../styles/GlobalComponents/StyledComponents.js';
-import { ProjectsData } from '../../constants/constants';
+import { Layout } from "@/layout/Layout.js";
+import { Section, SectionDivider, SectionTitle, Tag, TagList } from '@styles/GlobalComponents/StyledComponents.js';
+import { ProjectsData } from '@/constants/constants.js';
 import React, { useEffect, useState } from 'react';
 
 

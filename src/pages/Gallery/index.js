@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from 'next/router'
-import { Layout } from "../../Layout/Layout"
+import { Layout } from "../../layout/Layout.js"
 import { ImageSpread, PhotoGrid, GalleryContainer, ImageCard, Img, ImgStripe, Section, SectionTitle } from "../../styles/GlobalComponents/StyledComponents.js";
 import { GalleryData } from "../../constants/GalleryData.js";
 
