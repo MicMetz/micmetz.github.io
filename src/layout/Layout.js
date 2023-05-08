@@ -8,11 +8,11 @@ import { Container } from './LayoutStyles'
 
 
 export const Layout = ( { children } ) => {
-	return (
-		<Container >
-			<Navigation />
-			<main >{children}</main >
-			<Footer />
-		</Container >
-	)
+  return (
+    <Container >
+      <Navigation />
+      <main >{children}</main >
+      <Footer />
+    </Container >
+  )
 }

@@ -6,6 +6,9 @@ export const FooterWrapper = styled.section`
   padding: 2rem 48px 40px;
   margin: 1rem auto;
   box-sizing: content-box;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
 
 
   @media ${props => props.theme.breakpoints.sm} {
