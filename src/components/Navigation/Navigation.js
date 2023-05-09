@@ -14,7 +14,7 @@ const path = [
   { uid: 23, name: "Projects", path: "/Projects" },
   { uid: 24, name: "Gallery", path: "/Gallery" },
   { uid: 25, name: "Cartesian", path: "/Cartesian" },
-  { uid: 26, name: "Contact", path: "/About/contact" },
+  { uid: 26, name: "Contact", path: "/Contact" },
   { uid: 27, name: "Resume", path: "/Resume" },
 ];
 
@@ -23,25 +23,26 @@ const path = [
 const Navigation = () => (
   <Container >
     <Div1 >
-      <Link href = "/" >
-        <a style = {{ display: 'flex', alignItems: 'center', color: "rgba(0, 0, 0, 0.75)" }} >
-          <TiChartPie size = "3rem" /> <span >Michael Metzjer</span >
+      <Link href = "/">
+        <a style = {{ display: 'flex', alignItems: 'center', color: "rgba(0, 0, 0, 0.75)" }}>
+          <TiChartPie size = "3rem"/> <span >Michael Metzjer</span >
         </a >
       </Link >
     </Div1 >
     <Div2 >
       <li >
-        <Link href = "/Project/" >
-          <NavLink style = {{ paddingLeft: "15rem" }} >Projects</NavLink >
+        <Link href = "/Project">
+          <NavLink style = {{ paddingLeft: "15rem" }}>Projects</NavLink >
         </Link >
       </li >
       <li >
+        {/* <Link href = "/About"  redirect = {true} redirectPath = "./" > */}
         <Link href = "/About" >
           <NavLink >About</NavLink >
         </Link >
       </li >
       <li >
-        <Link href = "https://micmetz.github.io/resume/#/" passHref = {true} blank = {true} >
+        <Link href = "https://micmetz.github.io/resume/#/" passHref = {true} blank = {true}>
           <NavLink >
             Resume
           </NavLink >
@@ -53,20 +54,20 @@ const Navigation = () => (
       {/*   </Link > */}
       {/* </li > */}
       <li >
-        <Link href = "/Gallery" >
+        <Link href = "/Gallery">
           <NavLink >Gallery</NavLink >
         </Link >
       </li >
     </Div2 >
     <Div3 >
-      <SocialIcons href = "https://github.com/MicMetz" >
-        <AiFillGithub size = "3rem" />
+      <SocialIcons href = "https://github.com/MicMetz">
+        <AiFillGithub size = "3rem"/>
       </SocialIcons >
-      <SocialIcons href = "https://www.linkedin.com/in/michael-metzjer/" >
-        <AiFillLinkedin size = "3rem" />
+      <SocialIcons href = "https://www.linkedin.com/in/michael-metzjer/">
+        <AiFillLinkedin size = "3rem"/>
       </SocialIcons >
-      <SocialIcons href = "https://bsky.app/" >
-        <AiFillTwitterSquare size = "3rem" />
+      <SocialIcons href = "https://bsky.app/">
+        <AiFillTwitterSquare size = "3rem"/>
       </SocialIcons >
     </Div3 >
   </Container >
