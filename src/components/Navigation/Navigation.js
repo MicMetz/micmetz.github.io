@@ -41,13 +41,13 @@ const Navigation = () => (
           <NavLink >About</NavLink >
         </Link >
       </li >
-      <li >
-        <Link href = "https://micmetz.github.io/resume/#/" passHref = {true} blank = {true}>
-          <NavLink >
-            Resume
-          </NavLink >
-        </Link >
-      </li >
+      {/* <li > */}
+      {/*   <Link href = "https://micmetz.github.io/resume/#/" passHref = {true} blank = {true}> */}
+      {/*     <NavLink > */}
+      {/*       Resume */}
+      {/*     </NavLink > */}
+      {/*   </Link > */}
+      {/* </li > */}
       {/* <li > */}
       {/*   <Link href = "/Cartesian" > */}
       {/*     <NavLink >Cartesian</NavLink > */}
