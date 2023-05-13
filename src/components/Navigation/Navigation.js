@@ -24,9 +24,9 @@ const Navigation = () => (
   <Container >
     <Div1 >
       <Link href = "/">
-        <a style = {{ display: 'flex', alignItems: 'center', color: "rgba(0, 0, 0, 0.75)" }}>
+        <NavLink style = {{ display: 'flex', alignItems: 'center', color: "rgba(0, 0, 0, 0.75)" }}>
           <TiChartPie size = "3rem"/> <span >Michael Metzjer</span >
-        </a >
+        </NavLink >
       </Link >
     </Div1 >
     <Div2 >
@@ -47,7 +47,7 @@ const Navigation = () => (
         </Link >
       </li >
       <li >
-        <Link href = "/Library" redirect = {true} redirectPath = "https://micmetz.github.io/Library/" >
+        <Link href = "/Library" >
           <NavLink >Library</NavLink >
         </Link >
       </li >

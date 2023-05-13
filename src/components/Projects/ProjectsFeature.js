@@ -17,7 +17,7 @@ export const ProjectsFeature = () => (
           <Card key = {idx} >
             <Img src = {value.image} style = {{ minHeight: '35%', maxHeight: '35%', position: 'relative', top: '0' }} />
             <TitleContent >
-              <HeaderThree title >{value.name}</HeaderThree >
+              <HeaderThree title="true" >{value.name}</HeaderThree >
               <Hr />
             </TitleContent >
             <Intro >{value.description}</Intro >
