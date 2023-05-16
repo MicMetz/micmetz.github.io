@@ -9,7 +9,7 @@ import { LeftSection } from './HeadshotStyles.js';
 
 const Headshot = ( props ) => (
 	<>
-		<Section row nopadding >
+		<Section row >
 			<LeftSection >
 				<SectionTitle main center >
 					Hi.

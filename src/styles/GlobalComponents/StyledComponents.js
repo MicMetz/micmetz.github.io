@@ -16,14 +16,14 @@ export const PhotoGrid = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media ${( props ) => props.theme.breakpoints.sm} {
+  @media ${(props) => props.theme.breakpoints.sm} {
     display: grid;
     height: auto !important;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
   }
 
-  @media ${( props ) => props.theme.breakpoints.md} {
+  @media ${(props) => props.theme.breakpoints.md} {
     display: grid;
     height: auto !important;
     grid-template-columns: repeat(4, 1fr);
@@ -143,7 +143,7 @@ export const SectionTitle = styled.h2`
 export const SectionText = styled.p`
   min-width: 50vw;
   //max-width: 45vw;
-  //width:  100%;
+  width:  100%;
   position: relative;
   max-font-size: 2.2rem;
   font-size: 2.2rem;
