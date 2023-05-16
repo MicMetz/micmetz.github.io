@@ -45,7 +45,7 @@ const Navigation = () => (
         </Link >
       </li >
       <li >
-        <Link href = "/Library">
+        <Link href = "/library">
           <NavLink >Library</NavLink >
         </Link >
       </li >
