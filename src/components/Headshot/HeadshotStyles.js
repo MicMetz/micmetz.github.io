@@ -4,7 +4,10 @@ import styled from 'styled-components';
 
 
 export const LeftSection = styled.div`
-  width: 100%;
+  max-width: calc(100% - 100px);
+  height: fit-content;
+  
+  
   @media ${( props ) => props.theme.breakpoints.sm} {
     width: 80%;
     display: flex;
