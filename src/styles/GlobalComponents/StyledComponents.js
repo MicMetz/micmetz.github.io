@@ -144,12 +144,13 @@ export const SectionText = styled.p`
   //min-width: 50vw;
   //max-width: 45vw;
   width:  100%;
+  height: fit-content;
+
   position: relative;
   max-font-size: 2.2rem;
   font-size: 2.2rem;
   line-height: 3.2rem;
   font-weight: 300;
-  padding-bottom: 3.6rem;
   color: black;
 
   @media ${( props ) => props.theme.breakpoints.md} {

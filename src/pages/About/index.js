@@ -1,31 +1,31 @@
-import Link from "next/link";
-import React from "react";
-import { LeftSection } from "../../components/Headshot/HeadshotStyles.js";
-import { Layout } from "../../layout/Layout.js";
-import { DefaultGrid, Img, LeftSectionDivide, RightSectionDivide, Section, SectionDivider, SectionText } from "../../styles/GlobalComponents/StyledComponents.js";
-import { SectionTitle, SectionRightText } from "../../styles/GlobalComponents/StyledComponents.js";
+import Link from 'next/link'
+import React from 'react'
+import { LeftSection } from '../../components/Headshot/HeadshotStyles.js'
+import { Layout } from '../../layout/Layout.js'
+import { DefaultGrid, Img, LeftSectionDivide, RightSectionDivide, Section, SectionDivider, SectionText } from '../../styles/GlobalComponents/StyledComponents.js'
+import { SectionTitle, SectionRightText } from '../../styles/GlobalComponents/StyledComponents.js'
 
 
 
 
-export default function AboutPage() {
+export default function AboutPage () {
 
   return (
     <Layout >
-      <Section nopadding id = "AboutPage" >
+      <Section nopadding id = "AboutPage">
 
 
-        <Section flex >
+        <Section flex>
 
-          <Section row nopadding >
-            <Img src = "https://raw.githubusercontent.com/MicMetz/micmetz.github.io/master/public/images/avatar.jpg" />
+          <Section row nopadding>
+            <Img src = "https://raw.githubusercontent.com/MicMetz/micmetz.github.io/master/public/images/avatar.jpg"/>
           </Section >
 
-          <Section row nopadding >
-            <SectionTitle main >WhoAmI</SectionTitle >
+          <Section row nopadding>
+            <SectionTitle main>WhoAmI</SectionTitle >
           </Section >
 
-          <Section row >
+          <Section row>
             <SectionText >
               <SectionTitle >"I am a perpetual learner."</SectionTitle >
               My name is Michael Metz, and as of right now, I would consider myself, a perpetual
@@ -61,26 +61,26 @@ export default function AboutPage() {
         <SectionDivider />
 
 
-        <Section flex >
-          <Section row >
-            <video autoPlay loop muted playsInline controls style = {{ width: "100%" }} >
+        <Section flex>
+          <Section row>
+            <video autoPlay loop muted playsInline controls style = {{ width: '100%' }}>
               <source
                 src = "https://raw.githubusercontent.com/MicMetz/micmetz.github.io/master/public/video/troisjs.mp4"
                 type = "video/mp4"
               />
             </video >
           </Section >
-          <Section row nopadding >
+          <Section row nopadding>
             <SectionTitle >what I do.</SectionTitle >
           </Section >
 
-          <Section row >
+          <Section row>
 
             <SectionText >
-              <h3 className = "discriptor" >Computer graphics</h3 >
+              <h3 className = "discriptor">Computer graphics</h3 >
               <br />
 
-              <div className = "information" >
+              <div className = "information">
                 <p >
                   For about a year now, I've been developing a steady addiction to 3D graphics, and game
                   development.
@@ -92,7 +92,7 @@ export default function AboutPage() {
                   Lumberyard. But so far, I've found that the best
                   fit
                   for me has
-                  been <Link href = "https://threejs.org/" >THREE.js</Link >, the <Link
+                  been <Link href = "https://threejs.org/">THREE.js</Link >, the <Link
                   href = "https://www.babylonjs.com/"
                 >BabylonJS</Link > framework, and a focus on web
                   development.
@@ -115,6 +115,6 @@ export default function AboutPage() {
       </Section >
     </Layout >
 
-  );
+  )
 
 }

@@ -1,23 +1,23 @@
-import React from 'react';
+import React from 'react'
 
-import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents/StyledComponents.js';
-import Button from '../../styles/GlobalComponents/Button';
-import { LeftSection } from './HeadshotStyles.js';
-
-
+import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents/StyledComponents.js'
+import Button from '../../styles/GlobalComponents/Button'
+import { LeftSection } from './HeadshotStyles.js'
 
 
-const Headshot = ( props ) => (
-	<>
-		<Section  >
+
+
+const Headshot = (props) => (
+  <>
+		<Section >
 			<LeftSection >
-				<SectionTitle main center >
-					Hi.
-					<br />
-					My name is <br />
-					<span style = {{ color: '#00bfff' }} >Michael Metz</span >.
-				</SectionTitle >
-        			</LeftSection >
+          <SectionTitle main center>
+            Hi.
+            <br />
+            My name is <br />
+            <span style = {{ color: '#00bfff' }}>Michael</span >.
+          </SectionTitle >
+        </LeftSection >
 
 				<SectionText >
 					I am a perpetual student. As of right now, I'm studying computer science at the University of Colorado at Boulder (CU Boulder).
@@ -27,6 +27,6 @@ const Headshot = ( props ) => (
 
 		</Section >
 	</>
-);
+)
 
-export default Headshot;
+export default Headshot
