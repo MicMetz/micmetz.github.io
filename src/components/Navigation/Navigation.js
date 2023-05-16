@@ -45,9 +45,9 @@ const Navigation = () => (
         </Link >
       </li >
       <li >
-        <Link href = "/library">
+        <a href = "https://micmetz.github.io/library/">
           <NavLink >Library</NavLink >
-        </Link >
+        </a >
       </li >
     </Div2 >
     <Div3 >
