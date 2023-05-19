@@ -17,7 +17,7 @@ export const CapabilitiesFeature = () => (
 		<List >
 			<ListItem >
 				<picture >
-					<DiReact size = "3rem" />
+					<DiReact size = "3px" />
 				</picture >
 				<ListContainer >
 					<ListTitle >Web Development</ListTitle >
@@ -29,7 +29,7 @@ export const CapabilitiesFeature = () => (
 			</ListItem >
 			<ListItem >
 				<picture >
-					<DiFirebase size = "3rem" />
+					<DiFirebase size = "3px" />
 				</picture >
 				<ListContainer >
 					<ListTitle >Database Management</ListTitle >
@@ -40,7 +40,7 @@ export const CapabilitiesFeature = () => (
 			</ListItem >
 			<ListItem >
 				<picture >
-					<DiZend size = "3rem" />
+					<DiZend size = "3px" />
 				</picture >
 				<ListContainer >
 					<ListTitle >Computer Graphics</ListTitle >

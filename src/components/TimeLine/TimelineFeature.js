@@ -40,7 +40,7 @@ const TimelineFeature = () => {
 			scroll( carouselRef.current, 0 );
 		}
 
-		window.addEventListener( 'resize', handleResize );
+		// window.addEventListener( 'resize', handleResize );
 	}, [] );
 
 	return (

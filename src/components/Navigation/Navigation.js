@@ -23,7 +23,7 @@ const Navigation = () => (
     <Div1 >
       <Link href = "/">
         <NavLink style = {{ display: 'flex', alignItems: 'center', color: 'rgba(0, 0, 0, 0.75)' }}>
-          <TiChartPie size = "3rem"/> <span >Michael Metzjer</span >
+          <TiChartPie size = "3em"/> <span >Michael Metzjer</span >
         </NavLink >
       </Link >
     </Div1 >
@@ -52,13 +52,13 @@ const Navigation = () => (
     </Div2 >
     <Div3 >
       <SocialIcons href = "https://github.com/MicMetz">
-        <AiFillGithub size = "3rem"/>
+        <AiFillGithub size = "3em"/>
       </SocialIcons >
       <SocialIcons href = "https://www.linkedin.com/in/michael-metzjer/">
-        <AiFillLinkedin size = "3rem"/>
+        <AiFillLinkedin size = "3em"/>
       </SocialIcons >
       <SocialIcons href = "https://bsky.app/">
-        <AiFillTwitterSquare size = "3rem"/>
+        <AiFillTwitterSquare size = "3em"/>
       </SocialIcons >
     </Div3 >
   </Container >

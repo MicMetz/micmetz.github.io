@@ -27,13 +27,13 @@ const Footer = () => {
 				</CompanyContainer >
 				<SocialContainer >
 					<SocialIcons href = "https://github.com/MicMetz" >
-						<AiFillGithub size = "3rem" />
+						<AiFillGithub size = "3px" />
 					</SocialIcons >
 					<SocialIcons href = "https://www.linkedin.com/in/michael-metzjer/" >
-						<AiFillLinkedin size = "3rem" />
+						<AiFillLinkedin size = "3px" />
 					</SocialIcons >
 					<SocialIcons href = "https://bsky.app/" >
-						<AiFillTwitterSquare size = "3rem" />
+						<AiFillTwitterSquare size = "3px" />
 					</SocialIcons >
 				</SocialContainer >
 			</SocialIconsContainer >

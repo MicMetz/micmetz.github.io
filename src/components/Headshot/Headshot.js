@@ -9,7 +9,7 @@ import { LeftSection } from './HeadshotStyles.js'
 
 const Headshot = (props) => (
   <>
-		<Section >
+		<Section  >
 			<LeftSection >
           <SectionTitle main center>
             Hi.
@@ -17,7 +17,7 @@ const Headshot = (props) => (
             My name is <br />
             <span style = {{ color: '#00bfff' }}>Michael</span >.
           </SectionTitle >
-        </LeftSection >
+      </LeftSection >
 
 				<SectionText >
 					I am a perpetual student. As of right now, I'm studying computer science at the University of Colorado at Boulder (CU Boulder).

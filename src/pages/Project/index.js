@@ -1,8 +1,8 @@
 import { Img, Card, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Intro, TitleContent, UtilityList } from "../../components/Projects/ProjectsFeatureStyles.js";
 import { Layout } from "../../layout/Layout.js";
 import { Section, SectionDivider, SectionTitle, Tag, TagList } from '../../styles/GlobalComponents/StyledComponents.js';
-import { ProjectsData } from '../../constants/constants';
 import React, { useEffect, useState } from 'react';
+import { ProjectsData } from '../../constants/constants';
 
 
 
@@ -14,7 +14,7 @@ export default function ProjectsPage() {
       <Section nopadding id = "ProjectsPage" >
         <SectionTitle main >Projects</SectionTitle >
         <GridContainer >
-          {ProjectsData[ 0 ].recent.map( ( value, idx ) => {
+          {ProjectsData.map( ( value, idx ) => {
             return (
               <Card key = {idx} >
                 <Img src = {value.image} style = {{ minHeight: '35%', maxHeight: '35%', position: 'relative', top: '0' }} />

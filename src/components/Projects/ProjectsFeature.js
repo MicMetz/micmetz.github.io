@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Card, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img, Intro } from './ProjectsFeatureStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents/StyledComponents.js';
-import { ProjectsData } from '../../constants/constants';
+import { RecentProjects } from '../../constants/constants';
 
 
 
@@ -12,7 +12,7 @@ export const ProjectsFeature = () => (
     <SectionDivider />
     <SectionTitle main >Featured Work</SectionTitle >
     <GridContainer >
-      {ProjectsData[ 0 ].recent.map( ( value, idx ) => {
+      {RecentProjects.map( ( value, idx ) => {
         return (
           <Card key = {idx} >
             <Img src = {value.image} style = {{ minHeight: '35%', maxHeight: '35%', position: 'relative', top: '0' }} />
@@ -27,14 +27,14 @@ export const ProjectsFeature = () => (
             <div >
               <TitleContent >Features</TitleContent >
               <TagList >
-                {value.tags.map( ( t, i ) => {
+                {value.tags?.map( ( t, i ) => {
                   return <Tag key = {i} >{t}</Tag >;
                 } )}
               </TagList >
             </div >
             <div >
               <TagList style = {{ position: 'relative', bottom: '0' }} >
-                {value.technologies.map( ( t, i ) => {
+                {value.technologies?.map( ( t, i ) => {
                   return <Tag key = {i} style = {{ position: 'relative', paddingBottom: '0' }} >
                     {t}
                   </Tag >;
