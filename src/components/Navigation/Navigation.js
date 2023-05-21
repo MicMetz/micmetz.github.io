@@ -45,7 +45,7 @@ const Navigation = () => (
         </Link >
       </li >
       <li >
-        <a href = "https://micmetz.github.io/Library/">
+        <a href = "https://micmetz.github.io/library">
           <NavLink >Library</NavLink >
         </a >
       </li >
