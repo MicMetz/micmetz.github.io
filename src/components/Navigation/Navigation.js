@@ -23,7 +23,8 @@ const Navigation = () => (
     <Div1 >
       <Link href = "/">
         <NavLink style = {{ display: 'flex', alignItems: 'center', color: 'rgba(0, 0, 0, 0.75)' }}>
-          <TiChartPie size = "3em"/> <span >Michael Metzjer</span >
+          <TiChartPie size = "3em"/>
+          <span >Michael Metzger</span >
         </NavLink >
       </Link >
     </Div1 >
