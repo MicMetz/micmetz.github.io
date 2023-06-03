@@ -46,8 +46,8 @@ const Navigation = () => (
         </Link >
       </li >
       <li >
-        <a href = "https://micmetz.github.io/library">
-          <NavLink >Library</NavLink >
+        <a href = "https://micmetz.github.io/theHook">
+          <NavLink >The Hook</NavLink >
         </a >
       </li >
     </Div2 >
