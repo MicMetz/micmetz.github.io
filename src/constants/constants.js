@@ -227,7 +227,7 @@ export const RecentProjects = [
 		title: 'Call Help!',
 		technologies: ['JavaScript', 'Three.js', 'WebGL'],
 		description: 'A 3d "finish the task" horror experience.',
-		demo: 'https://webdevgroupcu.org/mime9599/DEV/Call-Help/dist',
+		demo: 'https://webdevgroupcu.org/mime9599/DEV/Call-Help/',
 		code: 'https://github.com/MicMetz/Call-Help',
 		tags: ['Horror', 'Game', 'WebGL'],
 		image: './images/CallHelp2.png',
@@ -295,7 +295,7 @@ export const RecentProjects = [
 		id: 6
 	},
 
-  
+
 ]
 
 

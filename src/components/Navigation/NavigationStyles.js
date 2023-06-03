@@ -1,81 +1,115 @@
+// noinspection CssOverwrittenProperties,CssReplaceWithShorthandSafely
+
+import { Popover } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { IoIosArrowDropdown } from 'react-icons/io'
 import styled from 'styled-components'
+import { motion } from "framer-motion";
 
 
 
+export const RightHandSide = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
-export const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 2rem;
-  padding: 2rem 1rem 1rem;
 
-  @media ${(props) => props.theme.breakpoints.sm} {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 60px);
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem;
+export const OutsideDropdown = styled( motion.div )`
+  //div.outside-dropdown div {
+  margin-left: var(--space-s);
+  text-decoration: none;
+  font-size: var(--font-size-xs);
+  font-family: var(--font-sans);
+  transition: color 0.2s ease-in-out;
+
+  span {
+    color: var(--color-gray-800);
   }
-`
+
+  :hover {
+    span {
+      color: var(--color-crimson);
+    }
+  }
+
+`;
 
 
-export const Div1 = styled.div`
-  grid-area: 1 / 1 / 2 / 2;
+export const MainNav = styled.div`
+  display: flex;
+  flex-shrink: 0;
+
+  ${OutsideDropdown} {
+    margin-left: var(--space-s);
+    text-decoration: none;
+    font-size: var(--font-size-xs);
+    font-family: var(--font-sans);
+    transition: color 0.2s ease-in-out;
+
+    span {
+      color: var(--color-gray-800);
+    }
+
+    :hover {
+      span {
+        color: var(--color-crimson);
+      }
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    display: none;
+  };
+`;
+
+
+
+
+export const StyledNavbar = styled( motion.nav )`
   display: flex;
   flex-direction: row;
-  align-content: center;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 1 / 1 / 2 / 3;
-  }
+  justify-content: space-between;
+  padding: var(--space-s) var(--space-m) var(--space-s) 1.3rem;
 `
 
+export const StyledChevronDownIcon = styled( ChevronDownIcon )`
+  vertical-align: middle;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+  transform 0.8s ease-in-out;
+  color: var(--color-gray-600);
+  margin-left: var(--space-3xs);
+  position: relative;
+  top: 0;
+`;
 
-export const Div2 = styled.div`
-  grid-area: 1 / 2 / 2 / 4;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 2 / 2 / 3 / 5;
-  }
-`
-
-
-export const Div3 = styled.div`
-  grid-area: 1 / 5 / 2 / 6;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    align-items: center;
-    grid-area: 1 / 4 / 2 / 6;
-  }
-`
-
-
-export const NavLink = styled.a`
-  font-size: 1.5rem;
-  line-height: 32px;
-  color: rgba(0, 0, 0, 0.75);
-  transition: 0.4s ease;
-  padding-right: 5rem;
-  white-space: nowrap;
-  
+export const StyledPopoverButton = styled( Popover.Button )`
+  padding: 0;
 
   &:hover {
-    color: #3b4fb6;
-    opacity: 1;
-    cursor: pointer;
-    text-decoration: underline;
-    transition: 0.4s ease;
+    ${StyledChevronDownIcon} {
+      color: var(--color-bright-crimson);
+      transform: rotateY(180deg);
+      cursor: pointer;
+      background-color: var(--color-gray-100);
+      border-radius: 4px;
+    }
   }
+`;
 
-  @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0.5rem;
-  }
-`
+
+export const Dropdown = styled( motion.div )`
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.6rem;
+  background: var(--color-cream);
+  margin-left: 0.4rem;
+  border: 1px solid var(--color-tinted-cream);
+  border-radius: var(--border-radius-base);
+  box-shadow: var(--box-shadow-lg);
+  z-index: 1;
+`;
+
+
 
 /// DropDown Contact
 export const ContactDropDown = styled.button`
@@ -98,27 +132,27 @@ export const ContactDropDown = styled.button`
     color: #3b4fb6;
   }
 
-  @media ${(props) => props.theme.breakpoints.sm} {
+  @media ${( props ) => props.theme.breakpoints.sm} {
     padding: 0.4rem 0;
   }
-  @media ${(props) => props.theme.breakpoints.md} {
+  @media ${( props ) => props.theme.breakpoints.md} {
     padding: 0;
   }
 `
 
-export const NavProductsIcon = styled(IoIosArrowDropdown)`
+export const NavProductsIcon = styled( IoIosArrowDropdown )`
   margin-left: 8px;
   display: flex;
   align-self: center;
   transition: 0.3s ease;
-  opacity: ${({ isOpen }) => ( isOpen ? '1' : '.75' )};
-  transform: ${({ isOpen }) => ( isOpen ? 'scaleY(-1)' : 'scaleY(1)' )};
+  opacity: ${( { isOpen } ) => ( isOpen ? '1' : '.75' )};
+  transform: ${( { isOpen } ) => ( isOpen ? 'scaleY(-1)' : 'scaleY(1)' )};
 
   &:hover {
     opacity: 1;
   }
 
-  @media ${(props) => props.theme.breakpoints.sm} {
+  @media ${( props ) => props.theme.breakpoints.sm} {
     margin: 2px 0 0 2px;
     width: 15px;
   }
