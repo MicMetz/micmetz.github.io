@@ -61,6 +61,8 @@ export const NavLink = styled.a`
   color: rgba(0, 0, 0, 0.75);
   transition: 0.4s ease;
   padding-right: 5rem;
+  white-space: nowrap;
+  
 
   &:hover {
     color: #3b4fb6;
