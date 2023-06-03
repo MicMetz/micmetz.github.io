@@ -70,6 +70,7 @@ export const StyledNavbar = styled( motion.nav )`
   flex-direction: row;
   justify-content: space-between;
   padding: var(--space-s) var(--space-m) var(--space-s) 1.3rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 `
 
 export const StyledChevronDownIcon = styled( ChevronDownIcon )`

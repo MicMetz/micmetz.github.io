@@ -8,16 +8,16 @@ import { RightHandSide, SocialIcons, StyledNavbar } from './NavigationStyles.js'
 
 
 
-const path = [
-		{ uid: 21, name: 'Home', path: '/' },
-		// {uid: 21, name: "Journal", path: "/journal", redirect: true, redirectPath: "./"},
-		{ uid: 22, name: 'About', path: '/About' },
-		{ uid: 23, name: 'Projects', path: '/Projects' },
-		{ uid: 24, name: 'Gallery', path: '/Gallery' },
-		{ uid: 25, name: 'Cartesian', path: '/Cartesian' },
-		{ uid: 26, name: 'Contact', path: '/Contact' },
-		{ uid: 27, name: 'Resume', path: '/Resume' },
-]
+// const path = [
+// 		{ uid: 21, name: 'Home', path: '/' },
+// 		// {uid: 21, name: "Journal", path: "/journal", redirect: true, redirectPath: "./"},
+// 		{ uid: 22, name: 'About', path: '/About' },
+// 		{ uid: 23, name: 'Projects', path: '/Projects' },
+// 		{ uid: 24, name: 'Gallery', path: '/Gallery' },
+// 		{ uid: 25, name: 'Cartesian', path: '/Cartesian' },
+// 		{ uid: 26, name: 'Contact', path: '/Contact' },
+// 		{ uid: 27, name: 'Resume', path: '/Resume' },
+// ]
 
 const Navigation = () => (
 		<StyledNavbar
@@ -25,8 +25,8 @@ const Navigation = () => (
 				animate = {{ opacity: 1 }}
 				transition = {{ duration: 1, delay: 0.1 }}
 		>
-				<Link href = "https://micmetz.github.io/" >
-						<a aria-label = "home"  style = {{ display: 'flex', alignItems: 'center', color: 'rgba(0, 0, 0, 0.75)' }} >
+				<Link href = "/" >
+						<a aria-label = "Home" style = {{ display: 'flex', alignItems: 'center', color: 'rgba(0, 0, 0, 0.75)' }} >
 								<TiChartPie size = "3em" />
 								<span className = "" >Michael Metzger</span >
 								{/* <span className = "visually-hidden" >Michael Metzger</span > */}
