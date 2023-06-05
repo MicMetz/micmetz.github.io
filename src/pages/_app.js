@@ -1,17 +1,22 @@
-import { useRouter } from "next/router";
-import Theme from '../styles/theme';
+import Footer from "@/components/Footer/Footer.js";
+import Navigation from "@/components/Navigation/Navigation.js";
+import React from "react";
+import Theme from '../themes/theme.js';
 
 
 
+export default function App( { Component, pageProps, router } ) {
 
-export default function App( { Component, pageProps } ) {
-	const router = useRouter();
-
-	return (
-		<>
-			<Theme >
-				<Component Component key = {router.asPath} {...pageProps} />
-			</Theme >
-		</>
-	);
+		return (
+				<>
+						<Theme >
+								<container >
+										<Navigation />
+										<Component Component key = {router.route} {...pageProps} />
+										<Footer />
+								</container >
+						</Theme >
+				</>
+		);
 }
+

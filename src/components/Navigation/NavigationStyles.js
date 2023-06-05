@@ -2,9 +2,9 @@
 
 import { Popover } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { motion } from "framer-motion";
 import { IoIosArrowDropdown } from 'react-icons/io'
 import styled from 'styled-components'
-import { motion } from "framer-motion";
 
 
 
@@ -56,6 +56,24 @@ export const MainNav = styled.div`
   display: flex;
   flex-shrink: 0;
 
+  div.outside-dropdown div {
+    margin-left: var(--space-s);
+    text-decoration: none;
+    font-size: var(--font-size-xs);
+    font-family: var(--font-sans);
+    transition: color 0.2s ease-in-out;
+
+    span {
+      color: var(--color-gray-800);
+    }
+
+    :hover {
+      span {
+        color: var(--color-crimson);
+      }
+    }
+  }
+
   ${OutsideDropdown} {
     margin-left: var(--space-s);
     text-decoration: none;
@@ -98,6 +116,51 @@ export const StyledChevronDownIcon = styled( ChevronDownIcon )`
   position: relative;
   top: 0;
 `;
+
+
+export const SearchBarWrapper = styled.form`
+  label {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  input {
+    border: 1px solid #ccc;
+    padding: var(--space-3xs) var(--space-xs);
+    border-radius: 3rem;
+    font-size: var(--font-size-sm);
+    font-family: var(--font-sans);
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-cream);
+    transition: all 0.3s ease;
+
+    :focus {
+      width: 400px;
+    }
+  }
+`;
+
+
+
+export const HitsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-height: 450px;
+  max-width: 450px;
+  overflow: scroll;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  background-color: var(--color-light-cream);
+`;
+
+
 
 export const StyledPopoverButton = styled( Popover.Button )`
   padding: 0;

@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 
 
-
 export const LeftSection = styled.div`
   max-width: calc(100% - 100px);
   height: fit-content;

@@ -1,11 +1,12 @@
-
 import styled from 'styled-components'
+
+
 
 export const CarouselContainer = styled.ul`
   max-width: 1040px;
   background: #0F1624;
-	border-radius: 8px;
-	border: 1px solid #212D45;
+  border-radius: 8px;
+  border: 1px solid #212D45;
   padding: 1.5rem 2rem;
   list-style: none;
   display: flex;
@@ -39,7 +40,7 @@ export const CarouselContainer = styled.ul`
 export const CarouselMobileScrollNode = styled.div`
   @media ${props => props.theme.breakpoints.sm} {
     display: flex;
-    min-width: ${({ final }) => final ? `120%;` : `min-content`}
+    min-width: ${( { final } ) => final ? `120%;` : `min-content`}
   }
 `
 
@@ -51,7 +52,7 @@ export const CarouselItem = styled.div`
   @media ${props => props.theme.breakpoints.md} {
     max-width: 124px;
   }
-  
+
   @media ${props => props.theme.breakpoints.sm} {
     margin-left: 32px;
     min-width: 120px;
@@ -63,8 +64,8 @@ export const CarouselItem = styled.div`
     overflow: visible;
     position: relative;
     height: fit-content;
-    
-    ${(props) => props.active === props.index ? `opacity: 1` : `opacity: 0.5`}; 
+
+    ${( props ) => props.active === props.index ? `opacity: 1` : `opacity: 0.5`};
   }
 `
 
@@ -85,7 +86,7 @@ export const CarouselItemTitle = styled.h4`
     line-height: 28px;
     margin-bottom: 4px;
   }
-  
+
   @media ${props => props.theme.breakpoints.sm} {
     font-size: 16px;
     line-height: 24px;
@@ -141,8 +142,8 @@ export const CarouselButton = styled.button`
   border: none;
   cursor: pointer;
   margin-right: 4px;
-  opacity: ${(props) => props.active === props.index ? `1` : `.33`};
-  transform: ${(props) => props.active === props.index ? `scale(1.6)` : `scale(1)`};
+  opacity: ${( props ) => props.active === props.index ? `1` : `.33`};
+  transform: ${( props ) => props.active === props.index ? `scale(1.6)` : `scale(1)`};
 
   &:focus {
     outline: none;

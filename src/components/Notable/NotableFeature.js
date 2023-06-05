@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents/StyledComponents.js';
-import { Box, Boxes, BoxNum, BoxText } from './NotableFeatureStyles.js';
+import { Section, SectionTitle } from '../../styles/StyledComponents.js';
+import { Boxes } from './NotableFeatureStyles.js';
 
 
 
@@ -18,7 +18,7 @@ const NotableFeature = () => (
 				<Boxes >
 
 				</Boxes >
-				<SectionDivider />
+				{/* <SectionDivider /> */}
 		</Section >
 );
 

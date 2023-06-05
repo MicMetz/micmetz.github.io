@@ -1,18 +1,11 @@
-import React from 'react'
-
-import Footer from '../components/Footer/Footer'
-import Navigation from '../components/Navigation/Navigation.js'
-import { Container } from './LayoutStyles'
+import { StyledLayout } from "@/styles/StyledComponents.js";
 
 
 
-
-export const Layout = ({ children }) => {
-  return (
-    <Container >
-      <Navigation />
-      <main >{children}</main >
-      <Footer />
-    </Container >
-  )
+export const Layout = ( { children } ) => {
+		return (
+				<StyledLayout >
+						{children}
+				</StyledLayout >
+		)
 }
