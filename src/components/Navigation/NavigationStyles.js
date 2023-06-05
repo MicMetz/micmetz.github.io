@@ -14,6 +14,23 @@ export const RightHandSide = styled.div`
 `;
 
 
+export const SearchWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+
+
+  width: 100%;
+  min-width: 200px;
+  margin-left: var(--space-s);
+  margin-right: var(--space-s);
+  transition: all 0.3s ease-in-out;
+
+`;
+
+
 export const OutsideDropdown = styled( motion.div )`
   //div.outside-dropdown div {
   margin-left: var(--space-s);
@@ -61,7 +78,6 @@ export const MainNav = styled.div`
     display: none;
   };
 `;
-
 
 
 
