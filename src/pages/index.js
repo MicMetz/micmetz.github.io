@@ -1,12 +1,13 @@
 import AtlasCard from "@/components/cards/AtlasCard.js";
 import BookCard from "@/components/cards/BookCard.js";
 import EssayCard from "@/components/cards/EssayCard.js";
-import { IndexNoteCard } from "@/components/cards/IndexNoteCard.js";
 import ProjectCard from "@/components/cards/ProjectCard.js";
+import ResponseCard from "@/components/cards/ResponseCard.js";
 import GrowthIcon from "@/components/icons/GrowthIcon.js";
-
-import { ArchiveSection, LaborSection } from "@/styles/SectionStyledComponents.js";
+import { IndexNoteStyled } from "@/styles/StyledCardComponents/IndexNoteStyled.js";
 import { List, ListContainer, ListItem, ListParagraph, ListTitle, Section, SectionText, SectionTitle } from "@/styles/StyledComponents.js";
+
+import { ArchiveSection, LaborSection } from "@/styles/StyledSectionComponents.js";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import { motion } from "framer-motion";
 import fs from "fs";
@@ -24,10 +25,10 @@ import Headshot from "../components/Headshot/Headshot.js";
 
 import { ReadmoreLink } from "../components/links/LinkStyledComponents.js";
 import { Spacer } from "../components/Spacer.js";
-import { SectionHeader, Subheader, Title1, Title2 } from "../components/Typography.js";
 import { Layout } from "../layout/Layout";
+import { SectionHeader, Subheader, Title1, Title2 } from "../styles/StyledTypography.js";
 
-import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, patternFilePaths, PATTERNS_PATH, projectFilePaths, PROJECTS_PATH, } from "../tools/mdxUtils";
+import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, projectFilePaths, PROJECTS_PATH, RESPONSES_PATH, responsesFilePaths, } from "../tools/mdxUtils";
 
 
 
@@ -55,7 +56,7 @@ const itemAnimation = {
 
 
 
-export default function Index( { sortedEssays: essays, sortedNotes: notes, sortedProjects: projects, sortedPatterns: patterns } ) {
+export default function Index( { sortedEssays: essays, sortedNotes: notes, sortedProjects: projects, sortedResponses: responses } ) {
 
 
 
@@ -101,7 +102,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 												Writings
 										</Title2 >
 										<Subheader >
-												A collection of essays, notes, and patterns
+												A collection of essays, notes, and responses
 										</Subheader >
 										<ReadmoreLink href = "/Garden" >
 												Learn more
@@ -168,38 +169,39 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 														{notes.slice( 0, 12 ).map( ( note ) => (
 																<Link key = {note.slug} href = {`/${note.slug}`} >
 																		<a >
-																				<IndexNoteCard >
+																				<IndexNoteStyled >
 																						{note.data.growthStage && (
 																								<GrowthIcon growthStage = {note.data.growthStage} />
 																						)}
 																						<h3 >{note.data.title}</h3 >
-																				</IndexNoteCard >
+																				</IndexNoteStyled >
 																		</a >
 																</Link >
 														) )}
 												</section >
 
-												<section style = {{ gridArea: "ideas" }} >
-														<Link href = "/Garden/Ideas" >
+												<section style = {{ gridArea: "responses" }} >
+														<Link href = "/Garden/Responses" >
 																<a >
 																		<SectionHeader >
-																				Ideas
+																				Response
 																				<ArrowRightIcon width = "18" height = "18" />
 																		</SectionHeader >
 																</a >
 														</Link >
 														<Subheader >
-																Design patterns gathered from my own observations and research.
+																Responses to my own questions, thoughts, and other people’s work and questions.
 														</Subheader >
 														<div style = {{ marginLeft: "-1.4rem" }} >
-																{/* {GISData.map( ( visual, i ) => (
-																	<IdeaCard
-																	key = {i}
-																	slug = {visual.slug}
-																	title = {visual.title}
-																	date = {visual.date}
-																	/>
-																	) )} */}
+																{responses.map( ( pattern ) => (
+																		<ResponseCard
+																				key = {pattern.slug}
+																				slug = {pattern.slug}
+																				title = {pattern.data.title}
+																				growthStage = {pattern.data.growthStage}
+																				date = {pattern.data.updated}
+																		/>
+																) )}
 														</div >
 												</section >
 
@@ -364,7 +366,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 																</a >
 														</Link >
 														<Subheader >
-																Design patterns gathered from my own observations and research.
+																Design responses gathered from my own observations and research.
 														</Subheader >
 														<div style = {{ marginLeft: "-1.4rem" }} >
 																{GISData.map( ( visual, i ) => (
@@ -474,9 +476,9 @@ export function getStaticProps() {
 				};
 		} );
 
-		// Get all pattern posts
-		let patterns = patternFilePaths.map( ( filePath ) => {
-				const source = fs.readFileSync( path.join( PATTERNS_PATH, filePath ) );
+		// Get all responses
+		let responses = responsesFilePaths.map( ( filePath ) => {
+				const source = fs.readFileSync( path.join( RESPONSES_PATH, filePath ) );
 				const { content, data } = matter( source );
 				const slug = filePath.replace( /\.mdx?$/, "" );
 
@@ -484,24 +486,20 @@ export function getStaticProps() {
 						content, data, slug, filePath,
 				};
 		} );
-		// Sort patterns by date
-		const sortedPatterns = patterns.sort( ( a, b ) => {
+		// Sort responses by date
+		const sortedResponses = responses.sort( ( a, b ) => {
 				return new Date( b.data.updated ) - new Date( a.data.updated );
 		} );
 
-		// Filter projects for featured property
-		// const filteredProjects = projects
-		//     .filter((project) => project.data.featured === true)
-		//     .slice(0, 4);
-		// Sort filtered essays by date
+		// Sort projects by date
 		const sortedProjects = projects.slice( 0, 4 ).sort( ( a, b ) => {
 				return new Date( b.data.updated ) - new Date( a.data.updated );
 		} );
 
-		const allPosts = [ ...essays, ...notes, ...projects, ...patterns ];
+		const allPosts = [ ...essays, ...notes, ...projects, ...responses ];
 
 		return {
-				props: { sortedEssays, sortedNotes, sortedProjects, sortedPatterns },
+				props: { sortedEssays, sortedNotes, sortedProjects, sortedResponses },
 		};
 }
 

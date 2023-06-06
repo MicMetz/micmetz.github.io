@@ -1,5 +1,5 @@
 import UnderlineHoverLink from "@/components/links/UnderlineHoverLink.js";
-import { SmallTitle2 } from "@/components/Typography.js";
+import { SmallTitle2 } from "@/styles/StyledTypography.js";
 import React from 'react'
 
 import { SectionText, SectionTitle } from '../../styles/StyledComponents.js'

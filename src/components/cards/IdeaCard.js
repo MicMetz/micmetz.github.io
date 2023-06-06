@@ -1,4 +1,4 @@
-import { MetadataContainer, StyledIdeaCard } from "@/components/cards/CardStyled/IdeaStyled.js";
+import { IdeaMetadataContainer, StyledIdeaCard } from "@/styles/StyledCardComponents/IdeaStyled.js";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { RelativeDate } from "../DatesFormat.js";
@@ -72,13 +72,13 @@ export default function IdeaCard( { slug, date, title, growthStage, id } ) {
 										<Leaves />
 										<div >
 												<h3 >{title}</h3 >
-												<MetadataContainer >
+												<IdeaMetadataContainer >
 														<span >Pattern</span >
 														<svg width = "6px" height = "8px" >
 																<circle r = "3" cx = "3" cy = "3" fill = "var(--color-gray-400)" />
 														</svg >
 														<RelativeDate postDate = {date} />
-												</MetadataContainer >
+												</IdeaMetadataContainer >
 										</div >
 								</StyledIdeaCard >
 						</a >

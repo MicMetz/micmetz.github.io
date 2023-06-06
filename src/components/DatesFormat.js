@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 
 
-export default function Dates( { startDate, updated } ) {
+export default function DatesFormat( { startDate, updated } ) {
 		const relativeStartDate = parse( startDate, "yyyy-MM-dd", new Date() );
 		const relativeUpdatedDate = parse( updated, "yyyy-MM-dd", new Date() );
 

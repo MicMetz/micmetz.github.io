@@ -1,13 +1,13 @@
 import Header from "@/components/Header.js";
 import { GardenFiltersAndHits } from "@/components/Search/GardenFH/GardenFiltersAndHits.js";
 import TitleWithCount from "@/components/TitleWithCount.js";
-import { Title2 } from "@/components/Typography.js";
 import { Layout } from "@/layout/Layout.js";
+import { Title2 } from "@/styles/StyledTypography.js";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import { SectionText } from '../../styles/StyledComponents.js'
-import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, patternFilePaths, PATTERNS_PATH, } from "../../tools/mdxUtils";
+import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, RESPONSES_PATH, responsesFilePaths, } from "../../tools/mdxUtils";
 
 
 
@@ -50,8 +50,8 @@ export function getStaticProps() {
 		essays = sortedEssays;
 
 		// Get all pattern posts
-		let patterns = patternFilePaths.map( ( filePath ) => {
-				const source = fs.readFileSync( path.join( PATTERNS_PATH, filePath ) );
+		let responses = responsesFilePaths.map( ( filePath ) => {
+				const source = fs.readFileSync( path.join( RESPONSES_PATH, filePath ) );
 				const { content, data } = matter( source );
 				const slug = filePath.replace( /\.mdx$/, "" );
 				const { title, description, type, startDate, updated } = data;
@@ -79,7 +79,7 @@ export function getStaticProps() {
 		} );
 		notes = sortedNotes;
 
-		const allPosts = essays.concat( notes, patterns );
+		const allPosts = essays.concat( notes, responses );
 
 		return { props: { allPosts } };
 }

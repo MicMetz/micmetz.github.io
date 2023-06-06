@@ -1,8 +1,8 @@
 import Header from "@/components/Header.js";
 import { LaborFiltersAndHits } from "@/components/Search/LaborFH/LaborsFiltersAndHits.js";
 import TitleWithCount from "@/components/TitleWithCount.js";
-import { Title2 } from "@/components/Typography.js";
 import { Layout } from "@/layout/Layout.js";
+import { Title2 } from "@/styles/StyledTypography.js";
 import { LABOR_PATH, laborFilePaths, laborNoteFilePaths, LABORNOTES_PATH } from "@/tools/mdxUtils.js";
 import fs from "fs";
 import matter from "gray-matter";

@@ -1,5 +1,5 @@
-import Highlight, { defaultProps } from "prism-react-renderer";
-import theme from "prism-react-renderer/themes/nightOwl";
+import Highlight, { Prism } from "prism-react-renderer";
+// import theme from "prism-react-renderer/themes/nightOwl";
 import * as React from "react";
 import styled from "styled-components";
 // import useClipboard from "react-use-clipboard";
@@ -9,7 +9,7 @@ export default function CodeBlock( { children } ) {
 		const language = children.props.className.replace( /language-/, "" );
 		return (
 				<Highlight
-						{...defaultProps}
+						{...Prism}
 						theme = {theme}
 						code = {children.props.children.trim()}
 						language = {language}
@@ -42,7 +42,7 @@ const StyledCodeBlock = styled.pre`
   overflow: scroll;
   font-size: calc(var(--font-size-sm) * 1.1);
   line-height: var(--leading-loose);
-  font-family: IBM Plex Mono, Dank Mono, SF Mono, consolas;
+  font-family: IBM Plex Mono, Dank Mono, SF Mono, consolas, sans-serif;
   padding: var(--space-24) var(--space-32);
   border-radius: 0.3em;
 `;

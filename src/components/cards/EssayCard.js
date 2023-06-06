@@ -1,4 +1,4 @@
-import { ImageWrapper, MetadataContainer, StyledEssayCard } from "@/components/cards/CardStyled/EssayStyled.js";
+import { EssayImageWrapper, EssayMetadataContainer, StyledEssayCard } from "@/styles/StyledCardComponents/EssayStyled.js";
 import Image from "next/image";
 import Link from "next/link";
 import { RelativeDate } from "../DatesFormat.js";
@@ -12,18 +12,18 @@ export default function EssayCard( { slug, cover, title, growthStage, date, vari
 						<a >
 								<StyledEssayCard variants = {variants} >
 										{cover && (
-												<ImageWrapper >
+												<EssayImageWrapper >
 														<Image src = {cover} alt = {title} width = {400} height = {400} />
-												</ImageWrapper >
+												</EssayImageWrapper >
 										)}
 										<h3 >{title}</h3 >
-										<MetadataContainer >
+										<EssayMetadataContainer >
 												{growthStage && <span >{growthStage} Essay</span >}
 												{growthStage && <GrowthIcon size = "15" growthStage = {growthStage} />}
 												<span >
 														<RelativeDate postDate = {date} />
 												</span >
-										</MetadataContainer >
+										</EssayMetadataContainer >
 								</StyledEssayCard >
 						</a >
 				</Link >

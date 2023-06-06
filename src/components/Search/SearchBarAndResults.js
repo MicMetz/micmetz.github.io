@@ -47,17 +47,6 @@ export default function SearchBarAndResults( { searchState, searchResults } ) {
 				</InstantSearch >
 		);
 
-
-
-  /*  return (
-   <InstantSearch searchClient = {searchClient} indexName = "garden-posts" >
-   <Configure hitsPerPage = {12} />
-   <SearchBar />
-   <SearchResults />
-   </InstantSearch >
-   ); */
-
-
 }
 
 
