@@ -184,7 +184,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 														<Link href = "/Garden/Responses" >
 																<a >
 																		<SectionHeader >
-																				Response
+																				Responses
 																				<ArrowRightIcon width = "18" height = "18" />
 																		</SectionHeader >
 																</a >

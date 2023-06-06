@@ -2,6 +2,7 @@ import PatternTemplate from "@/components/PageTemplates/AtlasTemplate.js";
 import EssayTemplate from "@/components/PageTemplates/EssayTemplate.js";
 import ProjectTemplate from "@/components/PageTemplates/LaborTemplate.js";
 import NoteTemplate from "@/components/PageTemplates/NoteTemplate.js";
+import ResponseTemplate from "@/components/PageTemplates/ResponseTemplate.js";
 import { SmallCaps, Subtext, Title1, Title2, Title3, Title4, } from "@/styles/StyledTypography";
 import fs from "fs";
 import matter from "gray-matter";
@@ -361,6 +362,16 @@ export default function PostPage( {
 		} else if ( frontMatter.type === "pattern" ) {
 				return (
 						<PatternTemplate
+								slug = {slug}
+								source = {source}
+								frontMatter = {frontMatter}
+								components = {components}
+								ogImage = {ogImage}
+						/>
+				);
+		} else if ( frontMatter.type === "response" ) {
+				return (
+						<ResponseTemplate
 								slug = {slug}
 								source = {source}
 								frontMatter = {frontMatter}
