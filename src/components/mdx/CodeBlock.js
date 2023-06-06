@@ -1,5 +1,5 @@
-import Highlight, { Prism } from "prism-react-renderer";
-// import theme from "prism-react-renderer/themes/nightOwl";
+import Highlight, { defaultProps } from "prism-react-renderer";
+import theme from "prism-react-renderer/themes/nightOwl";
 import * as React from "react";
 import styled from "styled-components";
 // import useClipboard from "react-use-clipboard";
@@ -9,7 +9,7 @@ export default function CodeBlock( { children } ) {
 		const language = children.props.className.replace( /language-/, "" );
 		return (
 				<Highlight
-						{...Prism}
+						{...defaultProps}
 						theme = {theme}
 						code = {children.props.children.trim()}
 						language = {language}
