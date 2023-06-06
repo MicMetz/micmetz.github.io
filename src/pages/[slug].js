@@ -29,16 +29,18 @@ export const components = {
 		// It also works with dynamically-imported components, which is especially
 		// useful for conditionally components for certain routes.
 		// See the notes in README.md for more details.
-		h1                 : ( props ) => (
+		h1: ( props ) => (
 				<a href = {`#${props.id}`} >
 						<Title1 {...props} />
 				</a >
 		),
-		h2                 : ( props ) => (
+
+		h2: ( props ) => (
 				<a href = {`#${props.id}`} >
 						<Title2 {...props} />
 				</a >
 		),
+
 		h3                 : Title3,
 		h4                 : Title4,
 		SmallCaps          : SmallCaps,
@@ -314,15 +316,7 @@ export const components = {
 		} ),
 };
 
-export default function PostPage( {
-		source,
-		frontMatter,
-		slug,
-		headings,
-		backlinks,
-		toc,
-		ogImage,
-} ) {
+export default function PostPage( { source, frontMatter, slug, headings, backlinks, toc, ogImage, } ) {
 		if ( frontMatter.type === "note" ) {
 				return (
 						<NoteTemplate
@@ -456,7 +450,7 @@ export const getStaticProps = async ( { params } ) => {
 						remarkPlugins: [],
 						rehypePlugins: [
 								require( "rehype-slug" ),
-								// require("rehype-autolink-headings"),
+								require( "rehype-autolink-headings" ),
 						],
 				},
 				scope     : data,
