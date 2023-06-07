@@ -4,7 +4,7 @@ const fs = require( "fs" );
 
 
 // // Recursive function that calls itself to fetches all the files, including those in subdirectories
-const getAllDirectoryFiles = function ( dirPath, arrayOfFiles ) {
+export const getAllDirectoryFiles = function ( dirPath, arrayOfFiles ) {
 		let files = fs.readdirSync( dirPath );
 
 		arrayOfFiles = arrayOfFiles || [];
