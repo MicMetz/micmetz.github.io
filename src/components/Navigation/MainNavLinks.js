@@ -38,7 +38,7 @@ function GardenPopoverLinks() {
 										style = {{ position: "absolute", zIndex: "10" }}
 										key = "dropdown"
 								>
-										< Link href = "/Garden/Essays" >
+										< Link href = "/src/Essays.js" >
 												<DropdownLink >Essays</DropdownLink >
 										</Link >
 										<Link href = "/Garden/Notes" >

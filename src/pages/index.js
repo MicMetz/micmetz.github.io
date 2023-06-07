@@ -117,7 +117,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 												animate = "visible"
 										>
 												<section style = {{ gridArea: "essays" }} >
-														<Link href = "/Garden/Essays" >
+														<Link href = "/src/Essays.js" >
 																<a >
 																		{/* <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} > */}
 																		<SectionHeader >

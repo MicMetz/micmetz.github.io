@@ -1,4 +1,4 @@
-import { LinkIconImg } from "../../../src/styles/components/index.js";
+import { LinkIconImg } from "../../../src/styles/components/Essays.js";
 
 
 
