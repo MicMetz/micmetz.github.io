@@ -1,4 +1,4 @@
-import { StyledLayout } from "@/styles/StyledComponents.js";
+import { StyledLayout } from "../../styles/StyledComponents.js";
 
 
 

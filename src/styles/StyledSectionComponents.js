@@ -1,4 +1,4 @@
-import { breakpoints } from "@/constants/breakpoints.js";
+import { breakpoints } from "../constants/breakpoints.js";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 

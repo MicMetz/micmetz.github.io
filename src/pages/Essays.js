@@ -1,10 +1,9 @@
-// import ESSAYS_PATH, { essayFilePaths } from "@/tools/mdxUtils.js";
-import { essayFilePaths, ESSAYS_PATH } from "@/tools/mdxUtils.js";
-import EssayCard from "@components/Cards/EssayCard.js";
-import Header from "@components/Layouts/Header.js";
-import { Layout } from "@components/Layouts/Layout.js";
-import MasonryGrid from "@components/Layouts/MasonryGrid.js";
-import TitleWithCount from "@components/MISC/TitleWithCount.js";
+import { essayFilePaths, ESSAYS_PATH } from "../tools/mdxUtils.js";
+import EssayCard from "../components/Cards/EssayCard.js";
+import Header from "../components/Layouts/Header.js";
+import { Layout } from "../components/Layouts/Layout.js";
+import MasonryGrid from "../components/Layouts/MasonryGrid.js";
+import TitleWithCount from "../components/MISC/TitleWithCount.js";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
@@ -40,7 +39,8 @@ export default function EssaysPage( { essays } ) {
 
 
 
-function getStaticProps() {
+export function getStaticProps() {
+
 		// Get all essay posts
 		let essays = essayFilePaths.map( ( filePath ) => {
 				const source = fs.readFileSync( path.join( ESSAYS_PATH, filePath ) );

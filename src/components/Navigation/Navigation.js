@@ -4,9 +4,9 @@
 	*/
 
 
-import MainNavLinks from "@/components/Navigation/MainNavLinks.js";
-import MobileMenu from "@/components/Navigation/MobileMenu.js";
-import SearchBarAndResults from "@/components/Search/SearchBarAndResults.js";
+import MainNavLinks from "MainNavLinks.js";
+import MobileMenu from "MobileMenu.js";
+import SearchBarAndResults from "../Search/SearchBarAndResults.js";
 import Link from 'next/link'
 import React from 'react'
 import { TiChartPie } from 'react-icons/ti'

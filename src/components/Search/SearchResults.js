@@ -5,7 +5,7 @@
 	* @see {@link https://www.algolia.com/doc/api-reference/widgets/connect-state-results/react/}
 	*/
 
-import { HitsContainer } from "@/components/Navigation/NavigationStyles.js";
+import { HitsContainer } from "../Navigation/NavigationStyles.js";
 import { connectStateResults, Highlight } from "react-instantsearch-dom";
 
 

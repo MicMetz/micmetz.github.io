@@ -8,7 +8,7 @@
 	*/
 
 
-import { SearchBarWrapper } from "@/components/Navigation/NavigationStyles.js";
+import { SearchBarWrapper } from "../../components/Navigation/NavigationStyles.js";
 import { connectSearchBox } from "react-instantsearch-dom";
 
 

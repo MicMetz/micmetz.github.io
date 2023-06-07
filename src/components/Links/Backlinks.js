@@ -1,4 +1,4 @@
-import GrowthIcon from "@/components/Icons/GrowthIcon.js";
+import GrowthIcon from "../Icons/GrowthIcon.js";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import styled from "styled-components";

@@ -1,10 +1,10 @@
-// import {noteFilePaths,  NOTES_PATH } from "@/tools/mdxUtils.js";
-import { noteFilePaths, NOTES_PATH } from "@/tools/mdxUtils.js";
-import NoteCard from "@components/Cards/NoteCard.js";
-import Header from "@components/Layouts/Header.js";
-import { Layout } from "@components/Layouts/Layout.js";
-import MasonryGrid from "@components/Layouts/MasonryGrid.js";
-import TitleWithCount from "@components/MISC/TitleWithCount.js";
+// import {noteFilePaths,  NOTES_PATH } from "..//tools/mdxUtils.js";
+import {noteFilePaths,  NOTES_PATH } from "../tools/mdxUtils.js";
+import NoteCard from "../components/Cards/NoteCard.js";
+import Header from "../components/Layouts/Header.js";
+import { Layout } from "../components/Layouts/Layout.js";
+import MasonryGrid from "../components/Layouts/MasonryGrid.js";
+import TitleWithCount from "../components/MISC/TitleWithCount.js";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
@@ -39,7 +39,8 @@ export default function NotesPage( { notes } ) {
 }
 
 
-function getStaticProps() {
+export function getStaticProps() {
+
 		// Get all note posts
 		let notes = noteFilePaths.map( ( filePath ) => {
 				const source = fs.readFileSync( path.join( NOTES_PATH, filePath ) );

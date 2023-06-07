@@ -1,4 +1,4 @@
-import { AtlasMetadataContainer, StyledAtlasCard } from "@/styles/StyledCardComponents/AtlasStyled.js";
+import { AtlasMetadataContainer, StyledAtlasCard } from "../../styles/StyledCardComponents/AtlasStyled.js";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { RelativeDate } from "../MISC/DatesFormat.js";

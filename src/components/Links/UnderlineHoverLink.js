@@ -1,4 +1,4 @@
-import { LinkContainer, StyledLink } from "@/components/Links/LinkStyledComponents.js";
+import { LinkContainer, StyledLink } from "LinkStyledComponents.js";
 
 
 

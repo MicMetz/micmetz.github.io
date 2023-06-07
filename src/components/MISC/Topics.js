@@ -1,4 +1,4 @@
-import UnderlineHoverLink from "@/components/Links/UnderlineHoverLink.js";
+import UnderlineHoverLink from "../Links/UnderlineHoverLink.js";
 import Link from "next/link";
 import styled from "styled-components";
 import { slugifyTopic } from "../../tools/slugifyTopic.js";

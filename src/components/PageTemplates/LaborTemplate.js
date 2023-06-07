@@ -1,8 +1,8 @@
-import EvergreenIcon from "@/components/Icons/EvergreenIcon.js";
-import BackHoverLink from "@/components/Links/BackHoverLink.js";
-import BackToTop from "@/components/MDX/BackToTop.js";
-import ProseWrapper from "@/components/MDX/ProseWrapper.js";
-import { LaborStyledHeaderSection, LaborStyledMain, LaborStyledMetadata, LaborStyledTitleContainer } from "@/styles/StyledPageTemplates/StyledLaborTemplate.js";
+import EvergreenIcon from "../Icons/EvergreenIcon.js";
+import BackHoverLink from "../Links/BackHoverLink.js";
+import BackToTop from "../MDX/BackToTop.js";
+import ProseWrapper from "../MDX/ProseWrapper.js";
+import { LaborStyledHeaderSection, LaborStyledMain, LaborStyledMetadata, LaborStyledTitleContainer } from "../../styles/StyledPageTemplates/StyledLaborTemplate.js";
 import { MDXRemote } from "next-mdx-remote";
 import Link from "next/link";
 import { Title1 } from "../../styles/StyledTypography.js";

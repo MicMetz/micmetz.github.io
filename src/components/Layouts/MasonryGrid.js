@@ -1,4 +1,4 @@
-import { StyledMasonryGrid } from "@/styles/StyledGridComponents.js";
+import { StyledMasonryGrid } from "../../styles/StyledGridComponents.js";
 
 
 

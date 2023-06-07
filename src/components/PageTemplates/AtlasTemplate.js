@@ -1,8 +1,8 @@
-import GrowthIcon from "@/components/Icons/GrowthIcon.js";
-import BackHoverLink from "@/components/Links/BackHoverLink.js";
-import BackToTop from "@/components/MDX/BackToTop.js";
-import ProseWrapper from "@/components/MDX/ProseWrapper.js";
-import { AtlasStyledHeaderSection, AtlasStyledMain, AtlasStyledMetadata, AtlasStyledTitleContainer } from "@/styles/StyledPageTemplates/StyledAtlasTemplate.js";
+import GrowthIcon from "../Icons/GrowthIcon.js";
+import BackHoverLink from "../Links/BackHoverLink.js";
+import BackToTop from "../MDX/BackToTop.js";
+import ProseWrapper from "../MDX/ProseWrapper.js";
+import { AtlasStyledHeaderSection, AtlasStyledMain, AtlasStyledMetadata, AtlasStyledTitleContainer } from "../../styles/StyledPageTemplates/StyledAtlasTemplate.js";
 import { MDXRemote } from "next-mdx-remote";
 import Link from "next/link";
 import Header from "../Layouts/Header.js";

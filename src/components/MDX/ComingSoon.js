@@ -1,4 +1,4 @@
-import BuddingIcon from "@/components/Icons/BuddingIcon";
+import BuddingIcon from "../Icons/BuddingIcon.js";
 import styled from "styled-components";
 
 

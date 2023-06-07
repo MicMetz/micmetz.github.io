@@ -1,11 +1,11 @@
-import InternalTooltipLink from "@/components/Links/InternalTooltipLink";
-import AssumedAudience from "@/components/MDX/AssumedAudience";
-import Disclaimer from "@/components/MDX/Disclaimer";
-import EditRed from "@/components/MDX/EditRed";
-import EssayTemplate from "@/components/PageTemplates/EssayTemplate.js";
-import ProjectTemplate from "@/components/PageTemplates/LaborTemplate.js";
-import NoteTemplate from "@/components/PageTemplates/NoteTemplate.js";
-import { SmallCaps, Subtext, Title1, Title2, Title3, Title4, } from "@/styles/StyledTypography";
+import InternalTooltipLink from "../components/Links/InternalTooltipLink";
+import AssumedAudience from "../components/MDX/AssumedAudience";
+import Disclaimer from "../components/MDX/Disclaimer";
+import EditRed from "../components/MDX/EditRed";
+import EssayTemplate from "../components/PageTemplates/EssayTemplate.js";
+import ProjectTemplate from "../components/PageTemplates/LaborTemplate.js";
+import NoteTemplate from "../components/PageTemplates/NoteTemplate.js";
+import { SmallCaps, Subtext, Title1, Title2, Title3, Title4, } from "../styles/StyledTypography";
 import fs from "fs";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
@@ -51,265 +51,265 @@ export const components = {
 		Spacer             : Spacer,
 		Controls           : Controls,
 		EditRed            : EditRed,
-		ButtonLink         : dynamic( () => import("@/components/Links/ButtonLink") ),
-		Podcastiframe      : dynamic( () => import("@/components/MDX/Podcastiframe"), {
+		ButtonLink         : dynamic( () => import("../components/Links/ButtonLink") ),
+		Podcastiframe      : dynamic( () => import("../components/MDX/Podcastiframe"), {
 				ssr: false,
 		} ),
 		BlockquoteCitation : dynamic( () =>
-				import("@/components/MDX/BlockquoteCitation")
+				import("../components/MDX/BlockquoteCitation")
 		),
 		Subtext            : Subtext,
-		Accordion          : dynamic( () => import("@/components/MDX/Accordion") ),
-		Footnote           : dynamic( () => import("@/components/MDX/Footnote"), {
+		Accordion          : dynamic( () => import("../components/MDX/Accordion") ),
+		Footnote           : dynamic( () => import("../components/MDX/Footnote"), {
 				ssr: false,
 		} ),
-		img                : dynamic( () => import("@/components/MDX/Img"), {
+		img                : dynamic( () => import("../components/MDX/Img"), {
 				ssr: false,
 		} ),
-		NextImage          : dynamic( () => import("@/components/MDX/NextImage"), {
+		NextImage          : dynamic( () => import("../components/MDX/NextImage"), {
 				ssr: false,
 		} ),
-		Alert              : dynamic( () => import("@/components/MDX/Alert"), {
+		Alert              : dynamic( () => import("../components/MDX/Alert"), {
 				ssr: false,
 		} ),
-		ResourceBook       : dynamic( () => import("@/components/MDX/ResourceBook"), {
+		ResourceBook       : dynamic( () => import("../components/MDX/ResourceBook"), {
 				ssr: false,
 		} ),
-		Video              : dynamic( () => import("@/components/MDX/Video"), {
+		Video              : dynamic( () => import("../components/MDX/Video"), {
 				ssr: false,
 		} ),
-		ReferencesLink     : dynamic( () => import("@/components/MDX/ReferencesLink"), {
+		ReferencesLink     : dynamic( () => import("../components/MDX/ReferencesLink"), {
 				ssr: false,
 		} ),
-		a                  : dynamic( () => import("@/components/Links/TooltipLink"), {
+		a                  : dynamic( () => import("../components/Links/TooltipLink"), {
 				ssr: false,
 		} ),
-		pre                : dynamic( () => import("@/components/MDX/CodeBlock"), {
+		pre                : dynamic( () => import("../components/MDX/CodeBlock"), {
 				ssr: false,
 		} ),
-		Center             : dynamic( () => import("@/components/MDX/Center"), {
+		Center             : dynamic( () => import("../components/MDX/Center"), {
 				ssr: false,
 		} ),
-		BasicImage         : dynamic( () => import("@/components/MDX/BasicImage"), {
+		BasicImage         : dynamic( () => import("../components/MDX/BasicImage"), {
 				ssr: false,
 		} ),
-		ResponsiveImage    : dynamic( () => import("@/components/MDX/ResponsiveImage"), {
+		ResponsiveImage    : dynamic( () => import("../components/MDX/ResponsiveImage"), {
 				ssr: false,
 		} ),
-		ImageFrame         : dynamic( () => import("@/components/MDX/ImageFrame"), {
+		ImageFrame         : dynamic( () => import("../components/MDX/ImageFrame"), {
 				ssr: false,
 		} ),
-		ComingSoon         : dynamic( () => import("@/components/MDX/ComingSoon"), {
+		ComingSoon         : dynamic( () => import("../components/MDX/ComingSoon"), {
 				ssr: false,
 		} ),
-		References         : dynamic( () => import("@/components/MDX/References"), {
+		References         : dynamic( () => import("../components/MDX/References"), {
 				ssr: false,
 		} ),
-		Draft              : dynamic( () => import("@/components/MDX/Draft"), {
+		Draft              : dynamic( () => import("../components/MDX/Draft"), {
 				ssr: false,
 		} ),
-		TwoColumn          : dynamic( () => import("@/components/MDX/TwoColumn"), {
+		TwoColumn          : dynamic( () => import("../components/MDX/TwoColumn"), {
 				ssr: false,
 		} ),
-		ThreeColumn        : dynamic( () => import("@/components/MDX/ThreeColumn"), {
+		ThreeColumn        : dynamic( () => import("../components/MDX/ThreeColumn"), {
 				ssr: false,
 		} ),
-		TweetEmbed         : dynamic( () => import("@/components/MDX/TweetEmbed"), {
+		TweetEmbed         : dynamic( () => import("../components/MDX/TweetEmbed"), {
 				ssr    : false,
 				loading: () => <div >Loading...</div >,
 		} ),
-		IntroParagraph     : dynamic( () => import("@/components/MDX/IntroParagraph"), {
+		IntroParagraph     : dynamic( () => import("../components/MDX/IntroParagraph"), {
 				ssr: false,
 		} ),
-		SimpleCard         : dynamic( () => import("@/components/MDX/SimpleCard"), {
+		SimpleCard         : dynamic( () => import("../components/MDX/SimpleCard"), {
 				ssr: false,
 		} ),
-		LinkCard           : dynamic( () => import("@/components/MDX/LinkCard"), {
+		LinkCard           : dynamic( () => import("../components/MDX/LinkCard"), {
 				ssr: false,
 		} ),
-		ImageLink          : dynamic( () => import("@/components/Links/ImageLink"), {
+		ImageLink          : dynamic( () => import("../components/Links/ImageLink"), {
 				ssr: false,
 		} ),
 		FullWidthBackground: dynamic(
-				() => import("@/components/MDX/FullWidthBackground"),
+				() => import("../components/MDX/FullWidthBackground"),
 				{
 						ssr: false,
 				}
 		),
 		FullWidthSection   : dynamic(
-				() => import("@/components/MDX/FullWidthSection"),
+				() => import("../components/MDX/FullWidthSection"),
 				{
 						ssr: false,
 				}
 		),
-		NowSection         : dynamic( () => import("@/components/MDX/NowSection"), {
+		NowSection         : dynamic( () => import("../components/MDX/NowSection"), {
 				ssr: false,
 		} ),
-		TalkSlide          : dynamic( () => import("@/components/MDX/TalkSlide"), {
+		TalkSlide          : dynamic( () => import("../components/MDX/TalkSlide"), {
 				ssr: false,
 		} ),
-		ListNumber         : dynamic( () => import("@/components/MDX/ListNumber"), {
+		ListNumber         : dynamic( () => import("../components/MDX/ListNumber"), {
 				ssr: false,
 		} ),
 
 		// Unique components – used in specific essays or notes
 		StickyPosition         : dynamic(
-				() => import("@/components/Unique/css-position/StickyPosition"),
+				() => import("../components/Unique/css-position/StickyPosition"),
 				{
 						ssr: false,
 				}
 		),
 		RelativeCSSPosition    : dynamic(
-				() => import("@/components/Unique/css-position/RelativeCSSPosition"),
+				() => import("../components/Unique/css-position/RelativeCSSPosition"),
 				{
 						ssr: false,
 				}
 		),
 		AbsoluteCSSPosition    : dynamic(
-				() => import("@/components/Unique/css-position/AbsoluteCSSPosition"),
+				() => import("../components/Unique/css-position/AbsoluteCSSPosition"),
 				{
 						ssr: false,
 				}
 		),
 		FixedCSSPosition       : dynamic(
-				() => import("@/components/Unique/css-position/FixedCSSPosition"),
+				() => import("../components/Unique/css-position/FixedCSSPosition"),
 				{
 						ssr: false,
 				}
 		),
 		StaticCSSPosition      : dynamic(
-				() => import("@/components/Unique/css-position/StaticCSSPosition"),
+				() => import("../components/Unique/css-position/StaticCSSPosition"),
 				{
 						ssr: false,
 				}
 		),
-		MysteriousVoid         : dynamic( () => import("@/components/Unique/MysteriousVoid"), {
+		MysteriousVoid         : dynamic( () => import("../components/Unique/MysteriousVoid"), {
 				ssr: false,
 		} ),
 		ScrollingImages        : dynamic(
-				() => import("@/components/Unique/ScrollingImages"),
+				() => import("../components/Unique/ScrollingImages"),
 				{
 						ssr: false,
 				}
 		),
 		GsapScroller           : dynamic(
-				() => import("@/components/Unique/gsap-basics/GsapScroller"),
+				() => import("../components/Unique/gsap-basics/GsapScroller"),
 				{
 						ssr: false,
 				}
 		),
 		TweenRedBigBox         : dynamic(
-				() => import("@/components/Unique/gsap-basics/TweenRedBigBox"),
+				() => import("../components/Unique/gsap-basics/TweenRedBigBox"),
 				{
 						ssr: false,
 				}
 		),
 		TweenSpinningBox       : dynamic(
-				() => import("@/components/Unique/gsap-basics/TweenSpinningBox"),
+				() => import("../components/Unique/gsap-basics/TweenSpinningBox"),
 				{
 						ssr: false,
 				}
 		),
 		TweenReverseSpinningBox: dynamic(
-				() => import("@/components/Unique/gsap-basics/TweenReverseSpinningBox"),
+				() => import("../components/Unique/gsap-basics/TweenReverseSpinningBox"),
 				{
 						ssr: false,
 				}
 		),
 		TweenBlueRedBox        : dynamic(
-				() => import("@/components/Unique/gsap-basics/TweenBlueRedBox"),
+				() => import("../components/Unique/gsap-basics/TweenBlueRedBox"),
 				{
 						ssr: false,
 				}
 		),
-		MultipartIntro         : dynamic( () => import("@/components/Unique/MultipartIntro"), {
+		MultipartIntro         : dynamic( () => import("../components/Unique/MultipartIntro"), {
 				ssr: false,
 		} ),
 		InvisiblesFeature      : dynamic(
-				() => import("@/components/Unique/InvisiblesFeature"),
+				() => import("../components/Unique/InvisiblesFeature"),
 				{
 						ssr: false,
 				}
 		),
 		HackyFormatting        : dynamic(
-				() => import("@/components/Unique/HackyFormatting"),
+				() => import("../components/Unique/HackyFormatting"),
 				{
 						ssr: false,
 				}
 		),
 		MediumMaterialsMeat    : dynamic(
-				() => import("@/components/Unique/MediumMaterialsMeat"),
+				() => import("../components/Unique/MediumMaterialsMeat"),
 				{
 						ssr: false,
 				}
 		),
-		Tools                  : dynamic( () => import("@/components/Unique/apps/Tools"), {
+		Tools                  : dynamic( () => import("../components/Unique/apps/Tools"), {
 				ssr: false,
 		} ),
-		Hardware               : dynamic( () => import("@/components/Unique/apps/Hardware"), {
+		Hardware               : dynamic( () => import("../components/Unique/apps/Hardware"), {
 				ssr: false,
 		} ),
 		TextvBlocks            : dynamic(
-				() => import("@/components/Unique/blocks/TextvBlocks"),
+				() => import("../components/Unique/blocks/TextvBlocks"),
 				{
 						ssr: false,
 				}
 		),
-		DemoBlock1             : dynamic( () => import("@/components/Unique/blocks/DemoBlock1"), {
+		DemoBlock1             : dynamic( () => import("../components/Unique/blocks/DemoBlock1"), {
 				ssr: false,
 		} ),
-		DemoBlock2             : dynamic( () => import("@/components/Unique/blocks/DemoBlock2"), {
+		DemoBlock2             : dynamic( () => import("../components/Unique/blocks/DemoBlock2"), {
 				ssr: false,
 		} ),
-		DemoBlock3             : dynamic( () => import("@/components/Unique/blocks/DemoBlock3"), {
+		DemoBlock3             : dynamic( () => import("../components/Unique/blocks/DemoBlock3"), {
 				ssr: false,
 		} ),
-		DemoBlock4             : dynamic( () => import("@/components/Unique/blocks/DemoBlock4"), {
+		DemoBlock4             : dynamic( () => import("../components/Unique/blocks/DemoBlock4"), {
 				ssr: false,
 		} ),
 		LinearChars            : dynamic(
-				() => import("@/components/Unique/blocks/LinearChars"),
+				() => import("../components/Unique/blocks/LinearChars"),
 				{
 						ssr: false,
 				}
 		),
 		Blocktimeline          : dynamic(
-				() => import("@/components/Unique/blocks/Blocktimeline"),
+				() => import("../components/Unique/blocks/Blocktimeline"),
 				{
 						ssr: false,
 				}
 		),
-		BlockAges              : dynamic( () => import("@/components/Unique/blocks/BlockAges"), {
+		BlockAges              : dynamic( () => import("../components/Unique/blocks/BlockAges"), {
 				ssr: false,
 		} ),
-		BlockLogos             : dynamic( () => import("@/components/Unique/blocks/BlockLogos"), {
+		BlockLogos             : dynamic( () => import("../components/Unique/blocks/BlockLogos"), {
 				ssr: false,
 		} ),
 		TodoApp                : dynamic(
-				() => import("@/components/Unique/direct-manipulation/TodoApp"),
+				() => import("../components/Unique/direct-manipulation/TodoApp"),
 				{
 						ssr: false,
 				}
 		),
 		DetatchedTodoApp       : dynamic(
-				() => import("@/components/Unique/direct-manipulation/DetatchedTodoApp"),
+				() => import("../components/Unique/direct-manipulation/DetatchedTodoApp"),
 				{
 						ssr: false,
 				}
 		),
 		NoteAction             : dynamic(
-				() => import("@/components/Unique/programmatic-notes/NoteAction"),
+				() => import("../components/Unique/programmatic-notes/NoteAction"),
 				{
 						ssr: false,
 				}
 		),
 		NoteTrigger            : dynamic(
-				() => import("@/components/Unique/programmatic-notes/NoteTrigger"),
+				() => import("../components/Unique/programmatic-notes/NoteTrigger"),
 				{
 						ssr: false,
 				}
 		),
-		AIConversation         : dynamic( () => import("@/components/Unique/AIConversation"), {
+		AIConversation         : dynamic( () => import("../components/Unique/AIConversation"), {
 				ssr: false,
 		} ),
 };

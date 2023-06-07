@@ -1,7 +1,7 @@
-import EvergreenIcon from "@/components/Icons/EvergreenIcon";
-import { ExternalHoverLink } from "@/components/Links/ExternalHoverLink.js";
-import { HoverLink } from "@/components/Links/LinkStyledComponents.js";
-import { ProjectImageWrapper, ProjectMetadataContainer, StyledProjectCard } from "@/styles/StyledCardComponents/ProjectStyled.js";
+import EvergreenIcon from "../../components/Icons/EvergreenIcon";
+import { ExternalHoverLink } from "../../components/Links/ExternalHoverLink.js";
+import { HoverLink } from "../../components/Links/LinkStyledComponents.js";
+import { ProjectImageWrapper, ProjectMetadataContainer, StyledProjectCard } from "../../styles/StyledCardComponents/ProjectStyled.js";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 

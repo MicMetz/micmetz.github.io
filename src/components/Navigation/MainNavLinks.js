@@ -4,9 +4,9 @@
 	*/
 
 
-import { DropdownLink, HoverLink } from "@/components/Links/LinkStyledComponents.js";
-import UnderlineHoverLink from "@/components/Links/UnderlineHoverLink";
-import { Dropdown, MainNav, StyledChevronDownIcon, StyledPopoverButton } from "@/components/Navigation/NavigationStyles.js";
+import { DropdownLink, HoverLink } from "../Links/LinkStyledComponents.js";
+import UnderlineHoverLink from "../Links/UnderlineHoverLink";
+import { Dropdown, MainNav, StyledChevronDownIcon, StyledPopoverButton } from "../Navigation/NavigationStyles.js";
 import { Popover } from "@headlessui/react";
 import { AnimatePresence } from "framer-motion";
 import Link from "next/link";

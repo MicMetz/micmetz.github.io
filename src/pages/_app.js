@@ -1,5 +1,5 @@
-import Footer from "@/components/Footer/Footer.js";
-import Navigation from "@/components/Navigation/Navigation.js";
+import Footer from "../components/Footer/Footer.js";
+import Navigation from "../components/Navigation/Navigation.js";
 
 import React from "react";
 import Theme from '../themes/theme.js';

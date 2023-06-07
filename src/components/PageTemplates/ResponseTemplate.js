@@ -1,7 +1,7 @@
-import GrowthIcon from "@/components/Icons/GrowthIcon";
-import BackHoverLink from "@/components/Links/BackHoverLink";
-import BackToTop from "@/components/MDX/BackToTop";
-import ProseWrapper from "@/components/MDX/ProseWrapper";
+import GrowthIcon from "../Icons/GrowthIcon";
+import BackHoverLink from "../Links/BackHoverLink";
+import BackToTop from "../MDX/BackToTop";
+import ProseWrapper from "../MDX/ProseWrapper";
 import { MDXRemote } from "next-mdx-remote";
 import Link from "next/link";
 import styled from "styled-components";
