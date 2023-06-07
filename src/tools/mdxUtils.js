@@ -1,6 +1,5 @@
-const path = require( "path" );
-const fs = require( "fs" );
-// const frontMatter = require( "front-matter" );
+import fs from "fs";
+import path from "path";
 
 
 
