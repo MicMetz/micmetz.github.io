@@ -38,15 +38,10 @@ module.exports = withPWA( {
 						},
 				},
 		],
-		future         : {
-				webpack5: true, // by default, if you customize webpack config, they switch back to version 4.
-				// Looks like backward compatibility approach.
-		},
-		webpack( config ) {
-				config.resolve.fallback = {
-						...config.resolve.fallback, // if you miss it, all the other options in fallback, specified
-						// by next.js will be dropped. Doesn't make much sense, but how it is
-						fs: false, // the solution
+		webpack(config) { // we depend on nextjs switching to webpack 4 by default. Probably they will
+				// change this behavior at some future major version.
+				config.node = {
+						fs: "empty", // webpack4 era solution
 				};
 
 				return config;
