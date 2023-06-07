@@ -1,4 +1,4 @@
-import { GalleryData } from "@/posts/data/GalleryData.js";
+import { GalleryData } from "../../../posts/data/GalleryData.js";
 import { useRouter } from 'next/router'
 import React, { useEffect, useRef, useState } from "react";
 import { Layout } from "../../components/Layouts/Layout.js"

@@ -18,10 +18,10 @@ import Link from "next/link";
 import path from "path";
 import React from "react";
 import { DiFirebase, DiReact, DiZend } from "react-icons/di";
-import { GISData } from "@/posts/data/GISData.js";
+import { GISData } from "../../posts/data/GISData.js";
 
-import { ProjectsData } from "@/posts/data/ProjectsData.js";
-import { Readings } from "@/posts/data/Readings.js";
+import { ProjectsData } from "../../posts/data/ProjectsData.js";
+import { Readings } from "../../posts/data/Readings.js";
 import { Layout } from "../components/Layouts/Layout.js";
 import Headshot from "../components/MISC/Headshot.js";
 import { Spacer } from "../components/MISC/Spacer.js";
