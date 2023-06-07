@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { Layout } from '../../layout/Layout.js'
+import { Layout } from '../../components/Layouts/Layout.js'
 import { Img, Section, SectionText, SectionTitle } from '../../styles/StyledComponents.js'
 
 

@@ -1,7 +1,7 @@
-import Header from "@/components/Header.js";
+import Header from "@/components/Layouts/Header.js";
+import { Layout } from "@/components/Layouts/Layout.js";
+import TitleWithCount from "@/components/MISC/TitleWithCount.js";
 import { GardenFiltersAndHits } from "@/components/Search/GardenFH/GardenFiltersAndHits.js";
-import TitleWithCount from "@/components/TitleWithCount.js";
-import { Layout } from "@/layout/Layout.js";
 import { Title2 } from "@/styles/StyledTypography.js";
 import fs from "fs";
 import matter from "gray-matter";

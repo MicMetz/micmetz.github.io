@@ -47,7 +47,7 @@ module.exports = withPWA( {
 							}, */
 						{
 								source     : "/library",
-								destination: "/theHook",
+								destination: "/library",
 								permanent  : true,
 						},
 				];

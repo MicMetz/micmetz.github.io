@@ -1,9 +1,9 @@
-import NoteCard from "@/components/cards/NoteCard.js";
-import Header from "@/components/Header.js";
-import MasonryGrid from "@/components/MasonryGrid.js";
-import TitleWithCount from "@/components/TitleWithCount.js";
+import NoteCard from "@/components/Cards/NoteCard.js";
+import Header from "@/components/Layouts/Header.js";
+import MasonryGrid from "@/components/Layouts/MasonryGrid.js";
+import TitleWithCount from "@/components/MISC/TitleWithCount.js";
 import React from 'react';
-import { Layout } from "../../../layout/Layout.js";
+import { Layout } from "../../../components/Layouts/Layout.js";
 
 
 

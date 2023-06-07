@@ -1,8 +1,8 @@
-import IdeaCard from "@/components/cards/IdeaCard.js";
+import EssayCard from "@/components/Cards/EssayCard.js";
+import IdeaCard from "@/components/Cards/IdeaCard.js";
+import NoteCard from "@/components/Cards/NoteCard.js";
 import { connectInfiniteHits } from "react-instantsearch-dom";
-import EssayCard from "../../cards/EssayCard.js";
-import NoteCard from "../../cards/NoteCard.js";
-import MasonryGrid from "../../MasonryGrid.js";
+import MasonryGrid from "../../Layouts/MasonryGrid.js";
 
 
 

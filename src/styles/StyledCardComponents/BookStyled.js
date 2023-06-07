@@ -1,4 +1,4 @@
-import { ExternalHoverLink } from "@/components/links/ExternalHoverLink.js";
+import { ExternalHoverLink } from "@/components/Links/ExternalHoverLink.js";
 import styled from "styled-components";
 
 

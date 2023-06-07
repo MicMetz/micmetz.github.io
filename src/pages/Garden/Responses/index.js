@@ -1,7 +1,7 @@
-import ResponseCard from "@/components/cards/ResponseCard.js";
-import Header from "@/components/Header.js";
-import TitleWithCount from "@/components/TitleWithCount.js";
-import { Layout } from "@/layout/Layout.js";
+import ResponseCard from "@/components/Cards/ResponseCard.js";
+import Header from "@/components/Layouts/Header.js";
+import { Layout } from "@/components/Layouts/Layout.js";
+import TitleWithCount from "@/components/MISC/TitleWithCount.js";
 import { ResponsesGrid } from "@/styles/StyledGridComponents.js";
 import { Title2 } from "@/styles/StyledTypography.js";
 import { RESPONSES_PATH, responsesFilePaths } from "@/tools/mdxUtils.js";

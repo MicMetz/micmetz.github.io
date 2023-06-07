@@ -1,17 +1,17 @@
+import GrowthIcon from "@/components/Icons/GrowthIcon";
+import BackHoverLink from "@/components/Links/BackHoverLink";
+import BackToTop from "@/components/MDX/BackToTop";
+import ProseWrapper from "@/components/MDX/ProseWrapper";
 import { MDXRemote } from "next-mdx-remote";
 import Link from "next/link";
 import styled from "styled-components";
 import { breakpoints } from "../../constants/breakpoints";
-import Backlinks from "../Backlinks";
-import Dates from "../DatesFormat.js";
-import GrowthStage from "../GrowthStage";
-import Header from "../Header";
-import GrowthIcon from "../icons/GrowthIcon";
-import BackHoverLink from "../links/BackHoverLink";
-import BackToTop from "../mdx/BackToTop";
-import ProseWrapper from "../mdx/ProseWrapper";
-import Topics from "../Topics";
-import { TwitterReply } from "../TwitterReply";
+import Header from "../Layouts/Header.js";
+import Backlinks from "../Links/Backlinks.js";
+import Dates from "../MISC/DatesFormat.js";
+import GrowthStage from "../MISC/GrowthStage.js";
+import Topics from "../MISC/Topics.js";
+import { TwitterReply } from "../MISC/TwitterReply.js";
 
 
 

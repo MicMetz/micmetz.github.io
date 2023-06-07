@@ -1,16 +1,16 @@
+import GrowthIcon from "@/components/Icons/GrowthIcon.js";
+import BackHoverLink from "@/components/Links/BackHoverLink.js";
+import BackToTop from "@/components/MDX/BackToTop.js";
+import ProseWrapper from "@/components/MDX/ProseWrapper.js";
 import { AtlasStyledHeaderSection, AtlasStyledMain, AtlasStyledMetadata, AtlasStyledTitleContainer } from "@/styles/StyledPageTemplates/StyledAtlasTemplate.js";
 import { MDXRemote } from "next-mdx-remote";
 import Link from "next/link";
-import Backlinks from "../Backlinks.js";
-import Dates from "../DatesFormat.js";
-import GrowthStage from "../GrowthStage.js";
-import Header from "../Header.js";
-import GrowthIcon from "../icons/GrowthIcon.js";
-import BackHoverLink from "../links/BackHoverLink.js";
-import BackToTop from "../mdx/BackToTop.js";
-import ProseWrapper from "../mdx/ProseWrapper.js";
-import Topics from "../Topics.js";
-import { TwitterReply } from "../TwitterReply.js";
+import Header from "../Layouts/Header.js";
+import Backlinks from "../Links/Backlinks.js";
+import Dates from "../MISC/DatesFormat.js";
+import GrowthStage from "../MISC/GrowthStage.js";
+import Topics from "../MISC/Topics.js";
+import { TwitterReply } from "../MISC/TwitterReply.js";
 
 
 

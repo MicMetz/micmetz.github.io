@@ -1,13 +1,13 @@
+import EvergreenIcon from "@/components/Icons/EvergreenIcon.js";
+import BackHoverLink from "@/components/Links/BackHoverLink.js";
+import BackToTop from "@/components/MDX/BackToTop.js";
+import ProseWrapper from "@/components/MDX/ProseWrapper.js";
 import { LaborStyledHeaderSection, LaborStyledMain, LaborStyledMetadata, LaborStyledTitleContainer } from "@/styles/StyledPageTemplates/StyledLaborTemplate.js";
 import { MDXRemote } from "next-mdx-remote";
 import Link from "next/link";
 import { Title1 } from "../../styles/StyledTypography.js";
-import Header from "../Header.js";
-import EvergreenIcon from "../icons/EvergreenIcon.js";
-import BackHoverLink from "../links/BackHoverLink.js";
-import BackToTop from "../mdx/BackToTop.js";
-import ProseWrapper from "../mdx/ProseWrapper.js";
-import { TwitterReply } from "../TwitterReply.js";
+import Header from "../Layouts/Header.js";
+import { TwitterReply } from "../MISC/TwitterReply.js";
 
 
 

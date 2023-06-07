@@ -1,9 +1,11 @@
-import AtlasCard from "@/components/cards/AtlasCard.js";
-import BookCard from "@/components/cards/BookCard.js";
-import EssayCard from "@/components/cards/EssayCard.js";
-import ProjectCard from "@/components/cards/ProjectCard.js";
-import ResponseCard from "@/components/cards/ResponseCard.js";
-import GrowthIcon from "@/components/icons/GrowthIcon.js";
+import AtlasCard from "@/components/Cards/AtlasCard.js";
+import BookCard from "@/components/Cards/BookCard.js";
+import EssayCard from "@/components/Cards/EssayCard.js";
+import ProjectCard from "@/components/Cards/ProjectCard.js";
+import ResponseCard from "@/components/Cards/ResponseCard.js";
+import GrowthIcon from "@/components/Icons/GrowthIcon.js";
+
+import { ReadmoreLink } from "@/components/Links/LinkStyledComponents.js";
 import { IndexNoteStyled } from "@/styles/StyledCardComponents/IndexNoteStyled.js";
 import { List, ListContainer, ListItem, ListParagraph, ListTitle, Section, SectionText, SectionTitle } from "@/styles/StyledComponents.js";
 
@@ -21,11 +23,9 @@ import { GISData } from "../../posts/data/GISData.js";
 
 import { ProjectsData } from "../../posts/data/ProjectsData.js";
 import { Readings } from "../../posts/data/Readings.js";
-import Headshot from "../components/Headshot/Headshot.js";
-
-import { ReadmoreLink } from "../components/links/LinkStyledComponents.js";
-import { Spacer } from "../components/Spacer.js";
-import { Layout } from "../layout/Layout";
+import { Layout } from "../components/Layouts/Layout.js";
+import Headshot from "../components/MISC/Headshot.js";
+import { Spacer } from "../components/MISC/Spacer.js";
 import { SectionHeader, Subheader, Title1, Title2 } from "../styles/StyledTypography.js";
 
 import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, projectFilePaths, PROJECTS_PATH, RESPONSES_PATH, responsesFilePaths, } from "../tools/mdxUtils";
@@ -207,7 +207,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 
 
 												<section style = {{ gridArea: "books" }} >
-														<Link href = "https://micmetz.github.io/theHook/" >
+														<Link href = "https://micmetz.github.io/library/" >
 																<a >
 																		<SectionHeader >
 																				Books

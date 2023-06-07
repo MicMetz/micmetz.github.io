@@ -4,12 +4,12 @@
 	*/
 
 
-import { DropdownLink, HoverLink } from "@/components/links/LinkStyledComponents.js";
+import { DropdownLink, HoverLink } from "@/components/Links/LinkStyledComponents.js";
+import UnderlineHoverLink from "@/components/Links/UnderlineHoverLink";
 import { Dropdown, MainNav, StyledChevronDownIcon, StyledPopoverButton } from "@/components/Navigation/NavigationStyles.js";
 import { Popover } from "@headlessui/react";
 import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import UnderlineHoverLink from "../links/UnderlineHoverLink";
 
 
 
@@ -47,7 +47,7 @@ function GardenPopoverLinks() {
 										<Link href = "/Garden/Responses" >
 												<DropdownLink >Ideas</DropdownLink >
 										</Link >
-										{/* <Link href = "/theHook" > */}
+										{/* <Link href = "/library" > */}
 										{/* <DropdownLink >Library</DropdownLink > */}
 										{/* </Link > */}
 								</Dropdown >
@@ -65,7 +65,7 @@ export default function MainNavLinks() {
 						</AnimatePresence >
 						{/* <OutsideDropdown > */}
 						<div className = "outside-dropdown" >
-								<UnderlineHoverLink href = "/theHook" >The Hook</UnderlineHoverLink >
+								<UnderlineHoverLink href = "/library" >Library</UnderlineHoverLink >
 								<UnderlineHoverLink href = "/Labor" >Labor</UnderlineHoverLink >
 								<UnderlineHoverLink href = "/About" >About</UnderlineHoverLink >
 						</div >

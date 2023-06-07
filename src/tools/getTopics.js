@@ -3,9 +3,9 @@ import matter from "gray-matter";
 import path from "path";
 import { ESSAYS_PATH, NOTES_PATH, RESPONSES_PATH } from "./mdxUtils";
 import { slugifyTopic } from "./slugifyTopic";
-// Get the slug links for each post that matches a given topic
+// Get the slug Links for each post that matches a given topic
 export const getAllPostSlugsForTopic = ( topic ) => {
-		// For each directory, get the slug links for each post that matches the topic
+		// For each directory, get the slug Links for each post that matches the topic
 		const getSlugsForTopic = ( dir ) => {
 				const files = fs.readdirSync( dir );
 				const slugs = files
@@ -19,7 +19,7 @@ export const getAllPostSlugsForTopic = ( topic ) => {
 								);
 								if ( slugifiedTopics.includes( topic ) ) {
 										return {
-												slug : file.replace( ".mdx", "" ),
+												slug : file.replace( ".MDX", "" ),
 												topic: topic,
 										};
 								}
@@ -43,7 +43,7 @@ export const getAllPostSlugsForTopic = ( topic ) => {
 
 //     fileNames.forEach((filename) => {
 //         const fullPath = path.join(postDirectory, filename);
-//         const slug = filename.replace(".mdx", "");
+//         const slug = filename.replace(".MDX", "");
 
 //         // Extracts contents of the MDX file
 //         const fileContents = fs.readFileSync(fullPath, "utf8");

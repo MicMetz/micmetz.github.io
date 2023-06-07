@@ -1,12 +1,12 @@
-// import linkMaps from "../links.json";
+// import linkMaps from "../Links.json";
 import { getBracketPairs } from "./bracketPairs";
 
 
 
 /**
-	* This replaces double bracketed links [[like this one]] in the markdown for
+	* This replaces double bracketed Links [[like this one]] in the markdown for
 	* JSX elements that link to the referenced blog post. It also adds a tooltip
-	* to the links in order to preview the title and an excerpt from the post
+	* to the Links in order to preview the title and an excerpt from the post
 	* @param content : markdown string for a blog post
 	* @param title
 	* @returns transformed markdown string for blog post
@@ -21,7 +21,7 @@ export function linkify( content, title ) {
 				return content;
 		}
 
-		// Get all outbound links for this post
+		// Get all outbound Links for this post
 		// const outboundLinks = linkMaps.find(
 		//   (map) => map.ids[0] === title
 		// )?.outboundLinks;

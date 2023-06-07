@@ -10,12 +10,12 @@ export const getPostdata = async ( slug ) => {
 		const responses = fs.readdirSync( RESPONSES_PATH );
 
 		let post;
-		if ( essays.includes( slug + ".mdx" ) ) {
-				post = fs.readFileSync( path.join( ESSAYS_PATH, slug + ".mdx" ), "utf8" );
-		} else if ( notes.includes( slug + ".mdx" ) ) {
-				post = fs.readFileSync( path.join( NOTES_PATH, slug + ".mdx" ), "utf8" );
-		} else if ( responses.includes( slug + ".mdx" ) ) {
-				post = fs.readFileSync( path.join( RESPONSES_PATH, slug + ".mdx" ), "utf8" );
+		if ( essays.includes( slug + ".MDX" ) ) {
+				post = fs.readFileSync( path.join( ESSAYS_PATH, slug + ".MDX" ), "utf8" );
+		} else if ( notes.includes( slug + ".MDX" ) ) {
+				post = fs.readFileSync( path.join( NOTES_PATH, slug + ".MDX" ), "utf8" );
+		} else if ( responses.includes( slug + ".MDX" ) ) {
+				post = fs.readFileSync( path.join( RESPONSES_PATH, slug + ".MDX" ), "utf8" );
 		}
 
 		return post;
