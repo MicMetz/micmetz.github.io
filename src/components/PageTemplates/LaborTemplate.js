@@ -32,8 +32,8 @@ export default function LaborTemplate( {
 
 						<LaborStyledHeaderSection >
 								<div className = "above-title" >
-										<Link href = "/Labor" >
-												<BackHoverLink href = "/Labor" >Projects</BackHoverLink >
+										<Link href = "/Projects" >
+												<BackHoverLink href = "/Projects" >Projects</BackHoverLink >
 										</Link >
 								</div >
 								<LaborStyledTitleContainer >

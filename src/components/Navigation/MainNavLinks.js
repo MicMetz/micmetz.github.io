@@ -63,7 +63,7 @@ export default function MainNavLinks() {
 						{/* <OutsideDropdown > */}
 						<div className = "outside-dropdown" >
 								<UnderlineHoverLink href = "/library" >Library</UnderlineHoverLink >
-								<UnderlineHoverLink href = "/Labor" >Labor</UnderlineHoverLink >
+								<UnderlineHoverLink href = "/Projects" >Projects</UnderlineHoverLink >
 								<UnderlineHoverLink href = "/About" >About</UnderlineHoverLink >
 						</div >
 						{/* </OutsideDropdown > */}

@@ -96,7 +96,7 @@ export default function AboutPage() {
 																<br />
 																<p >
 																		Check out what I've been working on in my <Link
-																		href = "/Labor"
+																		href = "/Projects"
 																>projects</Link > archive.
 																</p >
 

@@ -1,7 +1,7 @@
 import algoliasearch from "algoliasearch/lite";
 import { Configure, InstantSearch } from "react-instantsearch-dom";
-import LaborFilters from "./LaborFilters.js";
-import LaborHits from "./LaborHits.js";
+import LaborFilters from "./ProjectFilters.js";
+import LaborHits from "./ProjectHits.js";
 
 
 

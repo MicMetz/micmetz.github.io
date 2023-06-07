@@ -32,8 +32,8 @@ export default function AtlasTemplate( {
 						/>
 						<AtlasStyledHeaderSection >
 								<div className = "above-title" >
-										<Link href = "/Labor/Atlas" >
-												<BackHoverLink href = "/Labor/Atlas" >Atlas</BackHoverLink >
+										<Link href = "/Projects/Atlas" >
+												<BackHoverLink href = "/Projects/Atlas" >Atlas</BackHoverLink >
 										</Link >
 										{frontMatter.growthStage && (
 												<>

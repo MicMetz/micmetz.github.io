@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 
 
-export default function LaborFilters() {
+export default function ProjectFilters() {
 		return ( <Container >
 				<TopicsContainer >
 						<TopicLabel >

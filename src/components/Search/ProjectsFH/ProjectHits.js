@@ -6,7 +6,7 @@ import { connectInfiniteHits } from "react-instantsearch-dom";
 
 
 
-function LaborHits( { hits, allPostData } ) {
+function ProjectHits( { hits, allPostData } ) {
 		const hitLength = hits?.length;
 		const sortedPosts = allPostData.sort( ( a, b ) => {
 				return new Date( b.updated ) - new Date( a.updated );
@@ -58,4 +58,4 @@ function LaborHits( { hits, allPostData } ) {
 }
 
 
-export default connectInfiniteHits( LaborHits );
+export default connectInfiniteHits( ProjectHits );
