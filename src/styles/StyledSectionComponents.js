@@ -12,8 +12,8 @@ export const ArchiveSection = styled( motion.section )`
   grid-template-rows: auto;
   grid-row-gap: 5%;
   grid-template-areas:
-    "essays essays essays notes"
-    "books books books responses";
+    "essays essays essays essays"
+    "books books books notes";
   @media ${breakpoints.mediaMD} {
     grid-gap: var(--space-m);
   }
@@ -21,7 +21,7 @@ export const ArchiveSection = styled( motion.section )`
     grid-template-columns: 1fr;
     grid-gap: var(--space-l);
     grid-template-rows: auto;
-    grid-template-areas: "essays" "notes" "atlas" "books";
+    grid-template-areas: "essays" "notes" "books";
   }
 
 
@@ -46,7 +46,7 @@ export const LaborSection = styled( motion.section )`
   grid-row-gap: 5%;
 
   grid-template-areas:
-    "technology technology technology atlas";
+    "technology technology atlas";
   //"presentations presentations presentations"
   //"hardware hardware hardware";
 

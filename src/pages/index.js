@@ -2,7 +2,6 @@ import AtlasCard from "@/components/Cards/AtlasCard.js";
 import BookCard from "@/components/Cards/BookCard.js";
 import EssayCard from "@/components/Cards/EssayCard.js";
 import ProjectCard from "@/components/Cards/ProjectCard.js";
-import ResponseCard from "@/components/Cards/ResponseCard.js";
 import GrowthIcon from "@/components/Icons/GrowthIcon.js";
 
 import { ReadmoreLink } from "@/components/Links/LinkStyledComponents.js";
@@ -178,31 +177,6 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 																		</a >
 																</Link >
 														) )}
-												</section >
-
-												<section style = {{ gridArea: "responses" }} >
-														<Link href = "/Garden/Responses" >
-																<a >
-																		<SectionHeader >
-																				Responses
-																				<ArrowRightIcon width = "18" height = "18" />
-																		</SectionHeader >
-																</a >
-														</Link >
-														<Subheader >
-																Responses to my own questions, thoughts, and other people’s work and questions.
-														</Subheader >
-														<div style = {{ marginLeft: "-1.4rem" }} >
-																{responses.map( ( pattern ) => (
-																		<ResponseCard
-																				key = {pattern.slug}
-																				slug = {pattern.slug}
-																				title = {pattern.data.title}
-																				growthStage = {pattern.data.growthStage}
-																				date = {pattern.data.updated}
-																		/>
-																) )}
-														</div >
 												</section >
 
 
@@ -476,30 +450,15 @@ export function getStaticProps() {
 				};
 		} );
 
-		// Get all responses
-		let responses = responsesFilePaths.map( ( filePath ) => {
-				const source = fs.readFileSync( path.join( RESPONSES_PATH, filePath ) );
-				const { content, data } = matter( source );
-				const slug = filePath.replace( /\.mdx?$/, "" );
-
-				return {
-						content, data, slug, filePath,
-				};
-		} );
-		// Sort responses by date
-		const sortedResponses = responses.sort( ( a, b ) => {
-				return new Date( b.data.updated ) - new Date( a.data.updated );
-		} );
-
 		// Sort projects by date
 		const sortedProjects = projects.slice( 0, 4 ).sort( ( a, b ) => {
 				return new Date( b.data.updated ) - new Date( a.data.updated );
 		} );
 
-		const allPosts = [ ...essays, ...notes, ...projects, ...responses ];
+		const allPosts = [ ...essays, ...notes, ...projects ];
 
 		return {
-				props: { sortedEssays, sortedNotes, sortedProjects, sortedResponses },
+				props: { sortedEssays, sortedNotes, sortedProjects },
 		};
 }
 
