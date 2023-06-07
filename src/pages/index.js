@@ -55,7 +55,7 @@ const itemAnimation = {
 
 
 
-export default function Index( { sortedEssays: essays, sortedNotes: notes, sortedProjects: projects, sortedResponses: responses } ) {
+export default function Index( { sortedEssays: essays, sortedNotes: notes, sortedProjects: projects } ) {
 
 
 

@@ -40,7 +40,7 @@ export default function EssaysPage( { essays } ) {
 
 
 
-export function getStaticProps() {
+function getStaticProps() {
 		// Get all essay posts
 		let essays = essayFilePaths.map( ( filePath ) => {
 				const source = fs.readFileSync( path.join( ESSAYS_PATH, filePath ) );

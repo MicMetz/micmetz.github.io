@@ -15,16 +15,7 @@ import { TwitterReply } from "../MISC/TwitterReply.js";
 
 
 
-export default function NoteTemplate( {
-		source,
-		frontMatter,
-		components,
-		slug,
-		toc,
-		headings,
-		backlinks,
-		ogImage,
-} ) {
+export default function NoteTemplate( { source, frontMatter, components, slug, toc, headings, backlinks, ogImage } ) {
 		return (
 				<>
 						<Header
@@ -35,8 +26,8 @@ export default function NoteTemplate( {
 						/>
 						<NoteStyledHeaderSection >
 								<div className = "above-title" >
-										<Link href = "/Notes" >
-												<BackHoverLink href = "/notes" >notes</BackHoverLink >
+										<Link href = "/Garden/Notes" >
+												<BackHoverLink href = "/Garden/Notes" >Notes</BackHoverLink >
 										</Link >
 										<GrowthIcon size = "16" growthStage = {frontMatter.growthStage} />
 										<GrowthStage stage = {frontMatter.growthStage} />

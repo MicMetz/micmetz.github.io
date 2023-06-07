@@ -39,7 +39,7 @@ export default function NotesPage( { notes } ) {
 }
 
 
-export function getStaticProps() {
+function getStaticProps() {
 		// Get all note posts
 		let notes = noteFilePaths.map( ( filePath ) => {
 				const source = fs.readFileSync( path.join( NOTES_PATH, filePath ) );

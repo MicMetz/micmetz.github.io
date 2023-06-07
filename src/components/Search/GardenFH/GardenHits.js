@@ -1,5 +1,4 @@
 import EssayCard from "@/components/Cards/EssayCard.js";
-import IdeaCard from "@/components/Cards/IdeaCard.js";
 import NoteCard from "@/components/Cards/NoteCard.js";
 import { connectInfiniteHits } from "react-instantsearch-dom";
 import MasonryGrid from "../../Layouts/MasonryGrid.js";
