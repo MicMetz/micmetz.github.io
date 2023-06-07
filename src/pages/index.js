@@ -28,7 +28,6 @@ import Headshot from "../components/MISC/Headshot.js";
 import { Spacer } from "../components/MISC/Spacer.js";
 import { SectionHeader, Subheader, Title1, Title2 } from "../styles/StyledTypography.js";
 
-// import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, projectFilePaths, PROJECTS_PATH } from "../tools/mdxUtils";
 
 
 

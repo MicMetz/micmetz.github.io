@@ -10,6 +10,8 @@ const {
 		ESSAYS_PATH,
 		noteFilePaths,
 		NOTES_PATH,
+		projectFilePaths,
+		PROJECTS_PATH,
 } = mdxUtils;
 
 let essays = essayFilePaths.map( ( filePath ) => {
@@ -38,8 +40,8 @@ let notes = noteFilePaths.map( ( filePath ) => {
 		};
 } );
 
-let responses = responsesFilePaths.map( ( filePath ) => {
-		const source = fs.readFileSync( path.join( RESPONSES_PATH, filePath ) );
+let projects = projectFilePaths.map( ( filePath ) => {
+		const source = fs.readFileSync( path.join( PROJECTS_PATH, filePath ) );
 		const { content, data } = matter( source );
 		const slug = filePath.replace( /\.mdx?$/, "" );
 
@@ -51,7 +53,7 @@ let responses = responsesFilePaths.map( ( filePath ) => {
 		};
 } );
 
-const posts = [ ...essays, ...notes, ...responses ];
+const posts = [ ...essays, ...notes, ...projects ];
 
 
 function transformPostsToSearchObjects( posts ) {
