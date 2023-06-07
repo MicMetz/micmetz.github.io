@@ -45,11 +45,8 @@ function GardenPopoverLinks() {
 												<DropdownLink >Notes</DropdownLink >
 										</Link >
 										<Link href = "/Garden/Responses" >
-												<DropdownLink >Ideas</DropdownLink >
+												<DropdownLink >Responses</DropdownLink >
 										</Link >
-										{/* <Link href = "/library" > */}
-										{/* <DropdownLink >Library</DropdownLink > */}
-										{/* </Link > */}
 								</Dropdown >
 						</Popover.Panel >
 				</Popover >

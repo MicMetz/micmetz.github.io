@@ -11,7 +11,7 @@ async function getOgImage( path, title ) {
 				return "og image will be generated in production";
 		}
 
-		const baseUrl = "https://maggieappleton.com";
+		const baseUrl = "https://micmetz.github.io";
 		const url = `${baseUrl}${path}`;
 		const hash = createHash( "md5" ).update( url ).digest( "hex" );
 		const browser = await playwright.launchChromium( { headless: true } );

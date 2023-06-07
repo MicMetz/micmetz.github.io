@@ -34,7 +34,7 @@ export default function ResponseTemplate( {
 						<HeaderSection >
 								<div className = "above-title" >
 										<Link href = "/Garden/Responses" >
-												<BackHoverLink href = "/patterns" >Patterns</BackHoverLink >
+												<BackHoverLink href = "/Garden/Responses" >Responses</BackHoverLink >
 										</Link >
 										{frontMatter.growthStage && (
 												<>
@@ -66,7 +66,7 @@ export default function ResponseTemplate( {
 								</ProseWrapper >
 						</StyledMain >
 						<TwitterReply
-								url = {`https://maggieappleton.com/${slug}/`}
+								url = {`https://micmetz.github.io/${slug}/`}
 								title = {frontMatter.title}
 						/>
 						{backlinks && backlinks.length ? (
