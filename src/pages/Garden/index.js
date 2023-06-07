@@ -7,7 +7,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import { SectionText } from '../../styles/StyledComponents.js'
-import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, RESPONSES_PATH, responsesFilePaths, } from "../../tools/mdxUtils";
+import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH } from "../../tools/mdxUtils";
 
 
 
@@ -49,18 +49,6 @@ export function getStaticProps() {
 
 		essays = sortedEssays;
 
-		// Get all pattern posts
-		let responses = responsesFilePaths.map( ( filePath ) => {
-				const source = fs.readFileSync( path.join( RESPONSES_PATH, filePath ) );
-				const { content, data } = matter( source );
-				const slug = filePath.replace( /\.mdx$/, "" );
-				const { title, description, type, startDate, updated } = data;
-
-				return {
-						content, title, description, startDate, updated, type, slug, filePath,
-				};
-		} );
-
 		// Get all note posts
 		let notes = noteFilePaths.map( ( filePath ) => {
 				const source = fs.readFileSync( path.join( NOTES_PATH, filePath ) );
@@ -79,7 +67,7 @@ export function getStaticProps() {
 		} );
 		notes = sortedNotes;
 
-		const allPosts = essays.concat( notes, responses );
+		const allPosts = essays.concat( notes );
 
 		return { props: { allPosts } };
 }

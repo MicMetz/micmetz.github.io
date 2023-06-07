@@ -10,8 +10,6 @@ const {
 		ESSAYS_PATH,
 		noteFilePaths,
 		NOTES_PATH,
-		responsesFilePaths,
-		RESPONSES_PATH,
 } = mdxUtils;
 
 let essays = essayFilePaths.map( ( filePath ) => {
