@@ -3,6 +3,7 @@ import { Layout } from "@/components/Layouts/Layout.js";
 import TitleWithCount from "@/components/MISC/TitleWithCount.js";
 import { GardenFiltersAndHits } from "@/components/Search/GardenFH/GardenFiltersAndHits.js";
 import { Title2 } from "@/styles/StyledTypography.js";
+import { essayFilePaths, ESSAYS_PATH } from "@/tools/mdxUtils.js";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";

@@ -1,4 +1,4 @@
-import GrowthIcon from "@/components/Icons/GrowthIcon";
+import GrowthIcon from "@/components/Icons/GrowthIcon.js";
 import { NoteMetadataContainer, StyledNoteCard } from "@/styles/StyledCardComponents/NoteStyled.js";
 import Link from "next/link";
 import { RelativeDate } from "../MISC/DatesFormat.js";

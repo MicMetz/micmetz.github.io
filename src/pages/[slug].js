@@ -15,10 +15,10 @@ import dynamic from "next/dynamic";
 import path from "path";
 import { Controls, PlayState, Timeline, Tween } from "react-gsap";
 import { Spacer } from "../components/MISC/Spacer.js";
-import { getHeadings } from "../tools/getHeadings";
-import getOgImage from "../tools/getOgImage";
-import { linkify } from "../tools/linkify";
-import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, projectFilePaths, PROJECTS_PATH } from "../tools/mdxUtils";
+import { getHeadings } from "../tools/getHeadings.js";
+import getOgImage from "../tools/getOgImage.js";
+import { linkify } from "../tools/linkify.js";
+import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, projectFilePaths, PROJECTS_PATH } from "../tools/mdxUtils.js";
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
 // to handle import statements. Instead, you must include components in scope

@@ -1,9 +1,10 @@
+import { noteFilePaths, NOTES_PATH } from "@/tools/mdxUtils.js";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import styled from "styled-components";
-import NoteCard from "../components/cards/NoteCard";
-import Header from "../components/Layouts/Header";
+import NoteCard from "../components/cards/NoteCard.js";
+import Header from "../components/Layouts/Header.js";
 import { Layout } from "../components/Layouts/Layout.js";
 import TitleWithCount from "../components/MISC/TitleWithCount";
 import { Title2 } from "../styles/StyledTypography.js";
