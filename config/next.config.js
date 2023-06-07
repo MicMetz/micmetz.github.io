@@ -13,12 +13,6 @@ module.exports = withPWA( {
 				publicPath: '/_next/static/images', // the path access the assets via url
 				outputPath: 'static/images/', // where to store on disk
 		},
-		images         : {
-				loader     : 'custom',
-				loaderFile : 'src/utilities/imageLoader.js',
-				unoptimized: true,
-				types      : [ 'png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff' ]
-		},
 		pwa            : {
 				disable    : process.env.NODE_ENV === "development",
 				register   : true,
