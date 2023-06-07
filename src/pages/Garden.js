@@ -1,13 +1,13 @@
+import fs from "fs";
+import matter from "gray-matter";
+import path from "path";
 import Header from "../components/Layouts/Header.js";
 import { Layout } from "../components/Layouts/Layout.js";
 import TitleWithCount from "../components/MISC/TitleWithCount.js";
 import { GardenFiltersAndHits } from "../components/Search/GardenFH/GardenFiltersAndHits.js";
+import { SectionText } from '../styles/StyledComponents.js'
 import { Title2 } from "../styles/StyledTypography.js";
 import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH } from "../tools/mdxUtils.js";
-import fs from "fs";
-import matter from "gray-matter";
-import path from "path";
-import { SectionText } from '../styles/StyledComponents.js'
 // import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, patternFilePaths, PATTERNS_PATH, } from "../../tools/mdxUtils.js";
 
 
@@ -36,9 +36,10 @@ export function getStaticProps() {
 		// Get all essay posts
 		let essays = essayFilePaths.map( ( filePath ) => {
 				const source = fs.readFileSync( path.join( ESSAYS_PATH, filePath ) );
-				const { content, data } = matter( source );
+
+				const { content, data } = matter( source ) || {};
 				const slug = filePath.replace( /\.mdx$/, "" );
-				const { title, description, growthStage, startDate, topics, type, cover, updated, } = data;
+				const { title, description, growthStage, startDate, topics, type, cover, updated, } = data || {};
 
 				return {
 						content, title, cover, description, growthStage, startDate, topics, type, updated, slug, filePath,
@@ -55,9 +56,9 @@ export function getStaticProps() {
 		// Get all note posts
 		let notes = noteFilePaths.map( ( filePath ) => {
 				const source = fs.readFileSync( path.join( NOTES_PATH, filePath ) );
-				const { content, data } = matter( source );
+				const { content, data } = matter( source ) || {};
 				const slug = filePath.replace( /\.mdx$/, "" );
-				const { title, description, growthStage, startDate, topics, type, updated, } = data;
+				const { title, description, growthStage, startDate, topics, type, updated, } = data || {};
 
 				return {
 						content, title, description, growthStage, startDate, topics, type, updated, slug, filePath,
