@@ -390,7 +390,6 @@ export const getStaticProps = async ( { params } ) => {
 		const essays = fs.readdirSync( ESSAYS_PATH );
 		const notes = fs.readdirSync( NOTES_PATH );
 		const projects = fs.readdirSync( PROJECTS_PATH );
-		const responses = fs.readdirSync( RESPONSES_PATH );
 
 
 		let type;
@@ -401,8 +400,6 @@ export const getStaticProps = async ( { params } ) => {
 				type = "essay";
 		} else if ( notes.find( ( file ) => file.includes( params.slug ) ) ) {
 				type = "note";
-		} else if ( responses.find( ( file ) => file.includes( params.slug ) ) ) {
-				type = "pattern";
 		}
 
 		// switch case statement to determine which file to load
@@ -416,9 +413,6 @@ export const getStaticProps = async ( { params } ) => {
 						break;
 				case "project":
 						filePath = path.join( PROJECTS_PATH, `${params.slug}.mdx` );
-						break;
-				case "responses":
-						filePath = path.join( RESPONSES_PATH, `${params.slug}.mdx` );
 						break;
 		}
 
@@ -481,10 +475,9 @@ export const getStaticPaths = async () => {
 		const notePaths = getSlugParams( noteFilePaths );
 		const essayPaths = getSlugParams( essayFilePaths );
 		const projectPaths = getSlugParams( projectFilePaths );
-		const responsesPaths = getSlugParams( responsesFilePaths );
 
 		// Combine all paths into one array
-		const paths = notePaths.concat( essayPaths, projectPaths, responsesPaths );
+		const paths = notePaths.concat( essayPaths, projectPaths, notePaths );
 
 		return {
 				paths,

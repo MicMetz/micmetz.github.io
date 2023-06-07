@@ -116,7 +116,6 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 												initial = "hidden"
 												animate = "visible"
 										>
-
 												<section style = {{ gridArea: "essays" }} >
 														<Link href = "/Garden/Essays" >
 																<a >
@@ -224,8 +223,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 										animate = {{ opacity: 1, x: 0 }}
 										transition = {{ delay: 0.7, duration: 1 }}
 								>
-										<Spacer size = "xlarge" />
-										<Spacer size = "xlarge" />
+										<Spacer size = "3xlarge" />
 										{/* <Section id = "capabilities" style = {{ marginTop: '12%', marginBottom: '8%' }} > */}
 										<SectionTitle >Capabilities</SectionTitle >
 										<SectionText >
@@ -274,8 +272,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 												<ArrowRightIcon width = "18" height = "18" />
 										</ReadmoreLink >
 										{/* </Section > */}
-										<Spacer size = "xlarge" />
-										<Spacer size = "xlarge" />
+										<Spacer size = "3xlarge" />
 
 								</motion.section >
 

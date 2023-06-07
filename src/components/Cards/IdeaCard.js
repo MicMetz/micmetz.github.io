@@ -73,7 +73,7 @@ export default function IdeaCard( { slug, date, title, growthStage, id } ) {
 										<div >
 												<h3 >{title}</h3 >
 												<IdeaMetadataContainer >
-														<span >Pattern</span >
+														<span >Idea</span >
 														<svg width = "6px" height = "8px" >
 																<circle r = "3" cx = "3" cy = "3" fill = "var(--color-gray-400)" />
 														</svg >
