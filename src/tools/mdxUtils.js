@@ -11,6 +11,7 @@ const essayFilePaths = fs
 const NOTES_PATH = path.join( process.cwd(), "posts", "notes" );
 const noteFilePaths = fs
 .readdirSync( NOTES_PATH )
+.filter( ( path ) => /\.mdx?$/.test( path ) );
 
 const PATTERNS_PATH = path.join( process.cwd(), "posts", "patterns" );
 const patternFilePaths = fs

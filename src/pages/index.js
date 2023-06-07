@@ -5,7 +5,7 @@ import ProjectCard from "../components/Cards/ProjectCard.js";
 import NoteCard from "../components/Cards/NoteCard.js";
 import GrowthIcon from "../components/Icons/GrowthIcon.js";
 
-import { ReadmoreLink } from "../components/Links/LinkStyledComponents.js";
+import { ReadmoreLink } from "../styles/LinkStyledComponents.js";
 import { IndexNoteStyled } from "../styles/StyledCardComponents/IndexNoteStyled.js";
 import { List, ListContainer, ListItem, ListParagraph, ListTitle, Section, SectionText, SectionTitle } from "../styles/StyledComponents.js";
 

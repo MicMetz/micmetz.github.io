@@ -1,4 +1,4 @@
-import { LinkContainer, StyledLink } from "./LinkStyledComponents.js";
+import { LinkContainer, StyledLink } from "../../styles/LinkStyledComponents.js";
 import { ArrowLeftIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 

@@ -1,5 +1,5 @@
 import { ExternalHoverLink } from "../../components/Links/ExternalHoverLink.js";
-import { HoverLink } from '../../components/Links/LinkStyledComponents.js';
+import { HoverLink } from '../../styles/LinkStyledComponents.js';
 import { BookImageWrapper, StyledBookCard } from "../../styles/StyledCardComponents/BookStyled.js";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";

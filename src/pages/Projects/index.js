@@ -7,6 +7,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import React from 'react';
+import { projectFilePaths, PROJECTS_PATH } from "../../tools/mdxUtils.js";
 
 
 

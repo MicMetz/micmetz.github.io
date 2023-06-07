@@ -4,8 +4,8 @@
 	*/
 
 
-import MainNavLinks from "MainNavLinks.js";
-import MobileMenu from "MobileMenu.js";
+import MainNavLinks from "./MainNavLinks.js";
+import MobileMenu from "./MobileMenu.js";
 import SearchBarAndResults from "../Search/SearchBarAndResults.js";
 import Link from 'next/link'
 import React from 'react'
