@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[2778],{2778:function(e,t,n){n.r(t);var i=n(4141).default.div.withConfig({displayName:"Center",componentId:"hfds9x-0"})(["text-align:center;margin:0 auto;display:flex;flex-direction:row;align-items:center;justify-content:center;font-family:var(--font-body);"]);t.default=i}}]);
