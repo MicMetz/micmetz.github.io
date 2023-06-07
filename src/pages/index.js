@@ -224,54 +224,59 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 										animate = {{ opacity: 1, x: 0 }}
 										transition = {{ delay: 0.7, duration: 1 }}
 								>
-										<Section id = "capabilities" style = {{ marginTop: '12%', marginBottom: '8%' }} >
-												<SectionTitle >Capabilities</SectionTitle >
-												<SectionText >
-														For about 2 years now, I've been developing a steady addiction to 3D graphics, and game
-														development.
-												</SectionText >
-												<List >
-														<ListItem >
-																<picture >
-																		<DiReact size = "3px" />
-																</picture >
-																<ListContainer >
-																		<ListTitle >Web Development</ListTitle >
-																		<ListParagraph >
+										<Spacer size = "xlarge" />
+										<Spacer size = "xlarge" />
+										{/* <Section id = "capabilities" style = {{ marginTop: '12%', marginBottom: '8%' }} > */}
+										<SectionTitle >Capabilities</SectionTitle >
+										<SectionText >
+												For about 2 years now, I've been developing a steady addiction to 3D graphics, and game
+												development.
+										</SectionText >
+										<List >
+												<ListItem >
+														<picture >
+																<DiReact size = "3px" />
+														</picture >
+														<ListContainer >
+																<ListTitle >Web Development</ListTitle >
+																<ListParagraph >
 
 
-																		</ListParagraph >
-																</ListContainer >
-														</ListItem >
-														<ListItem >
-																<picture >
-																		<DiFirebase size = "3px" />
-																</picture >
-																<ListContainer >
-																		<ListTitle >Database Management</ListTitle >
-																		<ListParagraph >
+																</ListParagraph >
+														</ListContainer >
+												</ListItem >
+												<ListItem >
+														<picture >
+																<DiFirebase size = "3px" />
+														</picture >
+														<ListContainer >
+																<ListTitle >Database Management</ListTitle >
+																<ListParagraph >
 
-																		</ListParagraph >
-																</ListContainer >
-														</ListItem >
-														<ListItem >
-																<picture >
-																		<DiZend size = "3px" />
-																</picture >
-																<ListContainer >
-																		<ListTitle >Computer Graphics</ListTitle >
-																		<ListParagraph >
+																</ListParagraph >
+														</ListContainer >
+												</ListItem >
+												<ListItem >
+														<picture >
+																<DiZend size = "3px" />
+														</picture >
+														<ListContainer >
+																<ListTitle >Computer Graphics</ListTitle >
+																<ListParagraph >
 
-																		</ListParagraph >
-																</ListContainer >
-														</ListItem >
-												</List >
+																</ListParagraph >
+														</ListContainer >
+												</ListItem >
+										</List >
 
-												<ReadmoreLink href = "/Resume" >
-														Learn more
-														<ArrowRightIcon width = "18" height = "18" />
-												</ReadmoreLink >
-										</Section >
+										<ReadmoreLink href = "/Resume" >
+												Learn more
+												<ArrowRightIcon width = "18" height = "18" />
+										</ReadmoreLink >
+										{/* </Section > */}
+										<Spacer size = "xlarge" />
+										<Spacer size = "xlarge" />
+
 								</motion.section >
 
 
