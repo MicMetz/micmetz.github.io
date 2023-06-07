@@ -1,29 +1,9 @@
-// const fs = require( "fs" );
 const path = require( "path" );
 const fs = require( "fs" );
+// const frontMatter = require( "front-matter" );
 
 
-// // Recursive function that calls itself to fetches all the files, including those in subdirectories
-export const getAllDirectoryFiles = function ( dirPath, arrayOfFiles ) {
-		let files = fs.readdirSync( dirPath );
 
-		arrayOfFiles = arrayOfFiles || [];
-
-		files.forEach( function ( file ) {
-				if ( fs.statSync( dirPath + "/" + file ).isDirectory() ) {
-						arrayOfFiles = getAllDirectoryFiles(
-								dirPath + "/" + file,
-								arrayOfFiles
-						);
-				} else {
-						arrayOfFiles.push( file );
-				}
-		} );
-
-		return arrayOfFiles;
-};
-
-// ESSAYS_PATH is useful when you want to get the path to a specific file
 const ESSAYS_PATH = path.join( process.cwd(), "posts", "essays" );
 const essayFilePaths = fs
 .readdirSync( ESSAYS_PATH )

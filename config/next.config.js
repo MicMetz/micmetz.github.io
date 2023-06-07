@@ -1,6 +1,7 @@
-const withPWA = require( "next-pwa" );
-
-module.exports = withPWA( {
+const withMDX = require( '@next/mdx' )( {
+		extension: /\.mdx?$/,
+} )
+module.exports = withMDX( {
 		reactStrictMode: true,
 		assetPrefix    : process.env.NODE_ENV === 'production' ? 'micmetz.github.io/' : '',
 		baseUrl        : process.env.NODE_ENV === 'production' ? 'micmetz.github.io/' : '',
@@ -8,20 +9,14 @@ module.exports = withPWA( {
 		hostnames      : [ 'micmetz.github.io', 'localhost', 'raw.githubusercontent.com', 'github.com' ],
 		compiler       : { styledComponents: true, },
 		types          : [ 'png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff', 'gltf' ],
+		pageExtensions : [ 'js', 'jsx', 'ts', 'tsx', 'md', 'mdx' ],
+		target         : 'serverless',
 		loader         : 'file-loader',
 		options        : {
 				publicPath: '/_next/static/images', // the path access the assets via url
 				outputPath: 'static/images/', // where to store on disk
 		},
-		pwa            : {
-				disable    : process.env.NODE_ENV === "development",
-				register   : true,
-				scope      : "/app",
-				sw         : "service-worker.js",
-				dest       : "public",
-				skipWaiting: true,
-		},
-		use            : [
+		use     : [
 				{
 						loader : '@svgr/webpack',
 						options: {
@@ -32,10 +27,9 @@ module.exports = withPWA( {
 						},
 				},
 		],
-		webpack5       : true,
-		webpack        : ( config, { isServer } ) => {
+		webpack5: true,
+		webpack : ( config, { isServer } ) => {
 				if ( !isServer ) {
-						// don't resolve 'fs' module on the client to prevent this error on build --> Error: Can't resolve 'fs'
 						config.resolve.fallback = {
 								fs: false,
 						};

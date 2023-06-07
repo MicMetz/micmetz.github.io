@@ -18,6 +18,7 @@
 		"dependencies": {
 				"@headlessui/react": "^1.4.2",
 				"@heroicons/react": "^2.0.10",
+				"@next/mdx": "^13.4.4",
 				"@tippyjs/react": "^4.2.6",
 				"algoliasearch": "^4.17.1",
 				"babel-plugin-styled-components": "1.10.2",
@@ -29,6 +30,7 @@
 				"dotenv": "^16.1.4",
 				"feed": "^4.2.2",
 				"framer-motion": "^4.1.17",
+				"front-matter": "^4.0.2",
 				"gh-pages": "^5.0.0",
 				"gray-matter": "^4.0.3",
 				"gsap": "^3.8.0",
