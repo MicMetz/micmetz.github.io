@@ -32,29 +32,53 @@ module.exports = withPWA( {
 						},
 				},
 		],
-		webpack: (config, { isServer }) => {
-				// Fixes npm packages that depend on `fs` module
-				if (!isServer) {
-						config.node = {
-								fs: 'empty'
+		webpack        : function ( config ) {
+				config.module.rules.push( {
+						test: /\.md$/,
+						use : 'raw-loader',
+				} );
+				// config.module.rules.push({
+				//   test: /\.svg$/,
+				//   issuer: {
+				//     test: /\.(js|ts)x?$/,
+				//   },
+				//   use: ['@svgr/webpack'],
+				// });
+				// config.module.rules.push({
+				//   test: /\.(png|jpe?g|gif|svg)$/i,
+				//   loader: 'file-loader',
+				//   options: {
+				//     outputPath: 'images',
+				//   },
+				// });
+				config.module.rules.forEach( rule => {
+						if ( rule.toString().includes( '.scss' ) ) {
+								rule.rules = rule.use.map( useRule => {
+										if ( typeof useRule === 'string' ) {
+												return { loader: useRule };
+										}
+										if ( useRule.loader === 'css-loader' ) {
+												return {
+														oneOf: [
+																{
+																		test   : new RegExp( '.global.scss$' ),
+																		loader : useRule.loader,
+																		options: {},
+																},
+																{
+																		loader : useRule.loader,
+																		options: { modules: true }
+																},
+														],
+												};
+										}
+										return useRule;
+								} );
+								delete rule.use;
 						}
-				}
+				} );
 				return config
-		},
-		async redirects() {
-				return [
-						/* {
-							source     : "/resources",
-							destination: "/illustration-resources",
-							permanent  : true,
-							}, */
-						{
-								source     : "/library",
-								destination: "/library",
-								permanent  : true,
-						},
-				];
-		},
+		}
 } );
 
 
