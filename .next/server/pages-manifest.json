@@ -1,0 +1,15 @@
+{
+  "/_error": "pages/_error.js",
+  "/About": "pages/About.js",
+  "/Gallery": "pages/Gallery.js",
+  "/Projects/Atlas": "pages/Projects/Atlas.js",
+  "/Projects/Presentations": "pages/Projects/Presentations.js",
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/Garden/Essays": "pages/Garden/Essays.js",
+  "/Projects": "pages/Projects.js",
+  "/Garden/Notes": "pages/Garden/Notes.js",
+  "/[slug]": "pages/[slug].js",
+  "/Garden": "pages/Garden.js",
+  "/": "pages/index.js"
+}

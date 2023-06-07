@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[7966],{6919:function(n,e,o){o.r(e);var t=o(4141),r=o(5893),c=t.default.span.withConfig({displayName:"NoteAction__StyledNoteAction",componentId:"zruupo-0"})(["color:var(--color-bright-crimson);"]);e.default=function(n){var e=n.children;return(0,r.jsx)(c,{children:e})}}}]);

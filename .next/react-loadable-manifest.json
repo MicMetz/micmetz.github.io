@@ -1,0 +1,405 @@
+{
+  "..\\..\\node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
+    "id": 2741,
+    "files": [
+      "static/chunks/2741.734764f66d43e501.js"
+    ]
+  },
+  "..\\..\\node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
+    "id": 9651,
+    "files": [
+      "static/chunks/9651.f273097d59decf3d.js"
+    ]
+  },
+  "[slug].js -> @/components/Links/ButtonLink": {
+    "id": 1703,
+    "files": [
+      "static/chunks/1703.2d87a4a9a69935c2.js"
+    ]
+  },
+  "[slug].js -> @/components/Links/ImageLink": {
+    "id": 1016,
+    "files": [
+      "static/chunks/1016.659cae5cd95fcc58.js"
+    ]
+  },
+  "[slug].js -> @/components/Links/TooltipLink": {
+    "id": 4869,
+    "files": [
+      "static/chunks/4869.e720cc67808d0b33.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/Accordion": {
+    "id": 5750,
+    "files": [
+      "static/chunks/5750.e619aaef17753e2b.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/Alert": {
+    "id": 9487,
+    "files": [
+      "static/chunks/9487.01b1e7c54d68254e.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/BasicImage": {
+    "id": 7546,
+    "files": [
+      "static/chunks/7546.0f104bee55f024b6.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/BlockquoteCitation": {
+    "id": 1294,
+    "files": [
+      "static/chunks/1294.d29db1da6432f489.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/Center": {
+    "id": 2778,
+    "files": [
+      "static/chunks/2778.f036ba29c0e9b9c6.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/CodeBlock": {
+    "id": 1189,
+    "files": [
+      "static/chunks/6476.429a8f28f8ee9f9c.js",
+      "static/chunks/1189.73ee79f03696d044.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/ComingSoon": {
+    "id": 9633,
+    "files": [
+      "static/chunks/9633.7c91499505bc8ad9.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/Draft": {
+    "id": 8451,
+    "files": [
+      "static/chunks/8451.8bc072a236c7b322.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/Footnote": {
+    "id": 7123,
+    "files": [
+      "static/chunks/7123.2b2b4e1693d483c2.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/FullWidthBackground": {
+    "id": 7003,
+    "files": [
+      "static/chunks/7003.9b085a7ad24a12a1.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/FullWidthSection": {
+    "id": 5588,
+    "files": [
+      "static/chunks/5588.b92f5d19821f6833.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/ImageFrame": {
+    "id": 9591,
+    "files": [
+      "static/chunks/9591.baa85073fe5fd7a8.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/Img": {
+    "id": 1493,
+    "files": [
+      "static/chunks/1493.76fa41729ef63957.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/IntroParagraph": {
+    "id": 783,
+    "files": [
+      "static/chunks/783.20e83330163d6f23.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/LinkCard": {
+    "id": 3773,
+    "files": [
+      "static/chunks/3773.4cea666fef622830.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/ListNumber": {
+    "id": 7124,
+    "files": [
+      "static/chunks/7124.083c3f49f0c625a6.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/NextImage": {
+    "id": 6859,
+    "files": [
+      "static/chunks/5675-dcd8fd9a8acc8b95.js",
+      "static/chunks/6859.3f62c24a3e288391.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/NowSection": {
+    "id": 1940,
+    "files": [
+      "static/chunks/8078.50d10dbf56acf71a.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/Podcastiframe": {
+    "id": 7703,
+    "files": [
+      "static/chunks/7703.6cf11a4e671d033b.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/References": {
+    "id": 7954,
+    "files": [
+      "static/chunks/7954.ab5786c645c34a96.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/ReferencesLink": {
+    "id": 1138,
+    "files": [
+      "static/chunks/1138.9e623d96eb0fc5d6.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/ResourceBook": {
+    "id": 9090,
+    "files": [
+      "static/chunks/5675-dcd8fd9a8acc8b95.js",
+      "static/chunks/9090.1077945529aaf3b7.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/ResponsiveImage": {
+    "id": 6826,
+    "files": [
+      "static/chunks/6826.7fe2ce0c84fc39bd.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/SimpleCard": {
+    "id": 8921,
+    "files": [
+      "static/chunks/8921.2c858273e2dd37b0.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/TalkSlide": {
+    "id": 9398,
+    "files": [
+      "static/chunks/9398.c39ad15d1ec2cfb8.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/ThreeColumn": {
+    "id": 1270,
+    "files": [
+      "static/chunks/1270.d99a8627c35eb545.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/TweetEmbed": {
+    "id": 4365,
+    "files": [
+      "static/chunks/4365.1c385f3bba132b47.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/TwoColumn": {
+    "id": 77,
+    "files": [
+      "static/chunks/77.facbca68c8ce0258.js"
+    ]
+  },
+  "[slug].js -> @/components/MDX/Video": {
+    "id": 658,
+    "files": [
+      "static/chunks/658.e92d3d09b9d0b0ba.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/AIConversation": {
+    "id": 4756,
+    "files": [
+      "static/chunks/4756.90b8e67877ca4d39.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/HackyFormatting": {
+    "id": 6702,
+    "files": [
+      "static/chunks/6702.c7418e5445b465ae.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/InvisiblesFeature": {
+    "id": 480,
+    "files": [
+      "static/chunks/480.6e5026d4c8c15ed1.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/MediumMaterialsMeat": {
+    "id": 3615,
+    "files": [
+      "static/chunks/3615.399724875a1894a1.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/MultipartIntro": {
+    "id": 2689,
+    "files": [
+      "static/chunks/2689.228a075906cfb92f.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/MysteriousVoid": {
+    "id": 7212,
+    "files": [
+      "static/chunks/7212.cc3dfd70c7c036fc.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/ScrollingImages": {
+    "id": 4891,
+    "files": [
+      "static/chunks/9805.95aacfc6bf4ed181.js",
+      "static/chunks/4891.6d77250b733eebdb.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/apps/Hardware": {
+    "id": 5634,
+    "files": [
+      "static/chunks/5634.046f9883ac08776e.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/apps/Tools": {
+    "id": 5540,
+    "files": [
+      "static/chunks/5540.343c32bdfb3ccc40.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/blocks/BlockAges": {
+    "id": 1636,
+    "files": [
+      "static/chunks/1636.7b5076dcf95d580b.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/blocks/BlockLogos": {
+    "id": 7115,
+    "files": [
+      "static/chunks/7115.0158759a65d9a062.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/blocks/Blocktimeline": {
+    "id": 8087,
+    "files": [
+      "static/chunks/8087.3827a14f45afea06.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/blocks/DemoBlock1": {
+    "id": 7351,
+    "files": [
+      "static/chunks/7351.5536484cfcea7ad1.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/blocks/DemoBlock2": {
+    "id": 5618,
+    "files": [
+      "static/chunks/5618.e84800621cd02368.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/blocks/DemoBlock3": {
+    "id": 9203,
+    "files": [
+      "static/chunks/9203.248ad2cc977951a4.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/blocks/DemoBlock4": {
+    "id": 6250,
+    "files": [
+      "static/chunks/6250.db633bfd8c167e26.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/blocks/LinearChars": {
+    "id": 8575,
+    "files": [
+      "static/chunks/8575.5433d5eccba0a2d7.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/blocks/TextvBlocks": {
+    "id": 2488,
+    "files": [
+      "static/chunks/2488.e79e4feb50eb52d7.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/css-position/AbsoluteCSSPosition": {
+    "id": 815,
+    "files": [
+      "static/chunks/815.d3bfb41fdfb1efd2.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/css-position/FixedCSSPosition": {
+    "id": 3869,
+    "files": [
+      "static/chunks/3869.b86bbf6a75a01609.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/css-position/RelativeCSSPosition": {
+    "id": 9810,
+    "files": [
+      "static/chunks/9810.580c4d4f86f3836f.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/css-position/StaticCSSPosition": {
+    "id": 5183,
+    "files": [
+      "static/chunks/5183.8202bd3fae3f83d4.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/css-position/StickyPosition": {
+    "id": 8704,
+    "files": [
+      "static/chunks/8704.b716804227cf0105.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/direct-manipulation/DetatchedTodoApp": {
+    "id": 4646,
+    "files": [
+      "static/chunks/7706.be97c5a598d8f8b6.js",
+      "static/chunks/4646.74530d136ce04ba3.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/direct-manipulation/TodoApp": {
+    "id": 8104,
+    "files": [
+      "static/chunks/7706.be97c5a598d8f8b6.js",
+      "static/chunks/8104.223152bb03e39061.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/gsap-basics/GsapScroller": {
+    "id": 4571,
+    "files": [
+      "static/chunks/9805.95aacfc6bf4ed181.js",
+      "static/chunks/4571.c07aa7961530ca95.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/gsap-basics/TweenBlueRedBox": {
+    "id": 7304,
+    "files": [
+      "static/chunks/7304.d2533558508c5048.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/gsap-basics/TweenRedBigBox": {
+    "id": 7966,
+    "files": [
+      "static/chunks/5613.0ad3fad83364e3c0.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/gsap-basics/TweenReverseSpinningBox": {
+    "id": 2542,
+    "files": [
+      "static/chunks/2542.a9c8a162427c67c4.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/gsap-basics/TweenSpinningBox": {
+    "id": 366,
+    "files": [
+      "static/chunks/366.8a7ea895f3ccee82.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/programmatic-notes/NoteAction": {
+    "id": 6919,
+    "files": [
+      "static/chunks/7966.d4fa1e55deb5f8e2.js"
+    ]
+  },
+  "[slug].js -> @/components/Unique/programmatic-notes/NoteTrigger": {
+    "id": 4858,
+    "files": [
+      "static/chunks/4858.4d204b1365ba5925.js"
+    ]
+  }
+}

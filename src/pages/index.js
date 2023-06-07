@@ -2,6 +2,7 @@ import AtlasCard from "@/components/Cards/AtlasCard.js";
 import BookCard from "@/components/Cards/BookCard.js";
 import EssayCard from "@/components/Cards/EssayCard.js";
 import ProjectCard from "@/components/Cards/ProjectCard.js";
+import NoteCard from "@/components/Cards/NoteCard.js";
 import GrowthIcon from "@/components/Icons/GrowthIcon.js";
 
 import { ReadmoreLink } from "@/components/Links/LinkStyledComponents.js";
