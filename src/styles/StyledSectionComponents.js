@@ -7,13 +7,13 @@ import styled from "styled-components";
 export const ArchiveSection = styled( motion.section )`
   margin: 0 0 10vh 0;
   display: grid;
-  grid-gap: var(--space-xl);
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: var(--space-lg);
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-row-gap: 5%;
   grid-template-areas:
-    "essays essays essays essays"
-    "books books books notes";
+    "essays essays notes"
+    "books books books";
   @media ${breakpoints.mediaMD} {
     grid-gap: var(--space-m);
   }
@@ -36,10 +36,10 @@ export const ArchiveSection = styled( motion.section )`
 
 
 
-export const LaborSection = styled( motion.section )`
+export const ProjectsSection = styled( motion.section )`
   margin: 0 0 10vh 0;
   display: grid;
-  grid-gap: var(--space-xl);
+  grid-gap: var(--space-lg);
 
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;

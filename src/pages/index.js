@@ -8,7 +8,7 @@ import { ReadmoreLink } from "@/components/Links/LinkStyledComponents.js";
 import { IndexNoteStyled } from "@/styles/StyledCardComponents/IndexNoteStyled.js";
 import { List, ListContainer, ListItem, ListParagraph, ListTitle, Section, SectionText, SectionTitle } from "@/styles/StyledComponents.js";
 
-import { ArchiveSection, LaborSection } from "@/styles/StyledSectionComponents.js";
+import { ArchiveSection, ProjectsSection } from "@/styles/StyledSectionComponents.js";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import { motion } from "framer-motion";
 import fs from "fs";
@@ -150,7 +150,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 														</div >
 												</section >
 
-												<section style = {{ gridArea: "notes" }} >
+												<section style = {{ gridArea: "notes", marginLeft: "2.4rem" }} >
 														<Link href = "/Garden/Notes" >
 																<a >
 																		{/* <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} > */}
@@ -165,18 +165,20 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 																Short, <i >'concise'</i >, and to the point
 														</Subheader >
 
-														{notes.slice( 0, 12 ).map( ( note ) => (
-																<Link key = {note.slug} href = {`/${note.slug}`} >
-																		<a >
-																				<IndexNoteStyled >
-																						{note.data.growthStage && (
-																								<GrowthIcon growthStage = {note.data.growthStage} />
-																						)}
-																						<h3 >{note.data.title}</h3 >
-																				</IndexNoteStyled >
-																		</a >
-																</Link >
-														) )}
+														<div style = {{}} >
+																{notes.slice( 0, 12 ).map( ( note ) => (
+																		<Link key = {note.slug} href = {`/${note.slug}`} >
+																				<a >
+																						<IndexNoteStyled >
+																								{note.data.growthStage && (
+																										<GrowthIcon growthStage = {note.data.growthStage} />
+																								)}
+																								<h3 >{note.data.title}</h3 >
+																						</IndexNoteStyled >
+																				</a >
+																		</Link >
+																) )}
+														</div >
 												</section >
 
 
@@ -292,7 +294,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 
 										<Spacer size = "medium" />
 
-										<LaborSection
+										<ProjectsSection
 												variants = {collection}
 												initial = "hidden"
 												animate = "visible"
@@ -329,7 +331,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 														</div >
 												</section >
 
-												<section style = {{ gridArea: "atlas" }} >
+												<section style = {{ gridArea: "atlas", marginLeft: "2.4rem" }} >
 														<Link href = "/Projects/Atlas" >
 																<a >
 																		{/* <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} > */}
@@ -342,7 +344,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 														<Subheader >
 																Design responses gathered from my own observations and research.
 														</Subheader >
-														<div style = {{ marginLeft: "-1.4rem" }} >
+														<div style = {{}} >
 																{GISData.map( ( visual, i ) => (
 																		<AtlasCard
 																				key = {i}
@@ -385,7 +387,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 
 													</section >
 													*/}
-										</LaborSection >
+										</ProjectsSection >
 								</motion.section >
 
 								<Spacer size = "medium" />
