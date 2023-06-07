@@ -30,7 +30,6 @@ import { SectionHeader, Subheader, Title1, Title2 } from "../styles/StyledTypogr
 
 
 
-
 const collection = {
 		hidden    : {
 				opacity: 0, transition: {
@@ -117,7 +116,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 												animate = "visible"
 										>
 												<section style = {{ gridArea: "essays" }} >
-														<Link href = "/Essays" >
+														<Link href = "/Garden/Essays" >
 																<a >
 																		{/* <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} > */}
 																		<SectionHeader >
@@ -150,7 +149,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 												</section >
 
 												<section style = {{ gridArea: "notes", marginLeft: "2.4rem" }} >
-														<Link href = "/Notes" >
+														<Link href = "/Garden/Notes" >
 																<a >
 																		{/* <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} > */}
 																		<SectionHeader >
