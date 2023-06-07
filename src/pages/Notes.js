@@ -7,7 +7,7 @@ import Header from "../components/Layouts/Header";
 import { Layout } from "../components/Layouts/Layout.js";
 import TitleWithCount from "../components/MISC/TitleWithCount";
 import { Title2 } from "../styles/StyledTypography.js";
-import { noteFilePaths, NOTES_PATH } from "../tools/mdxUtils";
+// import { noteFilePaths, NOTES_PATH } from "../tools/mdxUtils";
 
 
 

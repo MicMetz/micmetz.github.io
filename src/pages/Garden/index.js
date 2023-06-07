@@ -7,7 +7,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import { SectionText } from '../../styles/StyledComponents.js'
-import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, patternFilePaths, PATTERNS_PATH, } from "../../tools/mdxUtils.js";
+// import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, patternFilePaths, PATTERNS_PATH, } from "../../tools/mdxUtils.js";
 
 
 

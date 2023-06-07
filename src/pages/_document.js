@@ -5,6 +5,7 @@ import { ServerStyleSheet } from 'styled-components'
 
 
 export default class MyDocument extends Document {
+
 		static async getInitialProps( ctx ) {
 				// SSR support for styled-components
 				const sheet = new ServerStyleSheet();

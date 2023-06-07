@@ -9,6 +9,7 @@ import { IndexNoteStyled } from "@/styles/StyledCardComponents/IndexNoteStyled.j
 import { List, ListContainer, ListItem, ListParagraph, ListTitle, Section, SectionText, SectionTitle } from "@/styles/StyledComponents.js";
 
 import { ArchiveSection, ProjectsSection } from "@/styles/StyledSectionComponents.js";
+import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, projectFilePaths, PROJECTS_PATH } from "@/tools/mdxUtils.js";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import { motion } from "framer-motion";
 import fs from "fs";
@@ -27,7 +28,7 @@ import Headshot from "../components/MISC/Headshot.js";
 import { Spacer } from "../components/MISC/Spacer.js";
 import { SectionHeader, Subheader, Title1, Title2 } from "../styles/StyledTypography.js";
 
-import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, projectFilePaths, PROJECTS_PATH } from "../tools/mdxUtils";
+// import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, projectFilePaths, PROJECTS_PATH } from "../tools/mdxUtils";
 
 
 
@@ -117,7 +118,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 												animate = "visible"
 										>
 												<section style = {{ gridArea: "essays" }} >
-														<Link href = "/src/Essays.js" >
+														<Link href = "/Essays" >
 																<a >
 																		{/* <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} > */}
 																		<SectionHeader >
@@ -150,7 +151,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 												</section >
 
 												<section style = {{ gridArea: "notes", marginLeft: "2.4rem" }} >
-														<Link href = "/Garden/Notes" >
+														<Link href = "/Notes" >
 																<a >
 																		{/* <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} > */}
 																		<SectionHeader >

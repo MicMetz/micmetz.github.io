@@ -1,4 +1,4 @@
-import {noteFilePaths,  NOTES_PATH } from "@/tools/mdxUtils.js";
+// import {noteFilePaths,  NOTES_PATH } from "@/tools/mdxUtils.js";
 import NoteCard from "@components/Cards/NoteCard.js";
 import Header from "@components/Layouts/Header.js";
 import { Layout } from "@components/Layouts/Layout.js";

@@ -1,4 +1,4 @@
-import ESSAYS_PATH, { essayFilePaths } from "@/tools/mdxUtils.js";
+// import ESSAYS_PATH, { essayFilePaths } from "@/tools/mdxUtils.js";
 import EssayCard from "@components/Cards/EssayCard.js";
 import Header from "@components/Layouts/Header.js";
 import { Layout } from "@components/Layouts/Layout.js";
