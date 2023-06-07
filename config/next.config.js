@@ -1,7 +1,6 @@
-const withMDX = require( '@next/mdx' )( {
-		extension: /\.mdx?$/,
-} )
-module.exports = withMDX( {
+const withPWA = require( "next-pwa" );
+
+module.exports = withPWA( {
 		reactStrictMode: true,
 		assetPrefix    : process.env.NODE_ENV === 'production' ? 'micmetz.github.io/' : '',
 		baseUrl        : process.env.NODE_ENV === 'production' ? 'micmetz.github.io/' : '',

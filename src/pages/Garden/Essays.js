@@ -1,9 +1,13 @@
+import ESSAYS_PATH, { essayFilePaths } from "@/tools/mdxUtils.js";
 import EssayCard from "@components/Cards/EssayCard.js";
 import Header from "@components/Layouts/Header.js";
+import { Layout } from "@components/Layouts/Layout.js";
 import MasonryGrid from "@components/Layouts/MasonryGrid.js";
 import TitleWithCount from "@components/MISC/TitleWithCount.js";
+import fs from "fs";
+import matter from "gray-matter";
+import path from "path";
 import React from 'react';
-import { Layout } from "@components/Layouts/Layout.js";
 
 
 
@@ -32,3 +36,23 @@ export default function EssaysPage( { essays } ) {
 				</>
 		);
 }
+
+
+
+export function getStaticProps() {
+		// Get all essay posts
+		let essays = essayFilePaths.map( ( filePath ) => {
+				const source = fs.readFileSync( path.join( ESSAYS_PATH, filePath ) );
+				const { content, data } = matter( source );
+				const slug = filePath.replace( /\.mdx$/, "" );
+
+				return {
+						content,
+						data,
+						slug,
+						filePath,
+				};
+		} );
+
+}
+
