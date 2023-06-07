@@ -12,20 +12,22 @@ import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH } from "../../to
 
 
 export default function GardenPage( { allPosts } ) {
-		return ( <>
-				<Header title = "The Garden of Michael Metzger" />
-				<Layout >
-						<header style = {{ marginBottom: "var(--space-xl)" }} >
-								<TitleWithCount posts = {allPosts} >The Garden</TitleWithCount >
-								<Title2 >
-										<SectionText >
-												Welcome to my digital garden. This is where I cultivate my ideas and collect the things that help me grow.
-										</SectionText >
-								</Title2 >
-						</header >
-						<GardenFiltersAndHits allPostData = {allPosts} />
-				</Layout >
-		</> );
+		return (
+				<>
+						<Header title = "The Garden of Michael Metzger" />
+						<Layout >
+								<header style = {{ marginBottom: "var(--space-xl)" }} >
+										<TitleWithCount posts = {allPosts} >The Garden</TitleWithCount >
+										<Title2 >
+												<SectionText >
+														Welcome to my digital garden. This is where I cultivate my ideas and collect the things that help me grow.
+												</SectionText >
+										</Title2 >
+								</header >
+								<GardenFiltersAndHits allPostData = {allPosts} />
+						</Layout >
+				</>
+		);
 }
 
 

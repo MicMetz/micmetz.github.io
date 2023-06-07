@@ -18,7 +18,7 @@ export default function ProjectsPage() {
 						<Header title = "The Projects of Michael Metzger" />
 						<Layout >
 								<header style = {{ marginBottom: "var(--space-xl)" }} >
-										<TitleWithCount posts = {allPosts} >My Labor</TitleWithCount >
+										<TitleWithCount posts = {allPosts} >My Projects</TitleWithCount >
 										<Title2 >
 												A collection of prior works, and works in progress.
 										</Title2 >
@@ -34,7 +34,7 @@ export default function ProjectsPage() {
 // Fetches the data for the page.
 export function getStaticProps() {
 		// Get all essay posts
-		let labors = projectFilePaths.map( ( filePath ) => {
+		let projects = projectFilePaths.map( ( filePath ) => {
 				const source = fs.readFileSync( path.join( PROJECTS_PATH, filePath ) );
 				const { content, data } = matter( source );
 				const slug = filePath.replace( /\.mdx$/, "" );
@@ -67,17 +67,12 @@ export function getStaticProps() {
 		} );
 
 		// Sort essays by date
-		const sortedLabor = labors.sort( ( a, b ) => {
+		const sortedprojects = projects.sort( ( a, b ) => {
 				return new Date( b.updated ) - new Date( a.updated );
 		} );
+		projects = sortedprojects;
 
-
-		labors = sortedLabor;
-
-
-
-		const allPosts = labors
-
+		const allPosts = projects
 		return { props: { allPosts } };
 }
 

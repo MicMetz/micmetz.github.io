@@ -1,6 +1,6 @@
+import { ProjectsData } from "@/posts/data/ProjectsData.js";
 import React from 'react';
 import styled from "styled-components";
-import { ProjectsData } from "../../../posts/data/ProjectsData.js";
 import { Section, SectionTitle } from '../../styles/StyledComponents.js';
 
 
