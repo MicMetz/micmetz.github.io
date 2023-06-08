@@ -3,6 +3,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import React from 'react';
+import styled from "styled-components";
 import NoteCard from "../components/Cards/NoteCard.js";
 import Header from "../components/Layouts/Header.js";
 import { Layout } from "../components/Layouts/Layout.js";
@@ -35,6 +36,11 @@ export default function NotesPage( { notes } ) {
 				</>
 		);
 }
+
+const NotesGrid = styled.section`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+`;
 
 
 export function getStaticProps() {
