@@ -21,7 +21,7 @@ export default function NotesPage( { notes } ) {
 										<TitleWithCount posts = {notes} >Notes</TitleWithCount >
 								</header >
 								<MasonryGrid >
-										{notes.map( ( essay, i ) => (
+										{notes.map( ( note, i ) => (
 												<NoteCard
 														id = {note.slug}
 														slug = {note.slug}
