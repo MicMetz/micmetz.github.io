@@ -266,7 +266,7 @@ const GlobalStyles = createGlobalStyle`
 
 
   html {
-    //font-size: 62.5%;
+    font-size: 62.5%;
     scroll-behavior: smooth;
   }
 
@@ -275,7 +275,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
 
-  html, body, #root {
+  html, body, #root,	#___gatsby, #gatsby-focus-wrapper,	#gatsby-noscript {
     height: 100%;
   }
 
@@ -345,23 +345,11 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
     width: 100%;
   }
-
-
-  /* h1, h2, h3, h4, h5, h6, button {
-    font-family: ${props => props.theme.fonts.title};
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  li {
-    list-style: none;
-  } */
+		
 
   h1, h2 {
-    font-family: var(--font-serif);
-      // font-family: ${props => props.theme.fonts.title};
+  //  font-family: var(--font-serif);
+       font-family: ${props => props.theme.fonts.title};
   }
 
   h3, h4, h5, h6 {
