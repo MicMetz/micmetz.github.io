@@ -60,7 +60,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 
 		return (
 				<>
-						<Header title = "Michael Metz | Portfolio" />
+						<Header title = "Michael Metzger | Portfolio" />
 
 						<Layout >
 								<header
