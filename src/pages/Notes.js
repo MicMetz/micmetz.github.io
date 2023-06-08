@@ -20,17 +20,17 @@ export default function NotesPage( { notes } ) {
 								<header style = {{ marginBottom: "var(--space-xl)" }} >
 										<TitleWithCount posts = {notes} >Notes</TitleWithCount >
 								</header >
-								<MasonryGrid >
-										{notes.map( ( note, i ) => (
+								<NotesGrid>
+										{notes.map((note) => (
 												<NoteCard
-														id = {note.slug}
-														slug = {note.slug}
-														title = {note.data.title}
-														growthStage = {note.data.growthStage}
-														date = {note.data.updated}
+														id={note.slug}
+														slug={note.slug}
+														title={note.data.title}
+														growthStage={note.data.growthStage}
+														date={note.data.updated}
 												/>
-										) )}
-								</MasonryGrid >
+										))}
+								</NotesGrid>
 						</Layout >
 				</>
 		);
