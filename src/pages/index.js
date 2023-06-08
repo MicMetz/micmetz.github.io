@@ -6,6 +6,7 @@ import Link from "next/link";
 import path from "path";
 import React from "react";
 import { DiFirebase, DiReact, DiZend } from "react-icons/di";
+import styled from "styled-components";
 import { GISData } from "../../posts/data/GISData.js";
 
 import { ProjectsData } from "../../posts/data/ProjectsData.js";
@@ -21,7 +22,6 @@ import UnderlineHoverLink from "../components/Links/UnderlineHoverLink.js";
 import { Spacer } from "../components/MISC/Spacer.js";
 
 import { ReadmoreLink } from "../styles/LinkStyledComponents.js";
-import { IndexNoteStyled } from "../styles/StyledCardComponents/IndexNoteStyled.js";
 import { LeftSection, List, ListContainer, ListItem, ListParagraph, ListTitle, SectionText, SectionTitle } from "../styles/StyledComponents.js";
 
 import { GardenSection, ProjectsSection } from "../styles/StyledSectionComponents.js";
@@ -122,16 +122,19 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 										animate = {{ opacity: 1, x: 0 }}
 										transition = {{ delay: 0.7, duration: 1 }}
 								>
+
 										<Title2 style = {{ fontSize: "var(--font-size-2xl)" }} >
 												Writing Garden
 										</Title2 >
 										<Subheader >
-												A collection of essays, notes, and responses to readings.
+												A collection of essays, notes, and responses to readings.{' '}
+												<br />
 												<ReadmoreLink href = "/Garden" >
 														Learn more
 														<ArrowRightIcon width = "18" height = "18" />
 												</ReadmoreLink >
 										</Subheader >
+
 
 										<GardenSection
 												variants = {collection}
@@ -141,7 +144,6 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 												<section style = {{ gridArea: "essays" }} >
 														<Link href = "/Essays" >
 																<a >
-																		{/* <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} > */}
 																		<SectionHeader >
 																				Essays
 																				<ArrowRightIcon width = "18" height = "18" />
@@ -153,7 +155,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 														</Subheader >
 														<div
 																style = {{
-																		display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gridGap: "var(--space-2xs)",
+																		display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gridGap: "var(--space-2xs)"
 																}}
 														>
 																{essays.map( ( essay, i ) => (
@@ -171,7 +173,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 														</div >
 												</section >
 
-												<section style = {{ gridArea: "notes"/* , marginLeft: "2.4rem" */, margin: "0 auto" }} >
+												<section style = {{ gridArea: "notes", marginLeft: "3em"}} >
 														<Link href = "/Notes" >
 																<a >
 																		{/* <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} > */}
@@ -181,26 +183,21 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 																		</SectionHeader >
 																</a >
 														</Link >
-
 														<Subheader >
 																Short, <i >'concise'</i >, and to the point
 														</Subheader >
-
-														{/* <div style = {{	display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gridGap: "var(--space-2xs)" }} > */}
-														{/* <div style = {{	display: "grid", gridTemplateColumns: "repeat(auto-fit,200px) minmax(280px, 1fr)", gridGap: "var(--space-2xs)" }} > */}
-														{notes.slice( 0, 12 ).map( ( note ) => (
-																<Link key = {note.slug} href = {`/${note.slug}`} >
-																		<a >
-																				<IndexNoteStyled >
-																						{note.data.growthStage && (
-																								<GrowthIcon growthStage = {note.data.growthStage} />
-																						)}
-																						<h3 >{note.data.title}</h3 >
-																				</IndexNoteStyled >
-																		</a >
-																</Link >
-														) )}
-														{/* </div > */}
+															{notes.slice( 0, 12 ).map( ( note ) => (
+																		<Link key = {note.slug} href = {`/${note.slug}`} >
+																				<a >
+																						<IndexNoteCard >
+																								{note.data.growthStage && (
+																										<GrowthIcon growthStage = {note.data.growthStage} />
+																								)}
+																								<h3 >{note.data.title}</h3 >
+																						</IndexNoteCard >
+																				</a >
+																		</Link >
+																) )}
 												</section >
 
 
@@ -219,7 +216,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 														<div
 																style = {{
 																		display            : "grid",
-																		gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+																		gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
 																		gridGap            : "var(--space-m)",
 																}}
 														>
@@ -432,6 +429,42 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 		)
 				;
 };
+
+
+
+const IndexNoteCard = styled.div`
+  display: flex;
+  padding: var(--space-xs) 0 1.2rem;
+  border-bottom: 1px solid var(--color-tinted-cream);
+  transition: all 0.3s ease-in-out;
+
+  svg {
+    position: relative;
+    top: 5px;
+    flex-shrink: 0;
+  }
+
+  h3 {
+    color: var(--color-gray-800);
+    transition: all 0.3s ease-in-out;
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    line-height: var(--leading-snug);
+    margin-left: var(--space-xs);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    border-bottom: 1px solid var(--color-sea-blue);
+
+    h3 {
+      color: var(--color-crimson);
+    }
+
+    transform: scale3d(1.02, 1.02, 1.02);
+  }
+`;
 
 
 

@@ -1,7 +1,6 @@
+import React from "react";
 import Footer from "../components/Layouts/Footer.js";
 import Navigation from "../components/Navigation/Navigation.js";
-
-import React from "react";
 import Theme from '../themes/theme.js';
 
 

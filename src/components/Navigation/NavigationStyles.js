@@ -101,12 +101,12 @@ export const MainNav = styled.div`
 
 export const StyledNavbar = styled( motion.nav )`
   display: flex;
-  margin: var(--space-m) var(--space-l);
+		
+  //margin: var(--space-m) var(--space-l);
   flex-direction: row;
   justify-content: space-between;
 		align-items: center;
   padding: var(--space-s) var(--space-l);
-  //padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 `;
 
 export const StyledChevronDownIcon = styled( ChevronDownIcon )`

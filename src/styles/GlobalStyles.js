@@ -266,7 +266,7 @@ const GlobalStyles = createGlobalStyle`
 
 
   html {
-    font-size: 62.5%;
+    //font-size: 62.5%;
     scroll-behavior: smooth;
   }
 
@@ -274,30 +274,50 @@ const GlobalStyles = createGlobalStyle`
     max-width: 100%;
   }
 
-  
+
+  html, body, #root {
+    height: 100%;
+  }
+
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+
   body {
+    min-height: 100vh;
     //font-family: $ {props => props.theme.fonts.main};
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     /* 
 	background: $ {props => props.theme.colors.background1};
 	 color: $ {props => props.theme.colors.primary1};
 	  */
-    background: var(--background-color);
+    //background: var(--background-color);
+    background: var(--color-cream);
     padding: var(--space-base);
     color: var(--color-black);
 
-    cursor: default;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    max-width: 100vw;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
+    //cursor: default;
+    //align-items: center;
+    //justify-content: center;
+    //display: flex;
+    //flex-direction: column;
+    //min-height: 100vh;
+    //max-width: 100vw;
+    //width: 100%;
+    //height: 100%;
+    //overflow-x: hidden;
   }
 
   a:not([class]) {

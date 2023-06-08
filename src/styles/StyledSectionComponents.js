@@ -5,13 +5,16 @@ import styled from "styled-components";
 
 
 export const GardenSection = styled( motion.section )`
-  margin: 0 0 5vh 0;
-		height: fit-content;
-		width: 100%;
+  margin: var(--space-xl) 0 var(--space-s);
+  height: fit-content;
+  width: 100%;
   display: grid;
-		//justify-content: center;
-  justify-content: space-between;
-  grid-gap: var(--space-lg);
+
+  align-items: stretch;
+  //align-content: center;
+  justify-content: center;
+		
+  grid-gap: var(--space-xl);
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-row-gap: 5%;
@@ -45,9 +48,9 @@ export const ProjectsSection = styled( motion.section )`
   height: fit-content;
   width: 100%;
   display: grid;
-		
-		align-items: center;
-		//align-content: center;
+
+  align-items: stretch;
+  //align-content: center;
   justify-content: center;
 
   grid-gap: var(--space-lg);

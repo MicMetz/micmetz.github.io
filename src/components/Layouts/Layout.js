@@ -2,7 +2,7 @@ import { StyledLayout } from "../../styles/StyledComponents.js";
 
 
 
-export const Layout = ( { children } ) => {
+export function Layout( { children, type } ) {
 		return (
 				<StyledLayout >
 						{children}
