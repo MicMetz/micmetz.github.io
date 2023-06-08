@@ -7,7 +7,6 @@ import styled from "styled-components";
 import NoteCard from "../components/Cards/NoteCard.js";
 import Header from "../components/Layouts/Header.js";
 import { Layout } from "../components/Layouts/Layout.js";
-import MasonryGrid from "../components/Layouts/MasonryGrid.js";
 import TitleWithCount from "../components/MISC/TitleWithCount.js";
 import { noteFilePaths, NOTES_PATH } from "../tools/mdxUtils.js";
 
@@ -21,17 +20,19 @@ export default function NotesPage( { props: notes } ) {
 								<header style = {{ marginBottom: "var(--space-xl)" }} >
 										<TitleWithCount posts = {notes} >Notes</TitleWithCount >
 								</header >
-								<NotesGrid>
-										{notes.map((note) => (
+								<NotesGrid >
+										{notes.map( ( note, i ) => (
 												<NoteCard
-														id={note.slug}
-														slug={note.slug}
-														title={note.data.title}
-														growthStage={note.data.growthStage}
-														date={note.data.updated}
+														key = {i}
+														id = {note.slug}
+														slug = {note.slug}
+														cover = {note.data.cover}
+														title = {note.data.title}
+														growthStage = {note.data.growthStage}
+														date = {note.data.updated}
 												/>
-										))}
-								</NotesGrid>
+										) )}
+								</NotesGrid >
 						</Layout >
 				</>
 		);
