@@ -13,7 +13,7 @@ import { noteFilePaths, NOTES_PATH } from "../tools/mdxUtils.js";
 
 
 
-export default function NotesPage( { notes } ) {
+export default function NotesPage( { props: notes } ) {
 		return (
 				<>
 						<Header title = "Notes of Michael Metzger" />
