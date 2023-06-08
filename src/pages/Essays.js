@@ -11,7 +11,7 @@ import React from 'react';
 
 
 
-export default function EssaysPage({ essays} ) {
+export default function EssaysPage({ essays } ) {
 		return (
 				<>
 						<Header title = "Essays of Michael Metzger" />
@@ -38,13 +38,22 @@ export default function EssaysPage({ essays} ) {
 }
 
 
-
 export function getStaticProps() {
 		// Get all essay posts
-		let essays = essayFilePaths.map((filePath) => {
-				const source = fs.readFileSync(path.join(ESSAYS_PATH, filePath));
-				const { content, data } = matter(source);
-				const slug = filePath.replace(/\.mdx$/, "");
+		let essays = essayFilePaths.map( ( filePath ) => {
+				const source            = fs.readFileSync( path.join( ESSAYS_PATH, filePath ) );
+				const { content, data } = matter( source );
+				const slug              = filePath.replace( /\.mdx$/, "" );
+				const {
+						title,
+						description,
+						growthStage,
+						startDate,
+						topics,
+						type,
+						cover,
+						updated,
+				}                 = data;
 
 				return {
 						content,
@@ -55,10 +64,11 @@ export function getStaticProps() {
 		});
 
 		// Sort essays by date
-		const sortedEssays = essays.sort((a, b) => {
-				return new Date(b.data.updated) - new Date(a.data.updated);
-		});
-		essays = sortedEssays;
+		const sortedEssays = essays.sort( ( a, b ) => {
+				return new Date( b.updated ) - new Date( a.updated );
+		} );
+		essays             = sortedEssays;
+
 
 		return { props: { essays } };
 }
