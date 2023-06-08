@@ -8,7 +8,6 @@ import { GardenFiltersAndHits } from "../components/Search/GardenFH/GardenFilter
 import { SectionText } from '../styles/StyledComponents.js'
 import { Title2 } from "../styles/StyledTypography.js";
 import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH } from "../tools/mdxUtils.js";
-// import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, patternFilePaths, PATTERNS_PATH, } from "../../tools/mdxUtils.js";
 
 
 
@@ -32,17 +31,37 @@ export default function GardenPage( { allPosts } ) {
 }
 
 
+// Fetches the data for the page.
+
 export function getStaticProps() {
 		// Get all essay posts
 		let essays = essayFilePaths.map( ( filePath ) => {
-				const source = fs.readFileSync( path.join( ESSAYS_PATH, filePath ) );
-
-				const { content, data } = matter( source ) || {};
-				const slug = filePath.replace( /\.mdx$/, "" );
-				const { title, description, growthStage, startDate, topics, type, cover, updated, } = data || {};
+				const source            = fs.readFileSync( path.join( ESSAYS_PATH, filePath ) );
+				const { content, data } = matter( source );
+				const slug              = filePath.replace( /\.mdx$/, "" );
+				const {
+						title,
+						description,
+						growthStage,
+						startDate,
+						topics,
+						type,
+						cover,
+						updated,
+				}                 = data;
 
 				return {
-						content, title, cover, description, growthStage, startDate, topics, type, updated, slug, filePath,
+						content,
+						title,
+						cover,
+						description,
+						growthStage,
+						startDate,
+						topics,
+						type,
+						updated,
+						slug,
+						filePath,
 				};
 		} );
 
@@ -50,18 +69,34 @@ export function getStaticProps() {
 		const sortedEssays = essays.sort( ( a, b ) => {
 				return new Date( b.updated ) - new Date( a.updated );
 		} );
-
-		essays = sortedEssays;
+		essays             = sortedEssays;
 
 		// Get all note posts
 		let notes = noteFilePaths.map( ( filePath ) => {
-				const source = fs.readFileSync( path.join( NOTES_PATH, filePath ) );
-				const { content, data } = matter( source ) || {};
-				const slug = filePath.replace( /\.mdx$/, "" );
-				const { title, description, growthStage, startDate, topics, type, updated, } = data || {};
+				const source            = fs.readFileSync( path.join( NOTES_PATH, filePath ) );
+				const { content, data } = matter( source );
+				const slug              = filePath.replace( /\.mdx$/, "" );
+				const {
+						title,
+						description,
+						growthStage,
+						startDate,
+						topics,
+						type,
+						updated,
+				}                 = data;
 
 				return {
-						content, title, description, growthStage, startDate, topics, type, updated, slug, filePath,
+						content,
+						title,
+						description,
+						growthStage,
+						startDate,
+						topics,
+						type,
+						updated,
+						slug,
+						filePath,
 				};
 		} );
 
@@ -69,7 +104,7 @@ export function getStaticProps() {
 		const sortedNotes = notes.sort( ( a, b ) => {
 				return new Date( b.updated ) - new Date( a.updated );
 		} );
-		notes = sortedNotes;
+		notes             = sortedNotes;
 
 		const allPosts = essays.concat( notes );
 

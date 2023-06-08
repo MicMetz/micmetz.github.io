@@ -1,12 +1,12 @@
-import GrowthIcon from "../Icons/GrowthIcon.js";
-import BackHoverLink from "../Links/BackHoverLink.js";
-import BackToTop from "../MDX/BackToTop.js";
-import ProseWrapper from "../MDX/ProseWrapper.js";
-import { AtlasStyledHeaderSection, AtlasStyledMain, AtlasStyledMetadata, AtlasStyledTitleContainer } from "../../styles/StyledPageTemplates/StyledAtlasTemplate.js";
 import { MDXRemote } from "next-mdx-remote";
 import Link from "next/link";
+import { AtlasStyledHeaderSection, AtlasStyledMain, AtlasStyledMetadata, AtlasStyledTitleContainer } from "../../styles/StyledPageTemplates/StyledAtlasTemplate.js";
+import GrowthIcon from "../Icons/GrowthIcon.js";
 import Header from "../Layouts/Header.js";
+import BackHoverLink from "../Links/BackHoverLink.js";
 import Backlinks from "../Links/Backlinks.js";
+import BackToTop from "../MDX/BackToTop.js";
+import ProseWrapper from "../MDX/ProseWrapper.js";
 import Dates from "../MISC/DatesFormat.js";
 import GrowthStage from "../MISC/GrowthStage.js";
 import Topics from "../MISC/Topics.js";
@@ -14,14 +14,7 @@ import { TwitterReply } from "../MISC/TwitterReply.js";
 
 
 
-export default function AtlasTemplate( {
-		source,
-		frontMatter,
-		components,
-		slug,
-		backlinks,
-		ogImage,
-} ) {
+export default function AtlasTemplate( { source, frontMatter, components, slug, backlinks, ogImage } ) {
 		return (
 				<>
 						<Header
@@ -68,9 +61,9 @@ export default function AtlasTemplate( {
 								url = {`https://micmetz.github.io//${slug}/`}
 								title = {frontMatter.title}
 						/>
-						{backlinks && backlinks.length ? (
-								<Backlinks backlinks = {backlinks} />
-						) : null}
+						{/* {backlinks && backlinks.length ? ( */}
+						{/* 		<Backlinks backlinks = {backlinks} /> */}
+						{/* ) : null} */}
 				</>
 		);
 }

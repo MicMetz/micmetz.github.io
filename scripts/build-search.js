@@ -3,15 +3,13 @@ const path = require("path");
 const matter = require("gray-matter");
 const dotenv = require("dotenv");
 const algoliasearch = require("algoliasearch");
-const mdxUtils = require("../utils/mdxUtils");
+const mdxUtils = require("../src/tools/mdxUtils");
 
 const {
   essayFilePaths,
   ESSAYS_PATH,
   noteFilePaths,
   NOTES_PATH,
-  patternFilePaths,
-  PATTERNS_PATH,
 } = mdxUtils;
 
 let essays = essayFilePaths.map((filePath) => {
@@ -40,20 +38,8 @@ let notes = noteFilePaths.map((filePath) => {
   };
 });
 
-let patterns = patternFilePaths.map((filePath) => {
-  const source = fs.readFileSync(path.join(PATTERNS_PATH, filePath));
-  const { content, data } = matter(source);
-  const slug = filePath.replace(/\.mdx?$/, "");
 
-  return {
-    content,
-    data,
-    slug,
-    filePath,
-  };
-});
-
-const posts = [...essays, ...notes, ...patterns];
+const posts = [...essays, ...notes];
 
 function transformPostsToSearchObjects(posts) {
   const transformed = posts.map((post) => {
@@ -77,6 +63,7 @@ function transformPostsToSearchObjects(posts) {
   return transformed;
 }
 
+/*
 (async function () {
   // initialize environment variables
   dotenv.config();
@@ -87,11 +74,11 @@ function transformPostsToSearchObjects(posts) {
     const appID = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID;
     const adminKey = process.env.ALGOLIA_SEARCH_ADMIN_KEY;
 
-    const client = algoliasearch(appID, adminKey);
+    // const client = algoliasearch(appID, adminKey);
 
-    const index = client.initIndex("garden-posts");
+    // const index = client.initIndex("garden-posts");
 
-    const algoliaResponse = await index.saveObjects(searchObjects);
+    // const algoliaResponse = await index.saveObjects(searchObjects);
 
     console.log(
       `🎉 Sucessfully added ${
@@ -106,3 +93,4 @@ function transformPostsToSearchObjects(posts) {
 
   console.log("Search data request has fired!");
 })();
+ */

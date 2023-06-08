@@ -55,7 +55,7 @@ export default function NoteTemplate( { source, frontMatter, components, slug, t
 								url = {`https://micmetz.github.io/${slug}/`}
 								title = {frontMatter.title}
 						/>
-						{backlinks.length ? <Backlinks backlinks = {backlinks} /> : null}
+						{/* {backlinks.length ? <Backlinks backlinks = {backlinks} /> : null} */}
 				</>
 		);
 }

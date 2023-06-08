@@ -1,29 +1,29 @@
+import fs from "fs";
+import matter from "gray-matter";
+import path from "path";
+import React from 'react';
 import Header from "../components/Layouts/Header.js";
 import { Layout } from "../components/Layouts/Layout.js";
 import TitleWithCount from "../components/MISC/TitleWithCount.js";
 import { LaborFiltersAndHits } from "../components/Search/ProjectsFH/ProjectsFiltersAndHits.js";
 import { Title2 } from "../styles/StyledTypography.js";
-import fs from "fs";
-import matter from "gray-matter";
-import path from "path";
-import React from 'react';
 import { projectFilePaths, PROJECTS_PATH } from "../tools/mdxUtils.js";
 
 
 
-export default function ProjectsPage() {
+export default function ProjectsPage(	{ projects } ) {
 
 		return (
 				<>
 						<Header title = "The Projects of Michael Metzger" />
 						<Layout >
 								<header style = {{ marginBottom: "var(--space-xl)" }} >
-										<TitleWithCount posts = {allPosts} >My Projects</TitleWithCount >
+										<TitleWithCount posts = {projects} >My Projects</TitleWithCount >
 										<Title2 >
 												A collection of prior works, and works in progress.
 										</Title2 >
 								</header >
-								<LaborFiltersAndHits allPostData = {allPosts} />
+								<LaborFiltersAndHits allPostData = {projects} />
 						</Layout >
 				</>
 		);
@@ -31,7 +31,6 @@ export default function ProjectsPage() {
 
 
 
-// Fetches the data for the page.
 export function getStaticProps() {
 		// Get all essay posts
 		let projects = projectFilePaths.map( ( filePath ) => {
@@ -39,40 +38,19 @@ export function getStaticProps() {
 				const { content, data } = matter( source );
 				const slug = filePath.replace( /\.mdx$/, "" );
 
-				const {
-						title,
-						description,
-						growthStage,
-						startDate,
-						topics,
-						type,
-						cover,
-						updated,
-				} = data;
-
 				return {
 						content,
-						title,
-						cover,
-						description,
-						growthStage,
-						startDate,
-						topics,
-						type,
-						updated,
+						data,
 						slug,
 						filePath,
 				};
-
 		} );
 
-		// Sort essays by date
-		const sortedprojects = projects.sort( ( a, b ) => {
-				return new Date( b.updated ) - new Date( a.updated );
+		// Sort notes by date
+		const sortedProjects = projects.sort( ( a, b ) => {
+				return new Date( b.data.updated ) - new Date( a.data.updated );
 		} );
-		projects = sortedprojects;
+		projects = sortedProjects;
 
-		const allPosts = projects
-		return { props: { allPosts } };
+		return { props: { projects } };
 }
-

@@ -69,9 +69,9 @@ export default function ResponseTemplate( {
 								url = {`https://micmetz.github.io/${slug}/`}
 								title = {frontMatter.title}
 						/>
-						{backlinks && backlinks.length ? (
-								<Backlinks backlinks = {backlinks} />
-						) : null}
+						{/* {backlinks && backlinks.length ? ( */}
+						{/* 		<Backlinks backlinks = {backlinks} /> */}
+						{/* ) : null} */}
 				</>
 		);
 }

@@ -40,12 +40,11 @@ export default function NotesPage( { notes } ) {
 
 
 export function getStaticProps() {
-
 		// Get all note posts
-		let notes = noteFilePaths.map( ( filePath ) => {
-				const source = fs.readFileSync( path.join( NOTES_PATH, filePath ) );
-				const { content, data } = matter( source );
-				const slug = filePath.replace( /\.mdx$/, "" );
+		let notes = noteFilePaths.map((filePath) => {
+				const source = fs.readFileSync(path.join(NOTES_PATH, filePath));
+				const { content, data } = matter(source);
+				const slug = filePath.replace(/\.mdx$/, "");
 
 				return {
 						content,
@@ -53,13 +52,14 @@ export function getStaticProps() {
 						slug,
 						filePath,
 				};
-		} );
+		});
 
 		// Sort notes by date
-		const sortedNotes = notes.sort( ( a, b ) => {
-				return new Date( b.data.updated ) - new Date( a.data.updated );
-		} );
+		const sortedNotes = notes.sort((a, b) => {
+				return new Date(b.data.updated) - new Date(a.data.updated);
+		});
 		notes = sortedNotes;
 
 		return { props: { notes } };
 }
+
