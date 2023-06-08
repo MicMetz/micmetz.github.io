@@ -1,7 +1,7 @@
 import { ArrowDownIcon, ArrowRightIcon } from "@heroicons/react/20/solid";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
-import useCollapse from "react-collapsed";
+import { useCollapse } from "react-collapsed";
 import styled from "styled-components";
 
 
