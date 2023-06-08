@@ -44,16 +44,7 @@ export function getStaticProps() {
 				const source            = fs.readFileSync( path.join( ESSAYS_PATH, filePath ) );
 				const { content, data } = matter( source );
 				const slug              = filePath.replace( /\.mdx$/, "" );
-				const {
-						title,
-						description,
-						growthStage,
-						startDate,
-						topics,
-						type,
-						cover,
-						updated,
-				}                 = data;
+
 
 				return {
 						content,
