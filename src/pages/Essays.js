@@ -11,7 +11,7 @@ import React from 'react';
 
 
 
-export default function EssaysPage( { essays } ) {
+export default function EssaysPage({ sortedEssays: essays} ) {
 		return (
 				<>
 						<Header title = "Essays of Michael Metzger" />

@@ -9,8 +9,10 @@
 		},
 		"scripts": {
 				"dev": "next dev -p 3001",
-				"next:dev": "next",
-				"build": "npx playwright install && next build && npm run postbuild",
+				"dev:watch": "next-remote-watch ./posts",
+				"build:backlinks": "node ./scripts/post-links",
+				"build:webmentions": "node ./scripts/get-webmentions",
+				"build": "npm run build:backlinks && npx playwright install && next build && npm run postbuild",
 				"postbuild": "node ./scripts/build-search.js",
 				"start": "next start",
 				"deploy": "next build && touch ./out/.nojekyll && git add ./out/ && git commit -m \"Deploy\" && git subtree push --prefix ./out origin gh-pages"

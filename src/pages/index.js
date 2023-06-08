@@ -302,8 +302,8 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 												animate = "visible"
 										>
 												<section style = {{ gridArea: "technology" }} >
-														<Link href = "/Projects/technology" >
-																<a href = "/Projects/technology" >
+														<Link href = "/Technology" >
+																<a href = "Technology" >
 																		<SectionHeader >
 																				Technology
 																				<ArrowRightIcon width = "18" height = "18" />
@@ -334,7 +334,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 												</section >
 
 												<section style = {{ gridArea: "atlas", marginLeft: "2.4rem" }} >
-														<Link href = "/Projects/Atlas" >
+														<Link href = "/Atlas" >
 																<a >
 																		{/* <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} > */}
 																		<SectionHeader >

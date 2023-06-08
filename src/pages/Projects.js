@@ -1,13 +1,13 @@
-import Header from "../../components/Layouts/Header.js";
-import { Layout } from "../../components/Layouts/Layout.js";
-import TitleWithCount from "../../components/MISC/TitleWithCount.js";
-import { LaborFiltersAndHits } from "../../components/Search/ProjectsFH/ProjectsFiltersAndHits.js";
-import { Title2 } from "../../styles/StyledTypography.js";
+import Header from "../components/Layouts/Header.js";
+import { Layout } from "../components/Layouts/Layout.js";
+import TitleWithCount from "../components/MISC/TitleWithCount.js";
+import { LaborFiltersAndHits } from "../components/Search/ProjectsFH/ProjectsFiltersAndHits.js";
+import { Title2 } from "../styles/StyledTypography.js";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import React from 'react';
-import { projectFilePaths, PROJECTS_PATH } from "../../tools/mdxUtils.js";
+import { projectFilePaths, PROJECTS_PATH } from "../tools/mdxUtils.js";
 
 
 

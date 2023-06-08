@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
-import { Layout } from '../../components/Layouts/Layout.js'
-import { Img, Section, SectionText, SectionTitle } from '../../styles/StyledComponents.js'
+import { Layout } from '../components/Layouts/Layout.js'
+import { Img, Section, SectionText, SectionTitle } from '../styles/StyledComponents.js'
 
 
 
@@ -96,7 +96,7 @@ export default function AboutPage() {
 																<br />
 																<p >
 																		Check out what I've been working on in my <Link
-																		href = "/Projects"
+																		href = "/src/pages/Projects"
 																>projects</Link > archive.
 																</p >
 

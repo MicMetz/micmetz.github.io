@@ -1,4 +1,4 @@
-import Footer from "../components/Footer/Footer.js";
+import Footer from "../components/Layouts/Footer.js";
 import Navigation from "../components/Navigation/Navigation.js";
 
 import React from "react";
