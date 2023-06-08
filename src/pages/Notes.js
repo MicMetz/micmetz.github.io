@@ -12,7 +12,7 @@ import { noteFilePaths, NOTES_PATH } from "../tools/mdxUtils.js";
 
 
 
-export default function NotesPage( { props: notes } ) {
+export default function NotesPage( { notes } ) {
 		return (
 				<>
 						<Header title = "Notes of Michael Metzger" />
@@ -21,15 +21,15 @@ export default function NotesPage( { props: notes } ) {
 										<TitleWithCount posts = {notes} >Notes</TitleWithCount >
 								</header >
 								<NotesGrid >
-										{notes.map( ( note, i ) => (
+										{notes.map( ( value, i ) => (
 												<NoteCard
 														key = {i}
-														id = {note.slug}
-														slug = {note.slug}
-														cover = {note.data.cover}
-														title = {note.data.title}
-														growthStage = {note.data.growthStage}
-														date = {note.data.updated}
+														id = {value.slug}
+														slug = {value.slug}
+														cover = {value.data.cover}
+														title = {value.data.title}
+														growthStage = {value.data.growthStage}
+														date = {value.data.updated}
 												/>
 										) )}
 								</NotesGrid >
