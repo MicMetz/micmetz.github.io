@@ -23,15 +23,13 @@ export default function NotesPage( { notes } ) {
 								<MasonryGrid >
 										{notes.map( ( essay, i ) => (
 												<NoteCard
-														key = {i}
-														id = {essay.slug}
-														slug = {essay.slug}
-														cover = {essay.data.cover}
-														title = {essay.data.title}
-														growthStage = {essay.data.growthStage}
-														date = {essay.data.updated}
+														id={note.slug}
+														slug={note.slug}
+														title={note.data.title}
+														growthStage={note.data.growthStage}
+														date={note.data.updated}
 												/>
-										) )}
+										))}
 								</MasonryGrid >
 						</Layout >
 				</>

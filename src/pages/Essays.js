@@ -19,18 +19,18 @@ export default function EssaysPage({ essays } ) {
 								<header style = {{ marginBottom: "var(--space-xl)" }} >
 										<TitleWithCount posts = {essays} >Essays</TitleWithCount >
 								</header >
-								<MasonryGrid >
-										{essays.map( ( essay, i ) => (
+								<MasonryGrid>
+										{essays.map((essay, i) => (
 												<EssayCard
-														key = {i}
-														id = {essay.slug}
-														slug = {essay.slug}
-														cover = {essay.data.cover}
-														title = {essay.data.title}
-														growthStage = {essay.data.growthStage}
-														date = {essay.data.updated}
+														key={i}
+														id={essay.slug}
+														slug={essay.slug}
+														cover={essay.data.cover}
+														title={essay.data.title}
+														growthStage={essay.data.growthStage}
+														date={essay.data.updated}
 												/>
-										) )}
+										))}
 								</MasonryGrid >
 						</Layout >
 				</>
