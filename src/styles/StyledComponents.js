@@ -1,4 +1,3 @@
-// noinspection CssUnknownProperty
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -8,7 +7,7 @@ import styled from 'styled-components'
 
 export const StyledLayout = styled( motion.main )`
   max-width: 1400px;
-  margin: var(--space-l) auto var(--space-128);
+  margin: var(--space-l) var(--space-l)	var(--space-128);
   padding: 0 var(--space-l);
 
 
@@ -128,6 +127,29 @@ export const Section = styled.section`
     flex-direction: column;
   }
 `
+
+
+export const LeftSection = styled.div`
+  max-width: calc(100% - 100px);
+  height: fit-content;
+
+
+  @media ${( props ) => props.theme.breakpoints.sm} {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+  }
+  @media ${( props ) => props.theme.breakpoints.md} {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+  }
+`;
+
 
 export const SectionTitle = styled.h2`
   font-weight: 800;

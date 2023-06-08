@@ -4,9 +4,13 @@ import styled from "styled-components";
 
 
 
-export const ArchiveSection = styled( motion.section )`
-  margin: 0 0 10vh 0;
+export const GardenSection = styled( motion.section )`
+  margin: 0 0 5vh 0;
+		height: fit-content;
+		width: 100%;
   display: grid;
+		//justify-content: center;
+  justify-content: space-between;
   grid-gap: var(--space-lg);
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
@@ -37,10 +41,16 @@ export const ArchiveSection = styled( motion.section )`
 
 
 export const ProjectsSection = styled( motion.section )`
-  margin: 0 0 10vh 0;
+  margin: 0 0 5vh 0;
+  height: fit-content;
+  width: 100%;
   display: grid;
-  grid-gap: var(--space-lg);
+		
+		align-items: center;
+		//align-content: center;
+  justify-content: center;
 
+  grid-gap: var(--space-lg);
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-row-gap: 5%;
