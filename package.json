@@ -59,7 +59,7 @@
 				"react-twitter-embed": "^4.0.4",
 				"react-use-clipboard": "^1.0.7",
 				"rehype-autolink-headings": "^5",
-				"rehype-slug": "^4",
+				"rehype-slug": "^4.0.1",
 				"styled-components": "^5.3.5",
 				"styled-normalize": "^8.0.7",
 				"webpack": "^5.86.0"
