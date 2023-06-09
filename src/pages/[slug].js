@@ -27,330 +27,176 @@ export const components = {
   // It also works with dynamically-imported components, which is especially
   // useful for conditionally components for certain routes.
   // See the notes in README.md for more details.
-  h1: ( props ) => (
-    <a href = {`#${props.id}`}>
-      <Title1 {...props} />
-    </a >
-  ),
+  h1: ( props ) => ( <a href = {`#${props.id}`}>
+    <Title1 {...props} />
+  </a > ),
 
-  h2: ( props ) => (
-    <a href = {`#${props.id}`}>
-      <Title2 {...props} />
-    </a >
-  ),
+  h2: ( props ) => ( <a href = {`#${props.id}`}>
+    <Title2 {...props} />
+  </a > ),
 
-  h3                 : Title3,
-  h4                 : Title4,
-  SmallCaps          : SmallCaps,
-  InternalTooltipLink: InternalTooltipLink,
-  Tween              : Tween,
-  Timeline           : Timeline,
-  AssumedAudience    : AssumedAudience,
-  Disclaimer         : Disclaimer,
-  PlayState          : PlayState,
-  Spacer             : Spacer,
-  Controls           : Controls,
-  EditRed            : EditRed,
-  ButtonLink         : dynamic( () => import("../components/Links/ButtonLink") ),
-  Podcastiframe      : dynamic( () => import("../components/MDX/Podcastiframe"), {
+  h3                      : Title3, h4: Title4, SmallCaps: SmallCaps, InternalTooltipLink: InternalTooltipLink, Tween: Tween, Timeline: Timeline, AssumedAudience: AssumedAudience,
+  Disclaimer              : Disclaimer, PlayState: PlayState, Spacer: Spacer, Controls: Controls, EditRed: EditRed, ButtonLink: dynamic( () => import("../components/Links/ButtonLink") ),
+  Podcastiframe           : dynamic( () => import("../components/MDX/Podcastiframe"), {
     ssr: false,
-  } ),
-  BlockquoteCitation : dynamic( () =>
-    import("../components/MDX/BlockquoteCitation")
-  ),
-  Subtext            : Subtext,
-  Accordion          : dynamic( () => import("../components/MDX/Accordion") ),
-  Footnote           : dynamic( () => import("../components/MDX/Footnote"), {
+  } ), BlockquoteCitation : dynamic( () => import("../components/MDX/BlockquoteCitation") ), Subtext: Subtext, Accordion: dynamic( () => import("../components/MDX/Accordion") ),
+  Footnote                : dynamic( () => import("../components/MDX/Footnote"), {
     ssr: false,
-  } ),
-  img                : dynamic( () => import("../components/MDX/Img"), {
+  } ), img                : dynamic( () => import("../components/MDX/Img"), {
     ssr: false,
-  } ),
-  NextImage          : dynamic( () => import("../components/MDX/NextImage"), {
+  } ), NextImage          : dynamic( () => import("../components/MDX/NextImage"), {
     ssr: false,
-  } ),
-  Alert              : dynamic( () => import("../components/MDX/Alert"), {
+  } ), Alert              : dynamic( () => import("../components/MDX/Alert"), {
     ssr: false,
-  } ),
-  ResourceBook       : dynamic( () => import("../components/MDX/ResourceBook"), {
+  } ), ResourceBook       : dynamic( () => import("../components/MDX/ResourceBook"), {
     ssr: false,
-  } ),
-  Video              : dynamic( () => import("../components/MDX/Video"), {
+  } ), Video              : dynamic( () => import("../components/MDX/Video"), {
     ssr: false,
-  } ),
-  ReferencesLink     : dynamic( () => import("../components/MDX/ReferencesLink"), {
+  } ), ReferencesLink     : dynamic( () => import("../components/MDX/ReferencesLink"), {
     ssr: false,
-  } ),
-  a                  : dynamic( () => import("../components/Links/TooltipLink"), {
+  } ), a                  : dynamic( () => import("../components/Links/TooltipLink"), {
     ssr: false,
-  } ),
-  pre                : dynamic( () => import("../components/MDX/CodeBlock"), {
+  } ), pre                : dynamic( () => import("../components/MDX/CodeBlock"), {
     ssr: false,
-  } ),
-  Center             : dynamic( () => import("../components/MDX/Center"), {
+  } ), Center             : dynamic( () => import("../components/MDX/Center"), {
     ssr: false,
-  } ),
-  BasicImage         : dynamic( () => import("../components/MDX/BasicImage"), {
+  } ), BasicImage         : dynamic( () => import("../components/MDX/BasicImage"), {
     ssr: false,
-  } ),
-  ResponsiveImage    : dynamic( () => import("../components/MDX/ResponsiveImage"), {
+  } ), ResponsiveImage    : dynamic( () => import("../components/MDX/ResponsiveImage"), {
     ssr: false,
-  } ),
-  ImageFrame         : dynamic( () => import("../components/MDX/ImageFrame"), {
+  } ), ImageFrame         : dynamic( () => import("../components/MDX/ImageFrame"), {
     ssr: false,
-  } ),
-  ComingSoon         : dynamic( () => import("../components/MDX/ComingSoon"), {
+  } ), ComingSoon         : dynamic( () => import("../components/MDX/ComingSoon"), {
     ssr: false,
-  } ),
-  References         : dynamic( () => import("../components/MDX/References"), {
+  } ), References         : dynamic( () => import("../components/MDX/References"), {
     ssr: false,
-  } ),
-  Draft              : dynamic( () => import("../components/MDX/Draft"), {
+  } ), Draft              : dynamic( () => import("../components/MDX/Draft"), {
     ssr: false,
-  } ),
-  TwoColumn          : dynamic( () => import("../components/MDX/TwoColumn"), {
+  } ), TwoColumn          : dynamic( () => import("../components/MDX/TwoColumn"), {
     ssr: false,
-  } ),
-  ThreeColumn        : dynamic( () => import("../components/MDX/ThreeColumn"), {
+  } ), ThreeColumn        : dynamic( () => import("../components/MDX/ThreeColumn"), {
     ssr: false,
-  } ),
-  TweetEmbed         : dynamic( () => import("../components/MDX/TweetEmbed"), {
-    ssr    : false,
-    loading: () => <div >Loading...</div >,
-  } ),
-  IntroParagraph     : dynamic( () => import("../components/MDX/IntroParagraph"), {
+  } ), TweetEmbed         : dynamic( () => import("../components/MDX/TweetEmbed"), {
+    ssr: false, loading: () => <div >Loading...</div >,
+  } ), IntroParagraph     : dynamic( () => import("../components/MDX/IntroParagraph"), {
     ssr: false,
-  } ),
-  SimpleCard         : dynamic( () => import("../components/MDX/SimpleCard"), {
+  } ), SimpleCard         : dynamic( () => import("../components/MDX/SimpleCard"), {
     ssr: false,
-  } ),
-  LinkCard           : dynamic( () => import("../components/MDX/LinkCard"), {
+  } ), LinkCard           : dynamic( () => import("../components/MDX/LinkCard"), {
     ssr: false,
-  } ),
-  ImageLink          : dynamic( () => import("../components/Links/ImageLink"), {
+  } ), ImageLink          : dynamic( () => import("../components/Links/ImageLink"), {
     ssr: false,
-  } ),
-  FullWidthBackground: dynamic(
-    () => import("../components/MDX/FullWidthBackground"),
-    {
-      ssr: false,
-    }
-  ),
-  FullWidthSection   : dynamic(
-    () => import("../components/MDX/FullWidthSection"),
-    {
-      ssr: false,
-    }
-  ),
-  NowSection         : dynamic( () => import("../components/MDX/NowSection"), {
+  } ), FullWidthBackground: dynamic( () => import("../components/MDX/FullWidthBackground"), {
     ssr: false,
-  } ),
-  TalkSlide          : dynamic( () => import("../components/MDX/TalkSlide"), {
+  } ), FullWidthSection   : dynamic( () => import("../components/MDX/FullWidthSection"), {
     ssr: false,
-  } ),
-  ListNumber         : dynamic( () => import("../components/MDX/ListNumber"), {
+  } ), NowSection         : dynamic( () => import("../components/MDX/NowSection"), {
+    ssr: false,
+  } ), TalkSlide          : dynamic( () => import("../components/MDX/TalkSlide"), {
+    ssr: false,
+  } ), ListNumber         : dynamic( () => import("../components/MDX/ListNumber"), {
     ssr: false,
   } ),
 
   // Unique components – used in specific essays or notes
-  StickyPosition         : dynamic(
-    () => import("../components/Unique/css-position/StickyPosition"),
-    {
-      ssr: false,
-    }
-  ),
-  RelativeCSSPosition    : dynamic(
-    () => import("../components/Unique/css-position/RelativeCSSPosition"),
-    {
-      ssr: false,
-    }
-  ),
-  AbsoluteCSSPosition    : dynamic(
-    () => import("../components/Unique/css-position/AbsoluteCSSPosition"),
-    {
-      ssr: false,
-    }
-  ),
-  FixedCSSPosition       : dynamic(
-    () => import("../components/Unique/css-position/FixedCSSPosition"),
-    {
-      ssr: false,
-    }
-  ),
-  StaticCSSPosition      : dynamic(
-    () => import("../components/Unique/css-position/StaticCSSPosition"),
-    {
-      ssr: false,
-    }
-  ),
-  MysteriousVoid         : dynamic( () => import("../components/Unique/MysteriousVoid"), {
+  StickyPosition              : dynamic( () => import("../components/Unique/css-position/StickyPosition"), {
     ssr: false,
-  } ),
-  ScrollingImages        : dynamic(
-    () => import("../components/Unique/ScrollingImages"),
-    {
-      ssr: false,
-    }
-  ),
-  GsapScroller           : dynamic(
-    () => import("../components/Unique/gsap-basics/GsapScroller"),
-    {
-      ssr: false,
-    }
-  ),
-  TweenRedBigBox         : dynamic(
-    () => import("../components/Unique/gsap-basics/TweenRedBigBox"),
-    {
-      ssr: false,
-    }
-  ),
-  TweenSpinningBox       : dynamic(
-    () => import("../components/Unique/gsap-basics/TweenSpinningBox"),
-    {
-      ssr: false,
-    }
-  ),
-  TweenReverseSpinningBox: dynamic(
-    () => import("../components/Unique/gsap-basics/TweenReverseSpinningBox"),
-    {
-      ssr: false,
-    }
-  ),
-  TweenBlueRedBox        : dynamic(
-    () => import("../components/Unique/gsap-basics/TweenBlueRedBox"),
-    {
-      ssr: false,
-    }
-  ),
-  MultipartIntro         : dynamic( () => import("../components/Unique/MultipartIntro"), {
+  } ), RelativeCSSPosition    : dynamic( () => import("../components/Unique/css-position/RelativeCSSPosition"), {
     ssr: false,
-  } ),
-  InvisiblesFeature      : dynamic(
-    () => import("../components/Unique/InvisiblesFeature"),
-    {
-      ssr: false,
-    }
-  ),
-  HackyFormatting        : dynamic(
-    () => import("../components/Unique/HackyFormatting"),
-    {
-      ssr: false,
-    }
-  ),
-  MediumMaterialsMeat    : dynamic(
-    () => import("../components/Unique/MediumMaterialsMeat"),
-    {
-      ssr: false,
-    }
-  ),
-  Tools                  : dynamic( () => import("../components/Unique/apps/Tools"), {
+  } ), AbsoluteCSSPosition    : dynamic( () => import("../components/Unique/css-position/AbsoluteCSSPosition"), {
     ssr: false,
-  } ),
-  Hardware               : dynamic( () => import("../components/Unique/apps/Hardware"), {
+  } ), FixedCSSPosition       : dynamic( () => import("../components/Unique/css-position/FixedCSSPosition"), {
     ssr: false,
-  } ),
-  TextvBlocks            : dynamic(
-    () => import("../components/Unique/blocks/TextvBlocks"),
-    {
-      ssr: false,
-    }
-  ),
-  DemoBlock1             : dynamic( () => import("../components/Unique/blocks/DemoBlock1"), {
+  } ), StaticCSSPosition      : dynamic( () => import("../components/Unique/css-position/StaticCSSPosition"), {
     ssr: false,
-  } ),
-  DemoBlock2             : dynamic( () => import("../components/Unique/blocks/DemoBlock2"), {
+  } ), MysteriousVoid         : dynamic( () => import("../components/Unique/MysteriousVoid"), {
     ssr: false,
-  } ),
-  DemoBlock3             : dynamic( () => import("../components/Unique/blocks/DemoBlock3"), {
+  } ), ScrollingImages        : dynamic( () => import("../components/Unique/ScrollingImages"), {
     ssr: false,
-  } ),
-  DemoBlock4             : dynamic( () => import("../components/Unique/blocks/DemoBlock4"), {
+  } ), GsapScroller           : dynamic( () => import("../components/Unique/gsap-basics/GsapScroller"), {
     ssr: false,
-  } ),
-  LinearChars            : dynamic(
-    () => import("../components/Unique/blocks/LinearChars"),
-    {
-      ssr: false,
-    }
-  ),
-  Blocktimeline          : dynamic(
-    () => import("../components/Unique/blocks/Blocktimeline"),
-    {
-      ssr: false,
-    }
-  ),
-  BlockAges              : dynamic( () => import("../components/Unique/blocks/BlockAges"), {
+  } ), TweenRedBigBox         : dynamic( () => import("../components/Unique/gsap-basics/TweenRedBigBox"), {
     ssr: false,
-  } ),
-  BlockLogos             : dynamic( () => import("../components/Unique/blocks/BlockLogos"), {
+  } ), TweenSpinningBox       : dynamic( () => import("../components/Unique/gsap-basics/TweenSpinningBox"), {
     ssr: false,
-  } ),
-  TodoApp                : dynamic(
-    () => import("../components/Unique/direct-manipulation/TodoApp"),
-    {
-      ssr: false,
-    }
-  ),
-  DetatchedTodoApp       : dynamic(
-    () => import("../components/Unique/direct-manipulation/DetatchedTodoApp"),
-    {
-      ssr: false,
-    }
-  ),
-  NoteAction             : dynamic(
-    () => import("../components/Unique/programmatic-notes/NoteAction"),
-    {
-      ssr: false,
-    }
-  ),
-  NoteTrigger            : dynamic(
-    () => import("../components/Unique/programmatic-notes/NoteTrigger"),
-    {
-      ssr: false,
-    }
-  ),
-  AIConversation         : dynamic( () => import("../components/Unique/AIConversation"), {
+  } ), TweenReverseSpinningBox: dynamic( () => import("../components/Unique/gsap-basics/TweenReverseSpinningBox"), {
+    ssr: false,
+  } ), TweenBlueRedBox        : dynamic( () => import("../components/Unique/gsap-basics/TweenBlueRedBox"), {
+    ssr: false,
+  } ), MultipartIntro         : dynamic( () => import("../components/Unique/MultipartIntro"), {
+    ssr: false,
+  } ), InvisiblesFeature      : dynamic( () => import("../components/Unique/InvisiblesFeature"), {
+    ssr: false,
+  } ), HackyFormatting        : dynamic( () => import("../components/Unique/HackyFormatting"), {
+    ssr: false,
+  } ), MediumMaterialsMeat    : dynamic( () => import("../components/Unique/MediumMaterialsMeat"), {
+    ssr: false,
+  } ), Tools                  : dynamic( () => import("../components/Unique/apps/Tools"), {
+    ssr: false,
+  } ), Hardware               : dynamic( () => import("../components/Unique/apps/Hardware"), {
+    ssr: false,
+  } ), TextvBlocks            : dynamic( () => import("../components/Unique/blocks/TextvBlocks"), {
+    ssr: false,
+  } ), DemoBlock1             : dynamic( () => import("../components/Unique/blocks/DemoBlock1"), {
+    ssr: false,
+  } ), DemoBlock2             : dynamic( () => import("../components/Unique/blocks/DemoBlock2"), {
+    ssr: false,
+  } ), DemoBlock3             : dynamic( () => import("../components/Unique/blocks/DemoBlock3"), {
+    ssr: false,
+  } ), DemoBlock4             : dynamic( () => import("../components/Unique/blocks/DemoBlock4"), {
+    ssr: false,
+  } ), LinearChars            : dynamic( () => import("../components/Unique/blocks/LinearChars"), {
+    ssr: false,
+  } ), Blocktimeline          : dynamic( () => import("../components/Unique/blocks/Blocktimeline"), {
+    ssr: false,
+  } ), BlockAges              : dynamic( () => import("../components/Unique/blocks/BlockAges"), {
+    ssr: false,
+  } ), BlockLogos             : dynamic( () => import("../components/Unique/blocks/BlockLogos"), {
+    ssr: false,
+  } ), TodoApp                : dynamic( () => import("../components/Unique/direct-manipulation/TodoApp"), {
+    ssr: false,
+  } ), DetatchedTodoApp       : dynamic( () => import("../components/Unique/direct-manipulation/DetatchedTodoApp"), {
+    ssr: false,
+  } ), NoteAction             : dynamic( () => import("../components/Unique/programmatic-notes/NoteAction"), {
+    ssr: false,
+  } ), NoteTrigger            : dynamic( () => import("../components/Unique/programmatic-notes/NoteTrigger"), {
+    ssr: false,
+  } ), AIConversation         : dynamic( () => import("../components/Unique/AIConversation"), {
     ssr: false,
   } ),
 };
 
 export default function PostPage( { source, frontMatter, slug, headings, backlinks, toc, ogImage, } ) {
   if ( frontMatter.type === "note" ) {
-    return (
-      <NoteTemplate
-        slug = {slug}
-        source = {source}
-        toc = {toc}
-        frontMatter = {frontMatter}
-        components = {components}
-        backlinks = {backlinks}
-        headings = {headings}
-        ogImage = {ogImage}
-      />
-    );
+    return ( <NoteTemplate
+      slug = {slug}
+      source = {source}
+      toc = {toc}
+      frontMatter = {frontMatter}
+      components = {components}
+      backlinks = {backlinks}
+      headings = {headings}
+      ogImage = {ogImage}
+    /> );
   } else if ( frontMatter.type === "essay" ) {
-    return (
-      <EssayTemplate
-        slug = {slug}
-        source = {source}
-        toc = {toc}
-        frontMatter = {frontMatter}
-        components = {components}
-        backlinks = {backlinks}
-        headings = {headings}
-        ogImage = {ogImage}
-      />
-    );
+    return ( <EssayTemplate
+      slug = {slug}
+      source = {source}
+      toc = {toc}
+      frontMatter = {frontMatter}
+      components = {components}
+      backlinks = {backlinks}
+      headings = {headings}
+      ogImage = {ogImage}
+    /> );
   } else if ( frontMatter.type === "project" ) {
-    return (
-      <ProjectTemplate
-        slug = {slug}
-        source = {source}
-        frontMatter = {frontMatter}
-        components = {components}
-        ogImage = {ogImage}
-      />
-    );
+    return ( <ProjectTemplate
+      slug = {slug}
+      source = {source}
+      frontMatter = {frontMatter}
+      components = {components}
+      ogImage = {ogImage}
+    /> );
   }
 }
 
@@ -402,11 +248,7 @@ export const getStaticProps = async ( { params } ) => {
   const headings = await getHeadings( content );
 
   const ogObject = {
-    title      : data.title,
-    subtitle   : data.description,
-    postType   : data.type,
-    growthStage: data.growthStage,
-    cover      : data.cover,
+    title: data.title, subtitle: data.description, postType: data.type, growthStage: data.growthStage, cover: data.cover,
   };
   const ogImagePath = getOgImagePath( ogObject );
   const ogImage = await getOriginalImage( ogImagePath, data.title );
@@ -416,13 +258,10 @@ export const getStaticProps = async ( { params } ) => {
   const mdxSource = await serialize( contentWithBidirectionalLinks, {
     // Optionally pass remark/rehype plugins
     mdxOptions: {
-      remarkPlugins: [],
-      rehypePlugins: [
-        require( "rehype-slug" ),
-        require( "rehype-autolink-headings" ),
+      remarkPlugins: [], rehypePlugins: [
+        require( "rehype-slug" ), require( "rehype-autolink-headings" ),
       ],
-    },
-    scope     : data,
+    }, scope  : data,
   } );
   //
   // Get backlinks
@@ -431,12 +270,7 @@ export const getStaticProps = async ( { params } ) => {
 
   return {
     props: {
-      source     : mdxSource,
-      frontMatter: data,
-      headings,
-      slug       : params.slug,
-      toc,
-      // backlinks,
+      source: mdxSource, frontMatter: data, headings, slug: params.slug, toc, // backlinks,
       ogImage,
     },
   };
@@ -444,11 +278,10 @@ export const getStaticProps = async ( { params } ) => {
 
 export const getStaticPaths = async () => {
   // Get slugs for all file paths passed in
-  const getSlugParams = ( filePaths ) =>
-    filePaths
-    // Remove the .MDX extension
-    .map( ( path ) => path.replace( /\.mdx?$/, "" ) )
-    .map( ( slug ) => ( { params: { slug } } ) );
+  const getSlugParams = ( filePaths ) => filePaths
+  // Remove the .MDX extension
+  .map( ( path ) => path.replace( /\.mdx?$/, "" ) )
+  .map( ( slug ) => ( { params: { slug } } ) );
 
   const notePaths = getSlugParams( noteFilePaths );
   const essayPaths = getSlugParams( essayFilePaths );
@@ -458,7 +291,6 @@ export const getStaticPaths = async () => {
   const paths = notePaths.concat( essayPaths, projectPaths, notePaths );
 
   return {
-    paths,
-    fallback: false,
+    paths, fallback: false,
   };
 };
