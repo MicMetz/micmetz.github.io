@@ -11,6 +11,7 @@ import EditRed from "../components/MDX/EditRed.js";
 import { Spacer } from "../components/MISC/Spacer.js";
 import EssayTemplate from "../components/PageTemplates/EssayTemplate.js";
 import NoteTemplate from "../components/PageTemplates/NoteTemplate.js";
+import ProjectTemplate from "../components/PageTemplates/ProjectTemplate.js";
 import { SmallCaps, Subtext, Title1, Title2, Title3, Title4, } from "../styles/StyledTypography.js";
 import { getHeadings } from "../tools/getHeadings.js";
 import getOriginalImage from "../tools/getOriginalImage.js";
