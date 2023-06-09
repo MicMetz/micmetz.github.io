@@ -1,10 +1,11 @@
-import Link from 'next/link'
+import CoverImage from "/public/images/photography/QuietWeek.jpg"
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import { Layout } from '../components/Layouts/Layout.js'
 import { Spacer } from "../components/MISC/Spacer.js";
-import { Img, Section, SectionText, SectionTitle } from '../styles/StyledComponents.js'
-import CoverImage from "/public/images/photography/QuietWeek.jpg"
+import { Section, SectionText, SectionTitle } from '../styles/StyledComponents.js'
+
 
 
 export default function AboutPage() {
@@ -14,11 +15,11 @@ export default function AboutPage() {
       <Section nopadding id = "AboutPage">
 
         <Section row nopadding>
-          <Image src = {CoverImage} alt = "Quiet Week" />
+          <Image src = {CoverImage} alt = "Quiet Week"/>
         </Section >
 
         <Section row nopadding>
-          <SectionTitle main>WhoAmI</SectionTitle >
+          <SectionTitle main>Who Am I</SectionTitle >
         </Section >
 
         <Spacer size = "large"/>
@@ -59,7 +60,7 @@ export default function AboutPage() {
         {/* <Spacer size = "medium"/> */}
 
         <Section row nopadding>
-          <SectionTitle >what I do.</SectionTitle >
+          <SectionTitle >What Do I Do?</SectionTitle >
         </Section >
 
         <Spacer size = "large"/>
