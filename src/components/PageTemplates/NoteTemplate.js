@@ -56,7 +56,7 @@ export default function NoteTemplate( { source, frontMatter, components, slug, t
 								title = {frontMatter.title}
 						/>
 
-      {backlinks.length ? <Backlinks backlinks = {backlinks} /> : null}
+      {/* {backlinks.length ? <Backlinks backlinks = {backlinks} /> : null} */}
 				</>
 		);
 }
