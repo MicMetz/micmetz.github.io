@@ -5,7 +5,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
 import styled from "styled-components";
 import { Layout } from "../../components/Layouts/Layout.js";
-import ProseWrapper from "../../components/mdx/ProseWrapper.js";
+import ProseWrapper from "../../components/MDX/ProseWrapper.js";
 import { Title1, Title2 } from "../../styles/StyledTypography.js";
 import { components } from "../[slug].js";
 
@@ -51,7 +51,7 @@ const MainSection = styled.section`
 
 export const getStaticProps = async () => {
   //get the source code of the index.mdx file
-  const nowFilePath = path.join( process.cwd(), "pages", "now", "now.mdx" );
+  const nowFilePath = path.join( process.cwd(), "src", "pages", "Now", "now.mdx" );
   const source = fs.readFileSync( nowFilePath );
   const { content, data } = matter( source );
   const mdxSource = await serialize( content, {
