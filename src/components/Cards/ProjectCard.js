@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function ProjectCard( { slug, cover, title, date, topics } ) {
 		function formattedDate( date ) {
-				return new Date( date ).toLocaleDateString( "en-GB", {
+				return new Date( date ).toLocaleDateString( "en", {
 						year : "numeric",
 						month: "long",
 				} );
