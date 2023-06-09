@@ -19,7 +19,7 @@ const handleSize = ( size ) => {
 				case "3xlarge":
 						return "var(--space-3xl)";
 				default:
-						return "var(--space-l)";
+						return "var(--space-m)";
 		}
 };
 

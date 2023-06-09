@@ -85,9 +85,9 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             <LeftSection >
               <SectionTitle main>
                 Hi.
-                <br />
+                <Spacer />
                 My name is
-                <br />
+                <Spacer />
                 Michael.
               </SectionTitle >
             </LeftSection >
@@ -96,8 +96,8 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               As of right now, I'm studying computer science at the University of Colorado at Boulder (CU Boulder).
               Before, and not too long ago, I was studying Sociology and Information Science focused student at
               multiple New York universities over a few years.
-              <br />
-              <br />
+              <Spacer />
+              <Spacer />
               <SmallTitle2
                 initial = {{ opacity: 0, x: -50 }}
                 animate = {{ opacity: 1, x: 0 }}
@@ -127,7 +127,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
           </Title2 >
           <Subheader >
             A collection of essays, notes, and responses to readings.{' '}
-            <br />
+            <Spacer />
             <ReadmoreLink href = "/Garden">
               Learn more
               <ArrowRightIcon width = "18" height = "18"/>

@@ -50,33 +50,40 @@ export default function AboutPage() {
         <Section row>
           <video autoPlay loop muted playsInline controls style = {{ width: '100%' }}>
             <source
-              src = "https://raw.githubusercontent.com/MicMetz/micmetz.github.io/master/public/video/troisjs.mp4"
+              src = "/video/troisjs.mp4"
               type = "video/mp4"
             />
           </video >
         </Section >
+
+        {/* <Spacer size = "medium"/> */}
+
         <Section row nopadding>
           <SectionTitle >what I do.</SectionTitle >
         </Section >
 
+        <Spacer size = "large"/>
+
         <Section row>
           <SectionText >
             <SectionTitle >Computer graphics</SectionTitle >
-            <br />
+            <Spacer />
             For about a year now, I've been developing a steady addiction to 3D graphics, and game
             development.
-            <br />
+            <Spacer />
             So far I've explored a few different libraries, and frameworks. And I've used almost
             every single one of the most popular engines from Unity and Unreal, to Godot and
-            Lumberyard. But so far, I've found that the best fit for me has been
-            <Link href = "https://threejs.org/">THREE.js</Link >, the
-            <Link href = "https://www.babylonjs.com/">BabylonJS</Link >
+            Lumberyard. But so far, I've found that the best fit for me has been{' '}
+            <Link href = "https://threejs.org/">THREE.js</Link >,{' '}
+            the{' '}
+            <Link href = "https://www.babylonjs.com/">BabylonJS</Link >{' '}
             framework, and a focus on web
             development.
-            <br />
-            Check out what I've been working on in my
-            <Link href = "/src/pages/Projects">projects</Link > archive.
-            <br />
+            <Spacer />
+            Check out what I've been working on in my{' '}
+            <Link href = "/src/pages/Projects">projects</Link >{' '}
+            archive.
+            <Spacer />
           </SectionText >
         </Section >
 
