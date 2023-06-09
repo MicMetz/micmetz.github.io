@@ -6,7 +6,6 @@
 
 import Link from 'next/link'
 import React, { useEffect } from 'react'
-import { TiChartPie } from 'react-icons/ti'
 import SearchBarAndResults from "../Search/SearchBarAndResults.js";
 import MainNavLinks from "./MainNavLinks.js";
 import MobileMenu from "./MobileMenu.js";
@@ -52,7 +51,7 @@ export default function Navigation() {
 				>
 						<Link href = "/" >
 								<a aria-label = "Home" style = {{ display: 'flex', alignItems: 'center', color: 'rgba(0, 0, 0, 0.75)' }} >
-										<TiChartPie size = "3em" />
+										<img src = "/icons/logo-hook.svg" width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" xmlns = "http://www.w3.org/2000/svg" />
 										<span className = "" >Michael Metzger</span >
 								</a >
 						</Link >
