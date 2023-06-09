@@ -50,7 +50,7 @@ export default function Navigation() {
 				>
 						<Link href = "/" >
 								<a aria-label = "Home" style = {{ display: 'flex', alignItems: 'center', color: 'rgba(0, 0, 0, 0.75)' }} >
-										<img src = "/icons/logo-hook.svg" width = "24" height = "24" xmlns = "http://www.w3.org/2000/svg" />
+										<img src = "/icons/logo-hook.svg" width = "24" height = "20" xmlns = "http://www.w3.org/2000/svg" />
 										<span className = "" >Michael Metzger</span >
 								</a >
 						</Link >
