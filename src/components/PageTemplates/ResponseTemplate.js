@@ -27,7 +27,7 @@ export default function ResponseTemplate( { source, frontMatter, components, slu
       <HeaderSection >
         <div className = "above-title">
           <Link href = "/Responses">
-            <BackHoverLink href = "/Garden/Responses">Responses</BackHoverLink >
+            <BackHoverLink href = "/Responses">Responses</BackHoverLink >
           </Link >
           {frontMatter.growthStage && (
             <>
