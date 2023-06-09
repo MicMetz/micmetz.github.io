@@ -56,7 +56,6 @@ export default function EssayTemplate( { source, frontMatter, components, slug, 
         title = {frontMatter.title}
       />
 
-      {/* {backlinks.length ? <Backlinks backlinks = {backlinks} /> : null} */}
     </>
   );
 }
