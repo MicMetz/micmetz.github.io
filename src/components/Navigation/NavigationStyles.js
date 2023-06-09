@@ -107,6 +107,7 @@ export const StyledNavbar = styled( motion.nav )`
   padding: var(--space-s) var(--space-l);
 `;
 
+
 export const StyledChevronDownIcon = styled( ChevronDownIcon )`
   vertical-align: middle;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
