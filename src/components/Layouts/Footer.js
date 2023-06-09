@@ -15,9 +15,7 @@ export default function Footer() {
             <FooterLinkItem href = "mailto:mime9599@colorado.edu">
               mime9599@colorado.edu
             </FooterLinkItem >
-          </FooterLinkColumn >
 
-          <FooterLinkColumn >
             <FooterSocialMediaIcons >
               <FooterLinkItem href = "https://github.com/MicMetz">
                 <a rel = "me" href = "https://github.com/MicMetz">
@@ -36,7 +34,6 @@ export default function Footer() {
               </FooterLinkItem >
             </FooterSocialMediaIcons >
           </FooterLinkColumn >
-
         </FooterLinkList >
 
         <FooterSitemapList >
