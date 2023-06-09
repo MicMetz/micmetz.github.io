@@ -8,14 +8,18 @@ const ProseWrapper = styled.article`
   grid-auto-flow: columns;
   grid-template-columns:
     1fr
-    min(72ch, 100%)
+    min(92ch, 100%)
     1fr;
+
+  counter-reset: footnote-counter;
+  font-size: var(--font-size-base);
+
   & > * {
     grid-column: 2;
   }
-  counter-reset: footnote-counter;
-  font-size: var(--font-size-base);
+
   p {
+    //width: 100%;
     font-size: var(--font-size-base);
     line-height: var(--leading-looser);
     margin-bottom: var(--space-m);
@@ -23,10 +27,12 @@ const ProseWrapper = styled.article`
       line-height: var(--leading-loose);
     }
   }
+
   p.subtext {
     font-size: calc(var(--font-size-sm) * 1.1);
     line-height: var(--leading-loose);
   }
+
   h1 {
     font-size: var(--font-size-2xl);
     margin: var(--space-2xl) 0 var(--space-m);
@@ -34,6 +40,7 @@ const ProseWrapper = styled.article`
       margin: var(--space-xl) 0 var(--space-m);
     }
   }
+
   h2 {
     font-size: var(--font-size-xl);
     margin: var(--space-xl) 0 var(--space-m);
@@ -42,6 +49,7 @@ const ProseWrapper = styled.article`
       margin: var(--space-l) 0 var(--space-s);
     }
   }
+
   h2.micro {
     font-family: var(--font-sans);
     font-size: var(--font-size-sm);
@@ -52,12 +60,14 @@ const ProseWrapper = styled.article`
     font-weight: 700;
     letter-spacing: 0.04rem;
   }
+
   h3 {
     font-size: calc(var(--font-size-lg) / 1.1);
     font-weight: 300;
     line-height: var(--leading-base);
     margin: var(--space-m) 0 var(--space-s);
   }
+
   h4 {
     font-size: var(--font-size-base);
     font-weight: 700;
@@ -70,14 +80,17 @@ const ProseWrapper = styled.article`
     padding: 0;
     margin-top: 0;
   }
+
   ul {
     list-style: none;
   }
+
   ul > li {
     margin-bottom: var(--space-xs);
     line-height: var(--leading-looser);
     margin-left: 2.5rem;
   }
+
   ul > li::before {
     content: "";
     display: inline-block;
@@ -92,11 +105,13 @@ const ProseWrapper = styled.article`
     top: 4px;
     right: 2.5rem;
   }
+
   ol > li {
     margin-bottom: var(--space-xs);
     line-height: var(--leading-looser);
     margin-left: 2.5rem;
   }
+
   hr {
     margin: var(--space-2xl) auto;
     height: 3px;
@@ -107,8 +122,10 @@ const ProseWrapper = styled.article`
       margin: var(--space-l) auto;
     }
   }
+
   blockquote {
     text-align: center;
+
     & > p {
       text-align: center;
       max-width: 30ch;
@@ -117,6 +134,7 @@ const ProseWrapper = styled.article`
       line-height: var(--leading-base);
       display: inline-block;
     }
+
     & ::before,
     & ::after {
       content: "";
@@ -125,6 +143,7 @@ const ProseWrapper = styled.article`
       width: 3rem;
       border-top: 2px solid rgba(0, 0, 0, 0.1);
     }
+
     padding: var(--space-m) 0rem var(--space-xl);
   }
 `;

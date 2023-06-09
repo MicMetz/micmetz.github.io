@@ -271,17 +271,18 @@ const GlobalStyles = createGlobalStyle`
   }
 
 
-  iframe {
+  iframe, article {
     max-width: 100%;
   }
 
 
-  html, body, #root, #___gatsby, #gatsby-focus-wrapper, #gatsby-noscript {
+  html, body, article, #root, #___gatsby, #gatsby-focus-wrapper, #gatsby-noscript {
     height: 100%;
   }
 
 
   body,
+  article,
   h1,
   h2,
   h3,
