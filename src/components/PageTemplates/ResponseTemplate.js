@@ -63,7 +63,6 @@ export default function ResponseTemplate( { source, frontMatter, components, slu
         title = {frontMatter.title}
       />
 
-      {/* {backlinks.length ? <Backlinks backlinks = {backlinks}/> : null} */}
     </>
   );
 }
