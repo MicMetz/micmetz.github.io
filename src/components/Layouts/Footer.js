@@ -11,7 +11,6 @@ export default function Footer() {
       <FooterContent >
         <FooterLinkList >
           <FooterLinkColumn >
-            {/* <FooterLinkTitle >Email</FooterLinkTitle > */}
             <FooterLinkItem href = "mailto:mime9599@colorado.edu">
               mime9599@colorado.edu
             </FooterLinkItem >
