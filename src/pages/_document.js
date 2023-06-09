@@ -62,13 +62,3 @@ export default class MyDocument extends Document {
 				);
 		}
 }
-
-
-
-// const getStaticProps = ()	=> {
-// 		const posts = getAllDirectoryFiles("posts");
-//
-// 		return {
-// 				props: { posts },
-// 		};
-// };

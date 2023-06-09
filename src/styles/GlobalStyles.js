@@ -270,7 +270,7 @@ const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
-		
+
   iframe {
     max-width: 100%;
   }
@@ -294,7 +294,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
 
-		
+
   body {
     min-height: 100vh;
     font-size: 1.4rem;
@@ -307,12 +307,12 @@ const GlobalStyles = createGlobalStyle`
 
   }
 
-		
+
   a:not([class]) {
     text-decoration-skip-ink: auto;
   }
 
-		
+
   img,
   picture {
     max-width: 100%;
@@ -352,7 +352,7 @@ const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
     color: var(--color-crimson);
-				border:	none;
+    border: none;
   }
 
   button {

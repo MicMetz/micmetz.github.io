@@ -4,19 +4,19 @@ import Tooltip from "./Tooltip.js";
 
 
 export default function GrowthStage( { stage } ) {
-		if ( stage === "evergreen" ) {
+		if ( stage === "EvergreenTheory" ) {
 				return (
 						<Tooltip maxWidth = {300} content = "Evergreens are ideas I've invested significant time into. They are refined, edited, and won't significantly change – aside from the occassional trimming." >
 								<StyledGrowthStage >{stage}</StyledGrowthStage >
 						</Tooltip >
 				);
-		} else if ( stage === "budding" ) {
+		} else if ( stage === "BuddingConcept" ) {
 				return (
 						<Tooltip maxWidth = {300} content = "Buddings are ideas I've revised and worked on a bit. They're starting to grow, but still need refinement." >
 								<StyledGrowthStage >{stage}</StyledGrowthStage >
 						</Tooltip >
 				);
-		} else if ( stage === "seedling" ) {
+		} else if ( stage === "SeedlingIdea" ) {
 				return (
 						<Tooltip maxWidth = {300} content = "Seedlings are ideas I've just started that are rough, unrefined, and need some time to grow." >
 								<StyledGrowthStage >{stage}</StyledGrowthStage >

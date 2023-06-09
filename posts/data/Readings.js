@@ -105,10 +105,8 @@ export const Readings = [
 				],
 				link       : 'https://www.c-span.org/video/?462677-1/weve-people',
 				tags       : [
-						{ name: 'C-Span Talk', link: 'https://www.amazon.com/Weve-Got-People-Jackson-Movement/dp/1947492381' }, {
-								name: 'Author Biography',
-								link: 'https://theintercept.com/staff/ryangrim/'
-						}
+						{ name: 'C-Span Talk', link: 'https://www.amazon.com/Weve-Got-People-Jackson-Movement/dp/1947492381' },
+						{ name: 'Author Biography', link: 'https://theintercept.com/staff/ryangrim/' }
 				],
 				chapters   : []
 		},

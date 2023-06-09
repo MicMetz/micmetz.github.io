@@ -71,7 +71,6 @@ export const LinkContainer = styled.div`
 `;
 
 
-
 export const HoverLink = styled.span`
   margin-left: var(--space-s);
   text-decoration: none;
@@ -161,7 +160,7 @@ export const NavLink = styled.a`
   @media ${( props ) => props.theme.breakpoints.sm} {
     padding: 0.5rem;
   }
-`
+`;
 
 
 export const StyledLink = styled.a`
