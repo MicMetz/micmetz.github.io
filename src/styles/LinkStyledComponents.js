@@ -1,5 +1,3 @@
-// noinspection CssOverwrittenProperties,CssReplaceWithShorthandSafely
-
 import styled from "styled-components";
 
 

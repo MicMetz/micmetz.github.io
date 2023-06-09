@@ -270,6 +270,7 @@ const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
+		
   iframe {
     max-width: 100%;
   }
@@ -293,37 +294,25 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
 
+		
   body {
     min-height: 100vh;
-    //font-family: $ {props => props.theme.fonts.main};
     font-size: 1.4rem;
-    line-height: 1.5;
+    line-height: 1.4;
     text-rendering: optimizeSpeed;
-    /* 
-	background: $ {props => props.theme.colors.background1};
-	 color: $ {props => props.theme.colors.primary1};
-	  */
-    //background: var(--background-color);
+
     background: var(--color-cream);
     padding: var(--space-base);
     color: var(--color-black);
 
-    //cursor: default;
-    //align-items: center;
-    //justify-content: center;
-    //display: flex;
-    //flex-direction: column;
-    //min-height: 100vh;
-    //max-width: 100vw;
-    //width: 100%;
-    //height: 100%;
-    //overflow-x: hidden;
   }
 
+		
   a:not([class]) {
     text-decoration-skip-ink: auto;
   }
 
+		
   img,
   picture {
     max-width: 100%;
@@ -348,7 +337,6 @@ const GlobalStyles = createGlobalStyle`
 
 
   h1, h2 {
-    //  font-family: var(--font-serif);
     font-family: ${props => props.theme.fonts.title};
   }
 
@@ -364,6 +352,7 @@ const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
     color: var(--color-crimson);
+				border:	none;
   }
 
   button {
