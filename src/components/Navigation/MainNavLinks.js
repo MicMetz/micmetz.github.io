@@ -44,7 +44,7 @@ function GardenPopoverLinks() {
 										<Link href = "/Notes" >
 												<DropdownLink >Notes</DropdownLink >
 										</Link >
-										<Link href = "/library" >
+										<Link href = "https://micmetz.github.io/library" >
 												<DropdownLink >Library</DropdownLink >
 										</Link >
 								</Dropdown >
