@@ -44,7 +44,7 @@ export const GardenSection = styled( motion.section )`
 
 
 export const ProjectsSection = styled( motion.section )`
-  margin: 0 0 5vh 0;
+  margin: var(--space-xl) 0 var(--space-s);
   height: fit-content;
   width: 100%;
   display: grid;

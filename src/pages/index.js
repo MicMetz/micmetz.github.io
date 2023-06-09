@@ -6,7 +6,7 @@ import Link from "next/link";
 import path from "path";
 import React from "react";
 import styled from "styled-components";
-import { GISData } from "../../posts/data/GISData.js";
+import { ArcGISData } from "../../posts/data/ArcGISData.js";
 
 import { ProjectsData } from "../../posts/data/ProjectsData.js";
 import { Readings } from "../../posts/data/Readings.js";
@@ -175,7 +175,6 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             <section style = {{ gridArea: "notes", marginLeft: "3em" }}>
               <Link href = "/Notes">
                 <a >
-                  {/* <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} > */}
                   <SectionHeader >
                     Notes
                     <ArrowRightIcon width = "18" height = "18"/>
@@ -319,8 +318,6 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
           </ReadmoreLink >
 
 
-          <Spacer size = "medium"/>
-
           <ProjectsSection
             variants = {collection}
             initial = "hidden"
@@ -361,7 +358,6 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             <section style = {{ gridArea: "atlas", marginLeft: "2.4rem" }}>
               <Link href = "/Atlas">
                 <a >
-                  {/* <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} > */}
                   <SectionHeader >
                     Atlas
                     <ArrowRightIcon width = "18" height = "18"/>
@@ -372,7 +368,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
                 Design responses gathered from my own observations and research.
               </Subheader >
               <div style = {{}}>
-                {GISData.map( ( visual, i ) => (
+                {ArcGISData.map( ( visual, i ) => (
                   <AtlasCard
                     key = {i}
                     slug = {visual.slug}
@@ -417,9 +413,8 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
           </ProjectsSection >
         </motion.section >
 
-        <Spacer size = "medium"/>
+        <Spacer size = "3xlarge"/>
 
-        <Spacer />
       </Layout >
     </>
   )

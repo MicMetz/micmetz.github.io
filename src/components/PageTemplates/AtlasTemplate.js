@@ -61,10 +61,9 @@ export default function AtlasTemplate( { source, frontMatter, components, slug, 
 								url = {`https://micmetz.github.io//${slug}/`}
 								title = {frontMatter.title}
 						/>
-						{/* {backlinks && backlinks.length ? ( */}
-						{/* 		<Backlinks backlinks = {backlinks} /> */}
-						{/* ) : null} */}
-				</>
+
+      {backlinks.length ? <Backlinks backlinks = {backlinks} /> : null}
+    </>
 		);
 }
 

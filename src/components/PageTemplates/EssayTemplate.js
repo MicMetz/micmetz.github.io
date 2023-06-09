@@ -4,6 +4,7 @@ import { EssayStyledHeaderSection, EssayStyledMain, EssayStyledMetadata, EssaySt
 import GrowthIcon from "../Icons/GrowthIcon.js";
 import Header from "../Layouts/Header.js";
 import BackHoverLink from "../Links/BackHoverLink.js";
+import Backlinks from "../Links/Backlinks.js";
 import BackToTop from "../MDX/BackToTop.js";
 import ProseWrapper from "../MDX/ProseWrapper.js";
 import Dates from "../MISC/DatesFormat.js";
@@ -55,8 +56,7 @@ export default function EssayTemplate( { source, frontMatter, components, slug, 
         title = {frontMatter.title}
       />
 
-      {/* {backlinks.length ? <Backlinks backlinks = {backlinks} /> : null} */}
-
+      {backlinks.length ? <Backlinks backlinks = {backlinks} /> : null}
     </>
   );
 }

@@ -1,4 +1,4 @@
-export const GISData = [
+export const ArcGISData = [
 		{
 				id         : 1,
 				slug       : "./frames/pages/alpr.html",

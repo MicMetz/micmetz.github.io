@@ -1,13 +1,13 @@
-import GrowthIcon from "../Icons/GrowthIcon";
-import BackHoverLink from "../Links/BackHoverLink";
-import BackToTop from "../MDX/BackToTop";
-import ProseWrapper from "../MDX/ProseWrapper";
 import { MDXRemote } from "next-mdx-remote";
 import Link from "next/link";
 import styled from "styled-components";
 import { breakpoints } from "../../constants/breakpoints";
+import GrowthIcon from "../Icons/GrowthIcon";
 import Header from "../Layouts/Header.js";
+import BackHoverLink from "../Links/BackHoverLink";
 import Backlinks from "../Links/Backlinks.js";
+import BackToTop from "../MDX/BackToTop";
+import ProseWrapper from "../MDX/ProseWrapper";
 import Dates from "../MISC/DatesFormat.js";
 import GrowthStage from "../MISC/GrowthStage.js";
 import Topics from "../MISC/Topics.js";
@@ -15,65 +15,57 @@ import { TwitterReply } from "../MISC/TwitterReply.js";
 
 
 
-export default function ResponseTemplate( {
-		source,
-		frontMatter,
-		components,
-		slug,
-		backlinks,
-		ogImage,
-} ) {
-		return (
-				<>
-						<Header
-								title = {frontMatter.title}
-								description = {frontMatter.description}
-								keywords = {frontMatter.topics}
-								ogImage = {ogImage}
-						/>
-						<HeaderSection >
-								<div className = "above-title" >
-										<Link href = "/Garden/Responses" >
-												<BackHoverLink href = "/Garden/Responses" >Responses</BackHoverLink >
-										</Link >
-										{frontMatter.growthStage && (
-												<>
-														<GrowthIcon size = "16" growthStage = {frontMatter.growthStage} />
-														<GrowthStage stage = {frontMatter.growthStage} />
-												</>
-										)}
-								</div >
-								<TitleContainer >
-										<h1 >{frontMatter.title}</h1 >
-										{frontMatter.description && <p >{frontMatter.description}</p >}
-								</TitleContainer >
-								<Metadata >
-										{frontMatter.topics ? (
-												<Topics topics = {frontMatter.topics} />
-										) : (
-												<div />
-										)}
-										<Dates
-												startDate = {frontMatter.startDate}
-												updated = {frontMatter.updated}
-										/>
-								</Metadata >
-						</HeaderSection >
-						<StyledMain >
-								<BackToTop />
-								<ProseWrapper >
-										<MDXRemote {...source} components = {components} />
-								</ProseWrapper >
-						</StyledMain >
-						<TwitterReply
-								url = {`https://micmetz.github.io/${slug}/`}
-								title = {frontMatter.title}
-						/>
-						{/* {backlinks && backlinks.length ? ( */}
-						{/* 		<Backlinks backlinks = {backlinks} /> */}
-						{/* ) : null} */}
-				</>
-		);
+export default function ResponseTemplate( { source, frontMatter, components, slug, backlinks, ogImage } ) {
+  return (
+    <>
+      <Header
+        title = {frontMatter.title}
+        description = {frontMatter.description}
+        keywords = {frontMatter.topics}
+        ogImage = {ogImage}
+      />
+      <HeaderSection >
+        <div className = "above-title">
+          <Link href = "/Garden/Responses">
+            <BackHoverLink href = "/Garden/Responses">Responses</BackHoverLink >
+          </Link >
+          {frontMatter.growthStage && (
+            <>
+              <GrowthIcon size = "16" growthStage = {frontMatter.growthStage}/>
+              <GrowthStage stage = {frontMatter.growthStage}/>
+            </>
+          )}
+        </div >
+        <TitleContainer >
+          <h1 >{frontMatter.title}</h1 >
+          {frontMatter.description && <p >{frontMatter.description}</p >}
+        </TitleContainer >
+        <Metadata >
+          {frontMatter.topics ? (
+            <Topics topics = {frontMatter.topics}/>
+          ) : (
+            <div />
+          )}
+          <Dates
+            startDate = {frontMatter.startDate}
+            updated = {frontMatter.updated}
+          />
+        </Metadata >
+      </HeaderSection >
+      <StyledMain >
+        <BackToTop />
+        <ProseWrapper >
+          <MDXRemote {...source} components = {components}/>
+        </ProseWrapper >
+      </StyledMain >
+      <TwitterReply
+        url = {`https://micmetz.github.io/${slug}/`}
+        title = {frontMatter.title}
+      />
+
+      {backlinks.length ? <Backlinks backlinks = {backlinks}/> : null}
+    </>
+  );
 }
 
 

@@ -18,7 +18,6 @@ export default function Now( { source } ) {
         <Title1 >Now</Title1 >
         <Title2 >
 
-
         </Title2 >
       </HeaderContainer >
       <MainSection >
@@ -47,22 +46,20 @@ const MainSection = styled.section`
   }
 `;
 
-// TODO - use getstaticProps to read the now.mdx file for this.
+
 
 export const getStaticProps = async () => {
-  //get the source code of the index.mdx file
+  //get the source code of the now.mdx file
   const nowFilePath = path.join( process.cwd(), "src", "pages", "Now", "now.mdx" );
   const source = fs.readFileSync( nowFilePath );
   const { content, data } = matter( source );
   const mdxSource = await serialize( content, {
-    // Optionally pass remark/rehype plugins
     mdxOptions: {
       remarkPlugins: [],
       rehypePlugins: [],
     },
     scope     : data,
   } );
-  //return the props
   return {
     props: {
       source     : mdxSource,
