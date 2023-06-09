@@ -13,7 +13,7 @@ import EssayTemplate from "../components/PageTemplates/EssayTemplate.js";
 import NoteTemplate from "../components/PageTemplates/NoteTemplate.js";
 import { SmallCaps, Subtext, Title1, Title2, Title3, Title4, } from "../styles/StyledTypography.js";
 import { getHeadings } from "../tools/getHeadings.js";
-import getOgImage from "../tools/getOgImage.js";
+import getOriginalImage from "../tools/getOriginalImage.js";
 import { linkify } from "../tools/linkify.js";
 import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, projectFilePaths, PROJECTS_PATH } from "../tools/mdxUtils.js";
 // Custom components/renderers to pass to MDX.
@@ -408,7 +408,7 @@ export const getStaticProps = async ( { params } ) => {
     cover      : data.cover,
   };
   const ogImagePath = getOgImagePath( ogObject );
-  const ogImage = await getOgImage( ogImagePath, data.title );
+  const ogImage = await getOriginalImage( ogImagePath, data.title );
 
   const contentWithBidirectionalLinks = linkify( content, data.title );
 

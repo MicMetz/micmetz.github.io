@@ -6,7 +6,7 @@ const fs = require( "fs" );
 /**
 	* title is only passed in for logging purposes
 	*/
-async function getOgImage( path, title ) {
+async function getOriginalImage( path, title ) {
 		if ( process.env.NODE_ENV === "development" ) {
 				return "og image will be generated in production";
 		}
@@ -40,4 +40,4 @@ async function getOgImage( path, title ) {
 }
 
 
-export default getOgImage;
+export default getOriginalImage;

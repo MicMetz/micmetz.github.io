@@ -172,7 +172,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               </div >
             </section >
 
-            <section style = {{ gridArea: "notes", marginLeft: "3em" }}>
+            <section style = {{ gridArea: "notes", marginLeft: "2em" }}>
               <Link href = "/Notes">
                 <a >
                   <SectionHeader >
@@ -184,18 +184,20 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               <Subheader >
                 Short, <i >'concise'</i >, and to the point
               </Subheader >
-              {notes.slice( 0, 12 ).map( ( note ) => (
-                <Link key = {note.slug} href = {`/${note.slug}`}>
-                  <a >
-                    <IndexNoteCard >
-                      {note.data.growthStage && (
-                        <GrowthIcon growthStage = {note.data.growthStage}/>
-                      )}
-                      <h3 >{note.data.title}</h3 >
-                    </IndexNoteCard >
-                  </a >
-                </Link >
-              ) )}
+              <div style = {{}}>
+                {notes.slice( 0, 12 ).map( ( note ) => (
+                  <Link key = {note.slug} href = {`/${note.slug}`}>
+                    <a >
+                      <IndexNoteCard >
+                        {note.data.growthStage && (
+                          <GrowthIcon growthStage = {note.data.growthStage}/>
+                        )}
+                        <h3 >{note.data.title}</h3 >
+                      </IndexNoteCard >
+                    </a >
+                  </Link >
+                ) )}
+              </div >
             </section >
 
 
@@ -339,7 +341,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
                 style = {{
                   display            : "grid",
                   gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                  gridGap            : "var(--space-m)",
+                  gridGap            : "var(--space-xs)",
                 }}
               >
                 {ProjectsData.map( ( project, i ) => (
@@ -355,7 +357,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               </div >
             </section >
 
-            <section style = {{ gridArea: "atlas", marginLeft: "2.4rem" }}>
+            <section style = {{ gridArea: "atlas", marginLeft: "3em" }}>
               <Link href = "/Atlas">
                 <a >
                   <SectionHeader >
