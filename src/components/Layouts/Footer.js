@@ -41,17 +41,16 @@ export default function Footer() {
 
 								<FooterSitemapList >
 										{[
-												{ text: "The Garden", slug: "/garden" },
-												{ text: "Essays", slug: "/essays" },
-												{ text: "About", slug: "/about" },
-												{ text: "Notes", slug: "/notes" },
+												{ text: "The Digital Garden", slug: "/Garden" },
+												{ text: "Essays", slug: "/Essays" },
+												{ text: "About", slug: "/About" },
+												{ text: "Notes", slug: "/Notes" },
 												{ text: "Topics", slug: "/topics" },
 												{ text: "Now", slug: "/now" },
 												{ text: "Library", slug: "/library" },
-												{ text: "Books", slug: "/books" },
-												{ text: "Changelog", slug: "/changelog" },
-												{ text: "Projects", slug: "/Projects" },
-												{ text: "Colophon", slug: "/colophon" },
+												{ text: "Books", slug: "library/books" },
+            { text: "Projects", slug: "/Projects" },
+            { text: "Changelog", slug: "/changelog" },
 										].map( ( link, i ) => {
 												return (
 														<li key = {i} >
