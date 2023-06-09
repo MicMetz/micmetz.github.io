@@ -1,5 +1,5 @@
 import React from 'react';
-import { FooterContent, FooterLinkColumn, FooterLinkItem, FooterLinkList, FooterLinkTitle, FooterSitemapList, FooterSocialMediaIcons, StyledFooter } from "../../styles/FooterStyles.js";
+import { FooterContent, FooterLinkColumn, FooterLinkItem, FooterLinkList, FooterSitemapList, FooterSocialMediaIcons, StyledFooter } from "../../styles/FooterStyles.js";
 import { GithubIcon, LinkedInIcon, TwitterIcon, } from "../Icons/SocialMediaIcons.js";
 import UnderlineHoverLink from "../Links/UnderlineHoverLink.js";
 
@@ -45,7 +45,7 @@ export default function Footer() {
             { text: "Notes", slug: "/Notes" },
             { text: "Topics", slug: "/topics" },
             { text: "Library", slug: "/library" },
-            { text: "Books", slug: "library/books" },
+            { text: "Books", slug: "/library/books" },
             { text: "Projects", slug: "/Projects" },
             { text: "Contact", slug: "/Contact" },
             // { text: "Changelog", slug: "/Changelog" },
