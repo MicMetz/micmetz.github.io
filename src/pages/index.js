@@ -94,8 +94,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 
             <SectionText >
               As of right now, I'm studying computer science at the University of Colorado at Boulder (CU Boulder).
-              Before, and not too long ago, I was studying Sociology and Information Science focused student at
-              multiple New York universities over a few years.
+              Before, and not too long ago, I was studying Sociology and Information Science at multiple New York City universities over a few years.
               <Spacer />
               <Spacer />
               <SmallTitle2
@@ -216,8 +215,8 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               <div
                 style = {{
                   display            : "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-                  gridGap            : "var(--space-m)",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+                  gridGap            : "var(--space-xs)",
                 }}
               >
                 {Readings.slice( 0, 8 ).map( ( book, i ) => (

@@ -1,5 +1,5 @@
-import { ExternalHoverLink } from "../../components/Links/ExternalHoverLink.js";
 import styled from "styled-components";
+import { ExternalHoverLink } from "../../components/Links/ExternalHoverLink.js";
 
 
 
@@ -20,10 +20,7 @@ export const StyledBookCard = styled.div`
   flex-direction: column;
   transition: all 0.3s ease-in-out;
   margin: 1em 1em 1em 0;
-  padding: ${( props ) =>
-          props.small
-                  ? "0 0 var(--space-xs) 0"
-                  : "0 var(--space-3xs) var(--space-l) var(--space-3xs)"};
+  padding: ${( props ) => props.small ? "0 0 var(--space-xs) 0" : "0 var(--space-3xs) var(--space-l) var(--space-3xs)"};
 
   img {
     transition: all 0.3s ease-in-out;
