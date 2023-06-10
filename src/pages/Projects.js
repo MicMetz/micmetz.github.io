@@ -6,7 +6,8 @@ import Header from "../components/Layouts/Header.js";
 import { Layout } from "../components/Layouts/Layout.js";
 import TitleWithCount from "../components/MISC/TitleWithCount.js";
 import { LaborFiltersAndHits } from "../components/Search/ProjectsFH/ProjectsFiltersAndHits.js";
-import { Title2 } from "../styles/StyledTypography.js";
+import { SectionTitle } from "../styles/StyledComponents.js";
+import { Subheader, Title2 } from "../styles/StyledTypography.js";
 import { projectFilePaths, PROJECTS_PATH } from "../tools/mdxUtils.js";
 
 
@@ -17,13 +18,23 @@ export default function ProjectsPage(	{ projects } ) {
 				<>
 						<Header title = "The Projects of Michael Metzger" />
 						<Layout >
-								<header style = {{ marginBottom: "var(--space-xl)" }} >
-										<TitleWithCount posts = {projects} >My Projects</TitleWithCount >
-										<Title2 >
+        <header
+          style = {{
+            display       : "flex",
+            gap           : "var(--space-xs)",
+            flexDirection : "column",
+            alignContent  : "center",
+            alignItems    : "center",
+            justifyContent: "center",
+            marginBottom  : "10vh",
+          }}
+        >
+          <SectionTitle main>My Projects</SectionTitle>
+										<Subheader >
 												A collection of prior works, and works in progress.
-										</Title2 >
+										</Subheader >
 								</header >
-								<LaborFiltersAndHits allPostData = {projects} />
+								{/* <LaborFiltersAndHits allPostData = {projects} /> */}
 						</Layout >
 				</>
 		);

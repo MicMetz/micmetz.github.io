@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import Link from "next/link";
 import styled from 'styled-components'
@@ -18,6 +17,7 @@ export const StyledLayout = styled( motion.main )`
     padding: 0 var(--space-xs);
   }
 `;
+
 
 
 export const PhotoGrid = styled.div`
@@ -385,7 +385,7 @@ export const SectionSubText = styled.p`
     line-height: 22px;
   }
 `
-export const SecondaryBtn   = styled.button`
+export const SecondaryBtn = styled.button`
   color: #FFF;
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.33);

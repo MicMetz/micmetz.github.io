@@ -7,9 +7,9 @@ import path from "path";
 import React from "react";
 import styled from "styled-components";
 import { ArcGISData } from "../../posts/data/ArcGISData.js";
+import { CurrentReadings } from "../../posts/data/CurrentReadings.js";
 
 import { ProjectsData } from "../../posts/data/ProjectsData.js";
-import { Readings } from "../../posts/data/Readings.js";
 import AtlasCard from "../components/Cards/AtlasCard.js";
 import BookCard from "../components/Cards/BookCard.js";
 import EssayCard from "../components/Cards/EssayCard.js";
@@ -21,7 +21,7 @@ import UnderlineHoverLink from "../components/Links/UnderlineHoverLink.js";
 import { Spacer } from "../components/MISC/Spacer.js";
 
 import { ReadmoreLink } from "../styles/LinkStyledComponents.js";
-import { LeftSection, SectionText, SectionTitle } from "../styles/StyledComponents.js";
+import { LeftSection, SectionText } from "../styles/StyledComponents.js";
 
 import { GardenSection, ProjectsSection } from "../styles/StyledSectionComponents.js";
 import { SectionHeader, SmallTitle2, Subheader, Title1, Title2 } from "../styles/StyledTypography.js";
@@ -73,30 +73,30 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             marginBottom  : "10vh",
           }}
         >
-          <Title1
+          <motion.section
             initial = {{ opacity: 0, x: -50 }}
             animate = {{ opacity: 1, x: 0 }}
             transition = {{ delay: 0.2, duration: 1 }}
             style = {{
-              marginTop: "var(--space-m)", maxWidth: "1100px"
+              marginTop : "var(--space-m)",
+              maxWidth  : "1100px",
+              lineHeight: "1"
             }}
           >
-            {/* <Section grid > */}
             <LeftSection >
-              <SectionTitle main>
+              <Title1 fontWeight = "700">
                 Hi.
-                <Spacer />
+                <Spacer size = "xs"/>
                 My name is
-                <Spacer />
+                <Spacer size = "xs"/>
                 Michael.
-              </SectionTitle >
+              </Title1 >
             </LeftSection >
 
             <SectionText >
               As of right now, I'm studying computer science at the University of Colorado at Boulder (CU Boulder).
               Before, and not too long ago, I was studying Sociology and Information Science at multiple New York City universities over a few years.
-              <Spacer />
-              <Spacer />
+              <Spacer size = "xs"/>
               <SmallTitle2
                 initial = {{ opacity: 0, x: -50 }}
                 animate = {{ opacity: 1, x: 0 }}
@@ -109,10 +109,13 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
                 {" "}.
               </SmallTitle2 >
             </SectionText >
-            {/* </Section > */}
-          </Title1 >
-
+          </motion.section >
         </header >
+
+
+
+        <Spacer size = "xlarge"/>
+
 
 
         <motion.section
@@ -120,7 +123,6 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
           animate = {{ opacity: 1, x: 0 }}
           transition = {{ delay: 0.7, duration: 1 }}
         >
-
           <Title2 style = {{ fontSize: "var(--font-size-2xl)" }}>
             Writing Garden
           </Title2 >
@@ -132,7 +134,6 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               <ArrowRightIcon width = "18" height = "18"/>
             </ReadmoreLink >
           </Subheader >
-
 
           <GardenSection
             variants = {collection}
@@ -219,7 +220,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
                   gridGap            : "var(--space-xs)",
                 }}
               >
-                {Readings.slice( 0, 8 ).map( ( book, i ) => (
+                {CurrentReadings.slice( 0, 8 ).map( ( book, i ) => (
                   <BookCard
                     small
                     subtitle = {book.header.subtitle}
