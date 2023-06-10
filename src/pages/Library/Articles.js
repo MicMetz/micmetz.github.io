@@ -1,17 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Articles } from '../../../posts/data/Articles.js'
+import { ArticleList } from '../../../posts/data/Articles.js'
 import Header from "../../components/Layouts/Header.js";
 import LibraryLayout from '../../components/Layouts/LibraryLayout.js'
 import { Sidebar } from '../../components/Layouts/Sidebar.js'
-import { DefaultBody, DefaultMain, SectionTitle } from '../../styles/LibraryStyledComponents.js'
+import { Spacer } from "../../components/MISC/Spacer.js";
+import { LibrarySectionTitle, LibraryStyledBody, LibraryStyledMain } from '../../styles/LibraryStyledComponents.js'
 
 
 
-export default function ArticlesRoom( forwardRef, open, toggle ) {
-  const [ activeFeature, setActiveFeature ] = useState( Articles[ 0 ] )
+export default function ArticlesPage( forwardRef, open, toggle ) {
+  const [ activeFeature, setActiveFeature ] = useState( ArticleList[ 0 ] )
   const [ scrollPosition, setScrollPosition ] = useState()
   const navRef = useRef( { open, toggle } )
-  const ref = useRef( forwardRef )
 
 
   useEffect( () => {
@@ -21,11 +21,21 @@ export default function ArticlesRoom( forwardRef, open, toggle ) {
     }
   }, [] )
 
+
+  const loadActiveArticle = ( article ) => {
+    if ( article === null && activeFeature !== null ) {
+      return
+    } else if ( article !== null ) {
+      setActiveFeature( article )
+    }
+  }
+
+
   const handleScroll = () => {
     const observer = new IntersectionObserver( intersections => {
       intersections.forEach( ( intersection ) => {
         if ( intersection.intersectionRatio > 0.5 ) {
-          loadActiveArticle( Articles[ intersection.target.id ] )
+          loadActiveArticle( ArticleList[ intersection.target.id ] )
         }
       } )
     }, {
@@ -50,33 +60,29 @@ export default function ArticlesRoom( forwardRef, open, toggle ) {
   }
 
 
-  const loadActiveArticle = ( feature ) => {
-    if ( feature === null && activeFeature !== null ) {
-      return
-    } else if ( feature !== null ) {
-      setActiveFeature( feature )
-    }
-  }
-
-
 
   return (
     <LibraryLayout >
-      <Header title = {'Articles'}/>
-      <DefaultBody >
+      <Header title = "Article List" description = "A list of articles that have stuck with me over the years."/>
+      <LibraryStyledBody >
         <Sidebar
           // header = {'Articles'}
           header = {activeFeature.header}
           chapters = {[]}
           open = {open}
           toggle = {toggle}
-          forwardRef = {ref}
+          forwardRef = {navRef}
         />
-        <DefaultMain >
-          <SectionTitle main>Recent Articles</SectionTitle >
+        <LibraryStyledMain >
+          <LibrarySectionTitle main>Notable Articles</LibrarySectionTitle >
+          {/* {ArticleList.map( ( article, index ) => {
 
-        </DefaultMain >
-      </DefaultBody >
+
+           } )} */}
+        </LibraryStyledMain >
+      </LibraryStyledBody >
+
+      <Spacer size = "3xlarge"/>
 
     </LibraryLayout >
   );

@@ -1,4 +1,4 @@
-export const Readings = [
+export const ReadingList = [
   {
     id         : 0,
     header     : {

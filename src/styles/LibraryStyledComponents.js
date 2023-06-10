@@ -21,7 +21,7 @@ export const LibraryStyledLayout = styled( motion.main )`
 
 
 
-export const DefaultBody = styled.div`
+export const LibraryStyledBody = styled.div`
   padding: 4rem 8rem 0 !important;
   line-height: 24px;
   //background-size: 100px 100px;
@@ -31,14 +31,13 @@ export const DefaultBody = styled.div`
 `;
 
 
-export const DefaultMain = styled.main`
+export const LibraryStyledMain = styled.section`
   display: block;
   align-items: center;
   justify-content: space-around;
   //height: calc(100vh - 9rem);
   margin: 0 auto;
   //max-width: 99vw;
-  min-height: 100vh;
   width: 100%;
   height: 100%;
 `;
@@ -94,12 +93,12 @@ export const DefaultQuoteText = styled.p`
 `;
 
 
-export const DefaultHeader = styled.header`
+export const LibraryStyledHeader = styled.header`
   font-family: 'PitchWeb', Courier, monospace
 `;
 
 
-export const ContentBlock = styled.section`
+export const LibraryStyledContentBlock = styled.section`
   display: flex;
   //position: absolute;
   height: fit-content;
@@ -148,3 +147,6 @@ export const LibrarySectionTitle = styled.h2`
     max-width: 100%;
   }
 `;
+
+
+

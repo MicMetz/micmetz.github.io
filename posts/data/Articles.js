@@ -1,4 +1,4 @@
-export const Articles = [
+export const ArticleList = [
 		{
 				id        : 0,
 				header    : {

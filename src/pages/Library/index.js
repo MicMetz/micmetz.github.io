@@ -1,20 +1,19 @@
 import { useEffect, useState } from "react";
 import { CurrentReadings } from "../../../posts/data/CurrentReadings.js";
 import Header from "../../components/Layouts/Header.js";
-import { Layout } from "../../components/Layouts/Layout.js";
 import LibraryLayout from "../../components/Layouts/LibraryLayout.js";
 import { Sidebar } from "../../components/Layouts/Sidebar.js";
 import { Spacer } from "../../components/MISC/Spacer.js";
 import SplashScreen from "../../components/MISC/Splash.js";
 import { BookAtrribution, BookByline, BookCoverImage, BookSubtitle, BookTagline, BookTitle } from "../../styles/BookStyledComponents.js";
-import { ContentBlock, DefaultBody, DefaultMain, LibrarySectionTitle } from "../../styles/LibraryStyledComponents.js";
+import { LibrarySectionTitle, LibraryStyledBody, LibraryStyledContentBlock, LibraryStyledMain } from "../../styles/LibraryStyledComponents.js";
 import { DescriptionParser } from "../../tools/DescriptionParser.js";
 
 
 
 let animation;
 
-export default function LibraryPage( ) {
+export default function LibraryPage() {
   const [ activeFeature, setActiveFeature ] = useState( CurrentReadings[ 0 ] )
   const [ scrollPosition, setScrollPosition ] = useState()
   const [ isToggleOpen, setIsToggleOpen ] = useState( false )
@@ -62,49 +61,50 @@ export default function LibraryPage( ) {
 
 
   return (
-    <LibraryLayout>
+    <LibraryLayout >
       <Header title = "Michael Metzger | Library"/>
       <SplashScreen />
-        <DefaultBody >
-          <Sidebar header = {activeFeature.header}
-                   chapters = {activeFeature.chapters}
-                   open = {isSidebarOpen} toggle = {setIsSidebarOpen}
-          />
-          <DefaultMain >
+      <LibraryStyledBody >
+        <Sidebar header = {activeFeature.header}
+                 chapters = {activeFeature.chapters}
+                 open = {isSidebarOpen} toggle = {setIsSidebarOpen}
+        />
+        <LibraryStyledMain >
 
-            <LibrarySectionTitle main>Currently Reading</LibrarySectionTitle >
-            {CurrentReadings?.map( ( book, index ) => {
+          <LibrarySectionTitle main>Currently Reading</LibrarySectionTitle >
+          {CurrentReadings?.map( ( book, index ) => {
 
-              return (
-                <ContentBlock key = {index} value = {book} id = {index}>
-                  {DescriptionParser( book )}
-                  <BookAtrribution >
-                    <BookTitle >{book.header.title}</BookTitle >
-                    <BookSubtitle >{book.header.subtitle}</BookSubtitle >
-                    <BookByline >{book.author}</BookByline >
-                  </BookAtrribution >
-                  <BookCoverImage src = {book.cover} alt = {book.header.title}/>
-                  <BookTagline >
-                    <ul >
-                      <li >
-                        <a href = {book.link} target = "blank">Read More</a >
-                      </li >
-                      {book.tags.map( ( tag, id ) => {
-                        return (
-                          <li key = {id}>
-                            <a href = {tag.link} target = "blank">{tag.name}</a >
-                          </li >
-                        )
-                      } )}
-                    </ul >
-                  </BookTagline >
-                </ContentBlock >
-              )
-            } )}
-          </DefaultMain >
-        </DefaultBody >
+            return (
+              <LibraryStyledContentBlock key = {index} value = {book} id = {index} innerRef = {c => this.myRef = c}>
+                {DescriptionParser( book )}
+                <BookAtrribution >
+                  <BookTitle >{book.header.title}</BookTitle >
+                  <BookSubtitle >{book.header.subtitle}</BookSubtitle >
+                  <BookByline >{book.author}</BookByline >
+                </BookAtrribution >
+                <BookCoverImage src = {book.cover} alt = {book.header.title}/>
+                <BookTagline >
+                  <ul >
+                    <li >
+                      <a href = {book.link} target = "blank">Read More</a >
+                    </li >
+                    {book.tags.map( ( tag, id ) => {
+                      return (
+                        <li key = {id}>
+                          <a href = {tag.link} target = "blank">{tag.name}</a >
+                        </li >
+                      )
+                    } )}
+                  </ul >
+                </BookTagline >
+              </LibraryStyledContentBlock >
+            )
+          } )}
+        </LibraryStyledMain >
+      </LibraryStyledBody >
 
-        <Spacer size = "3xlarge"/>
+      <Spacer size = "3xlarge"/>
+
     </LibraryLayout >
   )
 }
