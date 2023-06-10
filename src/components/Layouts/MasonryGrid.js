@@ -2,24 +2,16 @@ import { StyledMasonryGrid } from "../../styles/StyledGridComponents.js";
 
 
 
-export default function MasonryGrid( {
-		children,
-		breakpointColumnsObj = {
-				default: 3,
-				1100   : 2,
-				700    : 1,
-		},
-		...props
-} ) {
-		return (
-				<StyledMasonryGrid
-						breakpointCols = {breakpointColumnsObj}
-						columnClassName = "masonry_grid_column"
-						{...props}
-				>
-						{children}
-				</StyledMasonryGrid >
-		);
+export default function MasonryGrid( { children, breakpointColumnsObj = { default: 3, 1100: 2, 700: 1 }, ...props } ) {
+  return (
+    <StyledMasonryGrid
+      breakpointCols = {breakpointColumnsObj}
+      columnClassName = "masonry_grid_column"
+      {...props}
+    >
+      {children}
+    </StyledMasonryGrid >
+  );
 }
 
 

@@ -20,6 +20,14 @@ export const StyledLayout = styled( motion.main )`
 
 
 
+export const Container = styled.div`
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+`;
+
+
+
 export const PhotoGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);

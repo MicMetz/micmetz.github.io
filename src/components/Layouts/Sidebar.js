@@ -4,7 +4,7 @@ import { SidebarHeader, SidebarMenuButtonOverlay, SideMenuClosed, SideMenuHeader
 
 
 
-export const Sidebar = ( { header, chapters, open, toggle, forwardRef } ) => {
+export const Sidebar = ( { header, chapters, type, open, toggle, forwardRef } ) => {
   const [ menuOpen, setMenu ] = useState( false )
   const [ activeChapter, setActiveChapter ] = useState()
 

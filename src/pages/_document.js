@@ -39,6 +39,9 @@ export default class MyDocument extends Document {
 				return (
 						<Html lang = "en" >
 								<Head >
+          <meta charSet = "utf-8" />
+          <meta content = "width=device-width, initial-scale=1.0" name = "viewport" />
+
 										<link rel = "manifest" href = "/static/manifest.json" />
 										<link rel = "preconnect" href = "https://fonts.googleapis.com" />
 										<link rel = "preconnect" href = "https://fonts.gstatic.com" crossOrigin = "true" />

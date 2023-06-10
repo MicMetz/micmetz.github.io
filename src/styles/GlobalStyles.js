@@ -523,7 +523,9 @@ const GlobalStyles = createGlobalStyle`
     position: relative;
   }
 
-
+  *, *:before, *:after {
+    box-sizing: border-box
+  }
 
 
   @media (min-width: 500px) {
@@ -532,7 +534,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     aside h2:before {
-      content: " · ";
+      //content: "·";
     }
   }
 
