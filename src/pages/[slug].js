@@ -166,6 +166,7 @@ export const components = {
   } ),
 };
 
+
 export default function PostPage( { source, frontMatter, slug, headings, backlinks, toc, ogImage, } ) {
   if ( frontMatter.type === "note" ) {
     return ( <NoteTemplate
