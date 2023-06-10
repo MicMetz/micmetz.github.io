@@ -30,7 +30,6 @@ export default function EssayTemplate( { source, frontMatter, components, slug, 
 
 
 
-
   console.log( headings )
   console.log( chapterList )
 

@@ -37,8 +37,8 @@ export const Sidebar = ( { header, chapters, type, open, toggle, forwardRef } ) 
               </TableHeader >
               <ul >
                 {chapters?.map( ( { chapterTitle }, id ) => (
-                  <TableItem key = {id} active = {activeChapter === id}>
-                    <a href = {`#${id}`}>
+                  <TableItem key = {id} active = {activeChapter === chapterTitle.toLowerCase().replace( / /g, '-' )}>
+                    <a href = {`/#${chapterTitle.toLowerCase().replace( / /g, '-' )}`}>
                       <span ></span >
                       {chapterTitle}
                     </a >
