@@ -54,32 +54,32 @@ export const CurrentReadings = [
     chapters   : [
       {
         chapter     : 1,
-        chapterTitle: 'The Massacre at Trieu Ai',
+        text: 'The Massacre at Trieu Ai',
         pages       : '1-17'
       },
       {
         chapter     : 2,
-        chapterTitle: 'A System of Suffering',
+        text: 'A System of Suffering',
         pages       : '18-46'
       },
       {
         chapter     : 3,
-        chapterTitle: 'Overkill',
+        text: 'Overkill',
         pages       : '47-72'
       },
       {
         chapter     : 4,
-        chapterTitle: 'A litany of atrocities',
+        text: 'A litany of atrocities',
         pages       : '73-108'
       },
       {
         chapter     : 5,
-        chapterTitle: 'The bummer, the \'Gook-Hunting\' General, and the Butcher of the Delta',
+        text: 'The bummer, the \'Gook-Hunting\' General, and the Butcher of the Delta',
         pages       : '109-135'
       },
       {
         chapter     : 6,
-        chapterTitle: 'Where Have All the War Crimes Gone?',
+        text: 'Where Have All the War Crimes Gone?',
         pages       : '136-168'
       }
     ]
@@ -133,57 +133,57 @@ export const CurrentReadings = [
     chapters   : [
       {
         chapter     : 1,
-        chapterTitle: 'The United States and Africa',
+        text: 'The United States and Africa',
         pages       : ''
       },
       {
         chapter     : 2,
-        chapterTitle: 'The CIA',
+        text: 'The CIA',
         pages       : ''
       },
       {
         chapter     : 3,
-        chapterTitle: 'African Jazz',
+        text: 'African Jazz',
         pages       : ''
       },
       {
         chapter     : 4,
-        chapterTitle: 'America and Africa',
+        text: 'America and Africa',
         pages       : ''
       },
       {
         chapter     : 5,
-        chapterTitle: 'Independance Cha Cha',
+        text: 'Independance Cha Cha',
         pages       : ''
       },
       {
         chapter     : 6,
-        chapterTitle: 'YQPROP',
+        text: 'YQPROP',
         pages       : ''
       },
       {
         chapter     : 7,
-        chapterTitle: 'The Global Game',
+        text: 'The Global Game',
         pages       : ''
       },
       {
         chapter     : 8,
-        chapterTitle: 'Carrot and Stick',
+        text: 'Carrot and Stick',
         pages       : ''
       },
       {
         chapter     : 9,
-        chapterTitle: 'The Turning Point',
+        text: 'The Turning Point',
         pages       : ''
       },
       {
         chapter     : 10,
-        chapterTitle: 'The Seeds are Sown',
+        text: 'The Seeds are Sown',
         pages       : ''
       },
       {
         chapter     : 11,
-        chapterTitle: 'Dark Days',
+        text: 'Dark Days',
         pages       : ''
       }
     ]

@@ -1,4 +1,4 @@
-import { useRouter } from "next/router.js";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from 'react'
 import styled from "styled-components";
 import { SidebarHeader, SidebarMenuButtonOverlay, SideMenuClosed, SideMenuHeader, SideMenuOpened, TableHeader, TableItem, TableOfContents } from '../../styles/SidebarStyledComponents.js'
@@ -38,8 +38,8 @@ export const Sidebar = ( { header, chapters, type, open, toggle, forwardRef } ) 
                 <h3 >Table of Contents</h3 >
               </TableHeader >
               <ul >
-                {chapters?.map( ( { chapterTitle }, id ) => {
-                  const link = chapterTitle.toLowerCase()
+                {chapters?.map( ( { text }, id ) => {
+                  const link = text.toLowerCase()
                   .toLowerCase()
                   .replace( /\s/g, "-" )
                   .replace( /[.,?()]/gim, "" )
@@ -49,7 +49,7 @@ export const Sidebar = ( { header, chapters, type, open, toggle, forwardRef } ) 
                     <TableItem key = {id}>
                       <a href = {`${route}#${link}`}>
                         <span ></span >
-                        {chapterTitle}
+                        {text}
                       </a >
                     </TableItem >
                   );

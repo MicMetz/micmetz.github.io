@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { EssayStyledHeaderSection, EssayStyledMain, EssayStyledMetadata, EssayStyledTitleContainer } from "../../styles/StyledPageTemplates/StyledEssayTemplate.js";
 import GrowthIcon from "../Icons/GrowthIcon.js";
 import Header from "../Layouts/Header.js";
-import { Sidebar } from "../Layouts/Sidebar.js";
 import BackHoverLink from "../Links/BackHoverLink.js";
 import BackToTop from "../MDX/BackToTop.js";
 import ProseWrapper from "../MDX/ProseWrapper.js";
@@ -23,7 +22,7 @@ export default function EssayTemplate( { source, frontMatter, components, slug, 
 
   const chapterList = headings.map( ( heading, i ) => {
     return {
-      chapterTitle: heading.text.toString(),
+      text: heading.text.toString(),
       id          : i,
     }
   } )
@@ -71,7 +70,6 @@ export default function EssayTemplate( { source, frontMatter, components, slug, 
         keywords = {frontMatter.topics}
         ogImage = {ogImage}
       />
-      <Sidebar header = {{ title: frontMatter.title, subtitle: frontMatter.description }} chapters = {chapterList} forwardRef = {navRef}/>
       <EssayStyledHeaderSection >
         <div className = "above-title">
           <Link href = "/Essays">

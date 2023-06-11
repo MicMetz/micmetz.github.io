@@ -23,56 +23,56 @@ export const ReadingList = [
     chapters   : [
       {
         chapter     : 1,
-        chapterTitle: 'China - 1945 to 1960s: Was Mao Tse-tung just paranoid?',
+        text: 'China - 1945 to 1960s: Was Mao Tse-tung just paranoid?',
       },
       {
         chapter     : 2,
-        chapterTitle: 'Italy - 1947-1948: Free elections, Hollywood style',
+        text: 'Italy - 1947-1948: Free elections, Hollywood style',
       },
       {
         chapter     : 3,
-        chapterTitle: 'Greece - 1947 to early 1950s: From cradle of democracy to client state',
+        text: 'Greece - 1947 to early 1950s: From cradle of democracy to client state',
       },
       {
         chapter     : 4,
-        chapterTitle: 'The Philippines - 1940s and 1950s: America\'s oldest colony',
+        text: 'The Philippines - 1940s and 1950s: America\'s oldest colony',
       },
       {
         chapter     : 5,
-        chapterTitle: 'Korea - 1945-1953: Was it all that it appeared to be?',
+        text: 'Korea - 1945-1953: Was it all that it appeared to be?',
       },
       {
         chapter     : 6,
-        chapterTitle: 'Albania - 1949-1953: The proper English spy',
+        text: 'Albania - 1949-1953: The proper English spy',
       },
       {
         chapter     : 7,
-        chapterTitle: 'Eastern Europe - 1948-1956: Operation Splinter Factor',
+        text: 'Eastern Europe - 1948-1956: Operation Splinter Factor',
       },
       {
         chapter     : 8,
-        chapterTitle: 'Germany 1950s: Everything from juvenile delinquency to terrorism',
+        text: 'Germany 1950s: Everything from juvenile delinquency to terrorism',
       },
       {
         chapter     : 9,
-        chapterTitle: 'Iran 1953: Making it safe for the King of Kings',
+        text: 'Iran 1953: Making it safe for the King of Kings',
       },
       {
         chapter     : 10,
-        chapterTitle: 'Guatemala 1953-1954: While the world watched',
+        text: 'Guatemala 1953-1954: While the world watched',
 
       },
       {
         chapter     : 11,
-        chapterTitle: 'Costa Rica mid-1950s: Trying to topple an ally, part I',
+        text: 'Costa Rica mid-1950s: Trying to topple an ally, part I',
       },
       {
         chapter     : 12,
-        chapterTitle: 'Syria 1956-1957: Purchasing a new government',
+        text: 'Syria 1956-1957: Purchasing a new government',
       },
       {
         chapter     : 13,
-        chapterTitle: 'The Middle East 1957-1958: The Eisenhower Doctrine claims another backyard for America',
+        text: 'The Middle East 1957-1958: The Eisenhower Doctrine claims another backyard for America',
       }
 
     ]
@@ -106,19 +106,19 @@ export const ReadingList = [
     chapters   : [
       {
         chapter     : 35,
-        chapterTitle: 'Greece 1964-1974: "Fuck your Parliament and your Constitution,"said the President of the United States',
+        text: 'Greece 1964-1974: "Fuck your Parliament and your Constitution,"said the President of the United States',
       },
       {
         chapter     : 36,
-        chapterTitle: 'Bolivia 1964-1975: Tracking down Che Guevara in the land of coup d\'etat'
+        text: 'Bolivia 1964-1975: Tracking down Che Guevara in the land of coup d\'etat'
       },
       {
         chapter     : 37,
-        chapterTitle: 'Guatemala 1962 to 1980s: A less publicized "final solution"'
+        text: 'Guatemala 1962 to 1980s: A less publicized "final solution"'
       },
       {
         chapter     : 38,
-        chapterTitle: 'Costa Rica 1970-1971: Trying to topple an ally, part II'
+        text: 'Costa Rica 1970-1971: Trying to topple an ally, part II'
       }
     ]
   },
@@ -194,32 +194,32 @@ export const ReadingList = [
     chapters   : [
       {
         chapter     : 1,
-        chapterTitle: 'The Massacre at Trieu Ai',
+        text: 'The Massacre at Trieu Ai',
         pages       : '1-17'
       },
       {
         chapter     : 2,
-        chapterTitle: 'A System of Suffering',
+        text: 'A System of Suffering',
         pages       : '18-46'
       },
       {
         chapter     : 3,
-        chapterTitle: 'Overkill',
+        text: 'Overkill',
         pages       : '47-72'
       },
       {
         chapter     : 4,
-        chapterTitle: 'A litany of atrocities',
+        text: 'A litany of atrocities',
         pages       : '73-108'
       },
       {
         chapter     : 5,
-        chapterTitle: 'The bummer, the \'Gook-Hunting\' General, and the Butcher of the Delta',
+        text: 'The bummer, the \'Gook-Hunting\' General, and the Butcher of the Delta',
         pages       : '109-135'
       },
       {
         chapter     : 6,
-        chapterTitle: 'Where Have All the War Crimes Gone?',
+        text: 'Where Have All the War Crimes Gone?',
         pages       : '136-168'
       }
     ]
@@ -271,57 +271,57 @@ export const ReadingList = [
     chapters   : [
       {
         chapter     : 1,
-        chapterTitle: 'The United States and Africa',
+        text: 'The United States and Africa',
         pages       : ''
       },
       {
         chapter     : 2,
-        chapterTitle: 'The CIA',
+        text: 'The CIA',
         pages       : ''
       },
       {
         chapter     : 3,
-        chapterTitle: 'African Jazz',
+        text: 'African Jazz',
         pages       : ''
       },
       {
         chapter     : 4,
-        chapterTitle: 'America and Africa',
+        text: 'America and Africa',
         pages       : ''
       },
       {
         chapter     : 5,
-        chapterTitle: 'Independance Cha Cha',
+        text: 'Independance Cha Cha',
         pages       : ''
       },
       {
         chapter     : 6,
-        chapterTitle: 'YQPROP',
+        text: 'YQPROP',
         pages       : ''
       },
       {
         chapter     : 7,
-        chapterTitle: 'The Global Game',
+        text: 'The Global Game',
         pages       : ''
       },
       {
         chapter     : 8,
-        chapterTitle: 'Carrot and Stick',
+        text: 'Carrot and Stick',
         pages       : ''
       },
       {
         chapter     : 9,
-        chapterTitle: 'The Turning Point',
+        text: 'The Turning Point',
         pages       : ''
       },
       {
         chapter     : 10,
-        chapterTitle: 'The Seeds are Sown',
+        text: 'The Seeds are Sown',
         pages       : ''
       },
       {
         chapter     : 11,
-        chapterTitle: 'Dark Days',
+        text: 'Dark Days',
         pages       : ''
       }
     ]

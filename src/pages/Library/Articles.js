@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import { ArticleList } from '../../../posts/data/Articles.js'
 import Header from "../../components/Layouts/Header.js";
 import LibraryLayout from '../../components/Layouts/LibraryLayout.js'
-import { Sidebar } from '../../components/Layouts/Sidebar.js'
 import { Spacer } from "../../components/MISC/Spacer.js";
 import { LibrarySectionTitle, LibraryStyledBody, LibraryStyledMain } from '../../styles/LibraryStyledComponents.js'
 
@@ -65,14 +64,6 @@ export default function ArticlesPage( forwardRef, open, toggle ) {
     <LibraryLayout >
       <Header title = "Article List" description = "A list of articles that have stuck with me over the years."/>
       <LibraryStyledBody >
-        <Sidebar
-          // header = {'Articles'}
-          header = {activeFeature.header}
-          chapters = {[]}
-          open = {open}
-          toggle = {toggle}
-          forwardRef = {navRef}
-        />
         <LibraryStyledMain >
           <LibrarySectionTitle main>Notable Articles</LibrarySectionTitle >
           {/* {ArticleList.map( ( article, index ) => {
