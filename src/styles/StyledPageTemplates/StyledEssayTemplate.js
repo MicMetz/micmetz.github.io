@@ -21,7 +21,7 @@ export const EssayStyledTitleContainer = styled.div`
     margin: var(--space-s) 0 0 0;
     color: var(--color-gray-600);
     @media screen and (max-width: 425px) {
-      font-size: var(--font-size-base);
+      font-size: var(--font-size-sm);
     }
   }
 `;
