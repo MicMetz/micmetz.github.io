@@ -7,73 +7,74 @@ import styled from "styled-components";
 
 
 export default function TableOfContents( { headings } ) {
-		const route = useRouter().asPath;
+  const route = useRouter().asPath;
 
-		const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
+  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
 
-		return (
-				<>
-						<DesktopContainer >
-								<Title >
-										<svg width = "8px" height = "8px" >
-												<circle r = "4" cx = "4" cy = "4" fill = "var(--color-sea-blue)" ></circle >
-										</svg >
-										<h4 >Table of Contents</h4 >
-								</Title >
+  return (
+    <>
+      <DesktopContainer >
+        <Title >
+          <svg width = "8px" height = "8px">
+            <circle r = "4" cx = "4" cy = "4" fill = "var(--color-sea-blue)"></circle >
+          </svg >
+          <h4 >Table of Contents</h4 >
+        </Title >
 
-								{headings.length > 0 &&
-										headings.map( ( { text, level } ) => {
-												const link = text
-												.toLowerCase()
-												.replace( /\s/g, "-" )
-												.replace( /[.,?()]/gim, "" )
-												.replace( /\*\*|__/g, "" )
-												.replace( /<[^>]+>/g, "" );
-												const href = `${route}#${link}`;
-												const filteredText = text
-												.replace( /[\*_]/gim, "" )
-												.replace( /<[^>]+>/g, "" );
-												return (
-														<A key = {text} href = {href} level = {level} >
-																{filteredText}
-														</A >
-												);
-										} )}
-						</DesktopContainer >
-						<MobileContainer >
-								<CollapseHeader isExpanded = {isExpanded} {...getToggleProps()}>
-										{isExpanded ? (
-												<ArrowDownIcon width = "18" height = "18" />
-										) : (
-												<ArrowRightIcon width = "18" height = "18" />
-										)}
-										<h4 >Table of Contents</h4 >
-								</CollapseHeader >
-								<CollapseContent {...getCollapseProps()}>
-										<div >
-												{headings.length > 0 &&
-														headings.map( ( { text, level } ) => {
-																const link = text
-																.toLowerCase()
-																.replace( /\s/g, "-" )
-																.replace( /[.,?()]/gim, "" )
-																.replace( /<[^>]+>/g, "" );
-																const href = `${route}#${link}`;
-																const filteredText = text
-																.replace( /[\*_]/gim, "" )
-																.replace( /<[^>]+>/g, "" );
-																return (
-																		<A key = {text} href = {href} level = {level} >
-																				{filteredText}
-																		</A >
-																);
-														} )}
-										</div >
-								</CollapseContent >
-						</MobileContainer >
-				</>
-		);
+        {headings.length > 0 &&
+          headings.map( ( { text, level } ) => {
+            const link = text
+            .toLowerCase()
+            .replace( /\s/g, "-" )
+            .replace( /[.,?()]/gim, "" )
+            .replace( /\*\*|__/g, "" )
+            .replace( /<[^>]+>/g, "" );
+            const href = `${route}#${link}`;
+            const filteredText = text
+            .replace( /[\*_]/gim, "" )
+            .replace( /<[^>]+>/g, "" );
+            return (
+              <A key = {text} href = {href} level = {level}>
+                {filteredText}
+              </A >
+            );
+          } )}
+      </DesktopContainer >
+      <MobileContainer >
+        <CollapseHeader isExpanded = {isExpanded} {...getToggleProps()}>
+          {isExpanded ? (
+            <ArrowDownIcon width = "18" height = "18"/>
+          ) : (
+            <ArrowRightIcon width = "18" height = "18"/>
+          )}
+          <h4 >Table of Contents</h4 >
+        </CollapseHeader >
+        <CollapseContent {...getCollapseProps()}>
+          <div >
+            {headings.length > 0 &&
+              headings.map( ( { text, level } ) => {
+                const link = text
+                .toLowerCase()
+                .replace( /\s/g, "-" )
+                .replace( /[.,?()]/gim, "" )
+                .replace( /<[^>]+>/g, "" );
+                const href = `${route}#${link}`;
+                const filteredText = text
+                .replace( /[\*_]/gim, "" )
+                .replace( /<[^>]+>/g, "" );
+                return (
+                  <A key = {text} href = {href} level = {level}>
+                    {filteredText}
+                  </A >
+                );
+              } )}
+          </div >
+        </CollapseContent >
+      </MobileContainer >
+    </>
+  );
 }
+
 
 const CollapseHeader = styled.div`
   cursor: pointer;

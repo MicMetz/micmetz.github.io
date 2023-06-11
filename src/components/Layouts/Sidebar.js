@@ -1,3 +1,4 @@
+import { useRouter } from "next/router.js";
 import React, { useEffect, useState } from 'react'
 import styled from "styled-components";
 import { SidebarHeader, SidebarMenuButtonOverlay, SideMenuClosed, SideMenuHeader, SideMenuOpened, TableHeader, TableItem, TableOfContents } from '../../styles/SidebarStyledComponents.js'
@@ -7,6 +8,7 @@ import { SidebarHeader, SidebarMenuButtonOverlay, SideMenuClosed, SideMenuHeader
 export const Sidebar = ( { header, chapters, type, open, toggle, forwardRef } ) => {
   const [ menuOpen, setMenu ] = useState( false )
   const [ activeChapter, setActiveChapter ] = useState()
+  const route = useRouter().asPath;
 
   useEffect( () => {
     let isMounted = true
@@ -36,14 +38,22 @@ export const Sidebar = ( { header, chapters, type, open, toggle, forwardRef } ) 
                 <h3 >Table of Contents</h3 >
               </TableHeader >
               <ul >
-                {chapters?.map( ( { chapterTitle }, id ) => (
-                  <TableItem key = {id} active = {activeChapter === chapterTitle.toLowerCase().replace( / /g, '-' )}>
-                    <a href = {`/#${chapterTitle.toLowerCase().replace( / /g, '-' )}`}>
-                      <span ></span >
-                      {chapterTitle}
-                    </a >
-                  </TableItem >
-                ) )}
+                {chapters?.map( ( { chapterTitle }, id ) => {
+                  const link = chapterTitle.toLowerCase()
+                  .toLowerCase()
+                  .replace( /\s/g, "-" )
+                  .replace( /[.,?()]/gim, "" )
+                  .replace( /<[^>]+>/g, "" );
+                  return (
+                    // <TableItem key = {id} active = {activeChapter === chapterTitle.toLowerCase().replace( / /g, '-' )}>
+                    <TableItem key = {id}>
+                      <a href = {`${route}#${link}`}>
+                        <span ></span >
+                        {chapterTitle}
+                      </a >
+                    </TableItem >
+                  );
+                } )}
               </ul >
             </TableOfContents >
           </SideMenuOpened >
