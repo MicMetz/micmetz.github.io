@@ -56,7 +56,7 @@ export default function SplashScreen( { ref } ) {
             animate = {{ x: 0, opacity: 1, transition: { ...transition } }}
             className = "preloader__forwards__right"
           >
-            <p className = "preloader__forwards__text">Michael Metzger</p >
+            <p className = "preloader__forwards__text">Michael Metzger's Digital Library</p >
             <p className = "preloader__forwards__text">There are decades</p >
             <p className = "preloader__forwards__text">where nothing happens;</p >
             <p className = "preloader__forwards__text">and there are weeks</p >
