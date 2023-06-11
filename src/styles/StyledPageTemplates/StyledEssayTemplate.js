@@ -73,11 +73,11 @@ export const EssayStyledMetadata = styled.div`
 
 export const EssayStyledMain = styled.main`
   margin-top: var(--space-xs);
-  margin: var(--space-xl) var(--space-xs);
+  padding: var(--space-xl) 0;
   background: linear-gradient(var(--color-cream) 0, white 110px);
   grid-column: 1/4 !important;
   width: 100%;
   @media (max-width: 768px) {
-    padding: var(--space-xl) var(--space-xs);
+    padding: var(--space-xl) var(--space-s);
   }
 `;
