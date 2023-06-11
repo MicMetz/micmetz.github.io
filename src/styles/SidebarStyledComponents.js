@@ -18,9 +18,14 @@ export const SideMenuClosed = styled.div`
   max-width: 20vw;
   border-right: 1px solid rgba(93, 88, 88, 0.26);
   height: 100vh;
-`
+`;
 
-export const SidebarHeader = styled.aside`
+
+export const SidebarHeader = styled.div`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: flex;
   transform: rotate(90deg);
   transform-origin: top left;
   left: 4rem;
@@ -64,7 +69,8 @@ export const SidebarHeader = styled.aside`
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: auto;
   }
-`
+`;
+
 
 export const SideMenuOpened = styled( SideMenuClosed )`
   left: 0;
@@ -78,7 +84,8 @@ export const SideMenuOpened = styled( SideMenuClosed )`
   border-top: none;
   border-bottom: none;
   transition: all 0.7s ease-in-out;
-`
+`;
+
 
 export const SideMenuHeader = styled( SidebarHeader )`
   transition: all 0.7s ease-in-out;
@@ -112,7 +119,8 @@ export const SideMenuHeader = styled( SidebarHeader )`
     max-font-size: 1.4rem;
     font-weight: 400;
   }
-`
+`;
+
 
 export const SidebarMenuButtonOverlay = styled.button`
   position: absolute;
@@ -164,7 +172,8 @@ export const TableOfContents = styled.div`
   a:hover {
 
   }
-`
+`;
+
 
 export const TableHeader = styled.span`
   display: block;
@@ -196,7 +205,8 @@ export const TableHeader = styled.span`
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: auto;
   }
-`
+`;
+
 
 export const TableItem = styled.li`
   margin: 5rem 1.5rem;
@@ -232,7 +242,7 @@ export const TableItem = styled.li`
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-`
+`;
 
 
 export const SideMenuHeaderOpen = styled.div`
@@ -242,4 +252,4 @@ export const SideMenuHeaderOpen = styled.div`
   text-transform: uppercase;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
-`
+`;

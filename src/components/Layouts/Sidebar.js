@@ -74,24 +74,14 @@ export const Sidebar = ( { header, chapters, type, open, toggle, forwardRef } ) 
 const StyledSidebar = styled.aside`
   width: fit-content;
   height: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
+  display: flex;
   background: ${( { theme } ) => theme.colors.sidebar};
   z-index: 100;
   transition: all 0.5s ease;
   overflow: hidden;
-
-
-    // ${( { theme } ) => theme.mediaQueries.tablet} {
-  //   width: 30%;
-  //   height: 100%;
-  // }
-  //
-    // ${( { theme } ) => theme.mediaQueries.desktop} {
-  //   width: 20%;
-  //   height: 100%;
-  // }
-
+  
 `;
