@@ -10,7 +10,6 @@ import Dates from "../MISC/DatesFormat.js";
 import GrowthStage from "../MISC/GrowthStage.js";
 import TableOfContents from "../MISC/TableOfContents.js";
 import Topics from "../MISC/Topics.js";
-import { TwitterReply } from "../MISC/TwitterReply.js";
 
 
 
@@ -50,10 +49,7 @@ export default function NoteTemplate( { source, frontMatter, components, slug, t
           <MDXRemote {...source} components = {components}/>
         </ProseWrapper >
       </NoteStyledMain >
-      <TwitterReply
-        url = {`https://micmetz.github.io/${slug}/`}
-        title = {frontMatter.title}
-      />
+
 
     </>
   );

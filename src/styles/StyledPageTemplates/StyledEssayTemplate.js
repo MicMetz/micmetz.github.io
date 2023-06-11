@@ -26,6 +26,7 @@ export const EssayStyledTitleContainer = styled.div`
   }
 `;
 
+
 export const EssayStyledHeaderSection = styled.header`
   max-width: 800px;
   margin: var(--space-l) auto 0;
@@ -57,6 +58,7 @@ export const EssayStyledHeaderSection = styled.header`
   }
 `;
 
+
 export const EssayStyledMetadata = styled.div`
   justify-content: space-between;
   display: flex;
@@ -67,6 +69,7 @@ export const EssayStyledMetadata = styled.div`
     align-items: flex-start;
   }
 `;
+
 
 export const EssayStyledMain = styled.main`
   margin-top: var(--space-xs);

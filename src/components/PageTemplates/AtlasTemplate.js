@@ -10,7 +10,6 @@ import ProseWrapper from "../MDX/ProseWrapper.js";
 import Dates from "../MISC/DatesFormat.js";
 import GrowthStage from "../MISC/GrowthStage.js";
 import Topics from "../MISC/Topics.js";
-import { TwitterReply } from "../MISC/TwitterReply.js";
 
 
 
@@ -57,10 +56,7 @@ export default function AtlasTemplate( { source, frontMatter, components, slug, 
 										<MDXRemote {...source} components = {components} />
 								</ProseWrapper >
 						</AtlasStyledMain >
-						<TwitterReply
-								url = {`https://micmetz.github.io//${slug}/`}
-								title = {frontMatter.title}
-						/>
+
 
     </>
 		);

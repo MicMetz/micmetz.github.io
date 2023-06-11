@@ -11,7 +11,6 @@ import ProseWrapper from "../MDX/ProseWrapper";
 import Dates from "../MISC/DatesFormat.js";
 import GrowthStage from "../MISC/GrowthStage.js";
 import Topics from "../MISC/Topics.js";
-import { TwitterReply } from "../MISC/TwitterReply.js";
 
 
 
@@ -58,10 +57,7 @@ export default function ResponseTemplate( { source, frontMatter, components, slu
           <MDXRemote {...source} components = {components}/>
         </ProseWrapper >
       </StyledMain >
-      <TwitterReply
-        url = {`https://micmetz.github.io/${slug}/`}
-        title = {frontMatter.title}
-      />
+
 
     </>
   );

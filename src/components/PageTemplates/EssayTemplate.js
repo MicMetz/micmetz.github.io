@@ -11,7 +11,6 @@ import Dates from "../MISC/DatesFormat.js";
 import GrowthStage from "../MISC/GrowthStage.js";
 import TableOfContents from "../MISC/TableOfContents.js";
 import Topics from "../MISC/Topics.js";
-import { TwitterReply } from "../MISC/TwitterReply.js";
 
 
 
@@ -97,10 +96,7 @@ export default function EssayTemplate( { source, frontMatter, components, slug, 
           <MDXRemote {...source} components = {components}/>
         </ProseWrapper >
       </EssayStyledMain >
-      <TwitterReply
-        url = {`https://micmetz.github.io/${slug}/`}
-        title = {frontMatter.title}
-      />
+
 
     </>
   );

@@ -8,7 +8,6 @@ import Header from "../Layouts/Header.js";
 import BackHoverLink from "../Links/BackHoverLink.js";
 import BackToTop from "../MDX/BackToTop.js";
 import ProseWrapper from "../MDX/ProseWrapper.js";
-import { TwitterReply } from "../MISC/TwitterReply.js";
 
 
 
@@ -52,10 +51,7 @@ export default function ProjectTemplate( { source, frontMatter, components, slug
           <MDXRemote {...source} components = {components}/>
         </ProseWrapper >
       </StyledMain >
-      <TwitterReply
-        url = {`https://maggieappleton.com/${slug}/`}
-        title = {frontMatter.title}
-      />
+
     </>
   );
 }
