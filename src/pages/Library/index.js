@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { CurrentReadings } from "../../../posts/data/CurrentReadings.js";
 import Header from "../../components/Layouts/Header.js";
@@ -7,6 +8,7 @@ import { Spacer } from "../../components/MISC/Spacer.js";
 import SplashScreen from "../../components/MISC/Splash.js";
 import { BookAtrribution, BookByline, BookCoverImage, BookSubtitle, BookTagline, BookTitle } from "../../styles/BookStyledComponents.js";
 import { LibrarySectionTitle, LibraryStyledBody, LibraryStyledContentBlock, LibraryStyledMain } from "../../styles/LibraryStyledComponents.js";
+import { ReadmoreLink } from "../../styles/LinkStyledComponents.js";
 import { DescriptionParser } from "../../tools/DescriptionParser.js";
 
 
@@ -86,12 +88,12 @@ export default function LibraryPage() {
                 <BookTagline >
                   <ul >
                     <li >
-                      <a href = {book.link} target = "blank">Read More</a >
+                      <ReadmoreLink href = {book.link} target = "blank">Read More</ReadmoreLink >
                     </li >
                     {book.tags.map( ( tag, id ) => {
                       return (
                         <li key = {id}>
-                          <a href = {tag.link} target = "blank">{tag.name}</a >
+                          <ReadmoreLink href = {tag.link} target = "blank">{tag.name}</ReadmoreLink >
                         </li >
                       )
                     } )}
