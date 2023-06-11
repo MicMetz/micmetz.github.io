@@ -111,6 +111,8 @@ const CollapseHeader = styled.div`
   }
 `;
 
+
+
 const CollapseContent = styled.div`
   padding-bottom: var(--space-xs);
   margin-bottom: var(--space-s);
@@ -132,7 +134,7 @@ const DesktopContainer = styled( motion.div )`
   max-width: 400px;
   margin-left: var(--space-xl);
   //padding: var(--space-s) var(--space-s) var(--space-xs) var(--space-s);
-  
+
   h4 {
     margin: 0;
     font-size: 0.96rem;
