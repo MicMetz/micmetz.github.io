@@ -7,7 +7,7 @@ const NoteAction = ( { children } ) => {
 };
 
 const StyledNoteAction = styled.span`
-  color: var(--color-bright-crimson);
+  color: var(--color-bright-tangerine);
 `;
 
 export default NoteAction;

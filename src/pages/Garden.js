@@ -14,10 +14,10 @@ import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH } from "../tools
 export default function GardenPage( { allPosts } ) {
 		return (
 				<>
-						<Header title = "The Digital Garden of Michael Metzger" />
+						<Header title = "My Digital Garden of Michael Metzger" />
 						<Layout >
 								<header style = {{ marginBottom: "var(--space-xl)" }} >
-										<TitleWithCount posts = {allPosts} >The Digital Garden</TitleWithCount >
+										<TitleWithCount posts = {allPosts} >My Digital Garden</TitleWithCount >
 										<Title2 >
 												<SectionText >
 														Welcome to my digital garden. This is where I cultivate my ideas and collect the things that help me grow.

@@ -36,7 +36,7 @@ const DisclaimerContainer = styled.div`
     color: var(--color-gray-800);
   }
   span.title {
-    color: var(--color-bright-crimson);
+    color: var(--color-bright-tangerine);
     margin-bottom: 0;
     flex-shrink: 0;
     font-family: var(--font-sans);

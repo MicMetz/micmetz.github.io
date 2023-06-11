@@ -16,7 +16,7 @@ export const ReadmoreLink = styled.a`
 
   &:hover {
     transition: color 0.3s ease-in-out, margin-left 0.2s ease-in-out;
-    color: var(--color-bright-crimson);
+    color: var(--color-bright-tangerine);
     cursor: pointer;
 
     svg {
@@ -56,7 +56,7 @@ export const DropdownLink = styled.span`
 
   &:hover {
     background: var(--color-light-cream);
-    color: var(--color-crimson);
+    color: var(--color-tangerine);
   }
 `;
 
@@ -84,7 +84,7 @@ export const HoverLink = styled.span`
 
   :hover {
     span {
-      color: var(--color-crimson);
+      color: var(--color-tangerine);
     }
   }
 
@@ -216,11 +216,11 @@ export const StyledLink = styled.a`
   span {
     display: inline-block;
     transition: all 0.5s cubic-bezier(0.2, 1, 0.8, 1);
-    color: var(--color-bright-crimson);
+    color: var(--color-crimson);
   }
 
   &:hover span {
     transform: translate3d(0, -2px, 0);
-    color: var(--color-crimson);
+    color: var(--color-tangerine);
   }
 `;

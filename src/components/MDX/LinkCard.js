@@ -60,7 +60,7 @@ const StyledLinkCard = styled.div`
   &:hover {
     box-shadow: var(--box-shadow-lg);
     h3 {
-      color: var(--color-bright-crimson);
+      color: var(--color-bright-tangerine);
     }
   }
 `;

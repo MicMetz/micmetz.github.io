@@ -38,7 +38,7 @@ const ForwardHoverLink = styled.a`
             left: 9px;
         }
         h4 {
-            color: var(--color-bright-crimson);
+            color: var(--color-bright-tangerine);
         }
 `;
 

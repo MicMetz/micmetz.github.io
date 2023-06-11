@@ -53,7 +53,7 @@ const ProseWrapper = styled.article`
   h2.micro {
     font-family: var(--font-sans);
     font-size: var(--font-size-sm);
-    color: var(--color-bright-crimson);
+    color: var(--color-bright-tangerine);
     margin: 0 0 var(--space-s);
     line-height: var(--leading-base);
     text-transform: uppercase;

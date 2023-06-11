@@ -44,7 +44,7 @@ const StyledBackToTop = styled.div`
         }
     }
     button:hover {
-        color: var(--color-bright-crimson);
+        color: var(--color-bright-tangerine);
         transform: translateY(-4px);
         svg {
             color: var(--color-sea-blue);

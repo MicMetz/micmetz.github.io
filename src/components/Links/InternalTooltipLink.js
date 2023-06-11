@@ -114,7 +114,7 @@ const StyledLink = styled.a`
     @media (min-width: 550px) {
       display: inline-block;
       transform: translate3d(0, 3px, 0) scale3d(1, 2, 1);
-      background: var(--color-bright-crimson);
+      background: var(--color-bright-tangerine);
       clip-path: polygon(
         0% 0%,
         0% 100%,

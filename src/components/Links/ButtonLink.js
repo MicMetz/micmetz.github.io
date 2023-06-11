@@ -30,7 +30,7 @@ const StyledExternalUrl = styled.a`
     transition: color 0.2s ease-in-out;
     text-align: center;
     &:hover {
-        color: var(--color-bright-crimson);
+        color: var(--color-bright-tangerine);
     }
 `;
 
@@ -43,7 +43,7 @@ const LinkContainer = styled.div`
 `;
 
 const StyledLink = styled.a`
-    background-color: var(--color-bright-crimson);
+    background-color: var(--color-bright-tangerine);
     padding: var(--space-16) var(--space-24);
     border-radius: var(--border-radius-base);
     color: white;

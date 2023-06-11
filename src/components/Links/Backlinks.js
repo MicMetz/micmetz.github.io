@@ -130,7 +130,7 @@ const StyledBacklinkCard = styled( motion.div )`
     cursor: pointer;
 
     h4 {
-      color: var(--color-crimson);
+      color: var(--color-tangerine);
     }
   }
 `;

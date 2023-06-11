@@ -43,7 +43,7 @@ export const OutsideDropdown = styled( motion.div )`
 
   :hover {
     span {
-      color: var(--color-crimson);
+      color: var(--color-tangerine);
     }
   }
 
@@ -67,7 +67,7 @@ export const MainNav = styled.div`
 
     :hover {
       span {
-        color: var(--color-crimson);
+        color: var(--color-tangerine);
       }
     }
   }
@@ -85,7 +85,7 @@ export const MainNav = styled.div`
 
     :hover {
       span {
-        color: var(--color-crimson);
+        color: var(--color-tangerine);
       }
     }
   }
@@ -168,7 +168,7 @@ export const StyledPopoverButton = styled( Popover.Button )`
 
   &:hover {
     ${StyledChevronDownIcon} {
-      color: var(--color-bright-crimson);
+      color: var(--color-bright-tangerine);
       transform: rotateY(180deg);
       cursor: pointer;
       background-color: var(--color-gray-100);

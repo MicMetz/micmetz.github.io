@@ -71,7 +71,7 @@ const StyledExternalUrl = styled.a`
     margin: 0 !important;
   }
   &:hover {
-    color: var(--color-bright-crimson);
+    color: var(--color-bright-tangerine);
   }
 `;
 
@@ -127,7 +127,7 @@ const StyledLink = styled.a`
       transform: translate3d(0, 3px, 0) scale3d(1, 2, 1);
       background: ${( props ) =>
 		props.internal
-				? "var(--color-bright-crimson)"
+				? "var(--color-bright-tangerine)"
 				: "var(--color-sea-blue)"};
       clip-path: polygon(
         0% 0%,
@@ -151,7 +151,7 @@ const StyledLink = styled.a`
     color: ${( props ) =>
 		props.internal
 				? "var(--color-medium-sea-blue)"
-				: "var(--color-bright-crimson)"};
+				: "var(--color-bright-tangerine)"};
     text-decoration: ${( props ) => ( props.noStyling ? "none" : "underline" )};
     @media (min-width: 550px) {
       text-decoration: none;
@@ -160,6 +160,6 @@ const StyledLink = styled.a`
   &:hover span {
     transform: translate3d(0, -1px, 0);
     color: ${( props ) =>
-		props.internal ? "var(--color-dark-sea-blue)" : "var(--color-crimson)"};
+		props.internal ? "var(--color-dark-sea-blue)" : "var(--color-tangerine)"};
   }
 `;

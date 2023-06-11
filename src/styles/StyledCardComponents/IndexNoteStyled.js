@@ -29,7 +29,7 @@ export const IndexNoteStyled = styled.div`
     border-bottom: 1px solid var(--color-sea-blue);
 
     h3 {
-      color: var(--color-crimson);
+      color: var(--color-tangerine);
     }
 
     transform: scale3d(1.02, 1.02, 1.02);

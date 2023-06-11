@@ -188,7 +188,7 @@ export const FooterSocialMediaIcons = styled.div`
 
     :hover {
       cursor: pointer;
-      fill: var(--color-bright-crimson);
+      fill: var(--color-bright-tangerine);
     }
   }
 `;

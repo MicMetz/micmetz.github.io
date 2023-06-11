@@ -30,7 +30,7 @@ const StyledExternalUrl = styled.a`
   transition: color 0.2s ease-in-out;
   text-align: center;
   &:hover {
-    color: var(--color-bright-crimson);
+    color: var(--color-bright-tangerine);
   }
 `;
 

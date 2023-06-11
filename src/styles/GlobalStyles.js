@@ -6,7 +6,7 @@ import { normalize } from 'styled-normalize';
 const GlobalStyles = createGlobalStyle`
   ${normalize}
   :root {
-    --color-primary: #e88448FF;
+    --color-primary: #f36916;
     --color-secondary: #FF1847FF;
     --color-tertiary: #333333FF;
     --color-quaternary: #FFD803FF;
@@ -51,6 +51,8 @@ const GlobalStyles = createGlobalStyle`
     --color-gray-100: #E9E9E7;
     --color-bright-crimson: #960462;
     --color-crimson: #5F023E;
+    --color-bright-tangerine: #F5A962;
+    --color-tangerine: #e88448FF;
     --color-sea-blue: #04A5BB;
     --color-medium-sea-blue: #008BA3;
     --color-dark-sea-blue: #00758F;

@@ -154,14 +154,14 @@ const LinkContainer = styled( motion.div )`
     border: none;
     background: none;
     cursor: pointer;
-    color: var(--color-crimson);
+    color: var(--color-tangerine);
     font-size: var(--font-size-lg);
     font-family: var(--font-serif);
     transition: all 0.3s ease-in-out;
   }
 
   button:hover {
-    color: var(--color-bright-crimson);
+    color: var(--color-bright-tangerine);
   }
 `;
 

@@ -212,7 +212,7 @@ const TopicsContainer = styled.div`
     font-size: calc(var(--font-size-xs) / 1.2);
     text-transform: uppercase;
     letter-spacing: 0.04rem;
-    color: var(--color-crimson);
+    color: var(--color-tangerine);
     @media (max-width: 768px) {
       display: none;
     }

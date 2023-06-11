@@ -116,7 +116,7 @@ const Metadata = styled.div`
   }
   &:hover {
     h3 {
-      color: var(--color-bright-crimson);
+      color: var(--color-bright-tangerine);
     }
   }
 `;

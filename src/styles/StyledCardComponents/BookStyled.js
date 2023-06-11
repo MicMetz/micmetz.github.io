@@ -48,7 +48,7 @@ export const StyledBookCard = styled.div`
     }
 
     p {
-      color: var(--color-crimson);
+      color: var(--color-tangerine);
     }
 
     div {

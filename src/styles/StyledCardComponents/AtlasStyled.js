@@ -57,7 +57,7 @@ export const StyledAtlasCard = styled( motion.div )`
     border: 1px solid var(--color-tinted-cream);
 
     h3 {
-      color: var(--color-crimson);
+      color: var(--color-tangerine);
     }
   }
 `;

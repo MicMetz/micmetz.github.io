@@ -37,7 +37,7 @@ export default function Footer() {
 
         <FooterSitemapList >
           {[
-            { text: "The Digital Garden", slug: "/Garden" },
+            { text: "My Digital Garden", slug: "/Garden" },
             { text: "About", slug: "/About" },
             { text: "Now", slug: "/Now" },
             { text: "Essays", slug: "/Essays" },

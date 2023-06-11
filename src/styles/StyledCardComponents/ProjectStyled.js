@@ -76,7 +76,7 @@ export const StyledProjectCard = styled( motion.div )`
     transform: scale3d(1.02, 1.02, 1.02);
 
     h3 {
-      color: var(--color-crimson);
+      color: var(--color-tangerine);
     }
 
     & > div:first-child {
