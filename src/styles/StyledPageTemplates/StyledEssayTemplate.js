@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 
 export const EssayStyledTitleContainer = styled.div`
-  padding: var(--space-s) var(--space-xs) var(--space-l) var(--space-xs);
+  padding: var(--space-s) 0 var(--space-l);
   border-bottom: 1px solid var(--color-tinted-cream);
 
   h1 {
@@ -21,7 +21,7 @@ export const EssayStyledTitleContainer = styled.div`
     margin: var(--space-s) 0 0 0;
     color: var(--color-gray-600);
     @media screen and (max-width: 425px) {
-      font-size: var(--font-size-sm);
+      font-size: var(--font-size-base);
     }
   }
 `;
@@ -73,7 +73,7 @@ export const EssayStyledMetadata = styled.div`
 
 export const EssayStyledMain = styled.main`
   margin-top: var(--space-xs);
-  padding: var(--space-xl) 0;
+  margin: var(--space-xl) var(--space-xs);
   background: linear-gradient(var(--color-cream) 0, white 110px);
   grid-column: 1/4 !important;
   width: 100%;
