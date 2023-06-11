@@ -250,7 +250,6 @@ const GlobalStyles = createGlobalStyle`
   @media (prefers-reduced-motion: reduce) {
     html:focus-within {
       scroll-behavior: auto;
-      
     }
 
     *,
@@ -283,18 +282,17 @@ const GlobalStyles = createGlobalStyle`
   }
 
 
-  iframe, article {
+  iframe {
     max-width: 100%;
   }
 
 
-  html, body, article, #root, #___gatsby, #gatsby-focus-wrapper, #gatsby-noscript {
+  html, body, #root, #___gatsby, #gatsby-focus-wrapper, #gatsby-noscript {
     height: 100%;
   }
 
 
   body,
-  article,
   h1,
   h2,
   h3,
