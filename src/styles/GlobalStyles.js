@@ -250,6 +250,7 @@ const GlobalStyles = createGlobalStyle`
   @media (prefers-reduced-motion: reduce) {
     html:focus-within {
       scroll-behavior: auto;
+      
     }
 
     *,

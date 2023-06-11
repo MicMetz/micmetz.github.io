@@ -23,7 +23,7 @@ export default function EssayTemplate( { source, frontMatter, components, slug, 
   const chapterList = headings.map( ( heading, i ) => {
     return {
       text: heading.text.toString(),
-      id          : i,
+      id  : i,
     }
   } )
 
