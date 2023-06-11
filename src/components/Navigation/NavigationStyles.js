@@ -1,5 +1,3 @@
-// noinspection CssOverwrittenProperties,CssReplaceWithShorthandSafely
-
 import { Popover } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { motion } from "framer-motion";
@@ -12,6 +10,7 @@ export const RightHandSide = styled.div`
   display: flex;
   align-items: center;
 `;
+
 
 
 export const SearchWrapper = styled.div`
@@ -27,6 +26,7 @@ export const SearchWrapper = styled.div`
   margin-right: var(--space-s);
   transition: all 0.3s ease-in-out;
 `;
+
 
 
 export const OutsideDropdown = styled( motion.div )`
@@ -46,8 +46,8 @@ export const OutsideDropdown = styled( motion.div )`
       color: var(--color-tangerine);
     }
   }
-
 `;
+
 
 
 export const MainNav = styled.div`
@@ -108,6 +108,7 @@ export const StyledNavbar = styled( motion.nav )`
 `;
 
 
+
 export const StyledChevronDownIcon = styled( ChevronDownIcon )`
   vertical-align: middle;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
@@ -117,6 +118,7 @@ export const StyledChevronDownIcon = styled( ChevronDownIcon )`
   position: relative;
   top: 0;
 `;
+
 
 
 export const SearchBarWrapper = styled.form`
@@ -159,6 +161,7 @@ export const HitsContainer = styled.div`
   top: 4rem;
   left: 0;
   background-color: var(--color-light-cream);
+  opacity: 0;
 `;
 
 
@@ -178,6 +181,7 @@ export const StyledPopoverButton = styled( Popover.Button )`
 `;
 
 
+
 export const Dropdown = styled( motion.div )`
   display: flex;
   flex-direction: column;
@@ -192,7 +196,6 @@ export const Dropdown = styled( motion.div )`
 
 
 
-/// DropDown Contact
 export const ContactDropDown = styled.button`
   border: none;
   display: flex;
@@ -237,10 +240,9 @@ export const NavProductsIcon = styled( IoIosArrowDropdown )`
     margin: 2px 0 0 2px;
     width: 15px;
   }
-`
+`;
 
 
-// Social Icons
 
 export const SocialIcons = styled.a`
   transition: 0.3s ease;
@@ -254,4 +256,4 @@ export const SocialIcons = styled.a`
     cursor: pointer;
 
   }
-`
+`;
