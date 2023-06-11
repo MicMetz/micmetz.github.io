@@ -126,11 +126,13 @@ const MobileContainer = styled.div`
 `;
 
 const DesktopContainer = styled( motion.div )`
+  position: fixed;
   grid-column: 3;
   height: 0;
-  max-width: 300px;
+  max-width: 400px;
   margin-left: var(--space-xl);
-
+  //padding: var(--space-s) var(--space-s) var(--space-xs) var(--space-s);
+  
   h4 {
     margin: 0;
     font-size: 0.96rem;

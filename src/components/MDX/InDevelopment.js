@@ -2,15 +2,17 @@ import styled from "styled-components";
 
 
 
-export default function ComingSoon() {
+export default function InDevelopment() {
   return (
-    <ComingSoonContainer >
-      <h1 >Coming Soon</h1 >
-    </ComingSoonContainer >
+    <DevelopmentContainer >
+      <h1 >In Development</h1 >
+    </DevelopmentContainer >
   );
 }
 
-const ComingSoonContainer = styled.div`
+
+
+const DevelopmentContainer = styled.div`
   margin: var(--space-s) 0;
   box-shadow: var(--box-shadow-lg);
   border-radius: var(--border-radius-lg);
@@ -28,4 +30,5 @@ const ComingSoonContainer = styled.div`
     margin: 0;
     line-height: var(--leading-tight);
   }
+  
 `;

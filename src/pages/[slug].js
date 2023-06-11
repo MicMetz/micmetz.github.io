@@ -68,7 +68,10 @@ export const components = {
     ssr: false,
   } ), ComingSoon         : dynamic( () => import("../components/MDX/ComingSoon"), {
     ssr: false,
-  } ), References         : dynamic( () => import("../components/MDX/References"), {
+  } ), InDevelopment      : dynamic( () => import("../components/MDX/InDevelopment"), {
+    ssr: false,
+  } ),
+  References              : dynamic( () => import("../components/MDX/References"), {
     ssr: false,
   } ), Draft              : dynamic( () => import("../components/MDX/Draft"), {
     ssr: false,
@@ -186,7 +189,7 @@ export default function PostPage( { source, frontMatter, slug, headings, backlin
     return ( <ProjectTemplate
       slug = {slug}
       source = {source}
-      toc={toc}
+      toc = {toc}
       frontMatter = {frontMatter}
       components = {components}
       ogImage = {ogImage}
