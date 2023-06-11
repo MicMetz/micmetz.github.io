@@ -465,9 +465,9 @@ export const ReadingList = [
     chapters   : [],
     description: [
       'Philip Burnett Franklin Agee (July 19, 1935 – January 7, 2008) was a Central Intelligence Agency (CIA) case officer and writer, best known as author of the 1975 book, Inside the Company:' +
-      ' CIA Diary, detailing his experiences in the CIA.\n' +
+      ' CIA Diary, detailing his experiences in the CIA.\n\n' +
       'Agee joined the CIA in 1957, and over the following decade had postings in Washington, D.C., Ecuador, Uruguay and Mexico. After resigning from the Agency in 1968, he became a leading' +
-      ' opponent of CIA practices. A co-founder of CovertAction Quarterly, he died in Cuba in January 2008.\n' +
+      ' opponent of CIA practices. A co-founder of CovertAction Quarterly, he died in Cuba in January 2008.\n\n' +
       'Dirty Work: The CIA in Africa is a 1978 book exploring the \"seamy side of American espionage, done under the guise of national security.\" '
     ]
   }

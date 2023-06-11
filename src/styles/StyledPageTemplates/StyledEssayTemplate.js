@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 
 export const EssayStyledTitleContainer = styled.div`
-  padding: var(--space-s) 0 var(--space-l);
+  padding: var(--space-s) var(--space-xs) var(--space-l) var(--space-xs);
   border-bottom: 1px solid var(--color-tinted-cream);
 
   h1 {
