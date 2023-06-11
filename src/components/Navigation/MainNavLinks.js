@@ -12,7 +12,7 @@ function GardenPopoverLinks() {
     <Popover style = {{ position: "relative" }}>
       <Link href = "/Garden">
         <HoverLink >
-          <span >Digital Garden</span >
+          <span >Garden</span >
         </HoverLink >
       </Link >
       <StyledPopoverButton >
@@ -38,6 +38,38 @@ function GardenPopoverLinks() {
           <Link href = "/Notes">
             <DropdownLink >Notes</DropdownLink >
           </Link >
+        </Dropdown >
+      </Popover.Panel >
+    </Popover >
+  );
+}
+
+
+function LibraryPopoverLinks() {
+  return (
+    <Popover style = {{ position: "relative" }}>
+      <Link href = "/Library">
+        <HoverLink >
+          <span >Library</span >
+        </HoverLink >
+      </Link >
+      <StyledPopoverButton >
+        <StyledChevronDownIcon width = "24" height = "24"/>
+      </StyledPopoverButton >
+
+      <Popover.Panel >
+        <Dropdown
+          initial = {{
+            opacity        : 0,
+            rotateX        : "90deg",
+            transformOrigin: "top",
+          }}
+          animate = {{ opacity: 1, rotateX: "0deg" }}
+          exit = {{ opacity: 0, rotateX: "90deg" }}
+          transition = {{ duration: 0.6, ease: "easeInOut" }}
+          style = {{ position: "absolute", zIndex: "10" }}
+          key = "dropdown"
+        >
           <Link href = "/Library/Books">
             <DropdownLink >Books</DropdownLink >
           </Link >
@@ -50,16 +82,17 @@ function GardenPopoverLinks() {
   );
 }
 
-
 export default function MainNavLinks() {
   return (
     <MainNav >
       <AnimatePresence >
         <GardenPopoverLinks />
       </AnimatePresence >
+      <AnimatePresence >
+        <LibraryPopoverLinks />
+      </AnimatePresence >
       <div className = "outside-dropdown">
         <UnderlineHoverLink href = "/">Home</UnderlineHoverLink >
-        <UnderlineHoverLink href = "/Library">Library</UnderlineHoverLink >
         <UnderlineHoverLink href = "/Projects">Projects</UnderlineHoverLink >
         <UnderlineHoverLink href = "/About">About</UnderlineHoverLink >
         <UnderlineHoverLink href = "/Contact">Contact</UnderlineHoverLink >
