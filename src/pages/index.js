@@ -203,7 +203,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
                   </SectionHeader >
               </Link >
               <Subheader >
-                Books I’ve read and books I like the idea of having read.
+                Books I’m currently reading.
               </Subheader >
               <div
                 style = {{
