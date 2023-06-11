@@ -186,6 +186,7 @@ export default function PostPage( { source, frontMatter, slug, headings, backlin
     return ( <ProjectTemplate
       slug = {slug}
       source = {source}
+      toc={toc}
       frontMatter = {frontMatter}
       components = {components}
       ogImage = {ogImage}
