@@ -1,11 +1,13 @@
 import React from 'react'
+import InDevelopment from "../components/MDX/InDevelopment.js";
 
 
 
 export default function Changelog() {
   return (
     <>
-      <h1 >Changelog</h1 >
+
+      <InDevelopment />
     </>
   )
 }

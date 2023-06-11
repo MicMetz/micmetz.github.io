@@ -9,20 +9,12 @@ import { PhotoGrid } from "../styles/StyledGridComponents.js";
 
 export default function PhotoGallery() {
 		const router = useRouter()
-
 		const [ selectedImage, setSelectedImage ] = useState( null );
-
   const [ isLoaded, setIsLoaded ] = useState( false );
-
   const [ images, setImages ] = useState( [] );
-
   const [ error, setError ] = useState( null );
-
   const [ page, setPage ] = useState( 1 );
-
-
   const [ hasMore, setHasMore ] = useState( false );
-
 
   const observer = useRef( null );
 

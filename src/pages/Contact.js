@@ -1,11 +1,13 @@
 import React from 'react'
+import InDevelopment from "../components/MDX/InDevelopment.js";
 
 
 
 export default function Contact() {
   return (
     <>
-      <h1 >Contact</h1 >
+
+      <InDevelopment />
     </>
   )
 }

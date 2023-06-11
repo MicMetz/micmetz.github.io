@@ -5,6 +5,7 @@ import React from 'react';
 import ProjectCard from "../../components/Cards/ProjectCard.js";
 import Header from "../../components/Layouts/Header.js";
 import { Layout } from "../../components/Layouts/Layout.js";
+import InDevelopment from "../../components/MDX/InDevelopment.js";
 import { SectionTitle } from "../../styles/StyledComponents.js";
 import { ProjectGrid } from "../../styles/StyledGridComponents.js";
 import { Subheader } from "../../styles/StyledTypography.js";
@@ -45,6 +46,7 @@ export default function ProjectsPage( { projects } ) {
             />
           ) )}
         </ProjectGrid >
+        <InDevelopment />
       </Layout >
     </>
   );
