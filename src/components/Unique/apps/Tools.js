@@ -18,15 +18,18 @@ export const MainLayout = styled.div`
   justify-items: center;
   justify-content: center;
   margin: var(--space-m) auto 0;
+
   img {
     transition: all 400ms ease;
     max-width: 175px;
     margin-bottom: 0;
+
     &:hover {
       transition: all 400ms ease;
       transform: translateY(-6px);
     }
   }
+
   h5 {
     transition: all 400ms ease;
     text-align: center;

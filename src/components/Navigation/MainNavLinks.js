@@ -1,9 +1,3 @@
-/**
- * @Author: Maggie Appleton <https://github.com/MaggieAppleton>
- * @Author: Michael Metzger
- */
-
-
 import { Popover } from "@headlessui/react";
 import { AnimatePresence } from "framer-motion";
 import Link from "next/link";

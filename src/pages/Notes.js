@@ -8,6 +8,7 @@ import NoteCard from "../components/Cards/NoteCard.js";
 import Header from "../components/Layouts/Header.js";
 import { Layout } from "../components/Layouts/Layout.js";
 import TitleWithCount from "../components/MISC/TitleWithCount.js";
+import { StyledNotesGrid } from "../styles/StyledGridComponents.js";
 import { noteFilePaths, NOTES_PATH } from "../tools/mdxUtils.js";
 
 
@@ -20,7 +21,7 @@ export default function NotesPage( { notes } ) {
 								<header style = {{ marginBottom: "var(--space-xl)" }} >
 										<TitleWithCount posts = {notes} >Notes</TitleWithCount >
 								</header >
-								<NotesGrid >
+								<StyledNotesGrid >
 										{notes.map( ( value, i ) => (
 												<NoteCard
 														key = {i}
@@ -32,16 +33,13 @@ export default function NotesPage( { notes } ) {
 														date = {value.data.updated}
 												/>
 										) )}
-								</NotesGrid >
+								</StyledNotesGrid >
 						</Layout >
 				</>
 		);
 }
 
-const NotesGrid = styled.section`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-`;
+
 
 
 export function getStaticProps() {

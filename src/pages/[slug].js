@@ -127,8 +127,6 @@ export const components = {
     ssr: false,
   } ), InvisiblesFeature      : dynamic( () => import("../components/Unique/InvisiblesFeature"), {
     ssr: false,
-  } ), HackyFormatting        : dynamic( () => import("../components/Unique/HackyFormatting"), {
-    ssr: false,
   } ), MediumMaterialsMeat    : dynamic( () => import("../components/Unique/MediumMaterialsMeat"), {
     ssr: false,
   } ), Tools                  : dynamic( () => import("../components/Unique/apps/Tools"), {
@@ -153,17 +151,11 @@ export const components = {
     ssr: false,
   } ), BlockLogos             : dynamic( () => import("../components/Unique/blocks/BlockLogos"), {
     ssr: false,
-  } ), TodoApp                : dynamic( () => import("../components/Unique/direct-manipulation/TodoApp"), {
-    ssr: false,
-  } ), DetatchedTodoApp       : dynamic( () => import("../components/Unique/direct-manipulation/DetatchedTodoApp"), {
-    ssr: false,
   } ), NoteAction             : dynamic( () => import("../components/Unique/programmatic-notes/NoteAction"), {
     ssr: false,
   } ), NoteTrigger            : dynamic( () => import("../components/Unique/programmatic-notes/NoteTrigger"), {
     ssr: false,
-  } ), AIConversation         : dynamic( () => import("../components/Unique/AIConversation"), {
-    ssr: false,
-  } ),
+  } )
 };
 
 

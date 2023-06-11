@@ -34,9 +34,9 @@ const GlobalStyles = createGlobalStyle`
     --main-height: calc(100vh - var(--nav-height));
 
     /**
-		MaggieAppleton
-		https://github.com/MaggieAppleton
-	*/
+      MaggieAppleton
+      https://github.com/MaggieAppleton
+    */
 
     /* Colors */
     --color-light-cream: #FCFBF7;
@@ -151,27 +151,27 @@ const GlobalStyles = createGlobalStyle`
     --space-128: 8rem;
     --space-160: 10rem;
 
-    --space-3xs: calc(((var(--fc-3xs-min) / 16) * 1rem) + (var(--fc-3xs-max) - var(--fc-3xs-min)) * var(--fluid-bp));
-    --space-2xs: calc(((var(--fc-2xs-min) / 16) * 1rem) + (var(--fc-2xs-max) - var(--fc-2xs-min)) * var(--fluid-bp));
-    --space-xs: calc(((var(--fc-xs-min) / 16) * 1rem) + (var(--fc-xs-max) - var(--fc-xs-min)) * var(--fluid-bp));
-    --space-s: calc(((var(--fc-s-min) / 16) * 1rem) + (var(--fc-s-max) - var(--fc-s-min)) * var(--fluid-bp));
-    --space-m: calc(((var(--fc-m-min) / 16) * 1rem) + (var(--fc-m-max) - var(--fc-m-min)) * var(--fluid-bp));
-    --space-l: calc(((var(--fc-l-min) / 16) * 1rem) + (var(--fc-l-max) - var(--fc-l-min)) * var(--fluid-bp));
-    --space-xl: calc(((var(--fc-xl-min) / 16) * 1rem) + (var(--fc-xl-max) - var(--fc-xl-min)) * var(--fluid-bp));
-    --space-2xl: calc(((var(--fc-2xl-min) / 16) * 1rem) + (var(--fc-2xl-max) - var(--fc-2xl-min)) * var(--fluid-bp));
-    --space-3xl: calc(((var(--fc-3xl-min) / 16) * 1rem) + (var(--fc-3xl-max) - var(--fc-3xl-min)) * var(--fluid-bp));
-    --space-4xl: calc(((var(--fc-4xl-min) / 16) * 1rem) + (var(--fc-4xl-max) - var(--fc-4xl-min)) * var(--fluid-bp));
+    --space-3xs: calc(((var(--fc-3xs-min) / 16) * 1.3rem) + (var(--fc-3xs-max) - var(--fc-3xs-min)) * var(--fluid-bp));
+    --space-2xs: calc(((var(--fc-2xs-min) / 16) * 1.3rem) + (var(--fc-2xs-max) - var(--fc-2xs-min)) * var(--fluid-bp));
+    --space-xs: calc(((var(--fc-xs-min) / 16) * 1.3rem) + (var(--fc-xs-max) - var(--fc-xs-min)) * var(--fluid-bp));
+    --space-s: calc(((var(--fc-s-min) / 16) * 1.3rem) + (var(--fc-s-max) - var(--fc-s-min)) * var(--fluid-bp));
+    --space-m: calc(((var(--fc-m-min) / 16) * 1.3rem) + (var(--fc-m-max) - var(--fc-m-min)) * var(--fluid-bp));
+    --space-l: calc(((var(--fc-l-min) / 16) * 1.3rem) + (var(--fc-l-max) - var(--fc-l-min)) * var(--fluid-bp));
+    --space-xl: calc(((var(--fc-xl-min) / 16) * 1.3rem) + (var(--fc-xl-max) - var(--fc-xl-min)) * var(--fluid-bp));
+    --space-2xl: calc(((var(--fc-2xl-min) / 16) * 1.3rem) + (var(--fc-2xl-max) - var(--fc-2xl-min)) * var(--fluid-bp));
+    --space-3xl: calc(((var(--fc-3xl-min) / 16) * 1.3rem) + (var(--fc-3xl-max) - var(--fc-3xl-min)) * var(--fluid-bp));
+    --space-4xl: calc(((var(--fc-4xl-min) / 16) * 1.3rem) + (var(--fc-4xl-max) - var(--fc-4xl-min)) * var(--fluid-bp));
 
     /* One-up pairs */
-    --space-3xs-2xs: calc(((var(--fc-3xs-min) / 16) * 1rem) + (var(--fc-2xs-max) - var(--fc-3xs-min)) * var(--fluid-bp));
-    --space-2xs-xs: calc(((var(--fc-2xs-min) / 16) * 1rem) + (var(--fc-xs-max) - var(--fc-2xs-min)) * var(--fluid-bp));
-    --space-xs-s: calc(((var(--fc-xs-min) / 16) * 1rem) + (var(--fc-s-max) - var(--fc-xs-min)) * var(--fluid-bp));
-    --space-s-m: calc(((var(--fc-s-min) / 16) * 1rem) + (var(--fc-m-max) - var(--fc-s-min)) * var(--fluid-bp));
-    --space-m-l: calc(((var(--fc-m-min) / 16) * 1rem) + (var(--fc-l-max) - var(--fc-m-min)) * var(--fluid-bp));
-    --space-l-xl: calc(((var(--fc-l-min) / 16) * 1rem) + (var(--fc-xl-max) - var(--fc-l-min)) * var(--fluid-bp));
-    --space-xl-2xl: calc(((var(--fc-xl-min) / 16) * 1rem) + (var(--fc-2xl-max) - var(--fc-xl-min)) * var(--fluid-bp));
-    --space-2xl-3xl: calc(((var(--fc-2xl-min) / 16) * 1rem) + (var(--fc-3xl-max) - var(--fc-2xl-min)) * var(--fluid-bp));
-    --space-3xl-4xl: calc(((var(--fc-3xl-min) / 16) * 1rem) + (var(--fc-4xl-max) - var(--fc-3xl-min)) * var(--fluid-bp));
+    --space-3xs-2xs: calc(((var(--fc-3xs-min) / 16) * 1.3rem) + (var(--fc-2xs-max) - var(--fc-3xs-min)) * var(--fluid-bp));
+    --space-2xs-xs: calc(((var(--fc-2xs-min) / 16) * 1.3rem) + (var(--fc-xs-max) - var(--fc-2xs-min)) * var(--fluid-bp));
+    --space-xs-s: calc(((var(--fc-xs-min) / 16) * 1.3rem) + (var(--fc-s-max) - var(--fc-xs-min)) * var(--fluid-bp));
+    --space-s-m: calc(((var(--fc-s-min) / 16) * 1.3rem) + (var(--fc-m-max) - var(--fc-s-min)) * var(--fluid-bp));
+    --space-m-l: calc(((var(--fc-m-min) / 16) * 1.3rem) + (var(--fc-l-max) - var(--fc-m-min)) * var(--fluid-bp));
+    --space-l-xl: calc(((var(--fc-l-min) / 16) * 1.3rem) + (var(--fc-xl-max) - var(--fc-l-min)) * var(--fluid-bp));
+    --space-xl-2xl: calc(((var(--fc-xl-min) / 16) * 1.3rem) + (var(--fc-2xl-max) - var(--fc-xl-min)) * var(--fluid-bp));
+    --space-2xl-3xl: calc(((var(--fc-2xl-min) / 16) * 1.3rem) + (var(--fc-3xl-max) - var(--fc-2xl-min)) * var(--fluid-bp));
+    --space-3xl-4xl: calc(((var(--fc-3xl-min) / 16) * 1.3rem) + (var(--fc-4xl-max) - var(--fc-3xl-min)) * var(--fluid-bp));
 
 
     --font-size-2xl: 2.5rem;
@@ -191,52 +191,52 @@ const GlobalStyles = createGlobalStyle`
 
     --f--2-min: 14.5;
     --f--2-max: 15;
-    --font-size-xs: calc(((var(--f--2-min) / 16) * 1rem) + (var(--f--2-max) - var(--f--2-min)) *
+    --font-size-xs: calc(((var(--f--2-min) / 16) * 1.3rem) + (var(--f--2-max) - var(--f--2-min)) *
     var(--fluid-bp));
 
     --f--1-min: 16.00;
     --f--1-max: 16.50;
-    --font-size-sm: calc(((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) *
+    --font-size-sm: calc(((var(--f--1-min) / 16) * 1.3rem) + (var(--f--1-max) - var(--f--1-min)) *
     var(--fluid-bp));
 
     --f-0-min: 20.00;
     --f-0-max: 22.00;
-    --font-size-base: calc(((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *
+    --font-size-base: calc(((var(--f-0-min) / 16) * 1.3rem) + (var(--f-0-max) - var(--f-0-min)) *
     var(--fluid-bp));
 
     --f-1-min: 25.00;
     --f-1-max: 28.6;
-    --font-size-md: calc(((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) *
+    --font-size-md: calc(((var(--f-1-min) / 16) * 1.3rem) + (var(--f-1-max) - var(--f-1-min)) *
     var(--fluid-bp));
 
     --f-2-min: 31.25;
     --f-2-max: 37.18;
-    --font-size-lg: calc(((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) *
+    --font-size-lg: calc(((var(--f-2-min) / 16) * 1.3rem) + (var(--f-2-max) - var(--f-2-min)) *
     var(--fluid-bp));
 
     --f-3-min: 39.06;
     --f-3-max: 48.33;
-    --font-size-xl: calc(((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) *
+    --font-size-xl: calc(((var(--f-3-min) / 16) * 1.3rem) + (var(--f-3-max) - var(--f-3-min)) *
     var(--fluid-bp));
 
     --f-4-min: 46.87;
     --f-4-max: 62.83;
-    --font-size-2xl: calc(((var(--f-4-min) / 16) * 1rem) + (var(--f-4-max) - var(--f-4-min)) *
+    --font-size-2xl: calc(((var(--f-4-min) / 16) * 1.3rem) + (var(--f-4-max) - var(--f-4-min)) *
     var(--fluid-bp));
 
     --f-5-min: 57.6;
     --f-5-max: 81.8;
-    --font-size-3xl: calc(((var(--f-5-min) / 16) * 1rem) + (var(--f-5-max) - var(--f-5-min)) *
+    --font-size-3xl: calc(((var(--f-5-min) / 16) * 1.3rem) + (var(--f-5-max) - var(--f-5-min)) *
     var(--fluid-bp));
 
     --f-6-min: 76.29;
     --f-6-max: 106.34;
-    --font-size-4xl: calc(((var(--f-6-min) / 16) * 1rem) + (var(--f-6-max) - var(--f-6-min)) *
+    --font-size-4xl: calc(((var(--f-6-min) / 16) * 1.3rem) + (var(--f-6-max) - var(--f-6-min)) *
     var(--fluid-bp));
 
   }
 
-  
+
   /* _________________________________________________________________________________________ Formating _________________________________________________________________________________________ */
   @media screen and (min-width: 1200px) {
     :root {
@@ -274,12 +274,10 @@ const GlobalStyles = createGlobalStyle`
   }
 
 
-
   html {
     font-size: 62.5%;
     scroll-behavior: smooth;
   }
-
 
 
   iframe, article {
@@ -310,7 +308,7 @@ const GlobalStyles = createGlobalStyle`
   body, section {
     line-height: 1;
   }
-  
+
   body {
     min-height: 100vh;
     font-size: 1.4rem;
@@ -359,7 +357,6 @@ const GlobalStyles = createGlobalStyle`
   }
 
 
-
   a:not([class]) {
     text-decoration-skip-ink: auto;
   }
@@ -378,7 +375,7 @@ const GlobalStyles = createGlobalStyle`
   select {
     font: inherit;
   }
-  
+
   .small-caps {
     font-size: var(--font-size-xs) !important;
     font-family: var(--font-sans);
@@ -504,7 +501,7 @@ const GlobalStyles = createGlobalStyle`
       animation-play-state: paused;
     }
   }
-  
+
   [data-collapsible="true"].bg-white + [data-collapsible="true"].bg-white {
   @apply pt-0 md: pt-0;
   }

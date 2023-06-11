@@ -1,16 +1,14 @@
-import BuddingIcon from "../Icons/BuddingIcon.js";
 import styled from "styled-components";
 
 
 
 export default function ComingSoon() {
-		return (
-				<ComingSoonContainer >
-						<BuddingIcon width = "80" height = "80" />
-						<h1 >Coming Soon</h1 >
-						<p >Feel free to bug me on twitter to finish writing this.</p >
-				</ComingSoonContainer >
-		);
+  return (
+    <ComingSoonContainer >
+      {/* <BuddingIcon width = "80" height = "80"/> */}
+      <h1 >Coming Soon</h1 >
+    </ComingSoonContainer >
+  );
 }
 
 const ComingSoonContainer = styled.div`
@@ -25,6 +23,7 @@ const ComingSoonContainer = styled.div`
   justify-content: center;
   text-align: center;
   padding: var(--space-l) var(--space-xs) var(--space-xl);
+
   h1,
   p {
     margin: 0;

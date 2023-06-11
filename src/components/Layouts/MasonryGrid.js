@@ -1,3 +1,9 @@
+/**
+ * @author
+ * @function MasonryGrid
+ * @description https://github.com/paulcollett/react-masonry-css
+ *
+ */
 import { StyledMasonryGrid } from "../../styles/StyledGridComponents.js";
 
 
@@ -15,5 +21,4 @@ export default function MasonryGrid( { children, breakpointColumnsObj = { defaul
 }
 
 
-// Docs
-// https://github.com/paulcollett/react-masonry-css
+//

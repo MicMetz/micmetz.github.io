@@ -172,7 +172,7 @@ export const StyledLink = styled.a`
   padding-bottom: 0.25rem;
 
   &:focus {
-    outline: 2px solid darkblue;
+    outline: 1px solid darkblue;
     border-radius: 2px;
   }
 

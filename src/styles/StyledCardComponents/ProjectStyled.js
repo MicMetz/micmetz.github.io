@@ -47,6 +47,7 @@ export const ProjectMetadataContainer = styled.div`
   }
 `;
 
+
 export const StyledProjectCard = styled( motion.div )`
   display: flex;
   flex-direction: column;
@@ -55,12 +56,20 @@ export const StyledProjectCard = styled( motion.div )`
   transition: all 0.3s ease-in-out;
   color: var(--color-gray-800);
   margin: 0 var(--space-xs) var(--space-xs) 0;
+  padding: var(--space-s);
 
   img,
   div:first-child {
     border-radius: var(--border-radius-base);
     transition: all 0.3s ease-in-out;
     margin-bottom: 0 !important;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
   }
 
   &:hover {
@@ -73,5 +82,7 @@ export const StyledProjectCard = styled( motion.div )`
     & > div:first-child {
       box-shadow: var(--box-shadow-lg);
     }
+
+
   }
 `;
