@@ -1,9 +1,24 @@
+import { getRandomValues } from "crypto";
 import { GalleryData } from "../../posts/data/GalleryData.js";
 import { useRouter } from 'next/router'
 import React, { useEffect, useRef, useState } from "react";
 import { Layout } from "../components/Layouts/Layout.js"
 import { GalleryContainer, ImageCard, ImageSpread, ImgStripe, Section, SectionTitle } from "../styles/StyledComponents.js";
 import { PhotoGrid } from "../styles/StyledGridComponents.js";
+
+
+
+function randomizeImages( data ) {
+  let currentIndex = data.length, temporaryValue, randomIndex;
+  while ( 0 !== currentIndex ) {
+    randomIndex = Math.floor( Math.random() * currentIndex );
+    currentIndex -= 1;
+    temporaryValue = data[ currentIndex ];
+    data[ currentIndex ] = data[ randomIndex ];
+    data[ randomIndex ] = temporaryValue;
+  }
+  return data;
+}
 
 
 
@@ -16,6 +31,7 @@ export default function PhotoGallery() {
   const [ page, setPage ] = useState( 1 );
   const [ hasMore, setHasMore ] = useState( false );
 
+  const imageRef = useRef(randomizeImages( GalleryData) );
   const observer = useRef( null );
 
 
