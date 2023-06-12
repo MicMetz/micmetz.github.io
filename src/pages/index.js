@@ -305,38 +305,6 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
                 ) )}
               </div >
             </section >
-
-            {/*
-             <section style = {{ gridArea: "presentations" }} >
-             <Link href = "/Project/Presentations" >
-             <a href = "/Project/Presentations" >
-             <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} >
-             <SectionHeader >
-             Presentations
-             <ArrowRightIcon width = "18" height = "18" />
-             </SectionHeader >
-             </Title2 >
-             </a >
-             </Link >
-             <Subheader >
-
-             </Subheader >
-
-             {PresentationsData.map( ( project, i ) => (
-             <BookCard
-             key = {i}
-             slug = {project.slug}
-             title = {project.title}
-             cover = {project.cover}
-             date = {project.date}
-             demo = {project.demo}
-             />
-             )
-             )}
-
-
-             </section >
-             */}
           </ProjectsSection >
         </motion.section >
 

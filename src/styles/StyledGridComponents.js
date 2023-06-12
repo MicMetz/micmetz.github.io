@@ -48,9 +48,7 @@ export const PhotoGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
-  padding: 0 1rem 1rem;
   margin: 0 auto;
-  max-width: 1200px;
   width: 100%;
   height: 100%;
   align-items: center;
