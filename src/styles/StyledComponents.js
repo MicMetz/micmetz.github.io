@@ -177,8 +177,6 @@ export const SectionTitle = styled.h2`
 `
 
 export const SectionText = styled.p`
-  //min-width: 50vw;
-  //max-width: 45vw;
   width: 100%;
   height: fit-content;
 

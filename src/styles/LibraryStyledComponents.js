@@ -55,10 +55,6 @@ export const DefaultDetails = styled.div`
   width: 100%;
   height: 100%;
 
-  p {
-    font-size: 1.2em;
-    line-height: 1.2em;
-  }
 `;
 
 
@@ -98,7 +94,7 @@ export const LibraryStyledHeader = styled.header`
 `;
 
 
-export const LibraryStyledContentBlock = styled.section`
+export const LibraryBookStyledComponent = styled.section`
   display: flex;
   //position: absolute;
   height: fit-content;

@@ -1,22 +1,27 @@
 import { ReadingList } from '/posts/data/ReadingList.js'
-import React, { useEffect, useRef, useState } from 'react'
-import Header from "../../components/Layouts/Header.js";
-import LibraryLayout from "../../components/Layouts/LibraryLayout.js";
-import { Sidebar } from '../../components/Layouts/Sidebar.js'
-import { Spacer } from "../../components/MISC/Spacer.js";
-import { BookAtrribution, BookByline, BookCoverImage, BookSubtitle, BookTagline, BookTitle } from '../../styles/BookStyledComponents.js'
-import { LibrarySectionTitle, LibraryStyledBody, LibraryStyledContentBlock, LibraryStyledMain } from '../../styles/LibraryStyledComponents.js'
-import { ReadmoreLink } from "../../styles/LinkStyledComponents.js";
-import { DescriptionParser } from '../../tools/DescriptionParser.js'
+import React, {
+  useEffect,
+  useRef,
+  useState
+}                      from 'react'
+import LibraryBookCard from "../../components/Cards/LibraryBookCard.js";
+import Header          from "../../components/Layouts/Header.js";
+import LibraryLayout   from "../../components/Layouts/LibraryLayout.js";
+import { Spacer }      from "../../components/MISC/Spacer.js";
+import {
+  LibrarySectionTitle,
+  LibraryStyledBody,
+  LibraryStyledMain
+}                      from '../../styles/LibraryStyledComponents.js'
 
 
 
 export default function ReadingPage( forwardRef, open, toggle ) {
-  const [ activeFeature, setActiveFeature ] = useState( ReadingList[ 0 ] )
+  const [ activeFeature, setActiveFeature ]   = useState( ReadingList[ 0 ] )
   const [ scrollPosition, setScrollPosition ] = useState()
-  const navRef = useRef( { open, toggle } )
-  const ref = useRef( forwardRef )
-  const [ activeReading, setActiveReading ] = useState( ReadingList.find( ( book ) => book.id === 0 ) )
+  const navRef                                = useRef( { open, toggle } )
+  const ref                                   = useRef( forwardRef )
+  const [ activeReading, setActiveReading ]   = useState( ReadingList.find( ( book ) => book.id === 0 ) )
 
 
   useEffect( () => {
@@ -60,57 +65,33 @@ export default function ReadingPage( forwardRef, open, toggle ) {
 
   return (
     <LibraryLayout >
-      <Header title = "Reading List" description = "A collection of books I've read and recommend."/>
-
+      <Header title = "Reading List" description = "A collection of books I've read and recommend." />
       <LibraryStyledBody >
-        <Sidebar header = {activeReading.header}
-                 chapters = {activeReading.chapters}
-                 open = {open}
-                 toggle = {toggle}
-                 forwardRef = {navRef}
-        />
         <LibraryStyledMain >
-          <LibrarySectionTitle main>Reading List</LibrarySectionTitle >
+          <LibrarySectionTitle main >Reading List</LibrarySectionTitle >
           {ReadingList.map( ( book, index ) => {
             return (
-              <LibraryStyledContentBlock key = {index} value = {book} id = {index} innerRef = {c => this.myRef = c}>
-                {DescriptionParser( book )}
-                <BookAtrribution >
-                  <BookTitle >{book.header.title}</BookTitle >
-                  <BookSubtitle >{book.header.subtitle}</BookSubtitle >
-                  <BookByline >{book.author}</BookByline >
-                </BookAtrribution >
-                <BookCoverImage src = {book.cover} alt = {book.header.title}/>
-                <BookTagline >
-                  <ul >
-                    <li >
-                      <ReadmoreLink href = {book.link} target = "blank">Read More</ReadmoreLink >
-                    </li >
-                    {book.tags.map( ( tag, id ) => {
-                      return (
-                        <li key = {id}>
-                          <ReadmoreLink href = {tag.link} target = "blank">{tag.name}</ReadmoreLink >
-                        </li >
-                      )
-                    } )}
-                  </ul >
-                </BookTagline >
-              </LibraryStyledContentBlock >
+              <LibraryBookCard key = {index} book = {book} index = {index} />
             )
           } )}
         </LibraryStyledMain >
       </LibraryStyledBody >
-
-      <Spacer size = "3xlarge"/>
-
+      <Spacer size = "3xlarge" />
     </LibraryLayout >
-  )
+  );
+
+
 }
 
 
 const transition = {
   duration: 1,
-  ease    : [ 0.6, 0.01, -0.05, 0.9 ],
+  ease    : [
+    0.6,
+    0.01,
+    -0.05,
+    0.9
+  ],
 }
 
 
@@ -130,3 +111,11 @@ const frameVariants = {
 }
 
 
+
+{/* <Sidebar header = {activeReading.header}
+ chapters = {activeReading.chapters}
+ open = {open}
+ toggle = {toggle}
+ forwardRef = {navRef}
+ /> */
+}

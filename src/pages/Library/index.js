@@ -1,25 +1,28 @@
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import {
+  useEffect,
+  useState
+}                          from "react";
 import { CurrentReadings } from "../../../posts/data/CurrentReadings.js";
-import Header from "../../components/Layouts/Header.js";
-import LibraryLayout from "../../components/Layouts/LibraryLayout.js";
-import { Sidebar } from "../../components/Layouts/Sidebar.js";
-import { Spacer } from "../../components/MISC/Spacer.js";
-import SplashScreen from "../../components/MISC/Splash.js";
-import { BookAtrribution, BookByline, BookCoverImage, BookSubtitle, BookTagline, BookTitle } from "../../styles/BookStyledComponents.js";
-import { LibrarySectionTitle, LibraryStyledBody, LibraryStyledContentBlock, LibraryStyledMain } from "../../styles/LibraryStyledComponents.js";
-import { ReadmoreLink } from "../../styles/LinkStyledComponents.js";
-import { DescriptionParser } from "../../tools/DescriptionParser.js";
+import LibraryBookCard     from "../../components/Cards/LibraryBookCard.js";
+import Header              from "../../components/Layouts/Header.js";
+import LibraryLayout       from "../../components/Layouts/LibraryLayout.js";
+import { Spacer }          from "../../components/MISC/Spacer.js";
+import SplashScreen        from "../../components/MISC/Splash.js";
+import {
+  LibrarySectionTitle,
+  LibraryStyledBody,
+  LibraryStyledMain
+}                          from "../../styles/LibraryStyledComponents.js";
 
 
 
 let animation;
 
 export default function LibraryPage() {
-  const [ activeFeature, setActiveFeature ] = useState( CurrentReadings[ 0 ] )
+  const [ activeFeature, setActiveFeature ]   = useState( CurrentReadings[ 0 ] )
   const [ scrollPosition, setScrollPosition ] = useState()
-  const [ isToggleOpen, setIsToggleOpen ] = useState( false )
-  const [ isSidebarOpen, setIsSidebarOpen ] = useState( false )
+  const [ isToggleOpen, setIsToggleOpen ]     = useState( false )
+  const [ isSidebarOpen, setIsSidebarOpen ]   = useState( false )
 
 
   useEffect( () => {
@@ -64,54 +67,35 @@ export default function LibraryPage() {
 
   return (
     <LibraryLayout >
-      <Header title = "Michael Metzger | Library"/>
+      <Header title = "Michael Metzger | Library" />
       <SplashScreen />
       <LibraryStyledBody >
-        <Sidebar header = {activeFeature.header}
-                 chapters = {activeFeature.chapters}
-                 open = {isSidebarOpen} toggle = {setIsSidebarOpen}
-        />
         <LibraryStyledMain >
-
-          <LibrarySectionTitle main>Currently Reading</LibrarySectionTitle >
+          <LibrarySectionTitle main >Currently Reading</LibrarySectionTitle >
           {CurrentReadings?.map( ( book, index ) => {
-
             return (
-              <LibraryStyledContentBlock key = {index} value = {book} id = {index} innerRef = {c => this.myRef = c}>
-                {DescriptionParser( book )}
-                <BookAtrribution >
-                  <BookTitle >{book.header.title}</BookTitle >
-                  <BookSubtitle >{book.header.subtitle}</BookSubtitle >
-                  <BookByline >{book.author}</BookByline >
-                </BookAtrribution >
-                <BookCoverImage src = {book.cover} alt = {book.header.title}/>
-                <BookTagline >
-                  <ul >
-                    <li >
-                      <ReadmoreLink href = {book.link} target = "blank">Read More</ReadmoreLink >
-                    </li >
-                    {book.tags.map( ( tag, id ) => {
-                      return (
-                        <li key = {id}>
-                          <ReadmoreLink href = {tag.link} target = "blank">{tag.name}</ReadmoreLink >
-                        </li >
-                      )
-                    } )}
-                  </ul >
-                </BookTagline >
-              </LibraryStyledContentBlock >
+              <LibraryBookCard key = {index} book = {book} index = {index} />
             )
           } )}
         </LibraryStyledMain >
       </LibraryStyledBody >
-
-      <Spacer size = "3xlarge"/>
-
+      <Spacer size = "3xlarge" />
     </LibraryLayout >
-  )
+  );
+
+
+
 }
 
 
+{/* <Sidebar header = {activeFeature.header} */
+}
+{/*          chapters = {activeFeature.chapters} */
+}
+{/*          open = {isSidebarOpen} toggle = {setIsSidebarOpen} */
+}
+{/* /> */
+}
 
 //
 // export const getStaticProps = () => {

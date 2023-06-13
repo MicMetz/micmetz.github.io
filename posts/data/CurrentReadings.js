@@ -36,11 +36,11 @@ export const CurrentReadings = [
     publisher  : 'Picador',
     cover      : '/images/library/books/KillAnythingThatMoves.jpg',
     description: [
-      'Based on classified documents and first-person interviews, a startling history of the American war on Vietnamese civilians. \n\n',
-      'The American Empire Project \n\n',
-      'Winner of the Ridenhour Prize for Reportorial Distinction \n\n\n',
-      'Americans have long been taught that events such as the notorious My Lai massacre were isolated incidents in the Vietnam War, carried out by \"a few bad apples.\" But as award-winning journalist and historian Nick Turse demonstrates in this groundbreaking investigation, violence against Vietnamese noncombatants was not at all exceptional during the conflict. Rather, it was pervasive and systematic, the predictable consequence of official orders to \"kill anything that moves.\" \n\n',
-      'Drawing on more than a decade of research in secret Pentagon files and extensive interviews with American veterans and Vietnamese survivors, Turse reveals for the first time how official policies resulted in millions of innocent civilians killed and wounded. In shocking detail, he lays out the workings of a military machine that made crimes in almost every major American combat unit all but inevitable. Kill Anything That Moves takes us from archives filled with Washington\'s long-suppressed war crime investigations to the rural Vietnamese hamlets that bore the brunt of the war; from boot camps where young American soldiers learned to hate all Vietnamese to bloodthirsty campaigns like Operation Speedy Express, in which a general obsessed with body counts led soldiers to commit what one participant called \"a My Lai a month.\" \n\n',
+      'Based on classified documents and first-person interviews, a startling history of the American war on Vietnamese civilians. \n',
+      '*The American Empire Project* \n',
+      '*Winner of the Ridenhour Prize for Reportorial Distinction* \n',
+      'Americans have long been taught that events such as the notorious My Lai massacre were isolated incidents in the Vietnam War, carried out by \"a few bad apples.\" But as award-winning journalist and historian Nick Turse demonstrates in this groundbreaking investigation, violence against Vietnamese noncombatants was not at all exceptional during the conflict. Rather, it was pervasive and systematic, the predictable consequence of official orders to \"kill anything that moves.\" \n',
+      'Drawing on more than a decade of research in secret Pentagon files and extensive interviews with American veterans and Vietnamese survivors, Turse reveals for the first time how official policies resulted in millions of innocent civilians killed and wounded. In shocking detail, he lays out the workings of a military machine that made crimes in almost every major American combat unit all but inevitable. Kill Anything That Moves takes us from archives filled with Washington\'s long-suppressed war crime investigations to the rural Vietnamese hamlets that bore the brunt of the war; from boot camps where young American soldiers learned to hate all Vietnamese to bloodthirsty campaigns like Operation Speedy Express, in which a general obsessed with body counts led soldiers to commit what one participant called \"a My Lai a month.\" \n',
       'Thousands of Vietnam books later, Kill Anything That Moves, devastating and definitive, finally brings us face-to-face with the truth of a war that haunts Americans to this day. \n\n'
     ],
     link       : 'https://us.macmillan.com/books/9781250045065/killanythingthatmoves',
@@ -252,10 +252,11 @@ export const CurrentReadings = [
     publisher  : 'UNC Press Books',
     cover      : '/images/library/books/TheTormentedAlliance.jpg',
     description: [
-      'After Japan\'s attack on Pearl Harbor, leaders in China and the United States had high hopes of a lasting partnership between the two countries. More than 120,000 U.S. servicemen deployed' +
-      ' to China, where Chiang Kai-shek\'s government carried out massive programs to provide them with housing, food, and interpreters. But, as Zach Fredman uncovers in The Tormented Alliance, a' +
-      ' military alliance with the United States means a military occupation by the United States. The first book to draw on archives from all of the areas in China where U.S. forces deployed' +
-      ' during the 1940s, it examines the formation, evolution, and undoing of the alliance between the United States and the Republic of China during World War II and the Chinese Civil War. \n\n'
+      'After Japan\'s attack on Pearl Harbor, leaders in China and the United States had high hopes of a lasting partnership between the two countries.\n',
+      'More than 120,000 U.S. servicemen deployed to China, where Chiang Kai-shek\'s government carried out massive programs to provide them with housing, food, and interpreters. But, as Zach' +
+      ' Fredman uncovers in The Tormented Alliance, a military alliance with the United States means a military occupation by the United States.\n',
+      'The first book to draw on archives from all of the areas in China where U.S. forces deployed during the 1940s, The Tormented Alliance examines the formation, evolution, and undoing of the' +
+      ' alliance between the United States and the Republic of China during World War II and the Chinese Civil War soon after. \n\n'
     ],
     link       : 'https://uncpress.org/book/9781469669588/the-tormented-alliance/',
     tags       : [

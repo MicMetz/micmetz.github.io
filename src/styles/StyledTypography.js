@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import styled from "styled-components";
+import { motion }      from "framer-motion";
+import styled          from "styled-components";
 import { breakpoints } from "../constants/breakpoints.js";
 
 
@@ -47,7 +47,7 @@ export const Title1 = styled( motion.h1 )`
   font-size: var(--font-size-3xl);
   font-family: var(--font-serif);
   line-height: var(--leading-tighter);
-  font-weight: ${( props ) => props.fontWeight || "normal"};
+  font-weight: ${( props ) => props.fontWeight ? props.fontWeight : "normal"};
   margin-bottom: var(--space-s);
   max-width: 1200px;
   @media ${breakpoints.mediaSM} {
