@@ -46,8 +46,8 @@ export const CurrentReadings = [
     link       : 'https://us.macmillan.com/books/9781250045065/killanythingthatmoves',
     tags       : [
       {
-        name: 'Amazon',
-        link: 'http://www.amazon.com/Kill-Anything-That-Moves-American/dp/1250045061/ref=sr_1_1?ie=UTF8&qid=1452120004&sr=8-1&keywords=kill+anything+that+moves'
+        name: 'Buy',
+        link: 'https://us.macmillan.com/books/9781250045065/killanythingthatmoves'
       },
       {
         name: 'Author Biography',
@@ -58,32 +58,50 @@ export const CurrentReadings = [
       {
         chapter: 1,
         text   : 'The Massacre at Trieu Ai',
-        pages  : '1-17'
+        pages  : [
+          1,
+          17
+        ]
       },
       {
         chapter: 2,
         text   : 'A System of Suffering',
-        pages  : '18-46'
+        pages  : [
+          18,
+          46
+        ]
       },
       {
         chapter: 3,
         text   : 'Overkill',
-        pages  : '47-72'
+        pages  : [
+          47,
+          72
+        ]
       },
       {
         chapter: 4,
         text   : 'A litany of atrocities',
-        pages  : '73-108'
+        pages  : [
+          73,
+          108
+        ]
       },
       {
         chapter: 5,
         text   : 'The bummer, the \'Gook-Hunting\' General, and the Butcher of the Delta',
-        pages  : '109-135'
+        pages  : [
+          109,
+          135
+        ]
       },
       {
         chapter: 6,
         text   : 'Where Have All the War Crimes Gone?',
-        pages  : '136-168'
+        pages  : [
+          136,
+          168
+        ]
       }
     ]
   },
@@ -102,15 +120,19 @@ export const CurrentReadings = [
       'Ryan Grim is The Intercept’s D.C. Bureau Chief and the host of the podcast Deconstructed. He authors the newsletter Bad News and was previously the Washington bureau chief for HuffPost, where he led a team that was twice a finalist for the Pulitzer Prize, and won once.\n',
       'He edited and contributed reporting to groundbreaking investigative project on heroin treatment that not only changed federal and state laws,' + ' but also shifted the culture of the recovery industry. The story, by Jason Cherkis, was a Pulitzer finalist and won a Polk Award.\n\n' + 'He has been a staff reporter for Politico and the Washington City Paper and is a co-host of the show Counter Points. He is the author of the books “We’ve Got People” (2019) and “This Is Your Country on Drugs” (2009).'
     ],
-    link       : 'https://www.c-span.org/video/?462677-1/weve-people',
+    link       : 'https://www.amazon.com/Weve-Got-People-Jackson-Movement/dp/1947492381',
     tags       : [
       {
-        name: 'C-Span Talk',
-        link: 'https://www.amazon.com/Weve-Got-People-Jackson-Movement/dp/1947492381'
+        name: 'Buy',
+        link: 'https://strongarmpress.com/catalog/weve-got-people/'
       },
       {
         name: 'Author Biography',
         link: 'https://theintercept.com/staff/ryangrim/'
+      },
+      {
+        name: 'Author Presentation',
+        link: 'https://www.c-span.org/video/?462677-1/weve-people'
       }
     ],
     chapters   : []
@@ -218,6 +240,104 @@ export const CurrentReadings = [
       }
     ],
     chapters   : []
+  },
+  {
+    id         : 5,
+    header     : {
+      title   : 'The Tormented Alliance:',
+      subtitle: 'American Servicemen and the Occupation of China, 1941–1949'
+    },
+    author     : 'Zach Fredman',
+    date       : Date.parse( '2022-01-08' ),
+    publisher  : 'UNC Press Books',
+    cover      : '/images/library/books/TheTormentedAlliance.jpg',
+    description: [
+      'After Japan\'s attack on Pearl Harbor, leaders in China and the United States had high hopes of a lasting partnership between the two countries. More than 120,000 U.S. servicemen deployed' +
+      ' to China, where Chiang Kai-shek\'s government carried out massive programs to provide them with housing, food, and interpreters. But, as Zach Fredman uncovers in The Tormented Alliance, a' +
+      ' military alliance with the United States means a military occupation by the United States. The first book to draw on archives from all of the areas in China where U.S. forces deployed' +
+      ' during the 1940s, it examines the formation, evolution, and undoing of the alliance between the United States and the Republic of China during World War II and the Chinese Civil War. \n\n'
+    ],
+    link       : 'https://uncpress.org/book/9781469669588/the-tormented-alliance/',
+    tags       : [
+      {
+        name: 'Buy',
+        link: 'https://uncpress.org/book/9781469669588/the-tormented-alliance/'
+      },
+      {
+        name: 'Author Biography',
+        link: 'https://scholars.duke.edu/person/zach.fredman'
+      },
+      {
+        name: 'Author Presentation',
+        link: 'https://www.youtube.com/watch?v=R8hQ4NoyQSQ'
+      }
+    ],
+    chapters   : [
+      {
+        chapter: 1,
+        text   : 'Introduction',
+        pages  : [
+          1,
+          20
+        ]
+      },
+      {
+        chapter: 2,
+        text   : 'China\'s Hostel Program',
+        pages  : [
+          21,
+          47
+        ]
+      },
+      {
+        chapter: 3,
+        text   : 'China\'s Interpreter Program',
+        pages  : [
+          48,
+          78
+        ]
+      },
+      {
+        chapter: 4,
+        text   : 'Military-to-Military Relations',
+        pages  : [
+          79,
+          107
+        ]
+      },
+      {
+        chapter: 5,
+        text   : 'Chinese Civilians',
+        pages  : [
+          108,
+          134
+        ]
+      },
+      {
+        chapter: 6,
+        text   : 'Sexual Relations',
+        pages  : [
+          135,
+          162
+        ]
+      },
+      {
+        chapter: 7,
+        text   : 'The Postwar Occupation',
+        pages  : [
+          163,
+          195
+        ]
+      },
+      {
+        chapter: 8,
+        text   : 'The Occupation of China\'s Long Shadow',
+        pages  : [
+          196,
+          206
+        ]
+      }
+    ]
   }
 
 

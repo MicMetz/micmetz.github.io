@@ -22,57 +22,57 @@ export const ReadingList = [
     tags       : [],
     chapters   : [
       {
-        chapter     : 1,
-        text: 'China - 1945 to 1960s: Was Mao Tse-tung just paranoid?',
+        chapter: 1,
+        text   : 'China - 1945 to 1960s: Was Mao Tse-tung just paranoid?',
       },
       {
-        chapter     : 2,
-        text: 'Italy - 1947-1948: Free elections, Hollywood style',
+        chapter: 2,
+        text   : 'Italy - 1947-1948: Free elections, Hollywood style',
       },
       {
-        chapter     : 3,
-        text: 'Greece - 1947 to early 1950s: From cradle of democracy to client state',
+        chapter: 3,
+        text   : 'Greece - 1947 to early 1950s: From cradle of democracy to client state',
       },
       {
-        chapter     : 4,
-        text: 'The Philippines - 1940s and 1950s: America\'s oldest colony',
+        chapter: 4,
+        text   : 'The Philippines - 1940s and 1950s: America\'s oldest colony',
       },
       {
-        chapter     : 5,
-        text: 'Korea - 1945-1953: Was it all that it appeared to be?',
+        chapter: 5,
+        text   : 'Korea - 1945-1953: Was it all that it appeared to be?',
       },
       {
-        chapter     : 6,
-        text: 'Albania - 1949-1953: The proper English spy',
+        chapter: 6,
+        text   : 'Albania - 1949-1953: The proper English spy',
       },
       {
-        chapter     : 7,
-        text: 'Eastern Europe - 1948-1956: Operation Splinter Factor',
+        chapter: 7,
+        text   : 'Eastern Europe - 1948-1956: Operation Splinter Factor',
       },
       {
-        chapter     : 8,
-        text: 'Germany 1950s: Everything from juvenile delinquency to terrorism',
+        chapter: 8,
+        text   : 'Germany 1950s: Everything from juvenile delinquency to terrorism',
       },
       {
-        chapter     : 9,
-        text: 'Iran 1953: Making it safe for the King of Kings',
+        chapter: 9,
+        text   : 'Iran 1953: Making it safe for the King of Kings',
       },
       {
-        chapter     : 10,
-        text: 'Guatemala 1953-1954: While the world watched',
+        chapter: 10,
+        text   : 'Guatemala 1953-1954: While the world watched',
 
       },
       {
-        chapter     : 11,
-        text: 'Costa Rica mid-1950s: Trying to topple an ally, part I',
+        chapter: 11,
+        text   : 'Costa Rica mid-1950s: Trying to topple an ally, part I',
       },
       {
-        chapter     : 12,
-        text: 'Syria 1956-1957: Purchasing a new government',
+        chapter: 12,
+        text   : 'Syria 1956-1957: Purchasing a new government',
       },
       {
-        chapter     : 13,
-        text: 'The Middle East 1957-1958: The Eisenhower Doctrine claims another backyard for America',
+        chapter: 13,
+        text   : 'The Middle East 1957-1958: The Eisenhower Doctrine claims another backyard for America',
       }
 
     ]
@@ -100,32 +100,32 @@ export const ReadingList = [
     ],
     link       : 'https://www.hachettebookgroup.com/titles/annie-jacobsen/operation-paperclip/9780316221054/?lens=little-brown',
     tags       : [
+      { name: 'Buy', link: 'https://www.hachettebookgroup.com/titles/annie-jacobsen/operation-paperclip/9780316221054/?lens=little-brown' },
       { name: 'CIA Review', link: 'https://www.cia.gov/static/943643120807dda05c37d73ba0565ea9/Review-Operation-Paperclip.pdf' },
       { name: 'NPR Talk', link: 'https://www.npr.org/2014/02/15/275877755/the-secret-operation-to-bring-nazi-scientists-to-america' }
     ],
     chapters   : [
       {
-        chapter     : 35,
-        text: 'Greece 1964-1974: "Fuck your Parliament and your Constitution,"said the President of the United States',
+        chapter: 35,
+        text   : 'Greece 1964-1974: "Fuck your Parliament and your Constitution,"said the President of the United States',
       },
       {
-        chapter     : 36,
-        text: 'Bolivia 1964-1975: Tracking down Che Guevara in the land of coup d\'etat'
+        chapter: 36,
+        text   : 'Bolivia 1964-1975: Tracking down Che Guevara in the land of coup d\'etat'
       },
       {
-        chapter     : 37,
-        text: 'Guatemala 1962 to 1980s: A less publicized "final solution"'
+        chapter: 37,
+        text   : 'Guatemala 1962 to 1980s: A less publicized "final solution"'
       },
       {
-        chapter     : 38,
-        text: 'Costa Rica 1970-1971: Trying to topple an ally, part II'
+        chapter: 38,
+        text   : 'Costa Rica 1970-1971: Trying to topple an ally, part II'
       }
     ]
   },
   {
     id         : 2,
     header     : {
-
       title   : 'The Jakarta Method',
       subtitle: 'Washington\'s Anticommunist Crusade and the Mass Murder Program that Shaped Our World'
     },
@@ -145,13 +145,16 @@ export const ReadingList = [
       ' for the Washington Post. \n\n He, as of now, lives in Sao Paulo, Brazil.'
     ],
     link       : 'https://www.hachettebookgroup.com/titles/vincent-bevins/the-jakarta-method/9781541724013/?lens=publicaffairs',
-    tags       : [],
+    tags       : [
+      { name: 'Buy', link: 'https://www.hachettebookgroup.com/titles/vincent-bevins/the-jakarta-method/9781541724013/?lens=publicaffairs' },
+      { name: 'Author Biography', link: 'https://vincentbevins.com/bio/' },
+      { name: 'Author Interview', link: 'https://www.youtube.com/watch?v=up3-lOiO9L8' }
+    ],
     chapters   : []
   },
   {
     id         : 3,
     header     : {
-
       title   : 'Manufacturing Consent',
       subtitle: 'The Political Economy of the Mass Media'
     },
@@ -159,11 +162,16 @@ export const ReadingList = [
     author1    : 'Edward S. Herman',
     author2    : 'Noam Chomsky',
     date       : '1988',
-    publisher  : 'The Bodley Head London',
+    publisher  : 'Penguin Random House',
     cover      : '/images/library/books/ManufacturingConsent.jpg',
-    description: [],
+    description: [
+      'Based on a series of case studies—including the media’s dichotomous treatment of “worthy” versus “unworthy” victims, “legitimizing” and “meaningless” Third World elections, and' +
+      ' devastating critiques of media coverage of the U.S. wars against Indochina—Herman and Chomsky draw on decades of criticism and research to propose a Propaganda Model to explain the media’s' +
+      ' behavior and performance.\n'
+    ],
     link       : 'https://edisciplinas.usp.br/pluginfile.php/5537300/mod_resource/content/1/Noam%20Chomsky_%20Edward%20S.%20Herman%20-%20Manufacturing%20Consent_%20The%20Political%20Economy%20of%20the%20Mass%20Media-Bodley%20Head%20%282008%29.pdf',
     tags       : [
+      { name: 'Buy', link: 'https://www.penguinrandomhouse.com/books/78912/manufacturing-consent-by-edward-s-herman-and-noam-chomsky/' },
       { name: 'The 5 Filters', link: 'https://www.youtube.com/watch?v=34LGPIXvU5M' },
     ],
     chapters   : []
@@ -188,39 +196,63 @@ export const ReadingList = [
     ],
     link       : 'https://us.macmillan.com/books/9781250045065/killanythingthatmoves',
     tags       : [
-      { name: 'Amazon', link: 'http://www.amazon.com/Kill-Anything-That-Moves-American/dp/1250045061/ref=sr_1_1?ie=UTF8&qid=1452120004&sr=8-1&keywords=kill+anything+that+moves' },
-      { name: 'Author Biography', link: 'https://theintercept.com/staff/nick-turse/' }
+      {
+        name: 'Buy',
+        link: 'https://us.macmillan.com/books/9781250045065/killanythingthatmoves'
+      },
+      {
+        name: 'Author Biography',
+        link: 'https://theintercept.com/staff/nick-turse/'
+      }
     ],
     chapters   : [
       {
-        chapter     : 1,
-        text: 'The Massacre at Trieu Ai',
-        pages       : '1-17'
+        chapter: 1,
+        text   : 'The Massacre at Trieu Ai',
+        pages  : [
+          1,
+          17
+        ]
       },
       {
-        chapter     : 2,
-        text: 'A System of Suffering',
-        pages       : '18-46'
+        chapter: 2,
+        text   : 'A System of Suffering',
+        pages  : [
+          18,
+          46
+        ]
       },
       {
-        chapter     : 3,
-        text: 'Overkill',
-        pages       : '47-72'
+        chapter: 3,
+        text   : 'Overkill',
+        pages  : [
+          47,
+          72
+        ]
       },
       {
-        chapter     : 4,
-        text: 'A litany of atrocities',
-        pages       : '73-108'
+        chapter: 4,
+        text   : 'A litany of atrocities',
+        pages  : [
+          73,
+          108
+        ]
       },
       {
-        chapter     : 5,
-        text: 'The bummer, the \'Gook-Hunting\' General, and the Butcher of the Delta',
-        pages       : '109-135'
+        chapter: 5,
+        text   : 'The bummer, the \'Gook-Hunting\' General, and the Butcher of the Delta',
+        pages  : [
+          109,
+          135
+        ]
       },
       {
-        chapter     : 6,
-        text: 'Where Have All the War Crimes Gone?',
-        pages       : '136-168'
+        chapter: 6,
+        text   : 'Where Have All the War Crimes Gone?',
+        pages  : [
+          136,
+          168
+        ]
       }
     ]
   },
@@ -243,10 +275,20 @@ export const ReadingList = [
       ' but also shifted the culture of the recovery industry. The story, by Jason Cherkis, was a Pulitzer finalist and won a Polk Award.\n\n' +
       'He has been a staff reporter for Politico and the Washington City Paper and is a co-host of the show Counter Points. He is the author of the books “We’ve Got People” (2019) and “This Is Your Country on Drugs” (2009).'
     ],
-    link       : 'https://www.c-span.org/video/?462677-1/weve-people',
+    link       : 'https://strongarmpress.com/catalog/weve-got-people/',
     tags       : [
-      { name: 'C-Span Talk', link: 'https://www.amazon.com/Weve-Got-People-Jackson-Movement/dp/1947492381' },
-      { name: 'Author Biography', link: 'https://theintercept.com/staff/ryangrim/' }
+      {
+        name: 'Buy',
+        link: 'https://strongarmpress.com/catalog/weve-got-people/'
+      },
+      {
+        name: 'Author Biography',
+        link: 'https://theintercept.com/staff/ryangrim/'
+      },
+      {
+        name: 'Author Presentation',
+        link: 'https://www.c-span.org/video/?462677-1/weve-people'
+      }
     ],
     chapters   : []
   },
@@ -270,59 +312,59 @@ export const ReadingList = [
     tags       : [],
     chapters   : [
       {
-        chapter     : 1,
-        text: 'The United States and Africa',
-        pages       : ''
+        chapter: 1,
+        text   : 'The United States and Africa',
+        pages  : ''
       },
       {
-        chapter     : 2,
-        text: 'The CIA',
-        pages       : ''
+        chapter: 2,
+        text   : 'The CIA',
+        pages  : ''
       },
       {
-        chapter     : 3,
-        text: 'African Jazz',
-        pages       : ''
+        chapter: 3,
+        text   : 'African Jazz',
+        pages  : ''
       },
       {
-        chapter     : 4,
-        text: 'America and Africa',
-        pages       : ''
+        chapter: 4,
+        text   : 'America and Africa',
+        pages  : ''
       },
       {
-        chapter     : 5,
-        text: 'Independance Cha Cha',
-        pages       : ''
+        chapter: 5,
+        text   : 'Independance Cha Cha',
+        pages  : ''
       },
       {
-        chapter     : 6,
-        text: 'YQPROP',
-        pages       : ''
+        chapter: 6,
+        text   : 'YQPROP',
+        pages  : ''
       },
       {
-        chapter     : 7,
-        text: 'The Global Game',
-        pages       : ''
+        chapter: 7,
+        text   : 'The Global Game',
+        pages  : ''
       },
       {
-        chapter     : 8,
-        text: 'Carrot and Stick',
-        pages       : ''
+        chapter: 8,
+        text   : 'Carrot and Stick',
+        pages  : ''
       },
       {
-        chapter     : 9,
-        text: 'The Turning Point',
-        pages       : ''
+        chapter: 9,
+        text   : 'The Turning Point',
+        pages  : ''
       },
       {
-        chapter     : 10,
-        text: 'The Seeds are Sown',
-        pages       : ''
+        chapter: 10,
+        text   : 'The Seeds are Sown',
+        pages  : ''
       },
       {
-        chapter     : 11,
-        text: 'Dark Days',
-        pages       : ''
+        chapter: 11,
+        text   : 'Dark Days',
+        pages  : ''
       }
     ]
   },
@@ -390,7 +432,13 @@ export const ReadingList = [
     publisher  : 'Duke University Press',
     cover      : '/images/library/books/SchoolOftheAmerica.jpg',
     link       : 'https://muse.jhu.edu/book/70309',
-    tags       : [],
+    tags       : [
+      {
+        name: 'Buy',
+        link: 'https://bookshop.org/p/books/the-school-of-the-americas-military-training-and-political-violence-in-the-americas-lesley-gill/10871114?ean=9780822333920&ref=https%3A%2F%2Fwww.publishersweekly.com%2F&source=IndieBound&title=The+School+of+the+Americas%3A+Military+Training+and+Political+Violence+in+the+Americas+%28American+Encounters%2FGlobal+Interactions%29'
+      },
+      { name: 'Virtual Memorial', link: 'https://soaw.org/about' },
+    ],
     chapters   : [],
     description: [
       'Located at Fort Benning in Columbus, Georgia, the School of the Americas (soa) is a U.S. Army center that has trained more than sixty thousand soldiers and police, mostly from Latin America, in counterinsurgency and combat-related skills since it was founded in 1946.\n',
@@ -414,9 +462,10 @@ export const ReadingList = [
     cover      : '/images/library/books/TheShockDoctrineCover.jpg',
     link       : 'https://www.naomiklein.org/shock-doctrine',
     tags       : [
-      { name: 'The Book', link: 'https://www.powells.com/book/shock-doctrine-the-rise-of-disaster-capitalism-9780805079838' },
+      { name: 'Buy', link: 'https://tsd.naomiklein.org/shock-doctrine/where-to-buy.html' },
       { name: 'The Film', link: 'https://www.youtube.com/watch?v=B3B5qt6gsxY' },
-      { name: 'Talk', link: 'https://www.youtube.com/watch?v=hA736oK9FPg' }
+      { name: 'Author Biography', link: 'https://www.naomiklein.org/about-naomi' },
+      { name: 'Author Presentation', link: 'https://www.youtube.com/watch?v=hA736oK9FPg' }
     ],
     chapters   : [],
     description: [
@@ -440,10 +489,11 @@ export const ReadingList = [
     tags       : [],
     chapters   : [],
     description: [
-      'In A Thousand Cuts, Alexandros Kentikelenis and Thomas Stubbs provide a comprehensive analysis of IMF policies around the world. Based on novel data from the IMF archives, Kentikelenis and' +
-      ' Stubbs have generated a replicable database of all IMF-mandated reforms from 1980-2019 to examine their effects on social policies and outcomes. They reveal that although the precise' +
-      ' content of IMF-mandated austerity has changed over time, the organization continues to place a high burden of reform on countries in crisis. These reforms then decrease the availability' +
-      ' of important social services and contribute to rises in income inequality and declines in population health.'
+      'In A Thousand Cuts, Alexandros Kentikelenis and Thomas Stubbs provide a comprehensive analysis of IMF policies around the world.\n',
+      'Based on novel data from the IMF archives, Kentikelenis and Stubbs have generated a replicable database of all IMF-mandated reforms from 1980-2019 to examine their effects on social' +
+      ' policies and outcomes.\n',
+      'They reveal that although the precise content of IMF-mandated austerity has changed over time, the organization continues to place a high burden of reform on countries in crisis. These' +
+      ' reforms then decrease the availability of important social services and contribute to rises in income inequality and declines in population health.'
     ]
   },
   {
@@ -456,12 +506,12 @@ export const ReadingList = [
     date       : Date.parse( 'January 1, 1978' ),
     publisher  : 'Zed Books',
     cover      : '/images/library/books/DirtyWork.jpg',
-    link       : [
+    link       : 'https://archive.org/details/CIAInAfrica/page/n121/mode/2up',
+    tags       : [
       { name: 'The Book (PDF)', link: 'https://archive.org/details/CIAInAfrica/page/n121/mode/2up' },
       { name: 'Philip Agee', link: 'https://www.nytimes.com/1974/07/12/archives/the-disillusion-of-a-cia-man-12-years-from-agent-to-radical-wary-of.html' },
       { name: 'Schaap\'s Expose', link: 'https://www.cia.gov/readingroom/docs/CIA-RDP90-00806R000201110080-8.pdf' }
     ],
-    tags       : [],
     chapters   : [],
     description: [
       'Philip Burnett Franklin Agee (July 19, 1935 – January 7, 2008) was a Central Intelligence Agency (CIA) case officer and writer, best known as author of the 1975 book, Inside the Company:' +
@@ -470,6 +520,134 @@ export const ReadingList = [
       ' opponent of CIA practices. A co-founder of CovertAction Quarterly, he died in Cuba in January 2008.\n\n' +
       'Dirty Work: The CIA in Africa is a 1978 book exploring the \"seamy side of American espionage, done under the guise of national security.\" '
     ]
-  }
+  },
+  {
+    id         : 13,
+    header     : {
+      title   : 'The Black Jacobins',
+      subtitle: 'Toussaint L\'Ouverture and the San Domingo Revolution'
+    },
+    author     : 'C.L.R. James',
+    date       : Date.parse( '1938-01-01' ),
+    publisher  : 'Vintage',
+    cover      : '/images/library/books/TheBlackJacobins.jpg',
+    description: [
+      'A classic and impassioned account of the Haitian Revolution--the first revolution in the Third World and the model for the liberation movements from Africa to Cuba. \n\n',
+      'One of the seminal texts about the history of slavery and abolition. . . . Provocative and empowering." -The New York Times Book Review \n\n',
+      'This powerful, intensely dramatic book is the definitive account of the Haitian Revolution of 1794-1803, a revolution that began in the wake of the Bastille. It is the story of the French' + ' colony of San Domingo, a place where the brutality of master toward slave was legendary. And it is the story of a barely literate slave named Toussaint L\'Ouverture, who led the black' + ' people of San Domingo in a successful struggle against successive invasions by overwhelming French, Spanish, and English forces and in the process helped form the first independent nation' + ' in the Caribbean. \n\n'
+    ],
+    link       : 'https://politicaleducation.org/wp-content/uploads/2017/04/CLR_James_The_Black_Jacobins.pdf',
+    tags       : [
+      {
+        name: 'The Book (PDF)',
+        link: 'https://politicaleducation.org/wp-content/uploads/2017/04/CLR_James_The_Black_Jacobins.pdf'
+      },
+      {
+        name: 'Author Biography',
+        link: 'https://www.bl.uk/people/c-l-r-james'
+      }
+    ],
+    chapters   : []
+  },
+  {
+    id         : 14,
+    header     : {
+      title   : 'The Tormented Alliance:',
+      subtitle: 'American Servicemen and the Occupation of China, 1941–1949'
+    },
+    author     : 'Zach Fredman',
+    date       : Date.parse( '2022-01-08' ),
+    publisher  : 'UNC Press Books',
+    cover      : '/images/library/books/TheTormentedAlliance.jpg',
+    description: [
+      'After Japan\'s attack on Pearl Harbor, leaders in China and the United States had high hopes of a lasting partnership between the two countries.\n',
+      'More than 120,000 U.S. servicemen deployed to China, where Chiang Kai-shek\'s government carried out massive programs to provide them with housing, food, and interpreters. But, as Zach' +
+      ' Fredman uncovers in The Tormented Alliance, a military alliance with the United States means a military occupation by the United States.\n',
+      'The first book to draw on archives from all of the areas in China where U.S. forces deployed during the 1940s, The Tormented Alliance examines the formation, evolution, and undoing of the' +
+      ' alliance between the United States and the Republic of China during World War II and the Chinese Civil War soon after. \n\n'
+    ],
+    link       : 'https://uncpress.org/book/9781469669588/the-tormented-alliance/',
+    tags       : [
+      {
+        name: 'Buy',
+        link: 'https://uncpress.org/book/9781469669588/the-tormented-alliance/'
+      },
+      {
+        name: 'Author Biography',
+        link: 'https://scholars.duke.edu/person/zach.fredman'
+      },
+      {
+        name: 'Author Presentation',
+        link: 'https://www.youtube.com/watch?v=R8hQ4NoyQSQ'
+      }
+    ],
+    chapters   : [
+      {
+        chapter: 1,
+        text   : 'Introduction',
+        pages  : [
+          1,
+          20
+        ]
+      },
+      {
+        chapter: 2,
+        text   : 'China\'s Hostel Program',
+        pages  : [
+          21,
+          47
+        ]
+      },
+      {
+        chapter: 3,
+        text   : 'China\'s Interpreter Program',
+        pages  : [
+          48,
+          78
+        ]
+      },
+      {
+        chapter: 4,
+        text   : 'Military-to-Military Relations',
+        pages  : [
+          79,
+          107
+        ]
+      },
+      {
+        chapter: 5,
+        text   : 'Chinese Civilians',
+        pages  : [
+          108,
+          134
+        ]
+      },
+      {
+        chapter: 6,
+        text   : 'Sexual Relations',
+        pages  : [
+          135,
+          162
+        ]
+      },
+      {
+        chapter: 7,
+        text   : 'The Postwar Occupation',
+        pages  : [
+          163,
+          195
+        ]
+      },
+      {
+        chapter: 8,
+        text   : 'The Occupation of China\'s Long Shadow',
+        pages  : [
+          196,
+          206
+        ]
+      }
+    ]
+  },
+
 
 ];
