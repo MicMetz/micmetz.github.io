@@ -14,7 +14,7 @@ export const FooterWrapper = styled.section`
   display: flex;
 
 
-  @media ${props => props.theme.breakpoints.sm} {
+  @media ${props => props.theme.breakpoints.mediaSM} {
     padding: 0 16px 48px;
     width: calc(100vw - 32px);
   }
@@ -41,7 +41,7 @@ export const FooterLinkItem = styled.a`
     display: flex;
   }
 
-  @media ${props => props.theme.breakpoints.sm} {
+  @media ${props => props.theme.breakpoints.mediaSM} {
     font-size: 8px;
     line-height: 14px;
     margin-bottom: 8px;
@@ -60,7 +60,7 @@ export const FooterSocialIconsContainer = styled.div`
     justify-content: space-between;
   }
 
-  @media ${props => props.theme.breakpoints.sm} {
+  @media ${props => props.theme.breakpoints.mediaSM} {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -79,7 +79,7 @@ export const FooterCompanyContainer = styled.div`
     align-items: baseline;
   }
 
-  @media ${props => props.theme.breakpoints.sm} {
+  @media ${props => props.theme.breakpoints.mediaSM} {
     display: flex;
     flex-direction: column;
     margin: 0 0 32px;
@@ -101,7 +101,7 @@ export const FooterSlogan = styled.p`
     line-height: 28px;
   }
 
-  @media ${props => props.theme.breakpoints.sm} {
+  @media ${props => props.theme.breakpoints.mediaSM} {
     line-height: 22px;
     font-size: 14px;
     min-width: 100px;

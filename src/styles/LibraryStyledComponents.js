@@ -86,7 +86,7 @@ export const DefaultQuoteText = styled.p`
     line-height: 2rem;
   }
 
-  @media ${props => props.theme.breakpoints.sm} {
+  @media ${props => props.theme.breakpoints.mediaSM} {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
@@ -138,7 +138,7 @@ export const LibrarySectionTitle = styled.h2`
     padding: ${( props ) => props.main ? '40px 0 12px' : '0'};
   }
 
-  @media ${props => props.theme.breakpoints.sm} {
+  @media ${props => props.theme.breakpoints.mediaSM} {
     //line-height: 40px;
     font-size: ${( props ) => props.main ? '28px' : '32px'};
     line-height: ${( props ) => props.main ? '32px' : '40px'};

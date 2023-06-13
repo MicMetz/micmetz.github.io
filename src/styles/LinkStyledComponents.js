@@ -157,7 +157,7 @@ export const NavLink = styled.a`
     transition: 0.4s ease;
   }
 
-  @media ${( props ) => props.theme.breakpoints.sm} {
+  @media ${( props ) => props.theme.breakpoints.mediaSM} {
     padding: 0.5rem;
   }
 `;
