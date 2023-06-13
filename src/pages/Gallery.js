@@ -6,13 +6,6 @@ import { PhotoGrid } from "../styles/StyledGridComponents.js";
 
 
 
-function randomizeImages( data ) {
-  let set = Array.from( data );
-  return set.sort( () => Math.random() - 0.5 );
-}
-
-
-
 export default function PhotoGallery() {
   const imageRef = useRef( randomizeImages( GalleryData ) );
   const observer = useRef( null );
@@ -24,6 +17,11 @@ export default function PhotoGallery() {
   const [ page, setPage ] = useState( 1 );
   const [ hasMore, setHasMore ] = useState( false );
 
+
+  function randomizeImages( data ) {
+    let set = Array.from( data );
+    return set.sort( () => Math.random() - 0.5 );
+  }
 
 
   function selectImage( image ) {
@@ -79,9 +77,11 @@ export default function PhotoGallery() {
             </Section >
           </Section >
 
-          <Section row>
-            <ImageSpread src = {selectedImage?.image}/>
-          </Section >
+          <ImageSpreadWrapper >
+            <Section row>
+              <ImageSpread src = {selectedImage?.image}/>
+            </Section >
+          </ImageSpreadWrapper >
 
           <Section flex>
             <Section column nopadding>
@@ -119,20 +119,22 @@ export default function PhotoGallery() {
 
 
 
-const useOnScreen = ( ref ) => {
-  const [ isIntersecting, setIntersecting ] = useState( false );
-
-  const observer = new IntersectionObserver(
-    ( [ entry ] ) => setIntersecting( entry.isIntersecting )
-  );
+function ImageSpreadWrapper( { children } ) {
+  const ref = useRef();
+  const [ isVisible, setVisible ] = useState( false );
 
   useEffect( () => {
+    const observer = new IntersectionObserver( ( [ entry ] ) => {
+      setVisible( entry.isIntersecting );
+    } );
     observer.observe( ref.current );
-    // Remove the observer as soon as the component is unmounted
-    return () => {
-      observer.disconnect();
-    };
   }, [] );
 
-  return isIntersecting;
+  return (
+    <div ref = {ref}>
+      {isVisible ? children : null}
+    </div >
+  );
 }
+
+
