@@ -46,6 +46,7 @@ export default function PhotoGallery() {
   }
 
 
+  /*
   useEffect( () => {
     const options = {
       root      : null,
@@ -57,6 +58,7 @@ export default function PhotoGallery() {
       observer.current.observe( document.querySelector( "#gallery-bottom" ) );
     }
   }, [ images ] );
+  */
 
 
   useEffect( () => {
@@ -98,7 +100,6 @@ export default function PhotoGallery() {
                     </ImageCard >
                   );
                 } )}
-                <div id = "gallery-bottom"></div >
 
                 {isLoaded && hasMore && (
                   <div className = "loading">
@@ -108,6 +109,8 @@ export default function PhotoGallery() {
               </PhotoGrid >
             </Section >
           </Section >
+
+          {/* <div id = "gallery-bottom"></div > */}
 
 
 
