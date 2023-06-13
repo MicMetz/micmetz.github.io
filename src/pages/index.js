@@ -172,10 +172,10 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 
             <section style = {{ gridArea: "notes", marginLeft: "" }}>
               <Link href = "/Notes">
-                  <SectionHeader >
-                    Notes
-                    <ArrowRightIcon width = "18" height = "18"/>
-                  </SectionHeader >
+                <SectionHeader >
+                  Notes
+                  <ArrowRightIcon width = "18" height = "18"/>
+                </SectionHeader >
               </Link >
               <Subheader >
                 Short, <i >'concise'</i >, and to the point
@@ -183,12 +183,12 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               <div style = {{}}>
                 {notes.slice( 0, 12 ).map( ( note ) => (
                   <Link key = {note.slug} href = {`/${note.slug}`}>
-                      <IndexNoteCard >
-                        {note.data.growthStage && (
-                          <GrowthIcon growthStage = {note.data.growthStage}/>
-                        )}
-                        <h3 >{note.data.title}</h3 >
-                      </IndexNoteCard >
+                    <IndexNoteCard >
+                      {note.data.growthStage && (
+                        <GrowthIcon growthStage = {note.data.growthStage}/>
+                      )}
+                      <h3 >{note.data.title}</h3 >
+                    </IndexNoteCard >
                   </Link >
                 ) )}
               </div >
@@ -197,10 +197,10 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 
             <section style = {{ gridArea: "books" }}>
               <Link href = "https://micmetz.github.io/library/">
-                  <SectionHeader >
-                    Books
-                    <ArrowRightIcon width = "18" height = "18"/>
-                  </SectionHeader >
+                <SectionHeader >
+                  Books
+                  <ArrowRightIcon width = "18" height = "18"/>
+                </SectionHeader >
               </Link >
               <Subheader >
                 Books I’m currently reading.
@@ -255,11 +255,11 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             animate = "visible"
           >
             <section style = {{ gridArea: "technology" }}>
-              <Link href = "/Projects/Software">
-                  <SectionHeader >
-                    Software
-                    <ArrowRightIcon width = "18" height = "18"/>
-                  </SectionHeader >
+              <Link href = "/Projects">
+                <SectionHeader >
+                  Software
+                  <ArrowRightIcon width = "18" height = "18"/>
+                </SectionHeader >
               </Link >
               <Subheader >
                 Software and hardware projects I’ve worked on.
@@ -286,10 +286,10 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 
             <section style = {{ gridArea: "atlas", marginLeft: "3rem" }}>
               <Link href = "/Atlas">
-                  <SectionHeader >
-                    Atlas
-                    <ArrowRightIcon width = "18" height = "18"/>
-                  </SectionHeader >
+                <SectionHeader >
+                  Atlas
+                  <ArrowRightIcon width = "18" height = "18"/>
+                </SectionHeader >
               </Link >
               <Subheader >
                 Design responses gathered from my own observations and research.

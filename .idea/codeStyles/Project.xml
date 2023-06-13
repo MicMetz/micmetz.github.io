@@ -10,7 +10,7 @@
     </option>
     <option name="RIGHT_MARGIN" value="200" />
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="true" />
-    <option name="ENABLE_SECOND_REFORMAT" value="true" />
+    <option name="ENABLE_SECOND_REFORMAT" value="false" />
     <option name="SOFT_MARGINS" value="200" />
     <CssCodeStyleSettings>
       <option name="VALUE_ALIGNMENT" value="1" />
@@ -19,7 +19,8 @@
       <option name="ENFORCE_QUOTES_ON_FORMAT" value="true" />
     </CssCodeStyleSettings>
     <HTMLCodeStyleSettings>
-      <option name="HTML_KEEP_BLANK_LINES" value="3" />
+      <option name="HTML_ATTRIBUTE_WRAP" value="4" />
+      <option name="HTML_ALIGN_TEXT" value="true" />
       <option name="HTML_SPACE_AROUND_EQUALITY_IN_ATTRIBUTE" value="true" />
       <option name="HTML_SPACE_AFTER_TAG_NAME" value="true" />
       <option name="HTML_ELEMENTS_TO_INSERT_NEW_LINE_BEFORE" value="body,div,p,form,h1,h2,h3,input,label,textarea,span,a,title" />
@@ -29,19 +30,21 @@
       <option name="HTML_INLINE_ELEMENTS" value="abbr,acronym,b,basefont,bdo,big,cite,cite,code,dfn,em,font,i,kbd,q,s,samp,small,strike,strong,sub,sup,tt,u,var" />
       <option name="HTML_DONT_ADD_BREAKS_IF_INLINE_CONTENT" value="" />
       <option name="HTML_ENFORCE_QUOTES" value="true" />
-      <option name="HTML_NEWLINE_AFTER_LAST_ATTRIBUTE" value="When multiline" />
     </HTMLCodeStyleSettings>
     <JSCodeStyleSettings version="0">
       <option name="SPACE_BEFORE_TYPE_COLON" value="true" />
       <option name="ALIGN_OBJECT_PROPERTIES" value="2" />
+      <option name="ALIGN_VAR_STATEMENTS" value="2" />
       <option name="SPACE_WITHIN_ARRAY_INITIALIZER_BRACKETS" value="true" />
       <option name="REFORMAT_C_STYLE_COMMENTS" value="true" />
       <option name="JSX_ATTRIBUTE_VALUE" value="Based on type" />
       <option name="USE_EXPLICIT_JS_EXTENSION" value="TRUE" />
       <option name="VAR_DECLARATION_WRAP" value="5" />
       <option name="OBJECT_LITERAL_WRAP" value="1" />
+      <option name="IMPORTS_WRAP" value="2" />
       <option name="SPACES_WITHIN_OBJECT_LITERAL_BRACES" value="true" />
       <option name="SPACES_WITHIN_IMPORTS" value="true" />
+      <option name="ALIGN_IMPORTS" value="true" />
       <option name="INDENT_CHAINED_CALLS" value="false" />
       <option name="BLANK_LINES_AROUND_FUNCTION" value="2" />
       <option name="IMPORT_SORT_MODULE_NAME" value="true" />
@@ -52,7 +55,8 @@
       <option name="INDENT_CHAINED_CALLS" value="false" />
     </TypeScriptCodeStyleSettings>
     <XML>
-      <option name="XML_ALIGN_ATTRIBUTES" value="false" />
+      <option name="XML_ATTRIBUTE_WRAP" value="4" />
+      <option name="XML_KEEP_LINE_BREAKS_IN_TEXT" value="false" />
       <option name="XML_SPACE_AROUND_EQUALITY_IN_ATTRIBUTE" value="true" />
       <option name="XML_SPACE_INSIDE_EMPTY_TAG" value="true" />
     </XML>
@@ -81,6 +85,7 @@
       <option name="BLOCK_COMMENT_ADD_SPACE" value="true" />
       <indentOptions>
         <option name="CONTINUATION_INDENT_SIZE" value="4" />
+        <option name="USE_TAB_CHARACTER" value="true" />
       </indentOptions>
       <arrangement>
         <rules />
@@ -102,6 +107,7 @@
       <option name="BLANK_LINES_AROUND_CLASS" value="3" />
       <option name="BLANK_LINES_AROUND_METHOD" value="2" />
       <option name="ALIGN_MULTILINE_PARAMETERS" value="false" />
+      <option name="ALIGN_MULTILINE_FOR" value="false" />
       <option name="SPACE_WITHIN_PARENTHESES" value="true" />
       <option name="SPACE_WITHIN_METHOD_CALL_PARENTHESES" value="true" />
       <option name="SPACE_WITHIN_METHOD_PARENTHESES" value="true" />
@@ -110,10 +116,9 @@
       <option name="SPACE_WITHIN_FOR_PARENTHESES" value="true" />
       <option name="SPACE_WITHIN_BRACKETS" value="true" />
       <option name="EXTENDS_LIST_WRAP" value="1" />
-      <option name="METHOD_CALL_CHAIN_WRAP" value="5" />
-      <option name="KEEP_SIMPLE_BLOCKS_IN_ONE_LINE" value="true" />
+      <option name="METHOD_CALL_CHAIN_WRAP" value="1" />
       <option name="KEEP_SIMPLE_METHODS_IN_ONE_LINE" value="true" />
-      <option name="ARRAY_INITIALIZER_WRAP" value="5" />
+      <option name="ARRAY_INITIALIZER_WRAP" value="2" />
       <option name="ARRAY_INITIALIZER_LBRACE_ON_NEXT_LINE" value="true" />
       <option name="ARRAY_INITIALIZER_RBRACE_ON_NEXT_LINE" value="true" />
       <option name="WRAP_COMMENTS" value="true" />

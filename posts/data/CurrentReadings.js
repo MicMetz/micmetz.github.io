@@ -49,38 +49,41 @@ export const CurrentReadings = [
         name: 'Amazon',
         link: 'http://www.amazon.com/Kill-Anything-That-Moves-American/dp/1250045061/ref=sr_1_1?ie=UTF8&qid=1452120004&sr=8-1&keywords=kill+anything+that+moves'
       },
-      { name: 'Author Biography', link: 'https://theintercept.com/staff/nick-turse/' }
+      {
+        name: 'Author Biography',
+        link: 'https://theintercept.com/staff/nick-turse/'
+      }
     ],
     chapters   : [
       {
-        chapter     : 1,
-        text: 'The Massacre at Trieu Ai',
-        pages       : '1-17'
+        chapter: 1,
+        text   : 'The Massacre at Trieu Ai',
+        pages  : '1-17'
       },
       {
-        chapter     : 2,
-        text: 'A System of Suffering',
-        pages       : '18-46'
+        chapter: 2,
+        text   : 'A System of Suffering',
+        pages  : '18-46'
       },
       {
-        chapter     : 3,
-        text: 'Overkill',
-        pages       : '47-72'
+        chapter: 3,
+        text   : 'Overkill',
+        pages  : '47-72'
       },
       {
-        chapter     : 4,
-        text: 'A litany of atrocities',
-        pages       : '73-108'
+        chapter: 4,
+        text   : 'A litany of atrocities',
+        pages  : '73-108'
       },
       {
-        chapter     : 5,
-        text: 'The bummer, the \'Gook-Hunting\' General, and the Butcher of the Delta',
-        pages       : '109-135'
+        chapter: 5,
+        text   : 'The bummer, the \'Gook-Hunting\' General, and the Butcher of the Delta',
+        pages  : '109-135'
       },
       {
-        chapter     : 6,
-        text: 'Where Have All the War Crimes Gone?',
-        pages       : '136-168'
+        chapter: 6,
+        text   : 'Where Have All the War Crimes Gone?',
+        pages  : '136-168'
       }
     ]
   },
@@ -95,17 +98,17 @@ export const CurrentReadings = [
     publisher  : 'Strong Arm Press',
     cover      : '/images/library/books/WeGotPeople.jpg',
     description: [
-      'Alexandria Ocasio-Cortez may seem like she came from nowhere, but the movement that propelled her to office – and to global political stardom – has been building for 30 years. \n\n' +
-      'We’ve Got People is the story of that movement, which first exploded into public view with the largely forgotten presidential run of the Rev. Jesse Jackson, a campaign that came dangerously close to winning. \n\n' +
-      'With the party and the nation at a crossroads, this timely and original book offers new insight into how we’ve gotten where we are – and where we\'re headed. \n\n\n',
+      'Alexandria Ocasio-Cortez may seem like she came from nowhere, but the movement that propelled her to office – and to global political stardom – has been building for 30 years. \n\n' + 'We’ve Got People is the story of that movement, which first exploded into public view with the largely forgotten presidential run of the Rev. Jesse Jackson, a campaign that came dangerously close to winning. \n\n' + 'With the party and the nation at a crossroads, this timely and original book offers new insight into how we’ve gotten where we are – and where we\'re headed. \n\n\n',
       'Ryan Grim is The Intercept’s D.C. Bureau Chief and the host of the podcast Deconstructed. He authors the newsletter Bad News and was previously the Washington bureau chief for HuffPost, where he led a team that was twice a finalist for the Pulitzer Prize, and won once.\n',
-      'He edited and contributed reporting to groundbreaking investigative project on heroin treatment that not only changed federal and state laws,' +
-      ' but also shifted the culture of the recovery industry. The story, by Jason Cherkis, was a Pulitzer finalist and won a Polk Award.\n\n' +
-      'He has been a staff reporter for Politico and the Washington City Paper and is a co-host of the show Counter Points. He is the author of the books “We’ve Got People” (2019) and “This Is Your Country on Drugs” (2009).'
+      'He edited and contributed reporting to groundbreaking investigative project on heroin treatment that not only changed federal and state laws,' + ' but also shifted the culture of the recovery industry. The story, by Jason Cherkis, was a Pulitzer finalist and won a Polk Award.\n\n' + 'He has been a staff reporter for Politico and the Washington City Paper and is a co-host of the show Counter Points. He is the author of the books “We’ve Got People” (2019) and “This Is Your Country on Drugs” (2009).'
     ],
     link       : 'https://www.c-span.org/video/?462677-1/weve-people',
     tags       : [
-      { name: 'C-Span Talk', link: 'https://www.amazon.com/Weve-Got-People-Jackson-Movement/dp/1947492381' }, {
+      {
+        name: 'C-Span Talk',
+        link: 'https://www.amazon.com/Weve-Got-People-Jackson-Movement/dp/1947492381'
+      },
+      {
         name: 'Author Biography',
         link: 'https://theintercept.com/staff/ryangrim/'
       }
@@ -132,62 +135,90 @@ export const CurrentReadings = [
     tags       : [],
     chapters   : [
       {
-        chapter     : 1,
-        text: 'The United States and Africa',
-        pages       : ''
+        chapter: 1,
+        text   : 'The United States and Africa',
+        pages  : ''
       },
       {
-        chapter     : 2,
-        text: 'The CIA',
-        pages       : ''
+        chapter: 2,
+        text   : 'The CIA',
+        pages  : ''
       },
       {
-        chapter     : 3,
-        text: 'African Jazz',
-        pages       : ''
+        chapter: 3,
+        text   : 'African Jazz',
+        pages  : ''
       },
       {
-        chapter     : 4,
-        text: 'America and Africa',
-        pages       : ''
+        chapter: 4,
+        text   : 'America and Africa',
+        pages  : ''
       },
       {
-        chapter     : 5,
-        text: 'Independance Cha Cha',
-        pages       : ''
+        chapter: 5,
+        text   : 'Independance Cha Cha',
+        pages  : ''
       },
       {
-        chapter     : 6,
-        text: 'YQPROP',
-        pages       : ''
+        chapter: 6,
+        text   : 'YQPROP',
+        pages  : ''
       },
       {
-        chapter     : 7,
-        text: 'The Global Game',
-        pages       : ''
+        chapter: 7,
+        text   : 'The Global Game',
+        pages  : ''
       },
       {
-        chapter     : 8,
-        text: 'Carrot and Stick',
-        pages       : ''
+        chapter: 8,
+        text   : 'Carrot and Stick',
+        pages  : ''
       },
       {
-        chapter     : 9,
-        text: 'The Turning Point',
-        pages       : ''
+        chapter: 9,
+        text   : 'The Turning Point',
+        pages  : ''
       },
       {
-        chapter     : 10,
-        text: 'The Seeds are Sown',
-        pages       : ''
+        chapter: 10,
+        text   : 'The Seeds are Sown',
+        pages  : ''
       },
       {
-        chapter     : 11,
-        text: 'Dark Days',
-        pages       : ''
+        chapter: 11,
+        text   : 'Dark Days',
+        pages  : ''
       }
     ]
   },
+  {
+    id         : 4,
+    header     : {
+      title   : 'The Black Jacobins',
+      subtitle: 'Toussaint L\'Ouverture and the San Domingo Revolution'
+    },
+    author     : 'C.L.R. James',
+    date       : Date.parse( '1938-01-01' ),
+    publisher  : 'Vintage',
+    cover      : '/images/library/books/TheBlackJacobins.jpg',
+    description: [
+      'A classic and impassioned account of the Haitian Revolution--the first revolution in the Third World and the model for the liberation movements from Africa to Cuba. \n\n',
+      'One of the seminal texts about the history of slavery and abolition. . . . Provocative and empowering." -The New York Times Book Review \n\n',
+      'This powerful, intensely dramatic book is the definitive account of the Haitian Revolution of 1794-1803, a revolution that began in the wake of the Bastille. It is the story of the French' + ' colony of San Domingo, a place where the brutality of master toward slave was legendary. And it is the story of a barely literate slave named Toussaint L\'Ouverture, who led the black' + ' people of San Domingo in a successful struggle against successive invasions by overwhelming French, Spanish, and English forces and in the process helped form the first independent nation' + ' in the Caribbean. \n\n'
+    ],
+    link       : 'https://politicaleducation.org/wp-content/uploads/2017/04/CLR_James_The_Black_Jacobins.pdf',
+    tags       : [
+      {
+        name: 'The Book (PDF)',
+        link: 'https://politicaleducation.org/wp-content/uploads/2017/04/CLR_James_The_Black_Jacobins.pdf'
+      },
+      {
+        name: 'Author Biography',
+        link: 'https://www.bl.uk/people/c-l-r-james'
+      }
+    ],
+    chapters   : []
+  }
 
 
 ]
