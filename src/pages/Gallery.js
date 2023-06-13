@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import React, { useEffect, useRef, useState } from "react";
 import { GalleryData } from "../../posts/data/GalleryData.js";
 import { Layout } from "../components/Layouts/Layout.js"
@@ -8,30 +7,23 @@ import { PhotoGrid } from "../styles/StyledGridComponents.js";
 
 
 function randomizeImages( data ) {
-  let currentIndex = data.length, temporaryValue, randomIndex;
-  while ( 0 !== currentIndex ) {
-    randomIndex = Math.floor( Math.random() * currentIndex );
-    currentIndex -= 1;
-    temporaryValue = data[ currentIndex ];
-    data[ currentIndex ] = data[ randomIndex ];
-    data[ randomIndex ] = temporaryValue;
-  }
-  return data;
+  let set = Array.from( data );
+  return set.sort( () => Math.random() - 0.5 );
 }
 
 
 
 export default function PhotoGallery() {
-  const router = useRouter()
-  const [ selectedImage, setSelectedImage ] = useState( null );
+  const imageRef = useRef( randomizeImages( GalleryData ) );
+  const observer = useRef( null );
+
+  const [ selectedImage, setSelectedImage ] = useState( imageRef.current[ 0 ] );
   const [ isLoaded, setIsLoaded ] = useState( false );
   const [ images, setImages ] = useState( [] );
   const [ error, setError ] = useState( null );
   const [ page, setPage ] = useState( 1 );
   const [ hasMore, setHasMore ] = useState( false );
 
-  const imageRef = useRef( randomizeImages( GalleryData ) );
-  const observer = useRef( null );
 
 
   function selectImage( image ) {
@@ -74,87 +66,73 @@ export default function PhotoGallery() {
   }, [ page ] );
 
 
+
   return (
     <Layout >
-      {/* <Section nopadding id = "PhotographyPage"> */}
-      <GalleryContainer >
-        <Section row nopadding>
-          <ImageSpread src = {GalleryData[ 0 ].image}/>
-        </Section >
+      <Section nopadding id = "PhotographyPage">
+        <GalleryContainer >
 
-        <Section flex>
-          <Section row nopadding>
-            <SectionTitle main>Photos</SectionTitle >
+
+          <Section flex>
+            <Section row nopadding>
+              <SectionTitle main>Photos</SectionTitle >
+            </Section >
           </Section >
 
-          <PhotoGrid >
-            {images.map( ( image, index ) => {
-              return (
-                <ImageCard >
-                  <ImgStripe
-                    src = {image.image}
-                    width = {image.width}
-                    height = {image.height}
-                    onClick = {() => selectImage( image )}
-                  />
-                </ImageCard >
-              );
-            } )}
-          </PhotoGrid >
+          <Section row>
+            <ImageSpread src = {selectedImage?.image}/>
+          </Section >
 
-          <div id = "gallery-bottom"></div >
+          <Section flex>
+            <Section column nopadding>
+              <PhotoGrid >
+                {images.map( ( image, index ) => {
+                  return (
+                    <ImageCard >
+                      <ImgStripe
+                        src = {image.image}
+                        width = {image.width}
+                        height = {image.height}
+                        onClick = {() => selectImage( images[ index ] )}
+                      />
+                    </ImageCard >
+                  );
+                } )}
+                <div id = "gallery-bottom"></div >
+
+                {isLoaded && hasMore && (
+                  <div className = "loading">
+                    <h2 >Loading...</h2 >
+                  </div >
+                )}
+              </PhotoGrid >
+            </Section >
+          </Section >
 
 
-          {isLoaded && hasMore && (
-            <div className = "loading">
-              <h2 >Loading...</h2 >
-            </div >
-          )}
 
-
-        </Section >
-      </GalleryContainer >
-      {/* </Section > */}
+        </GalleryContainer >
+      </Section >
     </Layout >
   );
 }
 
 
 
-/*
+const useOnScreen = ( ref ) => {
+  const [ isIntersecting, setIntersecting ] = useState( false );
 
- return (
- <Layout >
- <Section nopadding id = "PhotographyPage" >
- <GalleryContainer >
- <Section flex >
+  const observer = new IntersectionObserver(
+    ( [ entry ] ) => setIntersecting( entry.isIntersecting )
+  );
 
- <Section row nopadding >
- <SectionTitle main >Photos</SectionTitle >
- </Section >
+  useEffect( () => {
+    observer.observe( ref.current );
+    // Remove the observer as soon as the component is unmounted
+    return () => {
+      observer.disconnect();
+    };
+  }, [] );
 
- <Section row >
- <PhotoGrid >
- {GalleryData.map(
- ( gallery ) => {
- return (
- <ImageCard >
- <ImgStripe
- src = {gallery.image}
- key = {gallery.id}
- width = {gallery.width}
- height = {gallery.height}
- // layout = "fill"
- />
- </ImageCard >
- )
- }
- )}
- </PhotoGrid >
- </Section >
- </Section >
- </GalleryContainer >
- </Section >
- </Layout >
- );
- */
+  return isIntersecting;
+}

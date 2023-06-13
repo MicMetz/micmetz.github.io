@@ -216,10 +216,10 @@ export const ContactDropDown = styled.button`
     color: #3b4fb6;
   }
 
-  @media ${( props ) => props.theme.breakpoints.sm} {
+  @media ${( props ) => props.theme.breakpoints.mediaSM} {
     padding: 0.4rem 0;
   }
-  @media ${( props ) => props.theme.breakpoints.md} {
+  @media ${( props ) => props.theme.breakpoints.mediaMD} {
     padding: 0;
   }
 `
@@ -236,7 +236,7 @@ export const NavProductsIcon = styled( IoIosArrowDropdown )`
     opacity: 1;
   }
 
-  @media ${( props ) => props.theme.breakpoints.sm} {
+  @media ${( props ) => props.theme.breakpoints.mediaSM} {
     margin: 2px 0 0 2px;
     width: 15px;
   }

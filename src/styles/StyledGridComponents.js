@@ -48,20 +48,22 @@ export const PhotoGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
+  padding: 0 1rem 1rem;
   margin: 0 auto;
+  //max-width: 1200px;
   width: 100%;
   height: 100%;
   align-items: center;
   justify-content: center;
 
-  @media ${( props ) => props.theme.breakpoints.sm} {
+  @media ${( props ) => props.theme.breakpoints.mediaSM} {
     display: grid;
     height: auto !important;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
   }
 
-  @media ${( props ) => props.theme.breakpoints.md} {
+  @media ${( props ) => props.theme.breakpoints.mediaMD} {
     display: grid;
     height: auto !important;
     grid-template-columns: repeat(4, 1fr);
@@ -77,7 +79,7 @@ export const DefaultGrid = styled.section`
   place-items: center;
   column-gap: 1rem;
   row-gap: 3rem;
-  @media ${( props ) => props.theme.breakpoints.sm} {
+  @media ${( props ) => props.theme.breakpoints.mediaSM} {
     display: flex;
     flex-direction: column;
     padding: 2rem 2rem 0;

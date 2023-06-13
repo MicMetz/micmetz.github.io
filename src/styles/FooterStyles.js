@@ -35,7 +35,7 @@ export const FooterLinkItem = styled.a`
     left: 6px;
   }
 
-  @media ${props => props.theme.breakpoints.md} {
+  @media ${props => props.theme.breakpoints.mediaMD} {
     font-size: 16px;
     line-height: 28px;
     display: flex;
@@ -55,7 +55,7 @@ export const FooterSocialIconsContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media ${props => props.theme.breakpoints.md} {
+  @media ${props => props.theme.breakpoints.mediaMD} {
     display: flex;
     justify-content: space-between;
   }
@@ -74,7 +74,7 @@ export const FooterCompanyContainer = styled.div`
   margin-right: auto;
 
 
-  @media ${props => props.theme.breakpoints.md} {
+  @media ${props => props.theme.breakpoints.mediaMD} {
     flex-direction: column;
     align-items: baseline;
   }
@@ -96,7 +96,7 @@ export const FooterSlogan = styled.p`
   line-height: 30px;
   padding: 1rem;
 
-  @media ${props => props.theme.breakpoints.md} {
+  @media ${props => props.theme.breakpoints.mediaMD} {
     font-size: 16px;
     line-height: 28px;
   }
@@ -112,7 +112,7 @@ export const FooterSocialContainer = styled.div`
   display: flex;
   align-items: center;
 
-  @media ${props => props.theme.breakpoints.md} {
+  @media ${props => props.theme.breakpoints.mediaMD} {
     justify-content: center;
     padding-right: 16px;
     flex-wrap: wrap;
@@ -127,16 +127,16 @@ export const FooterLinkList = styled.ul`
   gap: 40px;
   padding: 40px 0 28px;
 
-  @media ${props => props.theme.breakpoints.lg} {
+  @media ${props => props.theme.breakpoints.mediaLG} {
     padding: 32px 0 16px;
   }
 
-  @media ${props => props.theme.breakpoints.md} {
+  @media ${props => props.theme.breakpoints.mediaMD} {
     width: 100%;
     padding: 32px 0 16px;
     gap: 16px;
   }
-  @media ${props => props.theme.breakpoints.sm} {
+  @media ${props => props.theme.breakpoints.mediaSM} {
     width: 100%;
     padding: 32px 4px 16px;
     gap: 5px;
@@ -159,7 +159,7 @@ export const FooterLinkTitle = styled.h4`
   //color: rgba(255, 255, 255, 0.4);
   margin-bottom: 16px;
 
-  @media ${props => props.theme.breakpoints.sm} {
+  @media ${props => props.theme.breakpoints.mediaSM} {
     font-size: 10px;
     line-height: 12px;
     margin-bottom: 8px;
