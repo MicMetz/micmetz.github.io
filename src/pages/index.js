@@ -170,7 +170,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               </div >
             </section >
 
-            <section style = {{ gridArea: "notes", marginLeft: "1em" }}>
+            <section style = {{ gridArea: "notes", marginLeft: "" }}>
               <Link href = "/Notes">
                   <SectionHeader >
                     Notes
@@ -284,7 +284,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               </div >
             </section >
 
-            <section style = {{ gridArea: "atlas", marginLeft: "3em" }}>
+            <section style = {{ gridArea: "atlas", marginLeft: "3rem" }}>
               <Link href = "/Atlas">
                   <SectionHeader >
                     Atlas

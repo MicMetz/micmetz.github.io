@@ -47,18 +47,18 @@ export default function PhotoGallery() {
 
 
   /*
-  useEffect( () => {
-    const options = {
-      root      : null,
-      rootMargin: "20px",
-      threshold : 1.0
-    };
-    observer.current = new IntersectionObserver( handleObserver, options );
-    if ( images.length ) {
-      observer.current.observe( document.querySelector( "#gallery-bottom" ) );
-    }
-  }, [ images ] );
-  */
+   useEffect( () => {
+   const options = {
+   root      : null,
+   rootMargin: "20px",
+   threshold : 1.0
+   };
+   observer.current = new IntersectionObserver( handleObserver, options );
+   if ( images.length ) {
+   observer.current.observe( document.querySelector( "#gallery-bottom" ) );
+   }
+   }, [ images ] );
+   */
 
 
   useEffect( () => {

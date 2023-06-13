@@ -60,26 +60,21 @@ export const ProjectsSection = styled( motion.section )`
 
   grid-template-areas:
     "technology technology atlas";
-  //"presentations presentations presentations"
-  //"hardware hardware hardware";
 
   @media ${breakpoints.mediaMD} {
     grid-gap: var(--space-m);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "technology atlas";
   }
   @media ${breakpoints.mediaSM} {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-						"technology technology"
-						"atlas atlas";
+    grid-template-areas:	"technology atlas";
 
   }
   @media ${breakpoints.mediaLG} {
-    //grid-template-columns: 1fr 1fr 1fr;
-    //grid-template-areas:
-    //					"software software software"
-    //					"hardware hardware hardware"
-    //					"presentations presentations presentations";
-
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+						"technology technology atlas";
   }
 
 
