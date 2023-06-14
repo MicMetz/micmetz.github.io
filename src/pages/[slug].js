@@ -198,7 +198,7 @@ export default function PostPage( { source, frontMatter, slug, headings, backlin
 }
 
 const getOgImagePath = ( properties ) => {
-  let url = "/og-image?";
+  let url = "/ogImage?";
   Object.keys( properties ).forEach( ( property ) => {
     if ( properties[ property ] ) {
       url += `${property}=${encodeURIComponent( properties[ property ] )}&`;

@@ -83,31 +83,20 @@ export default function LibraryPage() {
     </LibraryLayout >
   );
 
-
-
 }
 
 
-{/* <Sidebar header = {activeFeature.header} */
-}
-{/*          chapters = {activeFeature.chapters} */
-}
-{/*          open = {isSidebarOpen} toggle = {setIsSidebarOpen} */
-}
-{/* /> */
-}
 
-//
-// export const getStaticProps = () => {
-//
-//   const data    = getLatestPosts();
-//   const allPost = getAllPosts();
-//   const feed    = generateRSSFeed(allPost)
-//   fs.writeFileSync('public/rss.xml', feed.rss2());
-//
-//   return {
-//     props: {
-//       posts: data
-//     }
-//   }
-// }
+export const getStaticProps = () => {
+
+  const data    = getLatestPosts();
+  const allPost = getAllPosts();
+  const feed    = generateRSSFeed( allPost )
+  fs.writeFileSync( 'public/rss.xml', feed.rss2() );
+
+  return {
+    props: {
+      posts: data
+    }
+  }
+}

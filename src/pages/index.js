@@ -97,7 +97,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               As of right now, I'm studying computer science at the University of Colorado at Boulder (CU Boulder).
               Before, and not too long ago, I was studying Sociology and Information Science at multiple New York City universities over a few years.
               <Spacer size = "xs"/>
-              <SmallTitle2
+              <motion.span
                 initial = {{ opacity: 0, x: -50 }}
                 animate = {{ opacity: 1, x: 0 }}
                 transition = {{ delay: 0.5, duration: 1 }}
@@ -107,7 +107,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
                   <i >bio page</i >
                 </UnderlineHoverLink >
                 {" "}.
-              </SmallTitle2 >
+              </motion.span >
             </SectionText >
           </motion.section >
         </header >
