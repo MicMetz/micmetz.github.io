@@ -46,31 +46,32 @@ export default function ArticleCard( { title, preamble, cover, link, publisher, 
 
 
 const StyledArticleCard = styled.section`
-  //display: flex;
+  display: flex;
   //position: relative;
-  //flex-direction: column;
+  flex-direction: column;
   min-width: 100%;
   min-height: 100%;
   height: fit-content;
 
   margin: 10vh 0;
   padding: 0;
+  border: 1px solid var(--color-tinted-cream);
 
-  border: 1px solid gray;
+  border-radius: var(--border-radius-base);
+  box-shadow: var(--box-shadow-sm);
+  background: var(--color-light-cream);
+  transition: all 0.3s ease-in-out;
+  color: var(--color-gray-800);
 
-  ${ExternalHoverLink} {
-    opacity: 100%;
-  }
+    // ${ExternalHoverLink} {
+  //   opacity: 100%;
+  // }
 
 `;
 
 
 const StyledArticleMain = styled.div`
-  display: block;
-  width: 100%;
-  height: 100%;
 
-  background-color: var(--color-white);
   border-top: 1px solid var(--color-gray-300);
 `;
 

@@ -273,81 +273,81 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
         <Spacer size = "xlarge" />
 
 
-        <motion.section
-          initial = {{ opacity: 0, x: -50 }}
-          animate = {{ opacity: 1, x: 0 }}
-          transition = {{ delay: 0.7, duration: 1 }}
-        >
-          <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} >
-            Projects
-          </Title2 >
-          <Subheader >
-            Projects I’ve worked on.
-            <Spacer />
-            <ReadmoreLink href = "/Projects" >
-              Learn more
-              <ArrowRightIcon width = "18" height = "18" />
-            </ReadmoreLink >
-          </Subheader >
+        {/* <motion.section */}
+        {/*   initial = {{ opacity: 0, x: -50 }} */}
+        {/*   animate = {{ opacity: 1, x: 0 }} */}
+        {/*   transition = {{ delay: 0.7, duration: 1 }} */}
+        {/* > */}
+        {/*   <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} > */}
+        {/*     Projects */}
+        {/*   </Title2 > */}
+        {/*   <Subheader > */}
+        {/*     Projects I’ve worked on. */}
+        {/*     <Spacer /> */}
+        {/*     <ReadmoreLink href = "/Projects" > */}
+        {/*       Learn more */}
+        {/*       <ArrowRightIcon width = "18" height = "18" /> */}
+        {/*     </ReadmoreLink > */}
+        {/*   </Subheader > */}
 
 
-          <ProjectsSection
-            variants = {collection}
-            initial = "hidden"
-            animate = "visible"
-          >
-            <section style = {{ gridArea: "technology" }} >
-              <Link href = "/Projects" >
-                <SectionHeader >
-                  Software
-                  <ArrowRightIcon width = "18" height = "18" />
-                </SectionHeader >
-              </Link >
-              <Subheader >
-                Software and hardware projects I’ve worked on.
-              </Subheader >
-              <div
-                style = {{
-                  display            : "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                }}
-              >
-                {ProjectsData.map( ( project, i ) => (
-                    <ProjectCard
-                      key = {i}
-                      slug = {project.code}
-                      title = {project.title}
-                      cover = {project.image}
-                      date = {project.date}
-                    />
-                  )
-                )}
-              </div >
-            </section >
+        {/*   <ProjectsSection */}
+        {/*     variants = {collection} */}
+        {/*     initial = "hidden" */}
+        {/*     animate = "visible" */}
+        {/*   > */}
+        {/*     <section style = {{ gridArea: "technology" }} > */}
+        {/*       <Link href = "/Projects" > */}
+        {/*         <SectionHeader > */}
+        {/*           Software */}
+        {/*           <ArrowRightIcon width = "18" height = "18" /> */}
+        {/*         </SectionHeader > */}
+        {/*       </Link > */}
+        {/*       <Subheader > */}
+        {/*         Software and hardware projects I’ve worked on. */}
+        {/*       </Subheader > */}
+        {/*       <div */}
+        {/*         style = {{ */}
+        {/*           display            : "grid", */}
+        {/*           gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", */}
+        {/*         }} */}
+        {/*       > */}
+        {/*         {ProjectsData.map( ( project, i ) => ( */}
+        {/*             <ProjectCard */}
+        {/*               key = {i} */}
+        {/*               slug = {project.code} */}
+        {/*               title = {project.title} */}
+        {/*               cover = {project.image} */}
+        {/*               date = {project.date} */}
+        {/*             /> */}
+        {/*           ) */}
+        {/*         )} */}
+        {/*       </div > */}
+        {/*     </section > */}
 
-            <section style = {{ gridArea: "atlas", marginLeft: "3rem" }} >
-              <Link href = "/Atlas" >
-                <SectionHeader >
-                  Atlas
-                  <ArrowRightIcon width = "18" height = "18" />
-                </SectionHeader >
-              </Link >
-              <Subheader >
-                Design responses gathered from my own observations and research.
-              </Subheader >
-              <div style = {{}} >
-                {ArcGISData.map( ( visual, i ) => (
-                  <AtlasCard
-                    key = {i}
-                    slug = {visual.slug}
-                    title = {visual.title}
-                    date = {visual.date}
-                  />
-                ) )}
-              </div >
-            </section >
-          </ProjectsSection >
-        </motion.section >
+        {/*     <section style = {{ gridArea: "atlas", marginLeft: "3rem" }} > */}
+        {/*       <Link href = "/Atlas" > */}
+        {/*         <SectionHeader > */}
+        {/*           Atlas */}
+        {/*           <ArrowRightIcon width = "18" height = "18" /> */}
+        {/*         </SectionHeader > */}
+        {/*       </Link > */}
+        {/*       <Subheader > */}
+        {/*         Design responses gathered from my own observations and research. */}
+        {/*       </Subheader > */}
+        {/*       <div style = {{}} > */}
+        {/*         {ArcGISData.map( ( visual, i ) => ( */}
+        {/*           <AtlasCard */}
+        {/*             key = {i} */}
+        {/*             slug = {visual.slug} */}
+        {/*             title = {visual.title} */}
+        {/*             date = {visual.date} */}
+        {/*           /> */}
+        {/*         ) )} */}
+        {/*       </div > */}
+        {/*     </section > */}
+        {/*   </ProjectsSection > */}
+        {/* </motion.section > */}
 
         <Spacer size = "3xlarge" />
 
