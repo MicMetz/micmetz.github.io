@@ -1,21 +1,21 @@
-import fs from "fs";
-import matter from "gray-matter";
-import { serialize } from "next-mdx-remote/serialize";
-import dynamic from "next/dynamic";
-import path from "path";
-import { Controls, PlayState, Timeline, Tween } from "react-gsap";
-import InternalTooltipLink from "../components/Links/InternalTooltipLink.js";
-import AssumedAudience from "../components/MDX/AssumedAudience.js";
-import Disclaimer from "../components/MDX/Disclaimer.js";
-import EditRed from "../components/MDX/EditRed.js";
-import { Spacer } from "../components/MISC/Spacer.js";
-import EssayTemplate from "../components/PageTemplates/EssayTemplate.js";
-import NoteTemplate from "../components/PageTemplates/NoteTemplate.js";
-import ProjectTemplate from "../components/PageTemplates/ProjectTemplate.js";
-import { SmallCaps, Subtext, Title1, Title2, Title3, Title4, } from "../styles/StyledTypography.js";
-import { getHeadings } from "../tools/getHeadings.js";
-import getOriginalImage from "../tools/getOriginalImage.js";
-import { linkify } from "../tools/linkify.js";
+import fs                                                                                          from "fs";
+import matter                                                                                      from "gray-matter";
+import { serialize }                                                                               from "next-mdx-remote/serialize";
+import dynamic                                                                                     from "next/dynamic";
+import path                                                                                        from "path";
+import { Controls, PlayState, Timeline, Tween }                                                    from "react-gsap";
+import InternalTooltipLink                                                                         from "../components/Links/InternalTooltipLink.js";
+import AssumedAudience                                                                             from "../components/MDX/AssumedAudience.js";
+import Disclaimer                                                                                  from "../components/MDX/Disclaimer.js";
+import EditRed                                                                                     from "../components/MDX/EditRed.js";
+import { Spacer }                                                                                  from "../components/MISC/Spacer.js";
+import EssayTemplate                                                                               from "../components/PageTemplates/EssayTemplate.js";
+import NoteTemplate                                                                                from "../components/PageTemplates/NoteTemplate.js";
+import ProjectTemplate                                                                             from "../components/PageTemplates/ProjectTemplate.js";
+import { SmallCaps, Subtext, Title1, Title2, Title3, Title4, }                                     from "../styles/StyledTypography.js";
+import { getHeadings }                                                                             from "../tools/getHeadings.js";
+import getOriginalImage                                                                            from "../tools/getOriginalImage.js";
+import { linkify }                                                                                 from "../tools/linkify.js";
 import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, projectFilePaths, PROJECTS_PATH } from "../tools/mdxUtils.js";
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -27,11 +27,11 @@ export const components = {
   // It also works with dynamically-imported components, which is especially
   // useful for conditionally components for certain routes.
   // See the notes in README.md for more details.
-  h1: ( props ) => ( <a href = {`#${props.id}`}>
+  h1: ( props ) => ( <a href = {`#${props.id}`} >
     <Title1 {...props} />
   </a > ),
 
-  h2: ( props ) => ( <a href = {`#${props.id}`}>
+  h2: ( props ) => ( <a href = {`#${props.id}`} >
     <Title2 {...props} />
   </a > ),
 
@@ -99,9 +99,12 @@ export const components = {
     ssr: false,
   } ), ListNumber         : dynamic( () => import("../components/MDX/ListNumber"), {
     ssr: false,
+  } ), ExpandCollapse     : dynamic( () => import("../components/MDX/ExpandCollapse"), {
+    ssr: false,
   } ),
 
   // Unique components – used in specific essays or notes
+
   StickyPosition              : dynamic( () => import("../components/Unique/css-position/StickyPosition"), {
     ssr: false,
   } ), RelativeCSSPosition    : dynamic( () => import("../components/Unique/css-position/RelativeCSSPosition"), {
@@ -208,8 +211,8 @@ const getOgImagePath = ( properties ) => {
 };
 
 export const getStaticProps = async ( { params } ) => {
-  const essays = fs.readdirSync( ESSAYS_PATH );
-  const notes = fs.readdirSync( NOTES_PATH );
+  const essays   = fs.readdirSync( ESSAYS_PATH );
+  const notes    = fs.readdirSync( NOTES_PATH );
   const projects = fs.readdirSync( PROJECTS_PATH );
 
 
@@ -237,18 +240,18 @@ export const getStaticProps = async ( { params } ) => {
       break;
   }
 
-  const source = fs.readFileSync( filePath );
+  const source            = fs.readFileSync( filePath );
   const { content, data } = matter( source );
 
   const toc = data?.toc || null;
 
   const headings = await getHeadings( content );
 
-  const ogObject = {
+  const ogObject    = {
     title: data.title, subtitle: data.description, postType: data.type, growthStage: data.growthStage, cover: data.cover,
   };
   const ogImagePath = getOgImagePath( ogObject );
-  const ogImage = await getOriginalImage( ogImagePath, data.title );
+  const ogImage     = await getOriginalImage( ogImagePath, data.title );
 
   const contentWithBidirectionalLinks = linkify( content, data.title );
 
@@ -256,7 +259,8 @@ export const getStaticProps = async ( { params } ) => {
     // Optionally pass remark/rehype plugins
     mdxOptions: {
       remarkPlugins: [], rehypePlugins: [
-        require( "rehype-slug" ), require( "rehype-autolink-headings" ),
+        require( "rehype-slug" ),
+        require( "rehype-autolink-headings" ),
       ],
     }, scope  : data,
   } );
@@ -280,8 +284,8 @@ export const getStaticPaths = async () => {
   .map( ( path ) => path.replace( /\.mdx?$/, "" ) )
   .map( ( slug ) => ( { params: { slug } } ) );
 
-  const notePaths = getSlugParams( noteFilePaths );
-  const essayPaths = getSlugParams( essayFilePaths );
+  const notePaths    = getSlugParams( noteFilePaths );
+  const essayPaths   = getSlugParams( essayFilePaths );
   const projectPaths = getSlugParams( projectFilePaths );
 
   // Combine all paths into one array

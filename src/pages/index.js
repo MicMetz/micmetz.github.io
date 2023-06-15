@@ -1,31 +1,32 @@
-import { ArrowRightIcon } from "@heroicons/react/20/solid";
-import { motion } from "framer-motion";
-import fs from "fs";
-import matter from "gray-matter";
-import Link from "next/link";
-import path from "path";
-import React from "react";
-import styled from "styled-components";
-import { ArcGISData } from "../../posts/data/ArcGISData.js";
+import { ArrowRightIcon }  from "@heroicons/react/20/solid";
+import { motion }          from "framer-motion";
+import fs                  from "fs";
+import matter              from "gray-matter";
+import Link                from "next/link";
+import path                from "path";
+import React               from "react";
+import styled              from "styled-components";
+import { ArcGISData }      from "../../posts/data/ArcGISData.js";
 import { CurrentReadings } from "../../posts/data/CurrentReadings.js";
 
-import { ProjectsData } from "../../posts/data/ProjectsData.js";
-import AtlasCard from "../components/Cards/AtlasCard.js";
-import BookCard from "../components/Cards/BookCard.js";
-import EssayCard from "../components/Cards/EssayCard.js";
-import ProjectCard from "../components/Cards/ProjectCard.js";
-import GrowthIcon from "../components/Icons/GrowthIcon.js";
-import Header from "../components/Layouts/Header.js";
-import { Layout } from "../components/Layouts/Layout.js";
+import { ProjectsData }   from "../../posts/data/ProjectsData.js";
+import AtlasCard          from "../components/Cards/AtlasCard.js";
+import BookCard           from "../components/Cards/BookCard.js";
+import EssayCard          from "../components/Cards/EssayCard.js";
+import ProjectCard        from "../components/Cards/ProjectCard.js";
+import GrowthIcon         from "../components/Icons/GrowthIcon.js";
+import Header             from "../components/Layouts/Header.js";
+import { Layout }         from "../components/Layouts/Layout.js";
 import UnderlineHoverLink from "../components/Links/UnderlineHoverLink.js";
-import { Spacer } from "../components/MISC/Spacer.js";
+import { Spacer }         from "../components/MISC/Spacer.js";
 
-import { ReadmoreLink } from "../styles/LinkStyledComponents.js";
+import { ReadmoreLink }             from "../styles/LinkStyledComponents.js";
 import { LeftSection, SectionText } from "../styles/StyledComponents.js";
 
-import { GardenSection, ProjectsSection } from "../styles/StyledSectionComponents.js";
-import { SectionHeader, SmallTitle2, Subheader, Title1, Title2 } from "../styles/StyledTypography.js";
+import { GardenSection, ProjectsSection }                                                          from "../styles/StyledSectionComponents.js";
+import { SectionHeader, Subheader, Title1, Title2 }                                                from "../styles/StyledTypography.js";
 import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, projectFilePaths, PROJECTS_PATH } from "../tools/mdxUtils.js";
+
 
 
 
@@ -59,7 +60,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 
   return (
     <>
-      <Header title = "Michael Metzger | Portfolio"/>
+      <Header title = "Michael Metzger | Portfolio" />
 
       <Layout >
         <header
@@ -84,26 +85,29 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             }}
           >
             <LeftSection >
-              <Title1 fontWeight = "700">
+              <Title1 fontWeight = "700" >
                 Hi.
-                <Spacer size = "xs"/>
+                <Spacer size = "xs" />
                 My name is
-                <Spacer size = "xs"/>
+                <Spacer size = "xs" />
                 Michael.
               </Title1 >
             </LeftSection >
 
             <SectionText >
-              As of right now, I'm studying computer science at the University of Colorado at Boulder (CU Boulder).
-              Before, and not too long ago, I was studying Sociology and Information Science at multiple New York City universities over a few years.
-              <Spacer size = "xs"/>
+              {/* <ExpandCollapse > */}
+                As of right now, I'm studying computer science at the University of Colorado at Boulder (CU Boulder).
+
+                Before, and not too long ago, I was studying Sociology and Information Science at multiple New York City universities over a few years.
+              {/* </ExpandCollapse > */}
+              <Spacer size = "xs" />
               <motion.span
                 initial = {{ opacity: 0, x: -50 }}
                 animate = {{ opacity: 1, x: 0 }}
                 transition = {{ delay: 0.5, duration: 1 }}
               >
                 For more, check out my {" "}
-                <UnderlineHoverLink href = "/About">
+                <UnderlineHoverLink href = "/About" >
                   <i >bio page</i >
                 </UnderlineHoverLink >
                 {" "}.
@@ -113,9 +117,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
         </header >
 
 
-
-        <Spacer size = "xlarge"/>
-
+        <Spacer size = "xlarge" />
 
 
         <motion.section
@@ -123,15 +125,15 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
           animate = {{ opacity: 1, x: 0 }}
           transition = {{ delay: 0.7, duration: 1 }}
         >
-          <Title2 style = {{ fontSize: "var(--font-size-2xl)" }}>
+          <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} >
             Writing Garden
           </Title2 >
           <Subheader >
             A collection of essays, notes, and responses to readings.{' '}
             <Spacer />
-            <ReadmoreLink href = "/Garden">
+            <ReadmoreLink href = "/Garden" >
               Learn more
-              <ArrowRightIcon width = "18" height = "18"/>
+              <ArrowRightIcon width = "18" height = "18" />
             </ReadmoreLink >
           </Subheader >
 
@@ -140,11 +142,11 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             initial = "hidden"
             animate = "visible"
           >
-            <section style = {{ gridArea: "essays" }}>
-              <Link href = "/Essays">
+            <section style = {{ gridArea: "essays" }} >
+              <Link href = "/Essays" >
                 <SectionHeader >
                   Essays
-                  <ArrowRightIcon width = "18" height = "18"/>
+                  <ArrowRightIcon width = "18" height = "18" />
                 </SectionHeader >
               </Link >
               <Subheader >
@@ -170,22 +172,22 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               </div >
             </section >
 
-            <section style = {{ gridArea: "notes", marginLeft: "" }}>
-              <Link href = "/Notes">
+            <section style = {{ gridArea: "notes", marginLeft: "" }} >
+              <Link href = "/Notes" >
                 <SectionHeader >
                   Notes
-                  <ArrowRightIcon width = "18" height = "18"/>
+                  <ArrowRightIcon width = "18" height = "18" />
                 </SectionHeader >
               </Link >
               <Subheader >
                 Short, <i >'concise'</i >, and to the point
               </Subheader >
-              <div style = {{}}>
+              <div style = {{}} >
                 {notes.slice( 0, 12 ).map( ( note ) => (
-                  <Link key = {note.slug} href = {`/${note.slug}`}>
+                  <Link key = {note.slug} href = {`/${note.slug}`} >
                     <IndexNoteCard >
                       {note.data.growthStage && (
-                        <GrowthIcon growthStage = {note.data.growthStage}/>
+                        <GrowthIcon growthStage = {note.data.growthStage} />
                       )}
                       <h3 >{note.data.title}</h3 >
                     </IndexNoteCard >
@@ -195,11 +197,11 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             </section >
 
 
-            <section style = {{ gridArea: "books" }}>
-              <Link href = "https://micmetz.github.io/library/">
+            <section style = {{ gridArea: "books" }} >
+              <Link href = "https://micmetz.github.io/library/" >
                 <SectionHeader >
                   Books
-                  <ArrowRightIcon width = "18" height = "18"/>
+                  <ArrowRightIcon width = "18" height = "18" />
                 </SectionHeader >
               </Link >
               <Subheader >
@@ -229,7 +231,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
           </GardenSection >
         </motion.section >
 
-        <Spacer size = "3xlarge"/>
+        <Spacer size = "3xlarge" />
 
 
         <motion.section
@@ -237,15 +239,15 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
           animate = {{ opacity: 1, x: 0 }}
           transition = {{ delay: 0.7, duration: 1 }}
         >
-          <Title2 style = {{ fontSize: "var(--font-size-2xl)" }}>
+          <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} >
             Projects
           </Title2 >
           <Subheader >
             Projects I’ve worked on.
           </Subheader >
-          <ReadmoreLink href = "/Projects">
+          <ReadmoreLink href = "/Projects" >
             Learn more
-            <ArrowRightIcon width = "18" height = "18"/>
+            <ArrowRightIcon width = "18" height = "18" />
           </ReadmoreLink >
 
 
@@ -254,11 +256,11 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             initial = "hidden"
             animate = "visible"
           >
-            <section style = {{ gridArea: "technology" }}>
-              <Link href = "/Projects">
+            <section style = {{ gridArea: "technology" }} >
+              <Link href = "/Projects" >
                 <SectionHeader >
                   Software
-                  <ArrowRightIcon width = "18" height = "18"/>
+                  <ArrowRightIcon width = "18" height = "18" />
                 </SectionHeader >
               </Link >
               <Subheader >
@@ -284,17 +286,17 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               </div >
             </section >
 
-            <section style = {{ gridArea: "atlas", marginLeft: "3rem" }}>
-              <Link href = "/Atlas">
+            <section style = {{ gridArea: "atlas", marginLeft: "3rem" }} >
+              <Link href = "/Atlas" >
                 <SectionHeader >
                   Atlas
-                  <ArrowRightIcon width = "18" height = "18"/>
+                  <ArrowRightIcon width = "18" height = "18" />
                 </SectionHeader >
               </Link >
               <Subheader >
                 Design responses gathered from my own observations and research.
               </Subheader >
-              <div style = {{}}>
+              <div style = {{}} >
                 {ArcGISData.map( ( visual, i ) => (
                   <AtlasCard
                     key = {i}
@@ -308,7 +310,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
           </ProjectsSection >
         </motion.section >
 
-        <Spacer size = "3xlarge"/>
+        <Spacer size = "3xlarge" />
 
       </Layout >
     </>
@@ -357,9 +359,9 @@ const IndexNoteCard = styled.div`
 export function getStaticProps() {
   // Get all essay posts
   let essays = essayFilePaths.map( ( filePath ) => {
-    const source = fs.readFileSync( path.join( ESSAYS_PATH, filePath ) );
+    const source            = fs.readFileSync( path.join( ESSAYS_PATH, filePath ) );
     const { content, data } = matter( source );
-    const slug = filePath.replace( /\.mdx$/, "" );
+    const slug              = filePath.replace( /\.mdx$/, "" );
 
     return {
       content, data, slug, filePath,
@@ -371,15 +373,15 @@ export function getStaticProps() {
   .filter( ( essay ) => essay.data.featured === true )
   .slice( 0, 4 );
   // Sort filtered essays by date
-  const sortedEssays = filteredEssays.sort( ( a, b ) => {
+  const sortedEssays   = filteredEssays.sort( ( a, b ) => {
     return new Date( b.data.updated ) - new Date( a.data.updated );
   } );
 
   // Get all note posts
   let notes = noteFilePaths.map( ( filePath ) => {
-    const source = fs.readFileSync( path.join( NOTES_PATH, filePath ) );
+    const source            = fs.readFileSync( path.join( NOTES_PATH, filePath ) );
     const { content, data } = matter( source );
-    const slug = filePath.replace( /\.mdx?$/, "" );
+    const slug              = filePath.replace( /\.mdx?$/, "" );
 
     return {
       content, data, slug, filePath,
@@ -392,9 +394,9 @@ export function getStaticProps() {
   } );
 
   let projects = projectFilePaths.map( ( filePath ) => {
-    const source = fs.readFileSync( path.join( PROJECTS_PATH, filePath ) );
+    const source            = fs.readFileSync( path.join( PROJECTS_PATH, filePath ) );
     const { content, data } = matter( source );
-    const slug = filePath.replace( /\.mdx?$/, "" );
+    const slug              = filePath.replace( /\.mdx?$/, "" );
 
     return {
       content, data, slug, filePath,
@@ -406,7 +408,11 @@ export function getStaticProps() {
     return new Date( b.data.updated ) - new Date( a.data.updated );
   } );
 
-  const allPosts = [ ...essays, ...notes, ...projects ];
+  const allPosts = [
+    ...essays,
+    ...notes,
+    ...projects
+  ];
 
   return {
     props: { sortedEssays, sortedNotes, sortedProjects },

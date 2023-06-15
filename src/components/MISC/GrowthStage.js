@@ -16,7 +16,7 @@ export default function GrowthStage( { stage } ) {
 								<StyledGrowthStage >{stage}</StyledGrowthStage >
 						</Tooltip >
 				);
-		} else if ( stage === "Seedling Idea" ) {
+		} else if ( stage === "Seedling Concept" ) {
 				return (
 						<Tooltip maxWidth = {300} content = "Seedlings are ideas I've just started that are rough, unrefined, and need some time to grow." >
 								<StyledGrowthStage >{stage}</StyledGrowthStage >
