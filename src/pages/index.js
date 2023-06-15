@@ -254,13 +254,14 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
           </Subheader >
           {/* <Scrollama offset = {0.5} onStepEnter = {onStepEnter} debug > */}
           <section style = {{ height: "fit-content" }} >
-            {ArticleList.slice( 0, 4 ).map( ( stepIndex, i ) => (
+            {ArticleList.slice( 0, 5 ).map( ( stepIndex, i ) => (
               <ArticleCard
                 key = {i}
                 title = {stepIndex.header.title}
                 preamble = {stepIndex.header.preamble}
                 cover = {stepIndex.cover}
                 link = {stepIndex.link}
+                topics = {stepIndex.topics}
                 publisher = {stepIndex.publisher}
                 author = {stepIndex.author}
                 date = {stepIndex.date}

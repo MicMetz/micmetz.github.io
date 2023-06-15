@@ -1,4 +1,3 @@
-import Image                 from "next/image";
 import styled                from "styled-components";
 import { ExternalHoverLink } from "../Links/ExternalHoverLink.js";
 import ImageLink             from "../Links/ImageLink.js";
@@ -6,33 +5,38 @@ import ImageLink             from "../Links/ImageLink.js";
 
 
 
-export default function ArticleCard( { title, preamble, cover, link, publisher, author, date } ) {
+export default function ArticleCard( { title, preamble, cover, link, publisher, author, date, topics } ) {
   return (
     <StyledArticleCard >
       <StyledArticleCoverWrapper >
         <ImageLink href = {link} target = "_blank" rel = "noopener noreferrer" >
-        <img src = {cover} alt = {title} />
+          <img src = {cover} alt = {title} />
         </ImageLink >
       </StyledArticleCoverWrapper >
-      <StyledArticleDetailsWrapper >
-        <h3 >{title}</h3 >
-        <p >{preamble}</p >
-        <p >
+
+
+      <StyledArticleMain >
+        <StyledArticleDetailsWrapper >
+          <h3 >{title}</h3 >
+
+          <StyledArticleTopics >
+            {topics.map( ( topic, index ) => (
+              <li key = {index} >{topic}</li >
+            ) )}
+          </StyledArticleTopics >
+
+          <p >{preamble}</p >
+
+        </StyledArticleDetailsWrapper >
+
+        <StyledArticleMetaWrapper >
           <span className = "metadata" >{author}</span >
-          <br />
           <span className = "metadata" >{publisher}</span >
-          <br />
           <span className = "metadata" >{date}</span >
-        </p >
-        {/* <ExternalHoverLink small = {false} href = {link} target = "_blank" rel = "noopener noreferrer" > */}
-        {/*   Read the article */}
-        {/*   <ArrowTopRightOnSquareIcon */}
-        {/*     width = "18" */}
-        {/*     height = "18" */}
-        {/*     style = {{ position: "relative", top: "3px" }} */}
-        {/*   /> */}
-        {/* </ExternalHoverLink > */}
-      </StyledArticleDetailsWrapper >
+        </StyledArticleMetaWrapper >
+
+      </StyledArticleMain >
+
 
     </StyledArticleCard >
   );
@@ -61,10 +65,18 @@ const StyledArticleCard = styled.section`
 `;
 
 
-const StyledArticleCoverWrapper = styled.div`
+const StyledArticleMain = styled.div`
   display: block;
-  position: relative;
+  width: 100%;
+  height: 100%;
 
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-gray-300);
+`;
+
+
+
+const StyledArticleCoverWrapper = styled.div`
   width: 100%;
   height: fit-content;
   margin: 0;
@@ -74,10 +86,10 @@ const StyledArticleCoverWrapper = styled.div`
     height: 100%;
     margin: 0;
     padding: 0;
-    
+
     object-position: center;
-    
-    
+
+
     object-fit: fill;
   }
 `;
@@ -87,24 +99,57 @@ const StyledArticleDetailsWrapper = styled.div`
   display: block;
   width: 100%;
   height: 100%;
-
-  background-color: var(--color-white);
-  border-top: 1px solid var(--color-gray-300);
+  padding: var(--space-2xs) var(--space-xs) var(--space-xs) var(--space-xs);
 
   h3 {
     font-size: var(--font-size-lg);
-    padding: var(--space-2xs) var(--space-xs);
+    padding: var(--space-2xs) 0;
   }
 
   p {
     font-size: var(--font-size-base);
     line-height: var(--leading-base);
-    padding: var(--space-2xs) var(--space-xs) var(--space-xs) var(--space-xs);
+    padding: var(--space-2xs) 0;
   }
 
+`;
+
+
+const StyledArticleMetaWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: var(--space-2xs) var(--space-xs) var(--space-xs) var(--space-xs);
+
   span.metadata {
-    font-size: var(--font-size-sm);
-    line-height: var(--leading-sm);
-    padding: var(--space-2xs) 0 var(--space-xs);
+    font-size: var(--font-size-xs);
+    line-height: var(--leading-tighter);
+    padding: var(--space-xxs) 0 0 0;
+  }
+`;
+
+
+
+const StyledArticleTopics = styled.ul`
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  list-style: none;
+  padding: 0 var(--space-xs) 0 0;
+  margin: 0 0 var(--space-s) 0;
+
+  li {
+    font-size: var(--font-size-xs);
+    line-height: var(--leading-tighter);
+    padding: 0;
+    margin: 0 1em 0 0;
+    color: var(--color-gray-500);
+  }
+
+  li::after {
+    content: ", ";
   }
 `;
