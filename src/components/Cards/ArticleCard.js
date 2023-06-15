@@ -150,7 +150,7 @@ const StyledArticleTopics = styled.ul`
     color: var(--color-gray-500);
   }
 
-  li::after {
+  li:not(:last-child)::after {
     content: ", ";
   }
 `;
