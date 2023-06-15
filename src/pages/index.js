@@ -4,12 +4,16 @@ import fs                  from "fs";
 import matter              from "gray-matter";
 import Link                from "next/link";
 import path                from "path";
-import React               from "react";
+import React, { useState } from "react";
+import { Scrollama, Step } from "react-scrollama";
 import styled              from "styled-components";
+
 import { ArcGISData }      from "../../posts/data/ArcGISData.js";
+import { ArticleList }     from "../../posts/data/Articles.js";
 import { CurrentReadings } from "../../posts/data/CurrentReadings.js";
 
 import { ProjectsData }   from "../../posts/data/ProjectsData.js";
+import ArticleCard        from "../components/Cards/ArticleCard.js";
 import AtlasCard          from "../components/Cards/AtlasCard.js";
 import BookCard           from "../components/Cards/BookCard.js";
 import EssayCard          from "../components/Cards/EssayCard.js";
@@ -55,7 +59,13 @@ const itemAnimation = {
 
 
 export default function Index( { sortedEssays: essays, sortedNotes: notes, sortedProjects: projects } ) {
+  const [ currentStepIndex, setCurrentStepIndex ] = useState( null );
 
+  // This callback fires when a Step hits the offset threshold. It receives the
+  // data prop of the step, which in this demo stores the index of the step.
+  const onStepEnter = ( { data } ) => {
+    setCurrentStepIndex( data );
+  };
 
 
   return (
@@ -96,9 +106,8 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 
             <SectionText >
               {/* <ExpandCollapse > */}
-                As of right now, I'm studying computer science at the University of Colorado at Boulder (CU Boulder).
-
-                Before, and not too long ago, I was studying Sociology and Information Science at multiple New York City universities over a few years.
+              As of right now, I'm studying computer science at the University of Colorado at Boulder (CU Boulder).
+              Before, and not too long ago, I was studying Sociology and Information Science at multiple New York City universities over a few years.
               {/* </ExpandCollapse > */}
               <Spacer size = "xs" />
               <motion.span
@@ -106,7 +115,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
                 animate = {{ opacity: 1, x: 0 }}
                 transition = {{ delay: 0.5, duration: 1 }}
               >
-                For more, check out my {" "}
+                For more about me, check out my{" "}
                 <UnderlineHoverLink href = "/About" >
                   <i >bio page</i >
                 </UnderlineHoverLink >
@@ -231,6 +240,56 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
           </GardenSection >
         </motion.section >
 
+
+        <Spacer size = "3xlarge" />
+
+
+        <motion.section
+          initial = {{ opacity: 0, x: -50 }}
+          animate = {{ opacity: 1, x: 0 }}
+          transition = {{ delay: 0.7, duration: 1 }}
+        >
+          <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} >
+            Articles
+          </Title2 >
+          <Subheader >
+            Some of the most memorable articles I’ve read over the recent months.{' '}
+            <Spacer />
+            <ReadmoreLink href = "/Articles" >
+              See more
+              <ArrowRightIcon width = "18" height = "18" />
+            </ReadmoreLink >
+          </Subheader >
+          <div >
+            {/* <Scrollama offset = {0.5} onStepEnter = {onStepEnter} debug > */}
+            <Scrollama offset = {0.5} onStepEnter = {onStepEnter} >
+              {ArticleList.map( ( _, stepIndex ) => (
+                <Step data = {stepIndex} key = {stepIndex} >
+                  {/* <div
+                   style = {{
+                   margin : '50vh 0',
+                   border : '1px solid gray',
+                   opacity: currentStepIndex === stepIndex ? 1 : 0.2,
+                   }}
+                   > */}
+                  <ArticleCard
+                    key = {stepIndex}
+                    title = {ArticleList[ stepIndex ].header.title}
+                    preamble = {ArticleList[ stepIndex ].header.preamble}
+                    cover = {ArticleList[ stepIndex ].cover}
+                    link = {ArticleList[ stepIndex ].link}
+                    publisher = {ArticleList[ stepIndex ].publisher}
+                    author = {ArticleList[ stepIndex ].author}
+                    date = {ArticleList[ stepIndex ].date}
+                  />
+                  {/* </div > */}
+                </Step >
+              ) )}
+            </Scrollama >
+          </div >
+        </motion.section >
+
+
         <Spacer size = "3xlarge" />
 
 
@@ -317,6 +376,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
   )
     ;
 };
+
 
 
 

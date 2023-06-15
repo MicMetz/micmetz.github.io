@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import styled                         from "styled-components";
-import { HiArrowUp, HiArrowDown }      from "react-icons/hi";
+import React, { useEffect, useRef, useState } from "react";
+import styled                                 from "styled-components";
+
 
 
 
@@ -12,14 +12,14 @@ import { HiArrowUp, HiArrowDown }      from "react-icons/hi";
  * @param minHeight - The minimum height of the content when collapsed (optional) - type: number
  */
 
-export function ExpandCollapse( { children, collapseText = '(Close)', expandText = "...Read More", minHeight = 10 } ) {
+export function ExpandCollapse( { children, collapseText = '(Close)', expandText = "...Read More", minHeight = 10} ) {
   const [ isExpanded, setIsExpanded ]         = useState( false );
   const [ scrollPosition, setScrollPosition ] = useState( 0 );
-  const [ buttonText, setButtonText ]         = useState();
   const [ contentHeight, setContentHeight ]   = useState( 0 );
   const [ scrollHeight, setScrollHeight ]     = useState( 0 );
-  const [ toggleRef, setToggleRef ]           = useState( null );
-  const [ contentRef, setContentRef ]         = useState( null );
+  const [ buttonText, setButtonText ]         = useState();
+  const toggleRef                             = useRef();
+  const contentRef                            = useRef( children );
 
 
 
@@ -28,6 +28,17 @@ export function ExpandCollapse( { children, collapseText = '(Close)', expandText
     setContentHeight( contentRef?.current?.clientHeight );
     setScrollHeight( contentRef?.current?.scrollHeight );
   }, [] );
+
+
+
+  useEffect( () => {
+    if ( isExpanded ) {
+      setButtonText( setCollapse() );
+    } else {
+      setButtonText( setOpen() );
+    }
+  }, [ isExpanded ] );
+
 
 
   const canExpand = () => {
@@ -44,7 +55,6 @@ export function ExpandCollapse( { children, collapseText = '(Close)', expandText
   const setCollapse = () => {
     return (
       <>
-        {/* <HiArrowUp size={16} /> */}
         {collapseText}
       </>
     );
@@ -54,7 +64,6 @@ export function ExpandCollapse( { children, collapseText = '(Close)', expandText
   const setOpen = () => {
     return (
       <>
-        {/* <HiArrowDown size={16} /> */}
         {expandText}
       </>
     );
@@ -81,19 +90,19 @@ export function ExpandCollapse( { children, collapseText = '(Close)', expandText
 
   return (
     <>
-      <StyledContainer isExpanded={isExpanded}>
-        <StyledContent isExpanded={isExpanded}>
-          <StyledText>
+      <StyledContainer isExpanded = {isExpanded} >
+        <StyledContent isExpanded = {isExpanded} >
+          <StyledText >
             {getContent()}
-          </StyledText>
-        </StyledContent>
+          </StyledText >
+        </StyledContent >
         <StyledButton
-          ref={toggleRef}
-          onClick={onClick}
+          ref = {toggleRef}
+          onClick = {onClick}
         >
           {isExpanded ? setCollapse() : setOpen()}
-        </StyledButton>
-      </StyledContainer>
+        </StyledButton >
+      </StyledContainer >
     </>
   );
 
@@ -119,6 +128,7 @@ const StyledContainer = styled.div`
 
   background-color: var(--color-gray-100);
   transition: background-color 0.2s ease-in-out;
+
   &:hover {
     background-color: var(--color-gray-200);
   }
@@ -130,6 +140,7 @@ const StyledExternalUrl = styled.a`
   color: var(--color-gray-600);
   transition: color 0.2s ease-in-out;
   text-align: center;
+
   &:hover {
     color: var(--color-bright-crimson);
   }
@@ -140,6 +151,7 @@ const StyledButton = styled.button`
   color: var(--color-gray-600);
   transition: color 0.2s ease-in-out;
   text-align: center;
+
   &:hover {
     color: var(--color-bright-crimson);
   }
@@ -157,6 +169,7 @@ const StyledContent = styled.div`
 const StyledText = styled.div`
   color: var(--color-gray-600);
   transition: color 0.2s ease-in-out;
+
   &:hover {
     color: var(--color-bright-crimson);
   }
