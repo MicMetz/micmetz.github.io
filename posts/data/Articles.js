@@ -13,17 +13,30 @@ export const ArticleList = [
     cover     : '/images/library/articles/ChinaRevealedCIAOperativesInAfricaAndEurope.jpg'
   },
   {
+    id        : 2,
+    header    : {
+      title   : 'Kissinger’s Killing Fields',
+      preamble: 'Interviews with more than 75 witnesses and survivors of U.S. military attacks and an exclusive archive of documents show that Henry Kissinger is responsible for even more civilian deaths in Cambodia than was previously known.',
+    },
+    link      : 'https://theintercept.com/series/henry-kissinger-killing-fields/',
+    categories: [ 'Politics', 'Foreign Policy', 'War', 'Cambodia', 'Henry Kissinger', 'War Crimes' ],
+    publisher : 'The Intercept',
+    date      : 'May 23, 2023',
+    author    : 'Nick Turse',
+    cover     : '/images/library/articles/KissingersKillingFields.jpg'
+  },
+  {
     id        : 3,
     header    : {
-      title   : 'Privacy or safety? U.S. brings \'surveillance city to the suburbs',
-      preamble: 'The spread of Fusus, a police technology platform that merges public and private cameras with predictive policing and other surveillance tools, is sparking debates in towns across the U.S.',
+      title   : 'The Taliban’s Successful Opium Ban is Bad for Afghans and the World',
+      preamble: 'The ban is not a counter-narcotics victory and will have negative economic and humanitarian consequences, potentially leading to a refugee crisis.'
     },
-    link      : 'https://www.context.news/digital-rights/privacy-or-safety-us-brings-surveillance-city-to-the-suburbs/',
-    categories: [ 'Politics', 'Domestic Policy', 'Surveillance', 'Privacy', 'Police', 'Technology' ],
-    publisher : 'Context News',
-    date      : 'May 11, 2023',
-    author    : 'Avi Asher-Schapiro',
-    cover     : '/images/library/articles/PrivacyOrSafetyUSBringsSurveillanceCityToTheSuburbs.jpg'
+    link      : 'https://www.usip.org/publications/2023/06/talibans-successful-opium-ban-bad-afghans-and-world',
+    categories: [ 'Politics', 'Foreign Policy', 'Afghanistan', 'War', 'Opium', 'Taliban', 'Ummm!?'],
+    publisher : 'United States Institute of Peace',
+    date      : 'June 08, 2023',
+    author    : 'William Byrd',
+    cover     : '/images/library/articles/TheTalibansSuccessfulOpiumBanIsBadForAfghansAndTheWorld.jpg'
   },
   {
     id        : 4,
@@ -112,7 +125,7 @@ export const ArticleList = [
     cover     : '/images/library/articles/TheDerangementOfTheAmericanMind.jpg'
   },
   {
-    id        : 2,
+    id        : 10,
     header    : {
       title   : 'The CIA’s Afghan Death Squads',
       preamble: 'A U.S.-Backed Militia That Kills Children May Be America’s Exit Strategy From Its Longest War',
@@ -132,6 +145,20 @@ export const ArticleList = [
     author    : 'Andrew Quilty',
     cover     : '/images/library/articles/TheCIAsAfghanDeathSquads.jpg'
   },
+  {
+    id        : 11,
+    header    : {
+      title   : 'Privacy or safety? U.S. brings \'surveillance city to the suburbs',
+      preamble: 'The spread of Fusus, a police technology platform that merges public and private cameras with predictive policing and other surveillance tools, is sparking debates in towns across the U.S.',
+    },
+    link      : 'https://www.context.news/digital-rights/privacy-or-safety-us-brings-surveillance-city-to-the-suburbs/',
+    categories: [ 'Politics', 'Domestic Policy', 'Surveillance', 'Privacy', 'Police', 'Technology' ],
+    publisher : 'Context News',
+    date      : 'May 11, 2023',
+    author    : 'Avi Asher-Schapiro',
+    cover     : '/images/library/articles/PrivacyOrSafetyUSBringsSurveillanceCityToTheSuburbs.jpg'
+  }
+
 
 
 ]

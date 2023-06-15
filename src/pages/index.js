@@ -5,7 +5,6 @@ import matter              from "gray-matter";
 import Link                from "next/link";
 import path                from "path";
 import React, { useState } from "react";
-import { Scrollama, Step } from "react-scrollama";
 import styled              from "styled-components";
 
 import { ArcGISData }      from "../../posts/data/ArcGISData.js";
@@ -59,13 +58,6 @@ const itemAnimation = {
 
 
 export default function Index( { sortedEssays: essays, sortedNotes: notes, sortedProjects: projects } ) {
-  const [ currentStepIndex, setCurrentStepIndex ] = useState( null );
-
-  // This callback fires when a Step hits the offset threshold. It receives the
-  // data prop of the step, which in this demo stores the index of the step.
-  const onStepEnter = ( { data } ) => {
-    setCurrentStepIndex( data );
-  };
 
 
   return (
@@ -236,7 +228,6 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
                 ) )}
               </div >
             </section >
-
           </GardenSection >
         </motion.section >
 
@@ -248,6 +239,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
           initial = {{ opacity: 0, x: -50 }}
           animate = {{ opacity: 1, x: 0 }}
           transition = {{ delay: 0.7, duration: 1 }}
+          style = {{ margin: 'var(--space-xl) 0 var(--space-s)' }}
         >
           <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} >
             Articles
@@ -260,37 +252,25 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               <ArrowRightIcon width = "18" height = "18" />
             </ReadmoreLink >
           </Subheader >
-          <div >
-            {/* <Scrollama offset = {0.5} onStepEnter = {onStepEnter} debug > */}
-            <Scrollama offset = {0.5} onStepEnter = {onStepEnter} >
-              {ArticleList.map( ( _, stepIndex ) => (
-                <Step data = {stepIndex} key = {stepIndex} >
-                  {/* <div
-                   style = {{
-                   margin : '50vh 0',
-                   border : '1px solid gray',
-                   opacity: currentStepIndex === stepIndex ? 1 : 0.2,
-                   }}
-                   > */}
-                  <ArticleCard
-                    key = {stepIndex}
-                    title = {ArticleList[ stepIndex ].header.title}
-                    preamble = {ArticleList[ stepIndex ].header.preamble}
-                    cover = {ArticleList[ stepIndex ].cover}
-                    link = {ArticleList[ stepIndex ].link}
-                    publisher = {ArticleList[ stepIndex ].publisher}
-                    author = {ArticleList[ stepIndex ].author}
-                    date = {ArticleList[ stepIndex ].date}
-                  />
-                  {/* </div > */}
-                </Step >
-              ) )}
-            </Scrollama >
-          </div >
+          {/* <Scrollama offset = {0.5} onStepEnter = {onStepEnter} debug > */}
+          <section style = {{ height: "fit-content" }} >
+            {ArticleList.slice( 0, 4 ).map( ( stepIndex, i ) => (
+              <ArticleCard
+                key = {i}
+                title = {stepIndex.header.title}
+                preamble = {stepIndex.header.preamble}
+                cover = {stepIndex.cover}
+                link = {stepIndex.link}
+                publisher = {stepIndex.publisher}
+                author = {stepIndex.author}
+                date = {stepIndex.date}
+              />
+            ) )}
+          </section >
         </motion.section >
 
 
-        <Spacer size = "3xlarge" />
+        <Spacer size = "xlarge" />
 
 
         <motion.section
@@ -303,11 +283,12 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
           </Title2 >
           <Subheader >
             Projects I’ve worked on.
+            <Spacer />
+            <ReadmoreLink href = "/Projects" >
+              Learn more
+              <ArrowRightIcon width = "18" height = "18" />
+            </ReadmoreLink >
           </Subheader >
-          <ReadmoreLink href = "/Projects" >
-            Learn more
-            <ArrowRightIcon width = "18" height = "18" />
-          </ReadmoreLink >
 
 
           <ProjectsSection
@@ -329,7 +310,6 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
                 style = {{
                   display            : "grid",
                   gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                  gridGap            : "var(--space-xs)",
                 }}
               >
                 {ProjectsData.map( ( project, i ) => (

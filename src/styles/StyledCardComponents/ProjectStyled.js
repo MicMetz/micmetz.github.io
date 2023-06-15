@@ -56,7 +56,7 @@ export const StyledProjectCard = styled( motion.div )`
   transition: all 0.3s ease-in-out;
   color: var(--color-gray-800);
   margin: 0 var(--space-xs) var(--space-xs) 0;
-  padding: var(--space-s);
+  padding: var(--space-s) 0;
 
   img,
   div:first-child {

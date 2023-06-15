@@ -23,7 +23,7 @@ export default function ProjectCard( { slug, cover, title, date, topics } ) {
       target = "_blank"
       rel = "noopener noreferrer"
     >
-      <a >
+
         <StyledProjectCard >
           <ExternalHoverLink >
             View further details{" "}
@@ -59,7 +59,7 @@ export default function ProjectCard( { slug, cover, title, date, topics } ) {
             </div >
           </ProjectMetadataContainer >
         </StyledProjectCard >
-      </a >
+
     </HoverLink >
 
   );

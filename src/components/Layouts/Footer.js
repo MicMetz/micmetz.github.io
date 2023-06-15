@@ -17,19 +17,19 @@ export default function Footer() {
 
             <FooterSocialMediaIcons >
               <FooterLinkItem href = "https://github.com/MicMetz">
-                <a rel = "me" href = "https://github.com/MicMetz">
+                {/* <a rel = "me" href = "https://github.com/MicMetz"> */}
                   <GithubIcon />
-                </a >
+                {/* </a > */}
               </FooterLinkItem >
               <FooterLinkItem href = "https://www.linkedin.com/in/michael-metzjer/">
-                <a rel = "me" href = "https://www.linkedin.com/in/michael-metzjer/">
+                {/* <a rel = "me" href = "https://www.linkedin.com/in/michael-metzjer/"> */}
                   <LinkedInIcon />
-                </a >
+                {/* </a > */}
               </FooterLinkItem >
               <FooterLinkItem href = "https://bsky.app/">
-                <a rel = "me" href = "https://bsky.app/">
+                {/* <a rel = "me" href = "https://bsky.app/"> */}
                   <TwitterIcon />
-                </a >
+                {/* </a > */}
               </FooterLinkItem >
             </FooterSocialMediaIcons >
           </FooterLinkColumn >

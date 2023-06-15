@@ -23,6 +23,12 @@ const handleSize = ( size ) => {
 		}
 };
 
-export const Spacer = styled.div`
+// export const Spacer = styled.div`
+//   height: ${( { size } ) => handleSize( size )};
+// `;
+
+export const Spacer = styled.span`
+  border: none;
+  display: block;
   height: ${( { size } ) => handleSize( size )};
 `;

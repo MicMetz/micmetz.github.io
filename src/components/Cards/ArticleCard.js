@@ -41,7 +41,7 @@ export default function ArticleCard( { title, preamble, cover, link, publisher, 
 
 
 
-const StyledArticleCard = styled.div`
+const StyledArticleCard = styled.section`
   //display: flex;
   //position: relative;
   //flex-direction: column;
