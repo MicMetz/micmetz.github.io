@@ -252,7 +252,6 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               <ArrowRightIcon width = "18" height = "18" />
             </ReadmoreLink >
           </Subheader >
-          {/* <Scrollama offset = {0.5} onStepEnter = {onStepEnter} debug > */}
           <section style = {{ height: "fit-content" }} >
             {ArticleList.slice( 0, 5 ).map( ( stepIndex, i ) => (
               <ArticleCard

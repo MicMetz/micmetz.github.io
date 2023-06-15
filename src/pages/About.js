@@ -1,13 +1,25 @@
 import CoverImage from "/public/images/photography/QuietWeek.jpg"
 import Image from 'next/image'
 import Link from 'next/link'
+import * as PropTypes from "prop-types";
 import React from 'react'
 import { Layout } from '../components/Layouts/Layout.js'
+import UnderlineHoverLink from "../components/Links/UnderlineHoverLink.js";
 import { Spacer } from "../components/MISC/Spacer.js";
 import { Section, SectionText, SectionTitle } from '../styles/StyledComponents.js'
 
 
 
+
+function UnderlineLink( props ) {
+  return null;
+}
+
+
+UnderlineLink.propTypes = {
+  href    : PropTypes.string,
+  children: PropTypes.node
+};
 export default function AboutPage() {
 
   return (
@@ -82,8 +94,8 @@ export default function AboutPage() {
             development.
             <Spacer />
             Check out what I've been working on in my{' '}
-            <Link href = "/src/pages/Projects">projects</Link >{' '}
-            archive.
+            <UnderlineHoverLink href = "/src/pages/Projects">projects archive.</UnderlineHoverLink >{' '}
+
             <Spacer />
           </SectionText >
         </Section >

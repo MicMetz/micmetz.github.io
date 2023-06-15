@@ -65,9 +65,10 @@ export const LinkContainer = styled.div`
   display: inline-block;
   align-items: center;
   justify-content: center;
+  top: 0;
   position: relative;
   left: 3px;
-  top: 1px;
+  //top: 1px;
 `;
 
 
