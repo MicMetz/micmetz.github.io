@@ -61,7 +61,7 @@ export const DropdownLink = styled.span`
 `;
 
 
-export const LinkContainer = styled.span`
+export const LinkContainer = styled.div`
   display: inline-block;
   align-items: center;
   justify-content: center;

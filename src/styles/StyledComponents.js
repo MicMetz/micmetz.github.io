@@ -176,7 +176,7 @@ export const SectionTitle = styled.h2`
   }
 `
 
-export const SectionText = styled.p`
+export const SectionText = styled.div`
   width: 100%;
   height: fit-content;
 

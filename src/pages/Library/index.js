@@ -85,18 +85,3 @@ export default function LibraryPage() {
 
 }
 
-
-
-export const getStaticProps = () => {
-
-  const data    = getLatestPosts();
-  const allPost = getAllPosts();
-  const feed    = generateRSSFeed( allPost )
-  fs.writeFileSync( 'public/rss.xml', feed.rss2() );
-
-  return {
-    props: {
-      posts: data
-    }
-  }
-}

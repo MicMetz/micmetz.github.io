@@ -57,13 +57,11 @@
 				"react-intersection-observer": "^9.4.4",
 				"react-is": "^18.2.0",
 				"react-masonry-css": "^1.0.16",
-				"react-scrollama": "^2.3.2",
 				"react-share": "^4.4.0",
 				"react-twitter-embed": "^4.0.4",
 				"react-use-clipboard": "^1.0.7",
 				"rehype-autolink-headings": "^5",
 				"rehype-slug": "^4.0.1",
-				"scrollama": "^3.2.0",
 				"styled-components": "^5.3.5",
 				"styled-normalize": "^8.0.7",
 				"webpack": "^5.86.0"
