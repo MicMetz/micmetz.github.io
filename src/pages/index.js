@@ -4,29 +4,23 @@ import fs                  from "fs";
 import matter              from "gray-matter";
 import Link                from "next/link";
 import path                from "path";
-import React, { useState } from "react";
+import React               from "react";
 import styled              from "styled-components";
-
-import { ArcGISData }      from "../../posts/data/ArcGISData.js";
 import { ArticleList }     from "../../posts/data/Articles.js";
 import { CurrentReadings } from "../../posts/data/CurrentReadings.js";
-
-import { ProjectsData }   from "../../posts/data/ProjectsData.js";
-import ArticleCard        from "../components/Cards/ArticleCard.js";
-import AtlasCard          from "../components/Cards/AtlasCard.js";
-import BookCard           from "../components/Cards/BookCard.js";
-import EssayCard          from "../components/Cards/EssayCard.js";
-import ProjectCard        from "../components/Cards/ProjectCard.js";
-import GrowthIcon         from "../components/Icons/GrowthIcon.js";
-import Header             from "../components/Layouts/Header.js";
-import { Layout }         from "../components/Layouts/Layout.js";
-import UnderlineHoverLink from "../components/Links/UnderlineHoverLink.js";
-import { Spacer }         from "../components/MISC/Spacer.js";
+import ArticleCard         from "../components/Cards/ArticleCard.js";
+import BookCard            from "../components/Cards/BookCard.js";
+import EssayCard           from "../components/Cards/EssayCard.js";
+import GrowthIcon          from "../components/Icons/GrowthIcon.js";
+import Header              from "../components/Layouts/Header.js";
+import { Layout }          from "../components/Layouts/Layout.js";
+import UnderlineHoverLink  from "../components/Links/UnderlineHoverLink.js";
+import { Spacer }          from "../components/MISC/Spacer.js";
 
 import { ReadmoreLink }             from "../styles/LinkStyledComponents.js";
 import { LeftSection, SectionText } from "../styles/StyledComponents.js";
 
-import { GardenSection, ProjectsSection }                                                          from "../styles/StyledSectionComponents.js";
+import { GardenSection }                                                                           from "../styles/StyledSectionComponents.js";
 import { SectionHeader, Subheader, Title1, Title2 }                                                from "../styles/StyledTypography.js";
 import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, projectFilePaths, PROJECTS_PATH } from "../tools/mdxUtils.js";
 
@@ -97,10 +91,8 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             </LeftSection >
 
             <SectionText >
-              {/* <ExpandCollapse > */}
               As of right now, I'm studying computer science at the University of Colorado at Boulder (CU Boulder).
               Before, and not too long ago, I was studying Sociology and Information Science at multiple New York City universities over a few years.
-              {/* </ExpandCollapse > */}
               <Spacer size = "xs" />
               <motion.span
                 initial = {{ opacity: 0, x: -50 }}

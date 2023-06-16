@@ -2,6 +2,20 @@ export const ArticleList = [
   {
     id       : 0,
     header   : {
+      title   : 'The derangement of the American mind',
+      preamble: 'The world, we have a problem. It is Houston. America is out of control, and is the main threat to the world’s peace, security and civilizations.',
+    },
+    link     : 'https://johnmenadue.com/defeat-to-america/',
+    topics   : [ 'Politics', 'Foreign Policy', 'Defence', 'US Imperialism', 'US Hegemony' ],
+    publisher: 'John Menadue',
+    date     : 'April 20, 2023',
+    author   : 'Jeff Rich',
+    cover    : '/images/library/articles/TheDerangementOfTheAmericanMind.jpg'
+  },
+  {
+    id       : 1,
+
+    header   : {
       title   : 'US opposes dictators? Yes! Except when it supports them',
       preamble: 'Dictators are bad, except, well, when they\'re kind of OK: welcome to the moral gymnastics that Joe Biden is only the latest US president to embrace in a complicated world.',
     },
@@ -11,19 +25,6 @@ export const ArticleList = [
     date     : 'July 6, 2022',
     author   : 'AFP',
     cover    : '/images/library/articles/USopposesDictatorsExceptWhenItSupportsThem.jpg'
-  },
-  {
-    id       : 1,
-    header   : {
-      title   : 'China Used Stolen Data to Expose CIA Operatives in Africa and Europe',
-      preamble: 'Around 2013, U.S. intelligence began noticing an alarming pattern: Undercover CIA personnel, flying into countries in Africa and Europe for sensitive work, were being rapidly and successfully identified by Chinese intelligence, according to three former U.S. officials. The surveillance by Chinese operatives began in some cases as soon as the CIA officers had cleared passport control. Sometimes, the surveillance was so overt that U.S. intelligence officials speculated that the Chinese wanted the U.S. side to know they had identified the CIA operatives, disrupting their missions; other times, however, it was much more subtle and only detected through U.S. spy agencies’ own sophisticated technical countersurveillance capabilities.',
-    },
-    link     : 'https://foreignpolicy.com/2020/12/21/china-stolen-us-data-exposed-cia-operatives-spy-networks/',
-    topics   : [ 'Politics', 'Foreign Policy', 'China', 'Espionage', 'US Imperialism' ],
-    publisher: 'Foreign Policy',
-    date     : 'December 21, 2020',
-    author   : 'Zach Dorfman',
-    cover    : '/images/library/articles/ChinaRevealedCIAOperativesInAfricaAndEurope.jpg'
   },
   {
     id       : 2,
@@ -66,16 +67,17 @@ export const ArticleList = [
   },
   {
     id       : 5,
+
     header   : {
-      title   : 'The derangement of the American mind',
-      preamble: 'The world, we have a problem. It is Houston. America is out of control, and is the main threat to the world’s peace, security and civilizations.',
+      title   : 'China Used Stolen Data to Expose CIA Operatives in Africa and Europe',
+      preamble: 'Around 2013, U.S. intelligence began noticing an alarming pattern: Undercover CIA personnel, flying into countries in Africa and Europe for sensitive work, were being rapidly and successfully identified by Chinese intelligence, according to three former U.S. officials. The surveillance by Chinese operatives began in some cases as soon as the CIA officers had cleared passport control. Sometimes, the surveillance was so overt that U.S. intelligence officials speculated that the Chinese wanted the U.S. side to know they had identified the CIA operatives, disrupting their missions; other times, however, it was much more subtle and only detected through U.S. spy agencies’ own sophisticated technical countersurveillance capabilities.',
     },
-    link     : 'https://johnmenadue.com/defeat-to-america/',
-    topics   : [ 'Politics', 'Foreign Policy', 'Defence', 'US Imperialism', 'US Hegemony' ],
-    publisher: 'John Menadue',
-    date     : 'April 20, 2023',
-    author   : 'Jeff Rich',
-    cover    : '/images/library/articles/TheDerangementOfTheAmericanMind.jpg'
+    link     : 'https://foreignpolicy.com/2020/12/21/china-stolen-us-data-exposed-cia-operatives-spy-networks/',
+    topics   : [ 'Politics', 'Foreign Policy', 'China', 'Espionage', 'US Imperialism' ],
+    publisher: 'Foreign Policy',
+    date     : 'December 21, 2020',
+    author   : 'Zach Dorfman',
+    cover    : '/images/library/articles/ChinaRevealedCIAOperativesInAfricaAndEurope.jpg'
   },
   {
     id       : 6,

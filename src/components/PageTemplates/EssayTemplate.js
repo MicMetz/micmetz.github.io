@@ -71,9 +71,9 @@ export default function EssayTemplate( { source, frontMatter, components, slug, 
       />
       <EssayStyledHeaderSection >
         <div className = "above-title">
-          <Link href = "/Essays">
-            <BackHoverLink href = "/essays">Essays</BackHoverLink >
-          </Link >
+          {/* <Link href = "/Essays"> */}
+            <BackHoverLink href = "/Essays">Essays</BackHoverLink >
+          {/* </Link > */}
           <GrowthIcon size = "16" growthStage = {frontMatter.growthStage}/>
           <GrowthStage stage = {frontMatter.growthStage}/>
         </div >
