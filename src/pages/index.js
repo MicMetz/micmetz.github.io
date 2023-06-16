@@ -253,7 +253,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             </ReadmoreLink >
           </Subheader >
           <section style = {{ height: "fit-content" }} >
-            {ArticleList.slice( 0, 5 ).map( ( stepIndex, i ) => (
+            {ArticleList.slice( 0, 6 ).map( ( stepIndex, i ) => (
               <ArticleCard
                 key = {i}
                 title = {stepIndex.header.title}
