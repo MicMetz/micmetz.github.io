@@ -234,44 +234,6 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
           initial = {{ opacity: 0, x: -50 }}
           animate = {{ opacity: 1, x: 0 }}
           transition = {{ delay: 0.7, duration: 1 }}
-          style = {{ margin: 'var(--space-xl) 0 var(--space-s)' }}
-        >
-          <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} >
-            Articles
-          </Title2 >
-          <Subheader >
-            Some of the most memorable articles I’ve read over the recent months.{' '}
-            <Spacer />
-            <ReadmoreLink href = "/Articles" >
-              See more
-              <ArrowRightIcon width = "18" height = "18" />
-            </ReadmoreLink >
-          </Subheader >
-          <section style = {{ height: "fit-content" }} >
-            {ArticleList.slice( 0, 6 ).map( ( stepIndex, i ) => (
-              <ArticleCard
-                key = {i}
-                title = {stepIndex.header.title}
-                preamble = {stepIndex.header.preamble}
-                cover = {stepIndex.cover}
-                link = {stepIndex.link}
-                topics = {stepIndex.topics}
-                publisher = {stepIndex.publisher}
-                author = {stepIndex.author}
-                date = {stepIndex.date}
-              />
-            ) )}
-          </section >
-        </motion.section >
-
-
-        <Spacer size = "xlarge" />
-
-
-        <motion.section
-          initial = {{ opacity: 0, x: -50 }}
-          animate = {{ opacity: 1, x: 0 }}
-          transition = {{ delay: 0.7, duration: 1 }}
         >
           <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} >
             Projects
@@ -343,7 +305,47 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
           </ProjectsSection >
         </motion.section >
 
-        <Spacer size = "3xlarge" />
+        <Spacer size = "xlarge" />
+
+        <motion.section
+          initial = {{ opacity: 0, x: -50 }}
+          animate = {{ opacity: 1, x: 0 }}
+          transition = {{ delay: 0.7, duration: 1 }}
+          style = {{ margin: 'var(--space-xl) 0 var(--space-s)' }}
+        >
+          <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} >
+            Articles
+          </Title2 >
+          <Subheader >
+            Some of the most memorable articles I’ve read over the recent months.{' '}
+            <Spacer />
+            <ReadmoreLink href = "/Articles" >
+              See more
+              <ArrowRightIcon width = "18" height = "18" />
+            </ReadmoreLink >
+          </Subheader >
+          <section style = {{ height: "fit-content" }} >
+            {ArticleList.slice( 0 ).reverse().filter((article, i) => i < 7).map( ( article, i ) => (
+              <ArticleCard
+                key = {i}
+                title = {article.header.title}
+                preamble = {article.header.preamble}
+                cover = {article.cover}
+                link = {article.link}
+                topics = {article.topics}
+                publisher = {article.publisher}
+                author = {article.author}
+                date = {article.date}
+              />
+            ) )}
+          </section >
+        </motion.section >
+
+
+        <Spacer size = "xlarge" />
+
+
+
 
       </Layout >
     </>

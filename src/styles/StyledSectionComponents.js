@@ -11,7 +11,6 @@ export const GardenSection = styled( motion.section )`
   display: grid;
 
   align-items: stretch;
-  //align-content: center;
   justify-content: center;
 		
   grid-gap: var(--space-xl);
