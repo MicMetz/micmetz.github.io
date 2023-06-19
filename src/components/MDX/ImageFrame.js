@@ -2,33 +2,25 @@ import styled from "styled-components";
 
 
 
-export default function ImageFrame( {
-		src,
-		alt,
-		width,
-		margin,
-		showalt,
-		sourceUrl,
-		sourceTitle,
-		...props
-} ) {
-		const { srcSet } = props;
-		delete props.srcSet;
 
-		return (
-				<Container margin = {margin} {...props}>
-						<StyledImageFrame src = {src} srcSet = {srcSet} alt = {alt} width = {width || "100%"} />
-						{showalt ? (
-								sourceUrl ? (
-										<figcaption >
-												{alt} – Source: <a href = {sourceUrl} >{sourceTitle}</a >
-										</figcaption >
-								) : (
-										<figcaption >{alt}</figcaption >
-								)
-						) : null}
-				</Container >
-		);
+export default function ImageFrame( { src, alt, width, margin, showalt, sourceUrl, sourceTitle, ...props } ) {
+  const { srcSet } = props;
+  delete props.srcSet;
+
+  return (
+    <Container margin = {margin} {...props}>
+      <StyledImageFrame src = {src} srcSet = {srcSet} alt = {alt} width = {width || "100%"} />
+      {showalt ? (
+        sourceUrl ? (
+          <figcaption >
+            {alt} – Source: <a href = {sourceUrl} >{sourceTitle}</a >
+          </figcaption >
+        ) : (
+          <figcaption >{alt}</figcaption >
+        )
+      ) : null}
+    </Container >
+  );
 }
 
 const Container = styled.figure`
@@ -36,6 +28,7 @@ const Container = styled.figure`
   grid-column: 1 / 4 !important;
   margin: ${( props ) => props.margin || "var(--space-s) auto var(--space-xl)"};
   text-align: center;
+
   figcaption {
     margin-top: var(--space-xs);
     font-family: var(--font-sans);

@@ -20,7 +20,6 @@
     </CssCodeStyleSettings>
     <HTMLCodeStyleSettings>
       <option name="HTML_ATTRIBUTE_WRAP" value="4" />
-      <option name="HTML_ALIGN_TEXT" value="true" />
       <option name="HTML_SPACE_AROUND_EQUALITY_IN_ATTRIBUTE" value="true" />
       <option name="HTML_SPACE_AFTER_TAG_NAME" value="true" />
       <option name="HTML_ELEMENTS_TO_INSERT_NEW_LINE_BEFORE" value="body,div,p,form,h1,h2,h3,input,label,textarea,span,a,title" />
@@ -48,6 +47,10 @@
       <option name="BLANK_LINES_AROUND_FUNCTION" value="2" />
       <option name="IMPORT_SORT_MODULE_NAME" value="true" />
     </JSCodeStyleSettings>
+    <Markdown>
+      <option name="KEEP_LINE_BREAKS_INSIDE_TEXT_BLOCKS" value="false" />
+      <option name="WRAP_TEXT_INSIDE_BLOCKQUOTES" value="false" />
+    </Markdown>
     <TypeScriptCodeStyleSettings version="0">
       <option name="ALIGN_OBJECT_PROPERTIES" value="2" />
       <option name="ALIGN_VAR_STATEMENTS" value="2" />

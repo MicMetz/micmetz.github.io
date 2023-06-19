@@ -1,42 +1,32 @@
-import CoverImage from "/public/images/photography/QuietWeek.jpg"
-import Image from 'next/image'
-import Link from 'next/link'
-import * as PropTypes from "prop-types";
-import React from 'react'
-import { Layout } from '../components/Layouts/Layout.js'
-import UnderlineHoverLink from "../components/Links/UnderlineHoverLink.js";
-import { Spacer } from "../components/MISC/Spacer.js";
+import CoverImage                             from "/public/images/photography/QuietWeek.jpg"
+import Image                                  from 'next/image'
+import Link                                   from 'next/link'
+import React                                  from 'react'
+import { Layout }                             from '../components/Layouts/Layout.js'
+import UnderlineHoverLink                     from "../components/Links/UnderlineHoverLink.js";
+import { Spacer }                             from "../components/MISC/Spacer.js";
 import { Section, SectionText, SectionTitle } from '../styles/StyledComponents.js'
 
 
 
 
-function UnderlineLink( props ) {
-  return null;
-}
-
-
-UnderlineLink.propTypes = {
-  href    : PropTypes.string,
-  children: PropTypes.node
-};
 export default function AboutPage() {
 
   return (
     <Layout >
-      <Section nopadding id = "AboutPage">
+      <Section nopadding id = "AboutPage" >
 
-        <Section row nopadding>
-          <Image src = {CoverImage} alt = "Quiet Week"/>
+        <Section row nopadding >
+          <Image src = {CoverImage} alt = "Quiet Week" />
         </Section >
 
-        <Section row nopadding>
-          <SectionTitle main>Who Am I</SectionTitle >
+        <Section row nopadding >
+          <SectionTitle main >Who Am I</SectionTitle >
         </Section >
 
-        <Spacer size = "large"/>
+        <Spacer size = "large" />
 
-        <Section row>
+        <Section row >
           <SectionText >
             <SectionTitle >"I am a perpetual learner."</SectionTitle >
             <Spacer />
@@ -58,10 +48,10 @@ export default function AboutPage() {
           </SectionText >
         </Section >
 
-        <Spacer size = "3xlarge"/>
+        <Spacer size = "3xlarge" />
 
-        <Section row>
-          <video autoPlay loop muted playsInline controls style = {{ width: '100%' }}>
+        <Section row >
+          <video autoPlay loop muted playsInline controls style = {{ width: '100%' }} >
             <source
               src = "/video/troisjs.mp4"
               type = "video/mp4"
@@ -71,13 +61,13 @@ export default function AboutPage() {
 
         {/* <Spacer size = "medium"/> */}
 
-        <Section row nopadding>
+        <Section row nopadding >
           <SectionTitle >What Do I Do?</SectionTitle >
         </Section >
 
-        <Spacer size = "large"/>
+        <Spacer size = "large" />
 
-        <Section row>
+        <Section row >
           <SectionText >
             <SectionTitle >Computer graphics</SectionTitle >
             <Spacer />
@@ -87,14 +77,14 @@ export default function AboutPage() {
             So far I've explored a few different libraries, and frameworks. And I've used almost
             every single one of the most popular engines from Unity and Unreal, to Godot and
             Lumberyard. But so far, I've found that the best fit for me has been{' '}
-            <Link href = "https://threejs.org/">THREE.js</Link >,{' '}
+            <Link href = "https://threejs.org/" >THREE.js</Link >,{' '}
             the{' '}
-            <Link href = "https://www.babylonjs.com/">BabylonJS</Link >{' '}
+            <Link href = "https://www.babylonjs.com/" >BabylonJS</Link >{' '}
             framework, and a focus on web
             development.
             <Spacer />
             Check out what I've been working on in my{' '}
-            <UnderlineHoverLink href = "/src/pages/Projects">projects archive.</UnderlineHoverLink >{' '}
+            <UnderlineHoverLink href = "/src/pages/Projects" >projects archive.</UnderlineHoverLink >{' '}
 
             <Spacer />
           </SectionText >

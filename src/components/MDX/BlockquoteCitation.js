@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Spacer } from "../MISC/Spacer.js";
 
 
 
@@ -6,10 +7,11 @@ export default function BlockquoteCitation( { children, author, title, url } ) {
 		return (
 				<figure >
 						<Blockquote >
-								<p >{children}</p >
+								<p >"{children}"</p >
 								<figcaption >
 										<Cite >
-												<span >{author} –</span >
+												<span >— {author}</span >
+            <Spacer size = "3xs" />
 												<a href = {url} >{title}</a >
 										</Cite >
 								</figcaption >

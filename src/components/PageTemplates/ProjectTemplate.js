@@ -1,13 +1,14 @@
-import { MDXRemote } from "next-mdx-remote";
-import Link from "next/link";
-import styled from "styled-components";
-import { breakpoints } from "../../constants/breakpoints.js";
-import { Title1 } from "../../styles/StyledTypography.js";
+import { MDXRemote }     from "next-mdx-remote";
+import Link              from "next/link";
+import styled            from "styled-components";
+import { breakpoints }   from "../../constants/breakpoints.js";
+import { Title1 }        from "../../styles/StyledTypography.js";
 import { EvergreenIcon } from "../Icons/AllIcons.js";
-import Header from "../Layouts/Header.js";
-import BackHoverLink from "../Links/BackHoverLink.js";
-import BackToTop from "../MDX/BackToTop.js";
-import ProseWrapper from "../MDX/ProseWrapper.js";
+import Header            from "../Layouts/Header.js";
+import BackHoverLink     from "../Links/BackHoverLink.js";
+import BackToTop         from "../MDX/BackToTop.js";
+import ProseWrapper      from "../MDX/ProseWrapper.js";
+
 
 
 
@@ -22,24 +23,24 @@ export default function ProjectTemplate( { source, frontMatter, components, slug
 
   return (
     <>
-      <Header title = {frontMatter.title} description = {frontMatter.description} ogImage = {ogImage}/>
+      <Header title = {frontMatter.title} description = {frontMatter.description} ogImage = {ogImage} />
 
       <HeaderSection >
-        <div className = "above-title">
-          <Link href = "/Projects">
-            <BackHoverLink href = "/Projects">Projects</BackHoverLink >
+        <div className = "above-title" >
+          <Link href = "/Projects" >
+            <BackHoverLink href = "/Projects" >Projects</BackHoverLink >
           </Link >
         </div >
         <TitleContainer >
           <Title1 >{frontMatter.title}</Title1 >
         </TitleContainer >
-        <Metadata className = "metadata">
+        <Metadata className = "metadata" >
           {frontMatter.topics && (
-            <span style = {{ textTransform: "capitalize" }}>
+            <span style = {{ textTransform: "capitalize" }} >
               {frontMatter.topics}
             </span >
           )}
-          <EvergreenIcon width = "14" height = "14"/>
+          <EvergreenIcon width = "14" height = "14" />
           {frontMatter.updated && (
             <span >{formattedDate( frontMatter.updated )}</span >
           )}
@@ -48,13 +49,14 @@ export default function ProjectTemplate( { source, frontMatter, components, slug
       <StyledMain >
         <BackToTop />
         <ProseWrapper >
-          <MDXRemote {...source} components = {components}/>
+          <MDXRemote {...source} components = {components} />
         </ProseWrapper >
       </StyledMain >
 
     </>
   );
 }
+
 
 const TitleContainer = styled.div`
   padding: var(--space-xs) 0 var(--space-3xs);
@@ -65,6 +67,7 @@ const TitleContainer = styled.div`
     color: var(--color-gray-600);
   }
 `;
+
 
 const HeaderSection = styled.header`
   max-width: 800px;
@@ -102,6 +105,7 @@ const Metadata = styled.div`
   grid-gap: var(--space-3xs);
   align-items: center;
 `;
+
 
 const StyledMain = styled.main`
   margin-top: var(--space-xs);

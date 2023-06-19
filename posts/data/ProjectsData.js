@@ -84,6 +84,18 @@ export const ProjectsData = [
 				date        : '2023-06-03',
 				id          : 6
 		},
+  {
+    name: 'Our Real Task',
+    title: 'Our Real Task',
+    technologies: ['JavaScript'],
+    description: 'A short educational project to help us understand the history of the United States and its reorganizing of the world after World War II.',
+    demo: 'https://micmetz.github.io/our-real-task/',
+    code: 'https://github.com/MicMetz/our-real-task',
+    tags: ['Web Application', 'Experiment', 'Web Development', 'History', 'Education', 'Politics'],
+    image: '/software/OurRealTask.png',
+    date: '2023-05-03',
+    id: 7
+  }
 
 
 ]

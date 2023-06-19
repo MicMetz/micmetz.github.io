@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import styled from "styled-components";
+import styled     from "styled-components";
+
 
 
 
@@ -9,6 +10,7 @@ export const ProjectImageWrapper = styled.div`
   max-width: 450px;
   max-height: 338px;
 `;
+
 
 export const ProjectMetadataContainer = styled.div`
   display: flex;
@@ -52,11 +54,10 @@ export const StyledProjectCard = styled( motion.div )`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: transparent;
+  background: var(--color-cream);
   transition: all 0.3s ease-in-out;
   color: var(--color-gray-800);
   margin: 0 var(--space-xs) var(--space-xs) 0;
-  padding: var(--space-s) 0;
 
   img,
   div:first-child {
@@ -69,7 +70,7 @@ export const StyledProjectCard = styled( motion.div )`
     width: 100%;
     height: 100%;
     object-fit: cover;
-
+    justify-self: center;
   }
 
   &:hover {
