@@ -3,7 +3,7 @@ import Link              from "next/link";
 import styled            from "styled-components";
 import { breakpoints }   from "../../constants/breakpoints.js";
 import { Title1 }        from "../../styles/StyledTypography.js";
-import { EvergreenIcon } from "../Icons/AllIcons.js";
+import { TheoryIcon } from "../Icons/AllIcons.js";
 import Header            from "../Layouts/Header.js";
 import BackHoverLink     from "../Links/BackHoverLink.js";
 import BackToTop         from "../MDX/BackToTop.js";
@@ -40,7 +40,7 @@ export default function ProjectTemplate( { source, frontMatter, components, slug
               {frontMatter.topics}
             </span >
           )}
-          <EvergreenIcon width = "14" height = "14" />
+          <TheoryIcon width = "14" height = "14" />
           {frontMatter.updated && (
             <span >{formattedDate( frontMatter.updated )}</span >
           )}

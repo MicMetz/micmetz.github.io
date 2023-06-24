@@ -1,6 +1,6 @@
 import Image                                                                from "next/image";
 import Link                                                                 from "next/link";
-import EvergreenIcon                                                        from "../Icons/TheoryIcon.js";
+import TheoryIcon                                                        from "../Icons/TheoryIcon.js";
 import { ProjectImageWrapper, ProjectMetadataContainer, StyledProjectCard } from "../../styles/StyledCardComponents/ProjectStyled.js";
 
 
@@ -31,7 +31,7 @@ export default function ProjectCard( { slug, cover, title, date, topics } ) {
             <h3 >{title}</h3 >
             <div className = "metadata" >
               <span >{formattedDate( date )}</span >
-              <EvergreenIcon width = "14" height = "14" />
+              <TheoryIcon width = "14" height = "14" />
               <span >{topics}</span >
             </div >
           </ProjectMetadataContainer >
