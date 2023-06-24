@@ -1,22 +1,24 @@
-import { Popover } from "@headlessui/react";
-import { AnimatePresence } from "framer-motion";
-import Link from "next/link";
-import { DropdownLink, HoverLink } from "../../styles/LinkStyledComponents.js";
-import UnderlineHoverLink from "../Links/UnderlineHoverLink";
+import { Popover }                                                       from "@headlessui/react";
+import { AnimatePresence }                                               from "framer-motion";
+import Link                                                              from "next/link";
+import { useRouter }                                                     from "next/router";
+import { DropdownLink, HoverLink }                                       from "../../styles/LinkStyledComponents.js";
+import UnderlineHoverLink                                                from "../Links/UnderlineHoverLink";
 import { Dropdown, MainNav, StyledChevronDownIcon, StyledPopoverButton } from "../Navigation/NavigationStyles.js";
+
 
 
 
 function GardenPopoverLinks() {
   return (
-    <Popover style = {{ position: "relative" }}>
-      <Link href = "/Garden">
+    <Popover style = {{ position: "relative" }} >
+      <Link href = "/Garden" >
         <HoverLink >
           <span >Garden</span >
         </HoverLink >
       </Link >
       <StyledPopoverButton >
-        <StyledChevronDownIcon width = "24" height = "24"/>
+        <StyledChevronDownIcon width = "24" height = "24" />
       </StyledPopoverButton >
 
       <Popover.Panel >
@@ -32,10 +34,10 @@ function GardenPopoverLinks() {
           style = {{ position: "absolute", zIndex: "10" }}
           key = "dropdown"
         >
-          < Link href = "/Essays">
+          < Link href = "/Essays" >
             <DropdownLink >Essays</DropdownLink >
           </Link >
-          <Link href = "/Notes">
+          <Link href = "/Notes" >
             <DropdownLink >Notes</DropdownLink >
           </Link >
         </Dropdown >
@@ -47,14 +49,14 @@ function GardenPopoverLinks() {
 
 function LibraryPopoverLinks() {
   return (
-    <Popover style = {{ position: "relative" }}>
-      <Link href = "/Library">
+    <Popover style = {{ position: "relative" }} >
+      <Link href = "/Library" >
         <HoverLink >
           <span >Library</span >
         </HoverLink >
       </Link >
       <StyledPopoverButton >
-        <StyledChevronDownIcon width = "24" height = "24"/>
+        <StyledChevronDownIcon width = "24" height = "24" />
       </StyledPopoverButton >
 
       <Popover.Panel >
@@ -70,10 +72,10 @@ function LibraryPopoverLinks() {
           style = {{ position: "absolute", zIndex: "10" }}
           key = "dropdown"
         >
-          <Link href = "/Library/Books">
+          <Link href = "/Library/Books" >
             <DropdownLink >Books</DropdownLink >
           </Link >
-          <Link href = "/Library/Articles">
+          <Link href = "/Library/Articles" >
             <DropdownLink >Articles</DropdownLink >
           </Link >
         </Dropdown >
@@ -84,6 +86,9 @@ function LibraryPopoverLinks() {
 
 
 export default function MainNavLinks() {
+  const router = useRouter();
+
+
   return (
     <MainNav >
       <AnimatePresence >
@@ -92,15 +97,17 @@ export default function MainNavLinks() {
       <AnimatePresence >
         <LibraryPopoverLinks />
       </AnimatePresence >
-      <div className = "outside-dropdown">
-        <UnderlineHoverLink href = "/">Home</UnderlineHoverLink >
-        <UnderlineHoverLink href = "/Gallery">Gallery</UnderlineHoverLink >
-        <UnderlineHoverLink href = "/Projects">Projects</UnderlineHoverLink >
-        <UnderlineHoverLink href = "/About">About</UnderlineHoverLink >
-        <UnderlineHoverLink href = "/Contact">Contact</UnderlineHoverLink >
+      <div className = "outside-dropdown" >
+        <UnderlineHoverLink href = "/" selected = {router.pathname === "/"} >Home</UnderlineHoverLink >
+        <UnderlineHoverLink href = "/Gallery" selected = {router.pathname === "/Gallery"} >Gallery</UnderlineHoverLink >
+        <UnderlineHoverLink href = "/Projects" selected = {router.pathname === "/Projects"} >Projects</UnderlineHoverLink >
+        <UnderlineHoverLink href = "/About" selected = {router.pathname === "/About"} >About</UnderlineHoverLink >
+        <UnderlineHoverLink href = "/Contact" selected = {router.pathname === "/Contact"} >Contact</UnderlineHoverLink >
       </div >
     </MainNav >
   );
-}
+};
+
+
 
 

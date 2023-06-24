@@ -78,7 +78,15 @@ export const HoverLink = styled.span`
   font-size: var(--font-size-xs);
   font-family: var(--font-sans);
   transition: color 0.2s ease-in-out;
-
+  cursor: pointer;
+  position: relative;
+  top: 1px;
+  white-space: nowrap;
+  text-decoration: none;
+  outline: none;
+  padding-bottom: 0.25rem;
+  
+  
   span {
     color: var(--color-gray-800);
   }
@@ -89,13 +97,7 @@ export const HoverLink = styled.span`
     }
   }
 
-  cursor: pointer;
-  position: relative;
-  top: 1px;
-  white-space: nowrap;
-  text-decoration: none;
-  outline: none;
-  padding-bottom: 0.25rem;
+ 
 
   &:focus {
     outline: 2px solid darkblue;
@@ -169,6 +171,7 @@ export const StyledLink = styled.a`
   position: relative;
   white-space: nowrap;
   text-decoration: none;
+  top: 1px;
   outline: none;
   padding-bottom: 0.25rem;
 

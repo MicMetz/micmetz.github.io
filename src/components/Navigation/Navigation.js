@@ -1,17 +1,28 @@
-import Link                            from 'next/link'
-import React, { useEffect }            from 'react'
-import MainNavLinks                    from "./MainNavLinks.js";
-import MobileMenu                      from "./MobileMenu.js";
-import { RightHandSide, StyledNavbar } from './NavigationStyles.js'
+import Link                                                            from 'next/link'
+import React, { forwardRef, useEffect, useImperativeHandle, useState } from 'react'
+import MainNavLinks                                                    from "./MainNavLinks.js";
+import MobileMenu                                                      from "./MobileMenu.js";
+import { RightHandSide, StyledNavbar }                                 from './NavigationStyles.js'
 
 
 
 
-export default function Navigation() {
-  const [ searchState, setSearchState ]     = React.useState( { query: {} } );
-  const [ searchResults, setSearchResults ] = React.useState( [] );
+export const Navigation = forwardRef( ( props, ref ) => {
+  const [ searchState, setSearchState ]     = useState( { query: {} } );
+  const [ searchResults, setSearchResults ] = useState( [] );
+  const [ isMobileMenuOpen, setMobileMenu ] = useState( false );
+  const [ selection, setSelection ]         = useState( "/" );
 
 
+
+  /*
+  useImperativeHandle( ref, () => ({
+      setSearchState,
+      setSearchResults
+    })  );
+  */
+
+  /*
   useEffect( () => {
     // If there is no search query, return early and reset the results
     if ( !searchState.query ) {
@@ -34,10 +45,27 @@ export default function Navigation() {
     };
     search();
   }, [ searchState.query ] );
+  */
+
+
+  useEffect( () => {
+    const handleRouteChange = ( url ) => {
+      setSelection( url );
+      console.log( "App is changing to: ", url );
+    };
+
+    window.addEventListener( "popstate", handleRouteChange );
+
+    return () => {
+      window.removeEventListener( "popstate", handleRouteChange );
+    };
+  }, [] );
+
 
 
   return (
     <StyledNavbar
+      ref = {ref}
       initial = {{ opacity: 0 }}
       animate = {{ opacity: 1 }}
       transition = {{ duration: 1, delay: 0.1 }}
@@ -50,10 +78,12 @@ export default function Navigation() {
       </Link >
       <RightHandSide >
         {/* <SearchBarAndResults searchResults = {[]} searchState = {{ query: {} }}/> */}
-        <MainNavLinks />
+        <MainNavLinks/>
       </RightHandSide >
       <MobileMenu />
     </StyledNavbar >
   );
-}
+} )
+
+
 

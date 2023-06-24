@@ -180,7 +180,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               </Subheader >
               <div style = {{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gridGap: "var(--space-2xs)" }} >
                 {notes.slice( 0, 12 ).map( ( note ) => (
-                  <IndexNoteCard note = {note} href = {note.slug} />
+                  <IndexNoteCard key = {note.slug} note = {note} href = {note.slug} />
                 ) )}
               </div >
             </section >
@@ -264,6 +264,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               >
                 {projects.map( ( project ) => (
                   <ProjectCard
+                    key = {project.slug}
                     slug = {project.slug}
                     title = {project.data.title}
                     date = {project.data.updated}
@@ -287,7 +288,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               <div style = {{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" }} >
                 {ArcGISData.map( ( visual, i ) => (
                   <AtlasCard
-                    key = {i}
+                    key = {visual.slug}
                     slug = {visual.slug}
                     title = {visual.title}
                     date = {visual.date}
@@ -319,7 +320,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
           <section style = {{ height: "fit-content" }} >
             {ArticleList.slice( 0 ).reverse().filter( ( article, i ) => i < 7 ).map( ( article, i ) => (
               <ArticleCard
-                key = {i}
+                key = {article.link}
                 title = {article.header.title}
                 preamble = {article.header.preamble}
                 cover = {article.cover}
