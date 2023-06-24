@@ -10,7 +10,7 @@ import BackToTop from "../MDX/BackToTop";
 import ProseWrapper from "../MDX/ProseWrapper";
 import Dates from "../MISC/DatesFormat.js";
 import GrowthStage from "../MISC/GrowthStage.js";
-import Topics from "../MISC/Topics.js";
+import Topics      from "../MDX/Topics.js";
 
 
 

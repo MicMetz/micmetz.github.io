@@ -2,8 +2,8 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import Header from "../components/Layouts/Header.js";
-import { Layout } from "../components/Layouts/Layout.js";
-import TitleWithCount from "../components/MISC/TitleWithCount.js";
+import { Layout }               from "../components/Layouts/Layout.js";
+import TitleWithCount           from "../components/MDX/TitleWithCount.js";
 import { GardenFiltersAndHits } from "../components/Search/GardenFH/GardenFiltersAndHits.js";
 import { SectionText } from '../styles/StyledComponents.js'
 import { Title2 } from "../styles/StyledTypography.js";

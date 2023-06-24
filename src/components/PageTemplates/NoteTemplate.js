@@ -7,9 +7,9 @@ import ProseWrapper from "../../components/MDX/ProseWrapper.js";
 import { NoteStyledHeaderSection, NoteStyledMain, NoteStyledMetadata, NoteStyledTitleContainer } from "../../styles/StyledPageTemplates/StyledNoteTemplate.js";
 import Header from "../Layouts/Header.js";
 import Dates from "../MISC/DatesFormat.js";
-import GrowthStage from "../MISC/GrowthStage.js";
-import TableOfContents from "../MISC/TableOfContents.js";
-import Topics from "../MISC/Topics.js";
+import GrowthStage     from "../MISC/GrowthStage.js";
+import TableOfContents from "../MDX/TableOfContents.js";
+import Topics          from "../MDX/Topics.js";
 
 
 

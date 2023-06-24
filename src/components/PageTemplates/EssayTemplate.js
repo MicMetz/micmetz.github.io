@@ -8,9 +8,9 @@ import BackHoverLink from "../Links/BackHoverLink.js";
 import BackToTop from "../MDX/BackToTop.js";
 import ProseWrapper from "../MDX/ProseWrapper.js";
 import Dates from "../MISC/DatesFormat.js";
-import GrowthStage from "../MISC/GrowthStage.js";
-import TableOfContents from "../MISC/TableOfContents.js";
-import Topics from "../MISC/Topics.js";
+import GrowthStage     from "../MISC/GrowthStage.js";
+import TableOfContents from "../MDX/TableOfContents.js";
+import Topics          from "../MDX/Topics.js";
 
 
 

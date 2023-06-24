@@ -2,7 +2,7 @@ import Link       from "next/link";
 import React      from "react";
 import styled     from "styled-components";
 import GrowthIcon from "../Icons/GrowthIcon.js";
-import Tooltip    from "../MISC/Tooltip.js";
+import Tooltip    from "../Links/Tooltip.js";
 
 
 

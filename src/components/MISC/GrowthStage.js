@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Tooltip from "./Tooltip.js";
+import styled  from "styled-components";
+import Tooltip from "../Links/Tooltip.js";
 
 
 
