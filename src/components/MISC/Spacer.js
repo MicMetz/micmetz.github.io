@@ -48,7 +48,7 @@ const handleSize = ( size ) => {
       return "var(--space-4xl)";
 
     default:
-      return "var(--space-s)";
+      return "var(--space-xs)";
   }
 };
 

@@ -339,7 +339,37 @@ export const CurrentReadings = [
         ]
       }
     ]
-  }
+  },
+  {
+    id         : 6,
+    header     : {
+      title   : 'Elite Capture:',
+      subtitle: ' How the Powerful Took Over Identity Politics (And Everything Else)'
+    },
+    author     : 'Olúfẹ́mi O. Táíwò',
+    date       : Date.parse( '2022-05-03' ),
+    publisher  : 'Haymarket Books',
+    cover      : '/images/library/books/EliteCapture.jpg',
+    description: [
+      '“Identity politics” is everywhere, polarizing discourse from the campaign trail to the classroom and amplifying antagonisms in the media, both online and off. But the compulsively referenced phrase bears little resemblance to the concept as first introduced by the radical Black feminist Combahee River Collective. While the Collective articulated a political viewpoint grounded in their own position as Black lesbians with the explicit aim of building solidarity across lines of difference, identity politics is now frequently weaponized as a means of closing ranks around ever-narrower conceptions of group interests.\n' +
+      '\n' +
+      'But the trouble, Olúfẹ́mi O. Táíwò deftly argues, is not with identity politics itself. Through a substantive engagement with the global Black radical tradition and a critical understanding of racial capitalism, Táíwò identifies the process by which a radical concept can be stripped of its political substance and liberatory potential by becoming the victim of elite capture—deployed by political, social, and economic elites in the service of their own interests.\n' +
+      '\n' +
+      'Táíwò’s crucial intervention both elucidates this complex process and helps us move beyond a binary of “class” vs. “race.” By rejecting elitist identity politics in favor of a constructive politics of radical solidarity, he advances the possibility of organizing across our differences in the urgent struggle for a better world.\n\n'
+    ],
+    link       : 'https://www.haymarketbooks.org/books/1867-elite-capture',
+    tags       : [
+      {
+        name: 'Buy',
+        link: 'https://www.haymarketbooks.org/books/1867-elite-capture'
+      },
+      {
+        name: 'Author Biography',
+        link: 'http://www.olufemiotaiwo.com/'
+      }
+    ],
+    chapters   : []
+  },
 
 
 ]

@@ -1,6 +1,5 @@
 import Masonry from "react-masonry-css";
-import styled from "styled-components";
-
+import styled  from "styled-components";
 
 
 

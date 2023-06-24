@@ -55,6 +55,7 @@ const itemAnimation = {
 
 
 export default function Index( { sortedEssays: essays, sortedNotes: notes, sortedProjects: projects } ) {
+  
 
 
   return (
@@ -325,7 +326,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             </ReadmoreLink >
           </Subheader >
           <section style = {{ height: "fit-content" }} >
-            {ArticleList.slice( 0 ).reverse().filter((article, i) => i < 7).map( ( article, i ) => (
+            {ArticleList.slice( 0 ).reverse().filter( ( article, i ) => i < 7 ).map( ( article, i ) => (
               <ArticleCard
                 key = {i}
                 title = {article.header.title}
@@ -343,8 +344,6 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 
 
         <Spacer size = "xlarge" />
-
-
 
 
       </Layout >
