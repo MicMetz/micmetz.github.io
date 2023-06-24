@@ -1,5 +1,5 @@
-import  Image  from 'next/image';
 import styled from 'styled-components';
+
 
 
 
@@ -143,9 +143,11 @@ export const BookAtrribution = styled.div`
   //top: calc(0 + 10rem);
   padding: 0 1rem;
   order: 3;
-`
+`;
 
-export const BookCoverImage = styled.img`	
+
+
+export const BookCoverContainer = styled.a`
   display: inline-block;
   position: relative;
 
@@ -153,16 +155,31 @@ export const BookCoverImage = styled.img`
   width: 100%;
   height: 100%;
   max-width: 28%;
-		
-		object-fit: cover;
-		object-position: center;
+  order: 2;
+
+
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+  }
+`;
+
+
+
+export const BookCoverImage = styled.img`
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
 
   max-height: calc(100vh - 18rem);
   border-radius: 0.8em;
   mix-blend-mode: normal;
   box-shadow: 0 0 10px 0 rgba(40, 42, 47, 0.1), -10px 10px 24px 10px rgba(40, 42, 47, 0.05), -30px 40px 30px 0 rgba(40, 42, 47, 0.1), -10px 10px 10px -5px rgba(40, 42, 47, 0.1);
-  order: 2;
-`
+  //order: 2;
+`;
+
 
 export const BookTitle = styled.h1`
   font-size: 3.5rem;

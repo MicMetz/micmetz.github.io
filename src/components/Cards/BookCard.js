@@ -1,10 +1,8 @@
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
-import Image                         from "next/image";
-import { ExternalHoverLink }         from "../../components/Links/ExternalHoverLink.js";
-import {
-  BookImageWrapper,
-  StyledBookCard
-}                                    from "../../styles/StyledCardComponents/BookStyled.js";
+import { ArrowTopRightOnSquareIcon }        from "@heroicons/react/20/solid";
+import Image                                from "next/image";
+import { ExternalHoverLink }                from "../../components/Links/ExternalHoverLink.js";
+import { BookImageWrapper, StyledBookCard } from "../../styles/StyledCardComponents/BookStyled.js";
+
 
 
 

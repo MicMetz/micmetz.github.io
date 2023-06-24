@@ -1,7 +1,5 @@
-import { motion }            from "framer-motion";
-import Image                 from "next/image";
-import Link                  from "next/link";
-import styled                from "styled-components";
+import Image                                                                from "next/image";
+import Link                                                                 from "next/link";
 import EvergreenIcon                                                        from "../../components/Icons/EvergreenIcon";
 import { ProjectImageWrapper, ProjectMetadataContainer, StyledProjectCard } from "../../styles/StyledCardComponents/ProjectStyled.js";
 
@@ -18,7 +16,6 @@ export default function ProjectCard( { slug, cover, title, date, topics } ) {
 
 
   return (
-    <>
     <Link href = {`/${slug}`} >
       <a >
         <StyledProjectCard >
@@ -29,7 +26,7 @@ export default function ProjectCard( { slug, cover, title, date, topics } ) {
               width = {300}
               height = {225}
             />
-          </ProjectImageWrapper>
+          </ProjectImageWrapper >
           <ProjectMetadataContainer >
             <h3 >{title}</h3 >
             <div className = "metadata" >
@@ -41,7 +38,6 @@ export default function ProjectCard( { slug, cover, title, date, topics } ) {
         </StyledProjectCard >
       </a >
     </Link >
-    </>
   );
 }
 

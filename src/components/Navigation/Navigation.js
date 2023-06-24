@@ -1,8 +1,8 @@
-import Link                                                            from 'next/link'
-import React, { forwardRef, useEffect, useImperativeHandle, useState } from 'react'
-import MainNavLinks                                                    from "./MainNavLinks.js";
-import MobileMenu                                                      from "./MobileMenu.js";
-import { RightHandSide, StyledNavbar }                                 from './NavigationStyles.js'
+import Link                                       from 'next/link'
+import React, { forwardRef, useEffect, useState } from 'react'
+import MainNavLinks                               from "./MainNavLinks.js";
+import MobileMenu                                 from "./MobileMenu.js";
+import { RightHandSide, StyledNavbar }            from './NavigationStyles.js'
 
 
 
@@ -14,53 +14,37 @@ export const Navigation = forwardRef( ( props, ref ) => {
   const [ selection, setSelection ]         = useState( "/" );
 
 
+  /*
+   useImperativeHandle( ref, () => ({
+   setSearchState,
+   setSearchResults
+   })  );
+   */
 
   /*
-  useImperativeHandle( ref, () => ({
-      setSearchState,
-      setSearchResults
-    })  );
-  */
+   useEffect( () => {
+   // If there is no search query, return early and reset the results
+   if ( !searchState.query ) {
+   setSearchResults( [] );
+   return;
+   }
 
-  /*
-  useEffect( () => {
-    // If there is no search query, return early and reset the results
-    if ( !searchState.query ) {
-      setSearchResults( [] );
-      return;
-    }
+   // Otherwise, search for results
+   const search = async () => {
+   try {
+   const res = await fetch(
+   `/api/search?q=${searchState.query}`
+   );
 
-    // Otherwise, search for results
-    const search = async () => {
-      try {
-        const res = await fetch(
-          `/api/search?q=${searchState.query}`
-        );
-
-        const searchResults = await res.json();
-        setSearchResults( searchResults );
-      } catch (error) {
-        console.error( error );
-      }
-    };
-    search();
-  }, [ searchState.query ] );
-  */
-
-
-  useEffect( () => {
-    const handleRouteChange = ( url ) => {
-      setSelection( url );
-      console.log( "App is changing to: ", url );
-    };
-
-    window.addEventListener( "popstate", handleRouteChange );
-
-    return () => {
-      window.removeEventListener( "popstate", handleRouteChange );
-    };
-  }, [] );
-
+   const searchResults = await res.json();
+   setSearchResults( searchResults );
+   } catch (error) {
+   console.error( error );
+   }
+   };
+   search();
+   }, [ searchState.query ] );
+   */
 
 
   return (
@@ -78,7 +62,7 @@ export const Navigation = forwardRef( ( props, ref ) => {
       </Link >
       <RightHandSide >
         {/* <SearchBarAndResults searchResults = {[]} searchState = {{ query: {} }}/> */}
-        <MainNavLinks/>
+        <MainNavLinks />
       </RightHandSide >
       <MobileMenu />
     </StyledNavbar >

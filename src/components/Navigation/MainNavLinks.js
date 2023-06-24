@@ -47,6 +47,7 @@ function GardenPopoverLinks() {
 }
 
 
+
 function LibraryPopoverLinks() {
   return (
     <Popover style = {{ position: "relative" }} >
@@ -82,7 +83,8 @@ function LibraryPopoverLinks() {
       </Popover.Panel >
     </Popover >
   );
-}
+};
+
 
 
 export default function MainNavLinks() {

@@ -39,6 +39,7 @@ export default function ProjectsPage( { projects } ) {
         <ProjectGrid >
           {projects.map( ( project ) => (
             <ProjectCard
+              key = {project.slug}
               slug = {project.slug}
               title = {project.data.title}
               date = {project.data.updated}
