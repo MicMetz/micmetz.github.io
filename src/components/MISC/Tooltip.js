@@ -1,4 +1,5 @@
 import Tippy                 from "@tippyjs/react";
+import Link                  from "next/link";
 import React, { forwardRef } from "react";
 import styled                from "styled-components";
 import "tippy.js/animations/shift-away.css";
@@ -7,7 +8,7 @@ import "tippy.js/dist/tippy.css";
 
 
 
-const Tooltip = forwardRef( ( { content, children, maxWidth }, ref ) => {
+const Tooltip = forwardRef( ( { content, children, maxWidth/* , href */ }, ref ) => {
   return (
     <StyledTippy
       maxWidth = {maxWidth || "320"}
@@ -16,8 +17,11 @@ const Tooltip = forwardRef( ( { content, children, maxWidth }, ref ) => {
       interactive = {true}
       animation = "shift-away"
       content = {content}
+      // href = {href}
     >
-      <span ref = {ref} >{children}</span >
+      {/* <Link href = {`/${href}`} > */}
+        <span ref = {ref} >{children}</span >
+      {/* </Link > */}
     </StyledTippy >
   );
 } );

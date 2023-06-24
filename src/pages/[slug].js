@@ -54,7 +54,7 @@ export const components = {
     ssr: false,
   } ), ReferencesLink     : dynamic( () => import("../components/MDX/ReferencesLink"), {
     ssr: false,
-  } ), a                  : dynamic( () => import("../components/Links/TooltipLink"), {
+  } ), a                  : dynamic( () => import("../components/Links/ToolTipLink.js"), {
     ssr: false,
   } ), pre                : dynamic( () => import("../components/MDX/CodeBlock"), {
     ssr: false,

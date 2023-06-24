@@ -5,7 +5,6 @@ import matter              from "gray-matter";
 import Link                from "next/link";
 import path                from "path";
 import React               from "react";
-import styled              from "styled-components";
 import { ArcGISData }      from "../../posts/data/ArcGISData.js";
 import { ArticleList }     from "../../posts/data/Articles.js";
 import { CurrentReadings } from "../../posts/data/CurrentReadings.js";
@@ -13,8 +12,8 @@ import ArticleCard         from "../components/Cards/ArticleCard.js";
 import AtlasCard           from "../components/Cards/AtlasCard.js";
 import BookCard            from "../components/Cards/BookCard.js";
 import EssayCard           from "../components/Cards/EssayCard.js";
+import IndexNoteCard       from "../components/Cards/IndexNoteCard.js";
 import ProjectCard         from "../components/Cards/ProjectCard.js";
-import GrowthIcon          from "../components/Icons/GrowthIcon.js";
 import Header              from "../components/Layouts/Header.js";
 import { Layout }          from "../components/Layouts/Layout.js";
 import UnderlineHoverLink  from "../components/Links/UnderlineHoverLink.js";
@@ -55,7 +54,7 @@ const itemAnimation = {
 
 
 export default function Index( { sortedEssays: essays, sortedNotes: notes, sortedProjects: projects } ) {
-  
+
 
 
   return (
@@ -179,16 +178,9 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               <Subheader >
                 Short, <i >'concise'</i >, and to the point
               </Subheader >
-              <div style = {{}} >
+              <div style = {{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gridGap: "var(--space-2xs)" }} >
                 {notes.slice( 0, 12 ).map( ( note ) => (
-                  <Link key = {note.slug} href = {`/${note.slug}`} >
-                    <IndexNoteCard >
-                      {note.data.growthStage && (
-                        <GrowthIcon growthStage = {note.data.growthStage} />
-                      )}
-                      <h3 >{note.data.title}</h3 >
-                    </IndexNoteCard >
-                  </Link >
+                  <IndexNoteCard note = {note} href = {note.slug} />
                 ) )}
               </div >
             </section >
@@ -292,7 +284,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               <Subheader >
                 A collection of maps I’ve made.
               </Subheader >
-              <div style = {{}} >
+              <div style = {{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" }} >
                 {ArcGISData.map( ( visual, i ) => (
                   <AtlasCard
                     key = {i}
@@ -312,7 +304,6 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
           initial = {{ opacity: 0, x: -50 }}
           animate = {{ opacity: 1, x: 0 }}
           transition = {{ delay: 0.7, duration: 1 }}
-          style = {{ margin: 'var(--space-xl) 0 var(--space-s)' }}
         >
           <Title2 style = {{ fontSize: "var(--font-size-2xl)" }} >
             Articles
@@ -352,42 +343,6 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
     ;
 };
 
-
-
-
-const IndexNoteCard = styled.div`
-  display: flex;
-  padding: var(--space-xs) 0 1.2rem;
-  border-bottom: 1px solid var(--color-tinted-cream);
-  transition: all 0.3s ease-in-out;
-
-  svg {
-    position: relative;
-    top: 5px;
-    flex-shrink: 0;
-  }
-
-  h3 {
-    color: var(--color-gray-800);
-    transition: all 0.3s ease-in-out;
-    font-family: var(--font-body);
-    font-size: var(--font-size-base);
-    font-weight: 400;
-    line-height: var(--leading-snug);
-    margin-left: var(--space-xs);
-    transition: all 0.3s ease-in-out;
-  }
-
-  &:hover {
-    border-bottom: 1px solid var(--color-sea-blue);
-
-    h3 {
-      color: var(--color-tangerine);
-    }
-
-    transform: scale3d(1.02, 1.02, 1.02);
-  }
-`;
 
 
 

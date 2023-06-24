@@ -18,6 +18,7 @@ export default function ProjectCard( { slug, cover, title, date, topics } ) {
 
 
   return (
+    <>
     <Link href = {`/${slug}`} >
       <a >
         <StyledProjectCard >
@@ -40,7 +41,7 @@ export default function ProjectCard( { slug, cover, title, date, topics } ) {
         </StyledProjectCard >
       </a >
     </Link >
-
+    </>
   );
 }
 
