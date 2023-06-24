@@ -1,27 +1,28 @@
+import Link               from "next/link";
+import styled             from "styled-components";
+import { slugifyTopic }   from "../../tools/slugifyTopic.js";
 import UnderlineHoverLink from "../Links/UnderlineHoverLink.js";
-import Link from "next/link";
-import styled from "styled-components";
-import { slugifyTopic } from "../../tools/slugifyTopic.js";
+
 
 
 
 export default function Topics( { topics } ) {
-		return (
-				<StyledList >
-						{topics.sort().map( ( topic ) => {
-								const slug = slugifyTopic( topic );
-								return (
-										<StyledTag key = {topic} >
-												<Link href = {`/topics/${slug}`} >
-														<UnderlineHoverLink href = {`/topics/${slug}`} >
-																{topic}
-														</UnderlineHoverLink >
-												</Link >
-										</StyledTag >
-								);
-						} )}
-				</StyledList >
-		);
+  return (
+    <StyledList >
+      {topics.sort().map( ( topic ) => {
+        const slug = slugifyTopic( topic );
+        return (
+          <StyledTag key = {topic} >
+            <Link href = {`/topics/${slug}`} >
+              <UnderlineHoverLink href = {`/topics/${slug}`} selected = {false} >
+                {topic}
+              </UnderlineHoverLink >
+            </Link >
+          </StyledTag >
+        );
+      } )}
+    </StyledList >
+  );
 }
 
 const StyledList = styled.ul`

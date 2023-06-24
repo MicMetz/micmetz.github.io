@@ -1,3 +1,4 @@
+import Link       from "next/link";
 import React      from "react";
 import styled     from "styled-components";
 import GrowthIcon from "../Icons/GrowthIcon.js";
@@ -12,14 +13,16 @@ export default function IndexNoteCard( { note, href } ) {
   return (
     <>
       <Tooltip maxWidth = {300} content = {note.data.description} >
-        <a href = {`/${href}`} >
-          <StyledIndexCard >
-            {note.data.growthStage && (
-              <StyledGrowthStage ><GrowthIcon growthStage = {note.data.growthStage} /></StyledGrowthStage >
-            )}
-            <h3 >{note.data.title}</h3 >
-          </StyledIndexCard >
-        </a >
+        <Link as = {`/${href}`} href = {`/${href}`} >
+          <a >
+            <StyledIndexCard >
+              {note.data.growthStage && (
+                <StyledGrowthStage ><GrowthIcon growthStage = {note.data.growthStage} /></StyledGrowthStage >
+              )}
+              <h3 >{note.data.title}</h3 >
+            </StyledIndexCard >
+          </a >
+        </Link >
       </Tooltip >
     </>
   );
