@@ -1,7 +1,8 @@
-import BuddingIcon from "./BuddingIcon";
-import EvergreenIcon from "./EvergreenIcon";
-import SeedlingIcon from "./SeedlingIcon";
+import ConceptIcon    from "./ConceptIcon";
+import HypothesisIcon from "./HypothesisIcon";
+import TheoryIcon     from "./TheoryIcon";
 
 
 
-export { BuddingIcon, SeedlingIcon, EvergreenIcon };
+
+export { HypothesisIcon, TheoryIcon, ConceptIcon };

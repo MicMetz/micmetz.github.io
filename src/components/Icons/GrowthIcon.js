@@ -1,35 +1,41 @@
-import { BuddingIcon, EvergreenIcon, SeedlingIcon } from "./AllIcons";
+import { ConceptIcon, HypothesisIcon, TheoryIcon } from "./AllIcons";
+
 
 
 
 export default function GrowthIcon( { growthStage, size } ) {
-  if ( growthStage === "Seedling Concept" ) {
+  if ( growthStage === "Concept" || growthStage === "In Developing" ) {
     return (
-      <SeedlingIcon
+      <ConceptIcon
         width = {size ? size : "22"}
         height = {size ? size : "22"}
       />
     );
-  } else if ( growthStage === "Budding Concept" ) {
+  } else if ( growthStage === "Hypothesis" ) {
     return (
-      <BuddingIcon
+      <HypothesisIcon
         width = {size ? size : "22"}
         height = {size ? size : "22"}
       />
     );
-  } else if ( growthStage === "Evergreen Theory" ) {
+  } else if ( growthStage === "Theory" ) {
     return (
-      <EvergreenIcon
+      <TheoryIcon
         width = {size ? size : "22"}
         height = {size ? size : "22"}
       />
     );
-  } else if ( growthStage === "Bedrock Principle" ) {
+  } else if ( growthStage === "Law" ) {
     return (
-      <EvergreenIcon
+      <TheoryIcon
         width = {size ? size : "22"}
         height = {size ? size : "22"}
+        color = "var(--color-secondary)"
       />
+      /* <LawIcon
+       width = {size ? size : "22"}
+       height = {size ? size : "22"}
+       /> */
     );
   }
 }

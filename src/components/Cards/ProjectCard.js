@@ -1,6 +1,6 @@
 import Image                                                                from "next/image";
 import Link                                                                 from "next/link";
-import EvergreenIcon                                                        from "../../components/Icons/EvergreenIcon";
+import EvergreenIcon                                                        from "../Icons/TheoryIcon.js";
 import { ProjectImageWrapper, ProjectMetadataContainer, StyledProjectCard } from "../../styles/StyledCardComponents/ProjectStyled.js";
 
 
