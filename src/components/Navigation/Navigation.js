@@ -1,5 +1,6 @@
 import Link                                       from 'next/link'
 import React, { forwardRef, useEffect, useState } from 'react'
+import ArticlePostTemplate                        from "../PageTemplates/ArticlePostTemplate.js";
 import MainNavLinks                               from "./MainNavLinks.js";
 import MobileMenu                                 from "./MobileMenu.js";
 import { RightHandSide, StyledNavbar }            from './NavigationStyles.js'
@@ -13,7 +14,7 @@ export const Navigation = forwardRef( ( props, ref ) => {
   const [ isMobileMenuOpen, setMobileMenu ] = useState( false );
   const [ selection, setSelection ]         = useState( "/" );
 
-
+  /*
   useEffect( () => {
     // If there is no search query, return early and reset the results
     if ( !searchState.query ) {
@@ -35,7 +36,7 @@ export const Navigation = forwardRef( ( props, ref ) => {
       }
     };
     search();
-  }, [ searchState.query ] );
+  }, [ searchState.query ] ); */
 
 
   return (
@@ -51,6 +52,11 @@ export const Navigation = forwardRef( ( props, ref ) => {
           <span className = "" >Michael Metzger</span >
         </a >
       </Link >
+
+      {/* <Link href = "/src/components/PageTemplates/ArticlePostTemplate" > */}
+      {/*   <span>Test</span> */}
+      {/* </Link > */}
+
       <RightHandSide >
         {/* <SearchBarAndResults searchResults = {[]} searchState = {{ query: {} }}/> */}
         <MainNavLinks />

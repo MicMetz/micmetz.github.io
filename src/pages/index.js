@@ -264,6 +264,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               >
                 {projects.map( ( project ) => (
                   <ProjectCard
+                    key = {project.slug}
                     slug = {project.slug}
                     title = {project.data.title}
                     date = {project.data.updated}
@@ -287,7 +288,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               <div style = {{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" }} >
                 {ArcGISData.map( ( visual, i ) => (
                   <AtlasCard
-                    key = {i}
+                    key = {visual.slug}
                     slug = {visual.slug}
                     title = {visual.title}
                     date = {visual.date}
