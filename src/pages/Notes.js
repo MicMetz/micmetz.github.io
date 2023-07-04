@@ -1,25 +1,28 @@
-// import {noteFilePaths,  NOTES_PATH } from "..//tools/mdxUtils.js";
-import fs                            from "fs";
-import matter                        from "gray-matter";
-import path                          from "path";
-import React                         from 'react';
-import NoteCard                      from "../components/Cards/NoteCard.js";
-import Header                        from "../components/Layouts/Header.js";
-import { Layout }                    from "../components/Layouts/Layout.js";
-import TitleWithCount                from "../components/MDX/TitleWithCount.js";
-import { StyledNotesGrid }           from "../styles/StyledGridComponents.js";
-import { noteFilePaths, NOTES_PATH } from "../tools/mdxUtils.js";
+import fs from "fs";
+import matter from "gray-matter";
+import path from "path";
+import styled from "styled-components";
+import NoteCard from "../components/cards/NoteCard";
+import Header from "../components/Layouts/Header";
+import { Layout } from "../components/Layouts/Layout.js";
+import TitleWithCount from "../components/MISC/TitleWithCount";
+import { StyledNotesGrid } from '../styles/StyledGridComponents.js';
+import { Title2 } from "../styles/StyledTypography.js";
+import { noteFilePaths, NOTES_PATH } from "../tools/mdxUtils";
 
 
 
-
-export default function NotesPage( { notes } ) {
+export default function Notes( { notes } ) {
   return (
     <>
-      <Header title = "Notes of Michael Metzger" />
+      <Header title = "Notes by Michael Metzger" />
       <Layout >
         <header style = {{ marginBottom: "var(--space-xl)" }} >
           <TitleWithCount posts = {notes} >Notes</TitleWithCount >
+          <Title2 >
+            Loose, unopinionated notes on things I don’t entirely understand
+            yet.
+          </Title2 >
         </header >
         <StyledNotesGrid >
           {notes.map( ( value, i ) => (
@@ -31,7 +34,7 @@ export default function NotesPage( { notes } ) {
               title = {value.title}
               growthStage = {value.growthStage}
               date = {value.updated}
-            />
+          />
           ) )}
         </StyledNotesGrid >
       </Layout >
@@ -40,14 +43,14 @@ export default function NotesPage( { notes } ) {
 }
 
 
-
+// Fetches the data for the page.
 
 export function getStaticProps() {
   // Get all note posts
   let notes = noteFilePaths.map( ( filePath ) => {
-    const source            = fs.readFileSync( path.join( NOTES_PATH, filePath ) );
+    const source = fs.readFileSync( path.join( NOTES_PATH, filePath ) );
     const { content, data } = matter( source );
-    const slug              = filePath.replace( /\.mdx$/, "" );
+    const slug = filePath.replace( /\.mdx$/, "" );
 
     return {
       content,
@@ -65,4 +68,3 @@ export function getStaticProps() {
 
   return { props: { notes } };
 }
-
