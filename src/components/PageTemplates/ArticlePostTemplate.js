@@ -1,4 +1,5 @@
 import styled    from "styled-components"
+import Button    from "../Layouts/Button.js";
 import Header    from "../Layouts/Header.js";
 import { Layout } from "../Layouts/Layout.js";
 import Paragraph from "../Layouts/Paragraph.js";
