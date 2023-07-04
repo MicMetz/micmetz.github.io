@@ -105,7 +105,7 @@ export default function MainNavLinks() {
       <div className = "outside-dropdown" >
         <UnderlineHoverLink href = "/" selected = {router.pathname === "/"} >Home</UnderlineHoverLink >
         <UnderlineHoverLink href = "/Gallery" selected = {router.pathname === "/Gallery"} >Gallery</UnderlineHoverLink >
-        <UnderlineHoverLink href = "/Design-Workshop" selected = {router.pathname === "/Design-Workshop"} >Designs</UnderlineHoverLink >
+        <UnderlineHoverLink href = "/Design-Workshop" selected = {router.pathname === "micmetz.github.io/Design-Workshop"} >Designs</UnderlineHoverLink >
         <UnderlineHoverLink href = "/About" selected = {router.pathname === "/About"} >About</UnderlineHoverLink >
         <UnderlineHoverLink href = "/Contact" selected = {router.pathname === "/Contact"} >Contact</UnderlineHoverLink >
       </div >
