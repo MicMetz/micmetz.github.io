@@ -2,7 +2,7 @@
 
 ## About
 
-(Redesign influenced by [this](https://github.com/MaggieAppleton/) person)
+(Original theme by [this](https://github.com/MaggieAppleton/) person)
 
 This is my personal website, where I post my projects and other things I'm working on. It's built with [React](https://reactjs.org/) and [Next.js](https://nextjs.org/), and hosted
 on [GitHub Pages](https://pages.github.com/).

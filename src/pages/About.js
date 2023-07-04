@@ -84,7 +84,7 @@ export default function AboutPage() {
             development.
             <Spacer />
             Check out what I've been working on in my{' '}
-            <UnderlineHoverLink href = "/src/pages/Projects" >projects archive.</UnderlineHoverLink >{' '}
+            <UnderlineHoverLink href = "/src/pages/Design-Workshop" >design workshop.</UnderlineHoverLink >{' '}
 
             <Spacer />
           </SectionText >

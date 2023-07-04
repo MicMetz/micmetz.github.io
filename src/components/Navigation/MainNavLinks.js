@@ -40,6 +40,9 @@ function GardenPopoverLinks() {
           <Link href = "/Notes" >
             <DropdownLink >Notes</DropdownLink >
           </Link >
+          <Link href = "/Lessons" >
+            <DropdownLink >Lessons</DropdownLink >
+          </Link >
         </Dropdown >
       </Popover.Panel >
     </Popover >
@@ -102,7 +105,7 @@ export default function MainNavLinks() {
       <div className = "outside-dropdown" >
         <UnderlineHoverLink href = "/" selected = {router.pathname === "/"} >Home</UnderlineHoverLink >
         <UnderlineHoverLink href = "/Gallery" selected = {router.pathname === "/Gallery"} >Gallery</UnderlineHoverLink >
-        <UnderlineHoverLink href = "/Projects" selected = {router.pathname === "/Projects"} >Projects</UnderlineHoverLink >
+        <UnderlineHoverLink href = "/Design-Workshop" selected = {router.pathname === "/Design-Workshop"} >Designs</UnderlineHoverLink >
         <UnderlineHoverLink href = "/About" selected = {router.pathname === "/About"} >About</UnderlineHoverLink >
         <UnderlineHoverLink href = "/Contact" selected = {router.pathname === "/Contact"} >Contact</UnderlineHoverLink >
       </div >

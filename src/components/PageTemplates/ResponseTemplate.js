@@ -1,16 +1,18 @@
-import { MDXRemote } from "next-mdx-remote";
-import Link from "next/link";
-import styled from "styled-components";
+import { MDXRemote }   from "next-mdx-remote";
+import Link            from "next/link";
+import styled          from "styled-components";
 import { breakpoints } from "../../constants/breakpoints";
-import GrowthIcon from "../Icons/GrowthIcon";
-import Header from "../Layouts/Header.js";
-import BackHoverLink from "../Links/BackHoverLink";
-import Backlinks from "../Links/Backlinks.js";
-import BackToTop from "../MDX/BackToTop";
-import ProseWrapper from "../MDX/ProseWrapper";
-import Dates from "../MISC/DatesFormat.js";
-import GrowthStage from "../MISC/GrowthStage.js";
-import Topics      from "../MDX/Topics.js";
+import GrowthIcon      from "../Icons/GrowthIcon";
+import Header          from "../Layouts/Header.js";
+import { Layout }      from "../Layouts/Layout.js";
+import BackHoverLink   from "../Links/BackHoverLink";
+import Backlinks       from "../Links/Backlinks.js";
+import BackToTop       from "../MDX/BackToTop";
+import ProseWrapper    from "../MDX/ProseWrapper";
+import Topics          from "../MDX/Topics.js";
+import Dates           from "../MISC/DatesFormat.js";
+import GrowthStage     from "../MISC/GrowthStage.js";
+
 
 
 
@@ -24,14 +26,14 @@ export default function ResponseTemplate( { source, frontMatter, components, slu
         ogImage = {ogImage}
       />
       <HeaderSection >
-        <div className = "above-title">
-          <Link href = "/Responses">
-            <BackHoverLink href = "/Responses">Responses</BackHoverLink >
+        <div className = "above-title" >
+          <Link href = "/Responses" >
+            <BackHoverLink href = "/Responses" >Responses</BackHoverLink >
           </Link >
           {frontMatter.growthStage && (
             <>
-              <GrowthIcon size = "16" growthStage = {frontMatter.growthStage}/>
-              <GrowthStage stage = {frontMatter.growthStage}/>
+              <GrowthIcon size = "16" growthStage = {frontMatter.growthStage} />
+              <GrowthStage stage = {frontMatter.growthStage} />
             </>
           )}
         </div >
@@ -41,12 +43,12 @@ export default function ResponseTemplate( { source, frontMatter, components, slu
         </TitleContainer >
         <Metadata >
           {frontMatter.topics ? (
-            <Topics topics = {frontMatter.topics}/>
+            <Topics topics = {frontMatter.topics} />
           ) : (
             <div />
           )}
           <Dates
-            startDate = {frontMatter.startDate}
+            started = {frontMatter.started}
             updated = {frontMatter.updated}
           />
         </Metadata >
@@ -54,14 +56,14 @@ export default function ResponseTemplate( { source, frontMatter, components, slu
       <StyledMain >
         <BackToTop />
         <ProseWrapper >
-          <MDXRemote {...source} components = {components}/>
+          <MDXRemote {...source} components = {components} />
         </ProseWrapper >
       </StyledMain >
-
-
+      {backlinks?.length ? <Backlinks backlinks = {backlinks} /> : null}
     </>
   );
 }
+
 
 
 const TitleContainer = styled.div`

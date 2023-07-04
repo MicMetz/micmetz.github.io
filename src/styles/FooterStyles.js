@@ -31,7 +31,7 @@ export const FooterLinkItem = styled.a`
   left: 0;
 
   &:hover {
-    color: #fff;
+    color: var(--color-quinary);
     left: 6px;
   }
 

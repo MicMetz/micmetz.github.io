@@ -1,8 +1,10 @@
 import styled    from "styled-components"
 import Button    from "../Layouts/Button.js";
 import Header    from "../Layouts/Header.js";
+import { Layout } from "../Layouts/Layout.js";
 import Paragraph from "../Layouts/Paragraph.js";
 import Text      from "../Layouts/Text.js";
+import Backlinks from "../Links/Backlinks.js";
 
 
 
@@ -10,45 +12,50 @@ import Text      from "../Layouts/Text.js";
 export default function ArticlePostTemplate( { source, frontMatter, components, slug, headings, toc, backlinks, ogImage } ) {
 
   return (
-    <ArticleWrapper >
-      <ArticleStyledHeader >
-        <ArticleRow area = "title" margin = "0 0 1em 0" >
-          <Header size = "h1" >{frontMatter.title}</Header >
-        </ArticleRow >
-        <ArticleRow area = "image" margin = "0 0 1em 0" >
-          <img src = {frontMatter.image} alt = {frontMatter.title} />
-        </ArticleRow >
-        <ArticleRow area = "lead" margin = "0 0 1em 0" >
-          <Paragraph >{frontMatter.lead}</Paragraph >
-        </ArticleRow >
-        <ArticleRow area = "tags" margin = "0 0 1em 0" >
-          <Paragraph >{frontMatter.tags}</Paragraph >
-        </ArticleRow >
-      </ArticleStyledHeader >
-      <ArticleSection >
-        <Text >
-          {components}
-        </Text >
-      </ArticleSection >
-      <ArticleSection >
-        <Paragraph >{source}</Paragraph >
-      </ArticleSection >
-      <ArticleSection >
-        <Paragraph >{slug}</Paragraph >
-      </ArticleSection >
-      <ArticleSection >
-        <Paragraph >{headings}</Paragraph >
-      </ArticleSection >
-      <ArticleSection >
-        <Paragraph >{toc}</Paragraph >
-      </ArticleSection >
-      <ArticleSection >
-        <Paragraph >{backlinks}</Paragraph >
-      </ArticleSection >
-      <ArticleSection >
-        <Paragraph >{ogImage}</Paragraph >
-      </ArticleSection >
-    </ArticleWrapper >
+    <>
+      <ArticleWrapper >
+        <ArticleStyledHeader >
+          <ArticleRow area = "title" margin = "0 0 1em 0" >
+            <Header size = "h1" >{frontMatter.title}</Header >
+          </ArticleRow >
+          <ArticleRow area = "image" margin = "0 0 1em 0" >
+            <img src = {frontMatter.image} alt = {frontMatter.title} />
+          </ArticleRow >
+          <ArticleRow area = "lead" margin = "0 0 1em 0" >
+            <Paragraph >{frontMatter.lead}</Paragraph >
+          </ArticleRow >
+          <ArticleRow area = "tags" margin = "0 0 1em 0" >
+            <Paragraph >{frontMatter.tags}</Paragraph >
+          </ArticleRow >
+        </ArticleStyledHeader >
+        <ArticleSection >
+          <Text >
+            {components}
+          </Text >
+        </ArticleSection >
+        <ArticleSection >
+          <Paragraph >{source}</Paragraph >
+        </ArticleSection >
+        <ArticleSection >
+          <Paragraph >{slug}</Paragraph >
+        </ArticleSection >
+        <ArticleSection >
+          <Paragraph >{headings}</Paragraph >
+        </ArticleSection >
+        <ArticleSection >
+          <Paragraph >{toc}</Paragraph >
+        </ArticleSection >
+        <ArticleSection >
+          <Paragraph >{backlinks}</Paragraph >
+        </ArticleSection >
+        <ArticleSection >
+          <Paragraph >{ogImage}</Paragraph >
+        </ArticleSection >
+
+      </ArticleWrapper >
+      {backlinks?.length ? <Backlinks backlinks = {backlinks} /> : null}
+
+    </>
   )
 
 }

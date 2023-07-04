@@ -7,9 +7,16 @@ export default function ImageFrame( { src, alt, width, margin, showalt, sourceUr
   const { srcSet } = props;
   delete props.srcSet;
 
+
+
   return (
     <Container margin = {margin} {...props}>
-      <StyledImageFrame src = {src} srcSet = {srcSet} alt = {alt} width = {width || "100%"} />
+      <StyledImageFrame
+        src = {src}
+        srcSet = {srcSet}
+        alt = {alt}
+        width = {width || "100%"}
+      />
       {showalt ? (
         sourceUrl ? (
           <figcaption >
@@ -22,6 +29,9 @@ export default function ImageFrame( { src, alt, width, margin, showalt, sourceUr
     </Container >
   );
 }
+
+
+
 
 const Container = styled.figure`
   max-width: 100%;
@@ -37,8 +47,11 @@ const Container = styled.figure`
   }
 `;
 
+
+
 const StyledImageFrame = styled.img`
   width: ${( props ) => props.width || "1100px"};
+  max-width: 100%;
   border-radius: var(--border-radius-base);
   border: 1px solid var(--color-tinted-cream);
   box-shadow: var(--box-shadow-lg);

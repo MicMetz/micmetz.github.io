@@ -1,4 +1,5 @@
 import { ConceptIcon, HypothesisIcon, TheoryIcon } from "./AllIcons";
+import { Phyllotaxis }                             from "./Phyllotaxis.js";
 
 
 
@@ -27,15 +28,12 @@ export default function GrowthIcon( { growthStage, size } ) {
     );
   } else if ( growthStage === "Law" ) {
     return (
-      <TheoryIcon
+      <Phyllotaxis
         width = {size ? size : "22"}
         height = {size ? size : "22"}
-        color = "var(--color-secondary)"
+        radius = {size ? size : "1"}
       />
-      /* <LawIcon
-       width = {size ? size : "22"}
-       height = {size ? size : "22"}
-       /> */
+
     );
   }
 }

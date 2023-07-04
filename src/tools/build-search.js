@@ -1,110 +1,110 @@
-const fs = require( "fs" );
-const path = require( "path" );
-const matter = require( "gray-matter" );
-const dotenv = require( "dotenv" );
+const fs            = require( "fs" );
+const path          = require( "path" );
+const matter        = require( "gray-matter" );
+const dotenv        = require( "dotenv" );
 const algoliasearch = require( "algoliasearch" );
-const mdxUtils = require( "./mdxUtils" );
+const mdxUtils      = require( "./mdxUtils" );
 
 const {
-		essayFilePaths,
-		ESSAYS_PATH,
-		noteFilePaths,
-		NOTES_PATH,
-		projectFilePaths,
-		PROJECTS_PATH,
-} = mdxUtils;
+        essayFilePaths,
+        ESSAYS_PATH,
+        noteFilePaths,
+        NOTES_PATH,
+        projectFilePaths,
+        PROJECTS_PATH,
+      } = mdxUtils;
 
 let essays = essayFilePaths.map( ( filePath ) => {
-		const source = fs.readFileSync( path.join( ESSAYS_PATH, filePath ) );
-		const { content, data } = matter( source );
-		const slug = filePath.replace( /\.mdx$/, "" );
+  const source            = fs.readFileSync( path.join( ESSAYS_PATH, filePath ) );
+  const { content, data } = matter( source );
+  const slug              = filePath.replace( /\.mdx$/, "" );
 
-		return {
-				content,
-				data,
-				slug,
-				filePath,
-		};
+  return {
+    content,
+    data,
+    slug,
+    filePath,
+  };
 } );
 
 let notes = noteFilePaths.map( ( filePath ) => {
-		const source = fs.readFileSync( path.join( NOTES_PATH, filePath ) );
-		const { content, data } = matter( source );
-		const slug = filePath.replace( /\.mdx?$/, "" );
+  const source            = fs.readFileSync( path.join( NOTES_PATH, filePath ) );
+  const { content, data } = matter( source );
+  const slug              = filePath.replace( /\.mdx?$/, "" );
 
-		return {
-				content,
-				data,
-				slug,
-				filePath,
-		};
+  return {
+    content,
+    data,
+    slug,
+    filePath,
+  };
 } );
 
 let projects = projectFilePaths.map( ( filePath ) => {
-		const source = fs.readFileSync( path.join( PROJECTS_PATH, filePath ) );
-		const { content, data } = matter( source );
-		const slug = filePath.replace( /\.mdx?$/, "" );
+  const source            = fs.readFileSync( path.join( PROJECTS_PATH, filePath ) );
+  const { content, data } = matter( source );
+  const slug              = filePath.replace( /\.mdx?$/, "" );
 
-		return {
-				content,
-				data,
-				slug,
-				filePath,
-		};
+  return {
+    content,
+    data,
+    slug,
+    filePath,
+  };
 } );
 
 const posts = [ ...essays, ...notes, ...projects ];
 
 
 function transformPostsToSearchObjects( posts ) {
-		const transformed = posts.map( ( post ) => {
-				const postId = post.data.title.toLowerCase().replace( /\s/g, "-" );
+  const transformed = posts.map( ( post ) => {
+    const postId = post.data.title.toLowerCase().replace( /\s/g, "-" );
 
-				return {
-						objectID   : postId,
-						slug       : post.slug,
-						title      : post.data.title,
-						description: post.data.description,
-						startDate  : post.data.startDate,
-						updated    : post.data.updated,
-						cover      : post.data.cover,
-						topics     : post.data.topics,
-						growthStage: post.data.growthStage,
-						type       : post.data.type,
-						content    : post.content,
-				};
-		} );
+    return {
+      objectID   : postId,
+      slug       : post.slug,
+      title      : post.data.title,
+      description: post.data.description,
+      started    : post.data.started,
+      updated    : post.data.updated,
+      cover      : post.data.cover,
+      topics     : post.data.topics,
+      growthStage: post.data.growthStage,
+      type       : post.data.type,
+      content    : post.content,
+    };
+  } );
 
-		return transformed;
+  return transformed;
 }
 
 
-( async function () {
-		// initialize environment variables
-		dotenv.config();
+(async function() {
+  // initialize environment variables
+  dotenv.config();
 
-		try {
-				// const posts = await getPostdata();
-				const searchObjects = transformPostsToSearchObjects( posts );
-				const appID = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID;
-				const adminKey = process.env.ALGOLIA_SEARCH_ADMIN_KEY;
+  try {
+    // const posts = await getPostdata();
+    const searchObjects = transformPostsToSearchObjects( posts );
+    const appID         = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID;
+    const adminKey      = process.env.ALGOLIA_SEARCH_ADMIN_KEY;
 
-				const client = algoliasearch( appID, adminKey );
+    const client = algoliasearch( appID, adminKey );
 
-				const index = client.initIndex( "garden-posts" );
+    const index = client.initIndex( "garden-posts" );
 
-				const algoliaResponse = await index.saveObjects( searchObjects );
+    const algoliaResponse = await index.saveObjects( searchObjects );
 
-				console.log(
-						`🎉 Sucessfully added ${
-								algoliaResponse.objectIDs.length
-						} records to Algolia search. Object IDs:\n${algoliaResponse.objectIDs.join(
-								"\n"
-						)}`
-				);
-		} catch (error) {
-				console.error( error );
-		}
+    console.log(
+      `🎉 Sucessfully added ${
+        algoliaResponse.objectIDs.length
+      } records to Algolia search. Object IDs:\n${algoliaResponse.objectIDs.join(
+        "\n"
+      )}`
+    );
+  } catch (error) {
+    console.error( error );
+  }
 
-		console.log( "Search data request has fired!" );
-} )();
+  console.log( "Search data request has fired!" );
+})();

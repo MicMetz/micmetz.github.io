@@ -6,6 +6,7 @@ import BackToTop from "../../components/MDX/BackToTop.js";
 import ProseWrapper from "../../components/MDX/ProseWrapper.js";
 import { NoteStyledHeaderSection, NoteStyledMain, NoteStyledMetadata, NoteStyledTitleContainer } from "../../styles/StyledPageTemplates/StyledNoteTemplate.js";
 import Header from "../Layouts/Header.js";
+import { Layout } from "../Layouts/Layout.js";
 import Dates from "../MISC/DatesFormat.js";
 import GrowthStage     from "../MISC/GrowthStage.js";
 import TableOfContents from "../MDX/TableOfContents.js";
@@ -37,7 +38,7 @@ export default function NoteTemplate( { source, frontMatter, components, slug, t
         <NoteStyledMetadata >
           {frontMatter.topics && <Topics topics = {frontMatter.topics}/>}
           <Dates
-            startDate = {frontMatter.startDate}
+            started = {frontMatter.started}
             updated = {frontMatter.updated}
           />
         </NoteStyledMetadata >

@@ -1,18 +1,20 @@
-import { MDXRemote }     from "next-mdx-remote";
-import Link              from "next/link";
-import styled            from "styled-components";
-import { breakpoints }   from "../../constants/breakpoints.js";
-import { Title1 }        from "../../styles/StyledTypography.js";
-import { TheoryIcon } from "../Icons/AllIcons.js";
-import Header            from "../Layouts/Header.js";
-import BackHoverLink     from "../Links/BackHoverLink.js";
-import BackToTop         from "../MDX/BackToTop.js";
-import ProseWrapper      from "../MDX/ProseWrapper.js";
+import { MDXRemote }   from "next-mdx-remote";
+import Link            from "next/link";
+import styled          from "styled-components";
+import { breakpoints } from "../../constants/breakpoints.js";
+import { Title1 }      from "../../styles/StyledTypography.js";
+import { TheoryIcon }  from "../Icons/AllIcons.js";
+import Header          from "../Layouts/Header.js";
+import { Layout }      from "../Layouts/Layout.js";
+import BackHoverLink   from "../Links/BackHoverLink.js";
+import Backlinks       from "../Links/Backlinks.js";
+import BackToTop       from "../MDX/BackToTop.js";
+import ProseWrapper    from "../MDX/ProseWrapper.js";
 
 
 
 
-export default function ProjectTemplate( { source, frontMatter, components, slug, ogImage } ) {
+export default function ProjectTemplate( { source, frontMatter, components, slug, ogImage, backlinks } ) {
   function formattedDate( date ) {
     return new Date( date ).toLocaleDateString( "en", {
       year : "numeric",
@@ -23,12 +25,16 @@ export default function ProjectTemplate( { source, frontMatter, components, slug
 
   return (
     <>
-      <Header title = {frontMatter.title} description = {frontMatter.description} ogImage = {ogImage} />
-
+      <Header
+        title = {frontMatter.title}
+        description = {frontMatter.description}
+        keywords = {frontMatter.topics}
+        ogImage = {ogImage}
+      />
       <HeaderSection >
         <div className = "above-title" >
-          <Link href = "/Projects" >
-            <BackHoverLink href = "/Projects" >Projects</BackHoverLink >
+          <Link href = "/Design-Workshop" >
+            <BackHoverLink href = "/Design-Workshop" >Designs</BackHoverLink >
           </Link >
         </div >
         <TitleContainer >
@@ -52,10 +58,11 @@ export default function ProjectTemplate( { source, frontMatter, components, slug
           <MDXRemote {...source} components = {components} />
         </ProseWrapper >
       </StyledMain >
-
+      {backlinks?.length ? <Backlinks backlinks = {backlinks} /> : null}
     </>
   );
 }
+
 
 
 const TitleContainer = styled.div`
