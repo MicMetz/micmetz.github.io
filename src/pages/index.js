@@ -82,7 +82,6 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               position    : 'relative',
               lineHeight  : '1',
               marginRight : 'var(--space-m)',
-              paddingRight: 'var(--space-m)'
             }}
           >
             {/* <LeftSection > */}
@@ -106,8 +105,6 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               lineHeight : '1',
               float      : 'left',
               position   : 'relative',
-              marginLeft : 'var(--space-m)',
-              paddingLeft: 'var(--space-m)'
             }}
           >
             {/* <RightSection > */}

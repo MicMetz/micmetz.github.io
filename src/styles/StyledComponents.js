@@ -1,6 +1,7 @@
-import { motion } from "framer-motion";
-import Link       from "next/link";
-import styled     from 'styled-components'
+import { motion } from 'framer-motion';
+import styled     from 'styled-components';
+
+
 
 
 export const ButtonBack = styled.div`
@@ -34,7 +35,7 @@ export const ButtonBack = styled.div`
     font-size: 14px;
     margin-bottom: ${( { alt } ) => alt ? '0' : '32px'};
   }
-`
+`;
 
 export const ButtonFront = styled.button`
   border: none;
@@ -82,7 +83,7 @@ export const ButtonFront = styled.button`
   @media ${( props ) => props.theme.breakpoints.sm} {
     font-size: 14px;
   }
-`
+`;
 
 export const StyledLayout = styled( motion.main )`
   max-width: 1400px;
@@ -182,9 +183,9 @@ export const ImgStripe = styled.img`
 
 
 export const Section = styled.section`
-  display: ${( props ) => props.grid ? "grid" : "flex"};
-  flex-direction: ${( props ) => props.row ? "row" : "column"};
-  padding: ${( props ) => props.nopadding ? "0" : "48px 0"};
+  display: ${( props ) => props.grid ? 'grid' : 'flex'};
+  flex-direction: ${( props ) => props.row ? 'row' : 'column'};
+  padding: ${( props ) => props.nopadding ? '0' : '48px 0'};
   margin: 0 auto;
   max-width: 1200px;
   box-sizing: content-box;
@@ -198,7 +199,7 @@ export const Section = styled.section`
   }
 
   @media ${( props ) => props.theme.breakpoints.mediaSM} {
-    padding: ${( props ) => props.nopadding ? "0" : "16px 16px 0"} ;
+    padding: ${( props ) => props.nopadding ? '0' : '16px 16px 0'} ;
 
     width: calc(100vw - 32px);
     flex-direction: column;
@@ -214,7 +215,7 @@ export const LeftSection = styled.div`
   font-weight: 300;
   height: fit-content;
 
-  
+
   @media ${( props ) => props.theme.breakpoints.mediaMD} {
     max-width: 670px;
     font-size: 2rem;
@@ -229,7 +230,7 @@ export const LeftSection = styled.div`
 
 
 
-export const RightSection  = styled.div`
+export const RightSection = styled.div`
   max-width: 50%;
   font-size: 2.2rem;
   line-height: 3.2rem;
@@ -287,7 +288,6 @@ export const SectionText = styled.section`
   width: 100%;
   height: fit-content;
   position: relative;
-  margin: 0 auto;
   max-font-size: 2.2rem;
   font-size: 2.2rem;
   line-height: 3.2rem;
@@ -313,8 +313,6 @@ export const SectionText = styled.section`
     padding-bottom: 3.6rem;
   }
 `;
-
-
 
 
 export const SectionSubText = styled.p`
