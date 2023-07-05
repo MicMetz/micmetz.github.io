@@ -1,27 +1,27 @@
-import { ArrowRightIcon } from '@heroicons/react/20/solid';
-import { motion } from 'framer-motion';
-import fs from 'fs';
-import matter from 'gray-matter';
-import Link from 'next/link';
-import path from 'path';
-import React from 'react';
-import { ArcGISData } from '../../posts/data/ArcGISData.js';
-import { ArticleList } from '../../posts/data/Articles.js';
-import { CurrentReadings } from '../../posts/data/CurrentReadings.js';
-import ArticleCard from '../components/Cards/ArticleCard.js';
-import AtlasCard from '../components/Cards/AtlasCard.js';
-import BookCard from '../components/Cards/BookCard.js';
-import EssayCard from '../components/Cards/EssayCard.js';
-import IndexNoteCard from '../components/Cards/IndexNoteCard.js';
-import ProjectCard from '../components/Cards/ProjectCard.js';
-import Header from '../components/Layouts/Header.js';
-import { Layout } from '../components/Layouts/Layout.js';
-import UnderlineHoverLink from '../components/Links/UnderlineHoverLink.js';
-import { Spacer } from '../components/MISC/Spacer.js';
-import { ReadmoreLink } from '../styles/LinkStyledComponents.js';
-import { LeftSection, SectionText } from '../styles/StyledComponents.js';
-import { GardenSection, ProjectsSection } from '../styles/StyledSectionComponents.js';
-import { SectionHeader, Subheader, Title1, Title2 } from '../styles/StyledTypography.js';
+import { ArrowRightIcon }                                                                          from '@heroicons/react/20/solid';
+import { motion }                                                                                  from 'framer-motion';
+import fs                                                                                          from 'fs';
+import matter                                                                                      from 'gray-matter';
+import Link                                                                                        from 'next/link';
+import path                                                                                        from 'path';
+import React                                                                                       from 'react';
+import { ArcGISData }                                                                              from '../../posts/data/ArcGISData.js';
+import { ArticleList }                                                                             from '../../posts/data/Articles.js';
+import { CurrentReadings }                                                                         from '../../posts/data/CurrentReadings.js';
+import ArticleCard                                                                                 from '../components/Cards/ArticleCard.js';
+import AtlasCard                                                                                   from '../components/Cards/AtlasCard.js';
+import BookCard                                                                                    from '../components/Cards/BookCard.js';
+import EssayCard                                                                                   from '../components/Cards/EssayCard.js';
+import IndexNoteCard                                                                               from '../components/Cards/IndexNoteCard.js';
+import ProjectCard                                                                                 from '../components/Cards/ProjectCard.js';
+import Header                                                                                      from '../components/Layouts/Header.js';
+import { Layout }                                                                                  from '../components/Layouts/Layout.js';
+import UnderlineHoverLink                                                                          from '../components/Links/UnderlineHoverLink.js';
+import { Spacer }                                                                                  from '../components/MISC/Spacer.js';
+import { ReadmoreLink }                                                                            from '../styles/LinkStyledComponents.js';
+import { LeftSection, RightSection, SectionText }                                                  from '../styles/StyledComponents.js';
+import { GardenSection, ProjectsSection }                                                          from '../styles/StyledSectionComponents.js';
+import { SectionHeader, Subheader, Title1, Title2 }                                                from '../styles/StyledTypography.js';
 import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, projectFilePaths, PROJECTS_PATH } from '../tools/mdxUtils.js';
 
 
@@ -67,20 +67,25 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             alignContent  : 'center',
             alignItems    : 'center',
             justifyContent: 'center',
-            marginBottom  : '10vh'
+            marginBottom  : '10vh',
+            marginTop     : '10vh'
           }}
         >
-          <motion.section
+          <motion.div
             initial = {{ opacity: 0, x: -50 }}
             animate = {{ opacity: 1, x: 0 }}
             transition = {{ delay: 0.2, duration: 1 }}
             style = {{
-              marginTop : 'var(--space-m)',
-              maxWidth  : '1100px',
-              lineHeight: '1'
+              maxWidth    : '80vw',
+              width       : '100%',
+              float       : 'right',
+              position    : 'relative',
+              lineHeight  : '1',
+              marginRight : 'var(--space-m)',
+              paddingRight: 'var(--space-m)'
             }}
           >
-            <LeftSection >
+            {/* <LeftSection > */}
               <Title1 fontWeight = '700' >
                 Hi.
                 <Spacer size = 'xs' />
@@ -88,25 +93,38 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
                 <Spacer size = 'xs' />
                 Michael.
               </Title1 >
-            </LeftSection >
+            {/* </LeftSection > */}
+          </motion.div >
 
-            <SectionText >
-              As of right now, I'm studying computer science at the University of Colorado at Boulder (CU Boulder).
-              Before, and not too long ago, I was studying Sociology and Information Science at multiple New York City universities over a few years.
+          <motion.div
+            initial = {{ opacity: 0, x: -50 }}
+            animate = {{ opacity: 1, x: 0 }}
+            transition = {{ delay: 0.5, duration: 1 }}
+            style = {{
+              maxWidth   : '80vw',
+              width      : '100%',
+              lineHeight : '1',
+              float      : 'left',
+              position   : 'relative',
+              marginLeft : 'var(--space-m)',
+              paddingLeft: 'var(--space-m)'
+            }}
+          >
+            {/* <RightSection > */}
+              <SectionText >
+                As of right now, I'm studying computer science at the University of Colorado at Boulder (CU Boulder).
+                Before, and not too long ago, I was studying Sociology and Information Science at multiple New York City universities over a few years.
+              </SectionText >
               <Spacer size = 'xs' />
-              <motion.span
-                initial = {{ opacity: 0, x: -50 }}
-                animate = {{ opacity: 1, x: 0 }}
-                transition = {{ delay: 0.5, duration: 1 }}
-              >
+              <SectionText >
                 For more about me, check out my{' '}
                 <UnderlineHoverLink href = '/About' >
                   <i >bio page</i >
                 </UnderlineHoverLink >
                 {' '}.
-              </motion.span >
-            </SectionText >
-          </motion.section >
+              </SectionText >
+            {/* </RightSection > */}
+          </motion.div >
         </header >
 
 

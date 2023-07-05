@@ -208,23 +208,44 @@ export const Section = styled.section`
 
 
 export const LeftSection = styled.div`
-  max-width: calc(100% - 100px);
+  max-width: 50%;
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+  font-weight: 300;
+  height: fit-content;
+
+  
+  @media ${( props ) => props.theme.breakpoints.mediaMD} {
+    max-width: 670px;
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+
+  @media ${( props ) => props.theme.breakpoints.mediaSM} {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+`;
+
+
+
+export const RightSection  = styled.div`
+  max-width: 50%;
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+  font-weight: 300;
   height: fit-content;
 
 
-  @media ${( props ) => props.theme.breakpoints.mediaSM} {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-
-    margin: 0 auto;
-  }
   @media ${( props ) => props.theme.breakpoints.mediaMD} {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    max-width: 670px;
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
 
-    margin: 0 auto;
+  @media ${( props ) => props.theme.breakpoints.mediaSM} {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
   }
 `;
 
@@ -262,12 +283,11 @@ export const SectionTitle = styled.h2`
 
 
 
-export const SectionText = styled.div`
+export const SectionText = styled.section`
   width: 100%;
   height: fit-content;
-
   position: relative;
-  margin: auto;
+  margin: 0 auto;
   max-font-size: 2.2rem;
   font-size: 2.2rem;
   line-height: 3.2rem;
@@ -275,51 +295,25 @@ export const SectionText = styled.div`
   color: black;
 
   @media ${( props ) => props.theme.breakpoints.mediaMD} {
-    //max-width: 670px;
-    font-size: 50%;
+    max-width: 670px;
     line-height: 2.8rem;
     padding-bottom: 3.6rem;
   }
 
   @media ${( props ) => props.theme.breakpoints.mediaSM} {
-    //max-width: 500px;
-    font-size: 50%;
+    max-width: 500px;
     line-height: 2.4rem;
     padding-bottom: 3.6rem;
   }
 
   @media ${( props ) => props.theme.breakpoints.mediaLG} {
-    //max-width: 700px;
+    max-width: 700px;
     font-size: 2.2rem;
     line-height: 3.2rem;
     padding-bottom: 3.6rem;
-
   }
 `;
 
-
-
-export const SectionRightText = styled.p`
-  max-width: 45%;
-  font-size: 2.2rem;
-  line-height: 3.2rem;
-  font-weight: 300;
-  padding-bottom: 3.6rem;
-  color: black;
-
-  @media ${( props ) => props.theme.breakpoints.mediaMD} {
-    max-width: 670px;
-    font-size: 2rem;
-    line-height: 2.8rem;
-    padding-bottom: 3.6rem;
-  }
-
-  @media ${( props ) => props.theme.breakpoints.mediaSM} {
-    font-size: 1.8rem;
-    line-height: 2.4rem;
-    padding-bottom: 3.6rem;
-  }
-`;
 
 
 

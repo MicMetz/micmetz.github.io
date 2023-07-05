@@ -1,6 +1,7 @@
-import { motion }      from "framer-motion";
-import styled          from "styled-components";
-import { breakpoints } from "../constants/breakpoints.js";
+import { motion }      from 'framer-motion';
+import styled          from 'styled-components';
+import { breakpoints } from '../constants/breakpoints.js';
+
 
 
 
@@ -44,17 +45,25 @@ export const Subheader = styled.p`
 
 
 export const Title1 = styled( motion.h1 )`
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-4xl);
   font-family: var(--font-serif);
   line-height: var(--leading-tighter);
-  font-weight: ${( props ) => props.fontWeight ? props.fontWeight : "normal"};
-  margin-bottom: var(--space-s);
+  font-weight: ${( props ) => props.fontWeight ? props.fontWeight : 'normal'};
+  margin-bottom: var(--space-m);
+
   max-width: 1200px;
+
+  @media ${breakpoints.mediaMD} {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-s);
+  }
+
   @media ${breakpoints.mediaSM} {
     font-size: var(--font-size-2xl);
-    max-width: 100%;
-    margin-bottom: var(--space-xs);
+    margin-bottom: var(--space-s);
   }
+
+
 `;
 
 export const Title2 = styled( motion.h2 )`
