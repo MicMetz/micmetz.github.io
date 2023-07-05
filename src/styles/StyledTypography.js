@@ -50,7 +50,6 @@ export const Title1 = styled( motion.h1 )`
   line-height: var(--leading-tighter);
   font-weight: ${( props ) => props.fontWeight ? props.fontWeight : 'normal'};
   margin-bottom: var(--space-m);
-
   max-width: 1200px;
 
   @media ${breakpoints.mediaMD} {

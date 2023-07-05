@@ -1,6 +1,6 @@
-import Link                          from "next/link";
-import styled                        from "styled-components";
-import { LinkContainer, StyledLink } from "../../styles/LinkStyledComponents.js";
+import Link                          from 'next/link';
+import styled                        from 'styled-components';
+import { LinkContainer, StyledLink } from '../../styles/LinkStyledComponents.js';
 
 
 
@@ -11,10 +11,12 @@ export default function UnderlineHoverLink( { href, children, selected } ) {
       <Link href = {href} >
         {selected ? (
           <SelectedStyle >
-            {children}
+            <StyledLink href = {href} >
+              <span >{children}</span >
+            </StyledLink >
           </SelectedStyle >
         ) : (
-          <StyledLink >
+          <StyledLink href = {href} >
             <span >{children}</span >
           </StyledLink >
         )}
@@ -26,6 +28,6 @@ export default function UnderlineHoverLink( { href, children, selected } ) {
 
 
 const SelectedStyle = styled.span`
-  border-bottom: 0.2em solid var(--color-secondary);
+  border-bottom: 0.2em solid var(--color-secondary) !important;
 `;
 
