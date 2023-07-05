@@ -1,13 +1,13 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
-import NoteCard from '../components/cards/NoteCard.js';
-import Header from '../components/Layouts/Header.js';
+import styled from 'styled-components';
+import NoteCard from '../components/Cards/NoteCard';
+import Header from '../components/Layouts/Header';
 import { Layout } from '../components/Layouts/Layout.js';
-import TitleWithCount from '../components/MISC/TitleWithCount.js';
-import { StyledNotesGrid } from '../styles/StyledGridComponents.js';
+import TitleWithCount from '../components/MISC/TitleWithCount';
 import { Title2 } from '../styles/StyledTypography.js';
-import { noteFilePaths, NOTES_PATH } from '../tools/mdxUtils.js';
+import { noteFilePaths, NOTES_PATH } from '../tools/mdxUtils';
 
 
 
@@ -20,27 +20,31 @@ export default function Notes( { notes } ) {
         <header style = {{ marginBottom: 'var(--space-xl)' }} >
           <TitleWithCount posts = {notes} >Notes</TitleWithCount >
           <Title2 >
-            Loose, unopinionated notes on things I don’t entirely understand
+            Loose, unopinionated notes on things I don't entirely understand
             yet.
           </Title2 >
         </header >
-        <StyledNotesGrid >
-          {notes.map( ( value, i ) => (
+        <NotesGrid >
+          {notes.map( ( note, i ) => (
             <NoteCard
               key = {i}
-              id = {value.slug}
-              slug = {value.slug}
-              cover = {value.cover}
-              title = {value.title}
-              growthStage = {value.growthStage}
-              date = {value.updated}
+              id = {note.slug}
+              slug = {note.slug}
+              title = {note.data.title}
+              growthStage = {note.data.growthStage}
+              date = {note.data.updated}
             />
           ) )}
-        </StyledNotesGrid >
+        </NotesGrid >
       </Layout >
     </>
   );
 }
+
+const NotesGrid = styled.section`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+`;
 
 
 // Fetches the data for the page.
@@ -62,7 +66,7 @@ export function getStaticProps() {
 
   // Sort notes by date
   const sortedNotes = notes.sort( ( a, b ) => {
-    return new Date( b.updated ) - new Date( a.updated );
+    return new Date( b.data.updated ) - new Date( a.data.updated );
   } );
   notes             = sortedNotes;
 
