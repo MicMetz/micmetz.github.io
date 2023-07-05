@@ -1,6 +1,6 @@
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
 import styled  from "styled-components";
-import Tooltip from "./Tooltip.js";
+import Tooltip from "../MISC/Tooltip.js";
 
 
 
