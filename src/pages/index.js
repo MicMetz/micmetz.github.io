@@ -237,6 +237,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
         <Spacer size = '3xlarge' />
 
 
+        {/*
         <motion.section
           initial = {{ opacity: 0, x: -50 }}
           animate = {{ opacity: 1, x: 0 }}
@@ -312,6 +313,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             </section >
           </ProjectsSection >
         </motion.section >
+        */}
 
         <Spacer size = 'xlarge' />
 

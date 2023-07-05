@@ -11,9 +11,9 @@ export default function UnderlineHoverLink( { href, children, selected } ) {
       <Link href = {href} >
         {selected ? (
           <SelectedStyle >
-            <StyledLink href = {href} >
-              <span >{children}</span >
-            </StyledLink >
+            <a href = {href} >
+              {children}
+            </a >
           </SelectedStyle >
         ) : (
           <StyledLink href = {href} >
