@@ -5,22 +5,19 @@ import matter                                                                   
 import Link                                                                                        from 'next/link';
 import path                                                                                        from 'path';
 import React                                                                                       from 'react';
-import { ArcGISData }                                                                              from '../../posts/data/ArcGISData.js';
 import { ArticleList }                                                                             from '../../posts/data/Articles.js';
 import { CurrentReadings }                                                                         from '../../posts/data/CurrentReadings.js';
 import ArticleCard                                                                                 from '../components/Cards/ArticleCard.js';
-import AtlasCard                                                                                   from '../components/Cards/AtlasCard.js';
 import BookCard                                                                                    from '../components/Cards/BookCard.js';
 import EssayCard                                                                                   from '../components/Cards/EssayCard.js';
-import IndexNoteCard                                                                               from '../components/Cards/IndexNoteCard.js';
-import ProjectCard                                                                                 from '../components/Cards/ProjectCard.js';
+import IndexCard                                                                                   from '../components/Cards/IndexCard.js';
 import Header                                                                                      from '../components/Layouts/Header.js';
 import { Layout }                                                                                  from '../components/Layouts/Layout.js';
 import UnderlineHoverLink                                                                          from '../components/Links/UnderlineHoverLink.js';
 import { Spacer }                                                                                  from '../components/MISC/Spacer.js';
 import { ReadmoreLink }                                                                            from '../styles/LinkStyledComponents.js';
-import { LeftSection, RightSection, SectionText }                                                  from '../styles/StyledComponents.js';
-import { GardenSection, ProjectsSection }                                                          from '../styles/StyledSectionComponents.js';
+import { SectionText }                                                                             from '../styles/StyledComponents.js';
+import { GardenSection }                                                                           from '../styles/StyledSectionComponents.js';
 import { SectionHeader, Subheader, Title1, Title2 }                                                from '../styles/StyledTypography.js';
 import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, projectFilePaths, PROJECTS_PATH } from '../tools/mdxUtils.js';
 
@@ -76,22 +73,22 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             animate = {{ opacity: 1, x: 0 }}
             transition = {{ delay: 0.2, duration: 1 }}
             style = {{
-              maxWidth    : '80vw',
-              width       : '100%',
-              float       : 'right',
-              position    : 'relative',
-              lineHeight  : '1',
-              marginRight : 'var(--space-m)',
+              maxWidth   : '80vw',
+              width      : '100%',
+              float      : 'right',
+              position   : 'relative',
+              lineHeight : '1',
+              marginRight: 'var(--space-m)'
             }}
           >
             {/* <LeftSection > */}
-              <Title1 fontWeight = '700' >
-                Hi.
-                <Spacer size = 'xs' />
-                My name is
-                <Spacer size = 'xs' />
-                Michael.
-              </Title1 >
+            <Title1 fontWeight = '700' >
+              Hi.
+              <Spacer size = 'xs' />
+              My name is
+              <Spacer size = 'xs' />
+              Michael.
+            </Title1 >
             {/* </LeftSection > */}
           </motion.div >
 
@@ -100,26 +97,26 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             animate = {{ opacity: 1, x: 0 }}
             transition = {{ delay: 0.5, duration: 1 }}
             style = {{
-              maxWidth   : '80vw',
-              width      : '100%',
-              lineHeight : '1',
-              float      : 'left',
-              position   : 'relative',
+              maxWidth  : '80vw',
+              width     : '100%',
+              lineHeight: '1',
+              float     : 'left',
+              position  : 'relative'
             }}
           >
             {/* <RightSection > */}
-              <SectionText >
-                As of right now, I'm studying computer science at the University of Colorado at Boulder (CU Boulder).
-                Before, and not too long ago, I was studying Sociology and Information Science at multiple New York City universities over a few years.
-              </SectionText >
-              <Spacer size = 'xs' />
-              <SectionText >
-                For more about me, check out my{' '}
-                <UnderlineHoverLink href = '/About' >
-                  <i >bio page</i >
-                </UnderlineHoverLink >
-                {' '}.
-              </SectionText >
+            <SectionText >
+              As of right now, I'm studying computer science at the University of Colorado at Boulder (CU Boulder).
+              Before, and not too long ago, I was studying Sociology and Information Science at multiple New York City universities over a few years.
+            </SectionText >
+            <Spacer size = 'xs' />
+            <SectionText >
+              For more about me, check out my{' '}
+              <UnderlineHoverLink href = '/About' >
+                <i >bio page</i >
+              </UnderlineHoverLink >
+              {' '}.
+            </SectionText >
             {/* </RightSection > */}
           </motion.div >
         </header >
@@ -194,7 +191,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
               </Subheader >
               <div style = {{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gridGap: 'var(--space-2xs)' }} >
                 {notes.slice( 0, 12 ).map( ( note ) => (
-                  <IndexNoteCard key = {note.slug} note = {note} href = {note.slug} />
+                  <IndexCard key = {note.slug} note = {note} href = {note.slug} />
                 ) )}
               </div >
             </section >
@@ -238,82 +235,82 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
 
 
         {/*
-        <motion.section
-          initial = {{ opacity: 0, x: -50 }}
-          animate = {{ opacity: 1, x: 0 }}
-          transition = {{ delay: 0.7, duration: 1 }}
-        >
-          <Title2 style = {{ fontSize: 'var(--font-size-2xl)' }} >
-            Projects
-          </Title2 >
-          <Subheader >
-            Projects I’ve worked on.
-            <Spacer />
-            <ReadmoreLink href = '/Design-Workshop' >
-              Learn more
-              <ArrowRightIcon width = '18' height = '18' />
-            </ReadmoreLink >
-          </Subheader >
+         <motion.section
+         initial = {{ opacity: 0, x: -50 }}
+         animate = {{ opacity: 1, x: 0 }}
+         transition = {{ delay: 0.7, duration: 1 }}
+         >
+         <Title2 style = {{ fontSize: 'var(--font-size-2xl)' }} >
+         Projects
+         </Title2 >
+         <Subheader >
+         Projects I’ve worked on.
+         <Spacer />
+         <ReadmoreLink href = '/Design-Workshop' >
+         Learn more
+         <ArrowRightIcon width = '18' height = '18' />
+         </ReadmoreLink >
+         </Subheader >
 
 
-          <ProjectsSection
-            variants = {collectionAnimation}
-            initial = 'hidden'
-            animate = 'visible'
-          >
-            <section style = {{ gridArea: 'technology' }} >
-              <Link href = '/Design-Workshop' >
-                <SectionHeader >
-                  Software Experiences
-                  <ArrowRightIcon width = '18' height = '18' />
-                </SectionHeader >
-              </Link >
-              <Subheader >
-                Software and digital storytelling projects.
-              </Subheader >
-              <div
-                style = {{
-                  display            : 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))'
-                }}
-              >
-                {projects.map( ( project ) => (
-                  <ProjectCard
-                    key = {project.slug}
-                    slug = {project.slug}
-                    title = {project.data.title}
-                    date = {project.data.updated}
-                    cover = {project.data.cover}
-                    topics = {project.data.topics}
-                  />
-                ) )}
-              </div >
-            </section >
+         <ProjectsSection
+         variants = {collectionAnimation}
+         initial = 'hidden'
+         animate = 'visible'
+         >
+         <section style = {{ gridArea: 'technology' }} >
+         <Link href = '/Design-Workshop' >
+         <SectionHeader >
+         Software Experiences
+         <ArrowRightIcon width = '18' height = '18' />
+         </SectionHeader >
+         </Link >
+         <Subheader >
+         Software and digital storytelling projects.
+         </Subheader >
+         <div
+         style = {{
+         display            : 'grid',
+         gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))'
+         }}
+         >
+         {projects.map( ( project ) => (
+         <ProjectCard
+         key = {project.slug}
+         slug = {project.slug}
+         title = {project.data.title}
+         date = {project.data.updated}
+         cover = {project.data.cover}
+         topics = {project.data.topics}
+         />
+         ) )}
+         </div >
+         </section >
 
-            <section style = {{ gridArea: 'atlas', marginLeft: '3rem' }} >
-              <Link href = '/Atlas' >
-                <SectionHeader >
-                  Atlas
-                  <ArrowRightIcon width = '18' height = '18' />
-                </SectionHeader >
-              </Link >
-              <Subheader >
-                A collection of maps I’ve made.
-              </Subheader >
-              <div style = {{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }} >
-                {ArcGISData.map( ( visual, i ) => (
-                  <AtlasCard
-                    key = {visual.slug}
-                    slug = {visual.slug}
-                    title = {visual.title}
-                    date = {visual.date}
-                  />
-                ) )}
-              </div >
-            </section >
-          </ProjectsSection >
-        </motion.section >
-        */}
+         <section style = {{ gridArea: 'atlas', marginLeft: '3rem' }} >
+         <Link href = '/Atlas' >
+         <SectionHeader >
+         Atlas
+         <ArrowRightIcon width = '18' height = '18' />
+         </SectionHeader >
+         </Link >
+         <Subheader >
+         A collection of maps I’ve made.
+         </Subheader >
+         <div style = {{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }} >
+         {ArcGISData.map( ( visual, i ) => (
+         <AtlasCard
+         key = {visual.slug}
+         slug = {visual.slug}
+         title = {visual.title}
+         date = {visual.date}
+         />
+         ) )}
+         </div >
+         </section >
+         </ProjectsSection >
+         </motion.section >
+         */}
 
         <Spacer size = 'xlarge' />
 

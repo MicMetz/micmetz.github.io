@@ -46,7 +46,7 @@ export default function Footer() {
             { text: "Library", slug: "/library" },
             { text: "Books", slug: "/library/Books" },
             { text: "Articles", slug: "/library/Articles" },
-            { text: "Designs", slug: "/Design-Workshop" },
+            { text: "Design", slug: "/Design-Workshop" },
             { text: "Contact", slug: "/Contact" },
             // { text: "Changelog", slug: "/Changelog" },
           ].map( ( link, i ) => {

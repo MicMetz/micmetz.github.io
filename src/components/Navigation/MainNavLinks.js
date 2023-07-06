@@ -1,48 +1,53 @@
-import { Popover }                                                       from "@headlessui/react";
-import { AnimatePresence }                                               from "framer-motion";
-import Link                                                              from "next/link";
-import { useRouter }                                                     from "next/router";
-import { DropdownLink, HoverLink }                                       from "../../styles/LinkStyledComponents.js";
-import UnderlineHoverLink                                                from "../Links/UnderlineHoverLink";
-import { Dropdown, MainNav, StyledChevronDownIcon, StyledPopoverButton } from "../Navigation/NavigationStyles.js";
+import { Popover }                                                       from '@headlessui/react';
+import { AnimatePresence }                                               from 'framer-motion';
+import { useRouter }                                                     from 'next/router';
+import { DropdownLink, HoverLink }                                       from '../../styles/LinkStyledComponents.js';
+import UnderlineHoverLink                                                from '../Links/UnderlineHoverLink';
+import { Dropdown, MainNav, StyledChevronDownIcon, StyledPopoverButton } from '../Navigation/NavigationStyles.js';
 
 
 
 
 function GardenPopoverLinks() {
   return (
-    <Popover style = {{ position: "relative" }} >
-      <Link href = "/Garden" >
-        <HoverLink >
+    <Popover style = {{ position: 'relative' }} >
+      <HoverLink >
+        <a href = '/Garden' >
           <span >Garden</span >
-        </HoverLink >
-      </Link >
+        </a >
+      </HoverLink >
       <StyledPopoverButton >
-        <StyledChevronDownIcon width = "24" height = "24" />
+        <StyledChevronDownIcon width = '24' height = '24' />
       </StyledPopoverButton >
 
       <Popover.Panel >
         <Dropdown
           initial = {{
             opacity        : 0,
-            rotateX        : "90deg",
-            transformOrigin: "top",
+            rotateX        : '90deg',
+            transformOrigin: 'top'
           }}
-          animate = {{ opacity: 1, rotateX: "0deg" }}
-          exit = {{ opacity: 0, rotateX: "90deg" }}
-          transition = {{ duration: 0.6, ease: "easeInOut" }}
-          style = {{ position: "absolute", zIndex: "10" }}
-          key = "dropdown"
+          animate = {{ opacity: 1, rotateX: '0deg' }}
+          exit = {{ opacity: 0, rotateX: '90deg' }}
+          transition = {{ duration: 0.6, ease: 'easeInOut' }}
+          style = {{ position: 'absolute', zIndex: '10' }}
+          key = 'dropdown'
         >
-          < Link href = "/Essays" >
-            <DropdownLink >Essays</DropdownLink >
-          </Link >
-          <Link href = "/Notes" >
-            <DropdownLink >Notes</DropdownLink >
-          </Link >
-          <Link href = "/Lessons" >
-            <DropdownLink >Lessons</DropdownLink >
-          </Link >
+          <DropdownLink >
+            <a href = '/Garden/Essays' >
+              <span >Essays</span >
+            </a >
+          </DropdownLink >
+          <DropdownLink >
+            <a href = '/Garden/Notes' >
+              <span > Notes</span >
+            </a >
+          </DropdownLink >
+          <DropdownLink >
+            <a href = '/Garden/Lessons' >
+              <span >Lessons</span >
+            </a >
+          </DropdownLink >
         </Dropdown >
       </Popover.Panel >
     </Popover >
@@ -53,35 +58,39 @@ function GardenPopoverLinks() {
 
 function LibraryPopoverLinks() {
   return (
-    <Popover style = {{ position: "relative" }} >
-      <Link href = "/Library" >
-        <HoverLink >
+    <Popover style = {{ position: 'relative' }} >
+      <HoverLink >
+        <a href = '/Library' >
           <span >Library</span >
-        </HoverLink >
-      </Link >
+        </a >
+      </HoverLink >
       <StyledPopoverButton >
-        <StyledChevronDownIcon width = "24" height = "24" />
+        <StyledChevronDownIcon width = '24' height = '24' />
       </StyledPopoverButton >
 
       <Popover.Panel >
         <Dropdown
           initial = {{
             opacity        : 0,
-            rotateX        : "90deg",
-            transformOrigin: "top",
+            rotateX        : '90deg',
+            transformOrigin: 'top'
           }}
-          animate = {{ opacity: 1, rotateX: "0deg" }}
-          exit = {{ opacity: 0, rotateX: "90deg" }}
-          transition = {{ duration: 0.6, ease: "easeInOut" }}
-          style = {{ position: "absolute", zIndex: "10" }}
-          key = "dropdown"
+          animate = {{ opacity: 1, rotateX: '0deg' }}
+          exit = {{ opacity: 0, rotateX: '90deg' }}
+          transition = {{ duration: 0.6, ease: 'easeInOut' }}
+          style = {{ position: 'absolute', zIndex: '10' }}
+          key = 'dropdown'
         >
-          <Link href = "/Library/Books" >
-            <DropdownLink >Books</DropdownLink >
-          </Link >
-          <Link href = "/Library/Articles" >
-            <DropdownLink >Articles</DropdownLink >
-          </Link >
+          <DropdownLink >
+            <a href = '/Library/Books' >
+              <span >Books</span >
+            </a >
+          </DropdownLink >
+          <DropdownLink >
+            <a href = '/Library/Articles' >
+              <span >Articles</span >
+            </a >
+          </DropdownLink >
         </Dropdown >
       </Popover.Panel >
     </Popover >
@@ -102,12 +111,12 @@ export default function MainNavLinks() {
       <AnimatePresence >
         <LibraryPopoverLinks />
       </AnimatePresence >
-      <div className = "outside-dropdown" >
-        <UnderlineHoverLink href = "/" selected = {router.pathname === "/"} >Home</UnderlineHoverLink >
-        <UnderlineHoverLink href = "/Gallery" selected = {router.pathname === "/Gallery"} >Gallery</UnderlineHoverLink >
-        <UnderlineHoverLink href = "/Design-Workshop" selected = {router.pathname === "/Design-Workshop"} >Designs</UnderlineHoverLink >
-        <UnderlineHoverLink href = "/About" selected = {router.pathname === "/About"} >About</UnderlineHoverLink >
-        <UnderlineHoverLink href = "/Contact" selected = {router.pathname === "/Contact"} >Contact</UnderlineHoverLink >
+      <div className = 'outside-dropdown' >
+        <UnderlineHoverLink href = '/' selected = {router.pathname === '/'} >Home</UnderlineHoverLink >
+        <UnderlineHoverLink href = '/Gallery' selected = {router.pathname === '/Gallery'} >Gallery</UnderlineHoverLink >
+        <UnderlineHoverLink href = '/Design-Workshop' >Design</UnderlineHoverLink >
+        <UnderlineHoverLink href = '/About' selected = {router.pathname === '/About'} >About</UnderlineHoverLink >
+        <UnderlineHoverLink href = '/Contact' selected = {router.pathname === '/Contact'} >Contact</UnderlineHoverLink >
       </div >
     </MainNav >
   );

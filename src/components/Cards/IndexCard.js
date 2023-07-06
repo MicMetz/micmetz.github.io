@@ -1,20 +1,20 @@
-import Link       from "next/link";
-import React      from "react";
-import styled     from "styled-components";
-import GrowthIcon from "../Icons/GrowthIcon.js";
-import Tooltip    from "../MISC/Tooltip.js";
+import Link       from 'next/link';
+import React      from 'react';
+import styled     from 'styled-components';
+import GrowthIcon from '../Icons/GrowthIcon.js';
+import Tooltip    from '../MISC/Tooltip.js';
 
 
 
 
-export default function IndexNoteCard( { note, href } ) {
+export default function IndexCard( { note, href } ) {
 
 
   return (
     <>
       <Tooltip maxWidth = {300} content = {note.data.description} >
         <Link as = {`/${href}`} href = {`/${href}`} >
-          <a >
+          <a href = {`/${href}`} >
             <StyledIndexCard >
               {note.data.growthStage && (
                 <StyledGrowthStage ><GrowthIcon growthStage = {note.data.growthStage} /></StyledGrowthStage >

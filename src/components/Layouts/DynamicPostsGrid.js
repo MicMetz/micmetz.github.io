@@ -1,6 +1,8 @@
-import styled from 'styled-components';
-import EssayCard from '../Cards/EssayCard.js';
-import NoteCard from '../Cards/NoteCard.js';
+import React       from 'react';
+import styled      from 'styled-components';
+import EssayCard   from '../Cards/EssayCard.js';
+import NoteCard    from '../Cards/NoteCard.js';
+import ProjectCard from '../Cards/ProjectCard.js';
 import MasonryGrid from './MasonryGrid.js';
 
 
@@ -32,7 +34,17 @@ export default function DynamicPostsGrid( { postsToShow } ) {
                 date = {updated}
               />
             );
-          }
+          } else if ( type === 'project' ) {
+            return (
+              <ProjectCard
+                key = {i}
+                slug = {slug}
+                title = {title}
+                growthStage = {growthStage}
+                date = {updated}
+              />
+            );
+          } 
         }
       )}
     </MasonryGrid >

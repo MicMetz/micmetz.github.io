@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import styled from 'styled-components';
-import GrowthIcon from '../../components/Icons/GrowthIcon.js';
+import Link               from 'next/link';
+import styled             from 'styled-components';
+import GrowthIcon         from '../../components/Icons/GrowthIcon.js';
 import { StyledNoteCard } from '../../styles/StyledCardComponents/NoteStyled.js';
-import { RelativeDate } from '../MISC/DatesFormat.js';
+import { RelativeDate }   from '../MISC/DatesFormat.js';
 
 
 

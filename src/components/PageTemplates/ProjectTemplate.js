@@ -1,24 +1,22 @@
-import { MDXRemote }   from "next-mdx-remote";
-import Link            from "next/link";
-import styled          from "styled-components";
-import { breakpoints } from "../../constants/breakpoints.js";
-import { Title1 }      from "../../styles/StyledTypography.js";
-import { TheoryIcon }  from "../Icons/AllIcons.js";
-import Header          from "../Layouts/Header.js";
-import { Layout }      from "../Layouts/Layout.js";
-import BackHoverLink   from "../Links/BackHoverLink.js";
-import Backlinks       from "../Links/Backlinks.js";
-import BackToTop       from "../MDX/BackToTop.js";
-import ProseWrapper    from "../MDX/ProseWrapper.js";
+import { MDXRemote }   from 'next-mdx-remote';
+import styled          from 'styled-components';
+import { breakpoints } from '../../constants/breakpoints.js';
+import { Title1 }      from '../../styles/StyledTypography.js';
+import { TheoryIcon }  from '../Icons/AllIcons.js';
+import Header          from '../Layouts/Header.js';
+import BackHoverLink   from '../Links/BackHoverLink.js';
+import Backlinks       from '../Links/Backlinks.js';
+import BackToTop       from '../MDX/BackToTop.js';
+import ProseWrapper    from '../MDX/ProseWrapper.js';
 
 
 
 
 export default function ProjectTemplate( { source, frontMatter, components, slug, ogImage, backlinks } ) {
   function formattedDate( date ) {
-    return new Date( date ).toLocaleDateString( "en", {
-      year : "numeric",
-      month: "long",
+    return new Date( date ).toLocaleDateString( 'en', {
+      year : 'numeric',
+      month: 'long'
     } );
   }
 
@@ -32,21 +30,19 @@ export default function ProjectTemplate( { source, frontMatter, components, slug
         ogImage = {ogImage}
       />
       <HeaderSection >
-        <div className = "above-title" >
-          <Link href = "/Design-Workshop" >
-            <BackHoverLink href = "/Design-Workshop" >Designs</BackHoverLink >
-          </Link >
+        <div className = 'above-title' >
+          <BackHoverLink href = 'https://micmetz.github.io/Design-Workshop/' >Designs</BackHoverLink >
         </div >
         <TitleContainer >
           <Title1 >{frontMatter.title}</Title1 >
         </TitleContainer >
-        <Metadata className = "metadata" >
+        <Metadata className = 'metadata' >
           {frontMatter.topics && (
-            <span style = {{ textTransform: "capitalize" }} >
+            <span style = {{ textTransform: 'capitalize' }} >
               {frontMatter.topics}
             </span >
           )}
-          <TheoryIcon width = "14" height = "14" />
+          <TheoryIcon width = '14' height = '14' />
           {frontMatter.updated && (
             <span >{formattedDate( frontMatter.updated )}</span >
           )}
