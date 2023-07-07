@@ -1,24 +1,27 @@
-import styled from "styled-components";
-import { Spacer } from "../MISC/Spacer.js";
+import styled     from 'styled-components';
+import { Spacer } from '../MISC/Spacer.js';
+
 
 
 
 export default function BlockquoteCitation( { children, author, title, url } ) {
-		return (
-				<figure >
-						<Blockquote >
-								<p >"{children}"</p >
-								<figcaption >
-										<Cite >
-												<span >— {author}</span >
-            <Spacer size = "3xs" />
-												<a href = {url} >{title}</a >
-										</Cite >
-								</figcaption >
-						</Blockquote >
-				</figure >
-		);
+  return (
+    <figure >
+      <Blockquote >
+        <p >"{children}"</p >
+        <figcaption >
+          <Cite >
+            <span >— {author}</span >
+            <Spacer size = '3xs' />
+            <a href = {url} >{title}</a >
+          </Cite >
+        </figcaption >
+      </Blockquote >
+    </figure >
+  );
 }
+
+
 
 const Cite = styled.cite`
   font-size: var(--font-size-xs);
@@ -34,12 +37,14 @@ const Cite = styled.cite`
 
 const Blockquote = styled.blockquote`
   p {
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-md);
     line-height: 1.25;
   }
+
   & > p {
     margin: var(--space-m) auto var(--space-s) !important;
   }
+
   & ::after {
     content: "";
     display: block;

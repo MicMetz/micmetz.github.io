@@ -1,12 +1,12 @@
-import { AnimatePresence }                         from 'framer-motion';
-import { DefaultSeo }                              from 'next-seo';
-import { useRouter }                               from 'next/router';
-import { GoogleAnalytics }                         from 'nextjs-google-analytics';
-import React, { createContext, useEffect, useRef } from 'react';
-import Footer                                      from '../components/Layouts/Footer.js';
-import { Navigation }                              from '../components/Navigation/Navigation.js';
-import Theme                                       from '../themes/theme.js';
-import * as gtag                                   from '../tools/gtag.js';
+import { AnimatePresence }              from 'framer-motion';
+import { DefaultSeo }                   from 'next-seo';
+import { useRouter }                    from 'next/router';
+import { GoogleAnalytics }              from 'nextjs-google-analytics';
+import React, { createContext, useRef } from 'react';
+import Footer                           from '../components/Layouts/Footer.js';
+import { Navigation }                   from '../components/Navigation/Navigation.js';
+import Theme                            from '../themes/theme.js';
+// import * as gtag                                   from '../tools/gtag.js';
 
 
 
@@ -34,15 +34,17 @@ export default function App( { Component, pageProps } ) {
 
 
   // Log client-side route changes to Google Analytics
-  useEffect( () => {
-    const handleRouteChange = ( url ) => {
-      gtag.pageview( url );
-    };
-    router.events.on( 'routeChangeComplete', handleRouteChange );
-    return () => {
-      router.events.off( 'routeChangeComplete', handleRouteChange );
-    };
-  }, [ router.events ] );
+  /*
+   useEffect( () => {
+   const handleRouteChange = ( url ) => {
+   gtag.pageview( url );
+   };
+   router.events.on( 'routeChangeComplete', handleRouteChange );
+   return () => {
+   router.events.off( 'routeChangeComplete', handleRouteChange );
+   };
+   }, [ router.events ] );
+   */
 
 
   return (
