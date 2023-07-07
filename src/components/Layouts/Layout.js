@@ -1,7 +1,7 @@
 import { StyledLayout } from "../../styles/StyledComponents.js";
-import DynamicPostsGrid from "./DynamicPostsGrid.js";
-import LibraryLayout from "./LibraryLayout.js";
-import MasonryGrid from "./MasonryGrid.js";
+import DynamicPostsGrid from "../Grids/DynamicPostsGrid.js";
+import LibraryLayout    from "./LibraryLayout.js";
+import MasonryGrid   from "../Grids/MasonryGrid.js";
 
 
 

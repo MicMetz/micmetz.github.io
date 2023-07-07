@@ -1,6 +1,6 @@
-import styled    from "styled-components"
-import Button    from "../Layouts/Button.js";
-import Header    from "../Layouts/Header.js";
+import styled from "styled-components"
+import Button from "../Buttons/Button.js";
+import Header from "../Layouts/Header.js";
 import { Layout } from "../Layouts/Layout.js";
 import Paragraph from "../Layouts/Paragraph.js";
 import Text      from "../Layouts/Text.js";

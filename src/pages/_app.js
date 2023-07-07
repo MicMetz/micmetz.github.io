@@ -1,17 +1,27 @@
-import { AnimatePresence } from 'framer-motion';
-import { DefaultSeo } from 'next-seo';
-import { GoogleAnalytics } from 'nextjs-google-analytics';
-import React, { useRef } from 'react';
-import Footer from '../components/Layouts/Footer.js';
-import { Navigation } from '../components/Navigation/Navigation.js';
-import Theme from '../themes/theme.js';
+import { AnimatePresence }                         from 'framer-motion';
+import { DefaultSeo }                              from 'next-seo';
+import { useRouter }                               from 'next/router';
+import { GoogleAnalytics }                         from 'nextjs-google-analytics';
+import React, { createContext, useEffect, useRef } from 'react';
+import Footer                                      from '../components/Layouts/Footer.js';
+import { Navigation }                              from '../components/Navigation/Navigation.js';
+import Theme                                       from '../themes/theme.js';
+import * as gtag                                   from '../tools/gtag.js';
 
 
 
 
-export default function App( { Component, pageProps, router } ) {
+export const PageContext = createContext( {} );
+
+export default function App( { Component, pageProps } ) {
+  const router        = useRouter();
   const navigationRef = useRef( null );
 
+
+  // log page props, but only in browser, not in node
+  if ( typeof window !== 'undefined' ) {
+    console.log( { pageProps } );
+  }
 
   if ( router.pathname === '/ogImage' ) {
     return (
@@ -22,8 +32,21 @@ export default function App( { Component, pageProps, router } ) {
     );
   }
 
+
+  // Log client-side route changes to Google Analytics
+  useEffect( () => {
+    const handleRouteChange = ( url ) => {
+      gtag.pageview( url );
+    };
+    router.events.on( 'routeChangeComplete', handleRouteChange );
+    return () => {
+      router.events.off( 'routeChangeComplete', handleRouteChange );
+    };
+  }, [ router.events ] );
+
+
   return (
-    <>
+    <PageContext.Provider value = {pageProps} >
       <GoogleAnalytics trackPageViews />
       <container >
         <Theme >
@@ -44,7 +67,7 @@ export default function App( { Component, pageProps, router } ) {
           <Footer />
         </Theme >
       </container >
-    </>
+    </PageContext.Provider >
   );
 }
 
