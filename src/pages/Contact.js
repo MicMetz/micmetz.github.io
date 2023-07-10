@@ -1,5 +1,6 @@
-import React from 'react'
-import InDevelopment from "../components/MDX/InDevelopment.js";
+import React         from 'react';
+import InDevelopment from '../components/MDX/InDevelopment.js';
+
 
 
 
@@ -9,5 +10,5 @@ export default function Contact() {
 
       <InDevelopment />
     </>
-  )
+  );
 }

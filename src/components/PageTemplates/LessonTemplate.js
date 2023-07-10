@@ -74,7 +74,7 @@ export default function LessonTemplate( { source, frontMatter, components, slug,
       />
       <LessonHeaderSection >
         <div className = "above-title" >
-          <Link href = "/lessons" >
+          <Link href = "/Design/Lessons" >
             <BackHoverLink href = "/lessons" >Lessons</BackHoverLink >
           </Link >
           <GrowthIcon size = "16" growthStage = {frontMatter.growthStage} />
@@ -87,7 +87,7 @@ export default function LessonTemplate( { source, frontMatter, components, slug,
         <LessonMetadata >
           {frontMatter.topics && <Topics topics = {frontMatter.topics} />}
           <Dates
-            started = {frontMatter.started}
+            created = {frontMatter.created}
             updated = {frontMatter.updated}
           />
         </LessonMetadata >

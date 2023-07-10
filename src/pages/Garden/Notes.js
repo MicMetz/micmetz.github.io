@@ -1,13 +1,13 @@
-import fs from 'fs';
-import matter from 'gray-matter';
-import path from 'path';
-import styled from 'styled-components';
-import NoteCard from '../components/Cards/NoteCard';
-import Header from '../components/Layouts/Header';
-import { Layout } from '../components/Layouts/Layout.js';
-import TitleWithCount from '../components/MISC/TitleWithCount';
-import { Title2 } from '../styles/StyledTypography.js';
-import { noteFilePaths, NOTES_PATH } from '../tools/mdxUtils';
+import fs                            from 'fs';
+import matter                        from 'gray-matter';
+import path                          from 'path';
+import styled                        from 'styled-components';
+import NoteCard                      from '../../components/Cards/NoteCard.js';
+import Header                        from '../../components/Layouts/Header.js';
+import Layout                        from '../../components/Layouts/Layout.js';
+import TitleWithCount                from '../../components/MISC/TitleWithCount.js';
+import { Title2 }                    from '../../styles/StyledTypography.js';
+import { noteFilePaths, NOTES_PATH } from '../../tools/mdxUtils.js';
 
 
 

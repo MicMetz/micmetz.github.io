@@ -11,9 +11,9 @@ import ArticleCard                                                              
 import BookCard                                                                                    from '../components/Cards/BookCard.js';
 import EssayCard                                                                                   from '../components/Cards/EssayCard.js';
 import IndexCard                                                                                   from '../components/Cards/IndexCard.js';
-import Header                                                                                      from '../components/Layouts/Header.js';
-import { Layout }                                                                                  from '../components/Layouts/Layout.js';
-import UnderlineHoverLink                                                                          from '../components/Links/UnderlineHoverLink.js';
+import Header             from '../components/Layouts/Header.js';
+import Layout             from '../components/Layouts/Layout.js';
+import UnderlineHoverLink from '../components/Links/UnderlineHoverLink.js';
 import { Spacer }                                                                                  from '../components/MISC/Spacer.js';
 import { ReadmoreLink }                                                                            from '../styles/LinkStyledComponents.js';
 import { SectionText }                                                                             from '../styles/StyledComponents.js';
@@ -148,7 +148,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             animate = 'visible'
           >
             <section style = {{ gridArea: 'essays' }} >
-              <Link href = '/Essays' >
+              <Link href = '/Garden/Essays' >
                 <SectionHeader >
                   Essays
                   <ArrowRightIcon width = '18' height = '18' />
@@ -180,7 +180,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             </section >
 
             <section style = {{ gridArea: 'notes', marginLeft: '' }} >
-              <Link href = '/Notes' >
+              <Link href = '/Garden/Notes' >
                 <SectionHeader >
                   Notes
                   <ArrowRightIcon width = '18' height = '18' />

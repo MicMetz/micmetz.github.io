@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Inter:wght@300;400;600&display=swap");
+
+
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+.wrapper {
+    display               : grid;
+    grid-template-columns :
+        1fr
+        min(76ch, 100%)
+        1fr;
+}
+
+
+
+.wrapper > * {
+    grid-column : 2;
+}
+
+
+
+.full-bleed {
+    width       : 100%;
+    grid-column : 1 / 4;
+}
+
+
+

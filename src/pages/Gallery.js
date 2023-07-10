@@ -1,8 +1,8 @@
 import useEmblaCarousel                            from 'embla-carousel-react'
 import React, { useCallback, useEffect, useState } from "react";
 import styled                                      from "styled-components";
-import { GalleryData }                             from "../../posts/data/GalleryData.js";
-import { Layout }                                  from "../components/Layouts/Layout.js"
+import { GalleryData } from "../../posts/data/GalleryData.js";
+import Layout          from "../components/Layouts/Layout.js"
 
 
 

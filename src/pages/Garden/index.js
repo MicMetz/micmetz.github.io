@@ -1,13 +1,13 @@
-import fs                                                                                        from "fs";
-import matter                                                                                    from "gray-matter";
-import path                                                                                      from "path";
-import Header                                                                                    from "../components/Layouts/Header.js";
-import { Layout }                                                                                from "../components/Layouts/Layout.js";
-import TitleWithCount                                                                            from "../components/MDX/TitleWithCount.js";
-import { GardenFiltersAndHits }                                                                  from "../components/Search/GardenFH/GardenFiltersAndHits.js";
-import { SectionText }                                                                           from '../styles/StyledComponents.js'
-import { Title2 }                                                                                from "../styles/StyledTypography.js";
-import { essayFilePaths, ESSAYS_PATH, lessonFilePaths, LESSONS_PATH, noteFilePaths, NOTES_PATH } from "../tools/mdxUtils.js";
+import fs                                                                                        from 'fs';
+import matter                                                                                    from 'gray-matter';
+import path                                                                                      from 'path';
+import Header                                                                                    from '../../components/Layouts/Header.js';
+import Layout                                                                                    from '../../components/Layouts/Layout.js';
+import TitleWithCount                                                                            from '../../components/MDX/TitleWithCount.js';
+import { GardenFiltersAndHits }                                                                  from '../../components/Search/GardenFH/GardenFiltersAndHits.js';
+import { SectionText }                                                                           from '../../styles/StyledComponents.js';
+import { Title2 }                                                                                from '../../styles/StyledTypography.js';
+import { essayFilePaths, ESSAYS_PATH, lessonFilePaths, LESSONS_PATH, noteFilePaths, NOTES_PATH } from '../../tools/mdxUtils.js';
 
 
 
@@ -15,9 +15,9 @@ import { essayFilePaths, ESSAYS_PATH, lessonFilePaths, LESSONS_PATH, noteFilePat
 export default function GardenPage( { allPosts } ) {
   return (
     <>
-      <Header title = "My Digital Garden of Michael Metzger" />
+      <Header title = 'My Digital Garden of Michael Metzger' />
       <Layout >
-        <header style = {{ marginBottom: "var(--space-xl)" }} >
+        <header style = {{ marginBottom: 'var(--space-xl)' }} >
           <TitleWithCount posts = {allPosts} >My Digital Garden</TitleWithCount >
           <Title2 >
             <SectionText >
@@ -39,8 +39,8 @@ export function getStaticProps() {
   let essays         = essayFilePaths.map( ( filePath ) => {
     const source                                                                     = fs.readFileSync( path.join( ESSAYS_PATH, filePath ) );
     const { content, data }                                                          = matter( source );
-    const slug                                                                       = filePath.replace( /\.mdx$/, "" );
-    const { title, description, growthStage, started, topics, type, cover, updated } = data;
+    const slug                                                                       = filePath.replace( /\.mdx$/, '' );
+    const { title, description, growthStage, created, topics, type, cover, updated } = data;
 
     return {
       content,
@@ -48,12 +48,12 @@ export function getStaticProps() {
       cover,
       description,
       growthStage,
-      started,
+      created,
       topics,
       type,
       updated,
       slug,
-      filePath,
+      filePath
     };
   } );
   // Sort essays by date
@@ -67,20 +67,20 @@ export function getStaticProps() {
   let notes         = noteFilePaths.map( ( filePath ) => {
     const source                                                              = fs.readFileSync( path.join( NOTES_PATH, filePath ) );
     const { content, data }                                                   = matter( source );
-    const slug                                                                = filePath.replace( /\.mdx$/, "" );
-    const { title, description, growthStage, started, topics, type, updated } = data;
+    const slug                                                                = filePath.replace( /\.mdx$/, '' );
+    const { title, description, growthStage, created, topics, type, updated } = data;
 
     return {
       content,
       title,
       description,
       growthStage,
-      started,
+      created,
       topics,
       type,
       updated,
       slug,
-      filePath,
+      filePath
     };
   } );
   // Sort notes by date
@@ -93,20 +93,20 @@ export function getStaticProps() {
   let lessons         = lessonFilePaths.map( ( filePath ) => {
     const source                                                              = fs.readFileSync( path.join( LESSONS_PATH, filePath ) );
     const { content, data }                                                   = matter( source );
-    const slug                                                                = filePath.replace( /\.mdx$/, "" );
-    const { title, description, growthStage, started, topics, type, updated } = data;
+    const slug                                                                = filePath.replace( /\.mdx$/, '' );
+    const { title, description, growthStage, created, topics, type, updated } = data;
 
     return {
       content,
       title,
       description,
       growthStage,
-      started,
+      created,
       topics,
       type,
       updated,
       slug,
-      filePath,
+      filePath
     };
   } );
   // Sort lessons by date

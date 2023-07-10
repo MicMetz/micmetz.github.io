@@ -1,5 +1,6 @@
 import { Popover }                                                       from '@headlessui/react';
 import { AnimatePresence }                                               from 'framer-motion';
+import Link                                                              from 'next/link';
 import { useRouter }                                                     from 'next/router';
 import { DropdownLink, HoverLink }                                       from '../../styles/LinkStyledComponents.js';
 import UnderlineHoverLink                                                from '../Links/UnderlineHoverLink';
@@ -12,9 +13,9 @@ function GardenPopoverLinks() {
   return (
     <Popover style = {{ position: 'relative' }} >
       <HoverLink >
-        <a href = '/Garden' >
+        <Link href = '/Garden/index' >
           <span >Garden</span >
-        </a >
+        </Link >
       </HoverLink >
       <StyledPopoverButton >
         <StyledChevronDownIcon width = '24' height = '24' />
@@ -34,19 +35,14 @@ function GardenPopoverLinks() {
           key = 'dropdown'
         >
           <DropdownLink >
-            <a href = '/Garden/Essays' >
+            <Link href = '/Garden/Essays' >
               <span >Essays</span >
-            </a >
+            </Link >
           </DropdownLink >
           <DropdownLink >
-            <a href = '/Garden/Notes' >
+            <Link href = '/Garden/Notes' >
               <span > Notes</span >
-            </a >
-          </DropdownLink >
-          <DropdownLink >
-            <a href = '/Garden/Lessons' >
-              <span >Lessons</span >
-            </a >
+            </Link >
           </DropdownLink >
         </Dropdown >
       </Popover.Panel >
@@ -60,9 +56,9 @@ function LibraryPopoverLinks() {
   return (
     <Popover style = {{ position: 'relative' }} >
       <HoverLink >
-        <a href = '/Library' >
+        <Link href = '/Library' >
           <span >Library</span >
-        </a >
+        </Link >
       </HoverLink >
       <StyledPopoverButton >
         <StyledChevronDownIcon width = '24' height = '24' />
@@ -82,14 +78,14 @@ function LibraryPopoverLinks() {
           key = 'dropdown'
         >
           <DropdownLink >
-            <a href = '/Library/Books' >
+            <Link href = '/Library/Books' >
               <span >Books</span >
-            </a >
+            </Link >
           </DropdownLink >
           <DropdownLink >
-            <a href = '/Library/Articles' >
+            <Link href = '/Library/Articles' >
               <span >Articles</span >
-            </a >
+            </Link >
           </DropdownLink >
         </Dropdown >
       </Popover.Panel >
@@ -114,7 +110,7 @@ export default function MainNavLinks() {
       <div className = 'outside-dropdown' >
         <UnderlineHoverLink href = '/' selected = {router.pathname === '/'} >Home</UnderlineHoverLink >
         <UnderlineHoverLink href = '/Gallery' selected = {router.pathname === '/Gallery'} >Gallery</UnderlineHoverLink >
-        <UnderlineHoverLink href = '/Design-Workshop' >Design</UnderlineHoverLink >
+        <UnderlineHoverLink href = '/Design' selected = {router.pathname === '/Design'} >Design</UnderlineHoverLink >
         <UnderlineHoverLink href = '/About' selected = {router.pathname === '/About'} >About</UnderlineHoverLink >
         <UnderlineHoverLink href = '/Contact' selected = {router.pathname === '/Contact'} >Contact</UnderlineHoverLink >
       </div >

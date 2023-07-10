@@ -47,7 +47,7 @@ export default function AtlasTemplate( { source, frontMatter, components, slug, 
             <div />
           )}
           <Dates
-            started = {frontMatter.started}
+            created = {frontMatter.created}
             updated = {frontMatter.updated}
           />
         </AtlasStyledMetadata >

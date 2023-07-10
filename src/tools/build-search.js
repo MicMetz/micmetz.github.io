@@ -65,7 +65,7 @@ function transformPostsToSearchObjects( posts ) {
       slug       : post.slug,
       title      : post.data.title,
       description: post.data.description,
-      started    : post.data.started,
+      created    : post.data.created,
       updated    : post.data.updated,
       cover      : post.data.cover,
       topics     : post.data.topics,

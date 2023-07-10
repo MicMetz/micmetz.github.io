@@ -48,7 +48,7 @@ export default function ResponseTemplate( { source, frontMatter, components, slu
             <div />
           )}
           <Dates
-            started = {frontMatter.started}
+            created = {frontMatter.created}
             updated = {frontMatter.updated}
           />
         </Metadata >

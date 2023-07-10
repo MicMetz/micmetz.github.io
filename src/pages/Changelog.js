@@ -1,5 +1,5 @@
 import React         from 'react'
-import { Layout }    from "../components/Layouts/Layout.js";
+import Layout        from "../components/Layouts/Layout.js";
 import InDevelopment from "../components/MDX/InDevelopment.js";
 import { Title1 }    from "../styles/StyledTypography.js";
 

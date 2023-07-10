@@ -8,13 +8,14 @@ import { Navigation }                   from '../components/Navigation/Navigatio
 import Theme                            from '../themes/theme.js';
 // import * as gtag                                   from '../tools/gtag.js';
 
+import '../styles/tailwind.css';
+
 
 
 
 export const PageContext = createContext( {} );
 
-export default function App( { Component, pageProps } ) {
-  const router        = useRouter();
+export default function App( { Component, pageProps, router } ) {
   const navigationRef = useRef( null );
 
 
@@ -26,12 +27,12 @@ export default function App( { Component, pageProps } ) {
   if ( router.pathname === '/ogImage' ) {
     return (
       <>
-        <Theme />
-        <Component {...pageProps} />
+        <Theme >
+          <Component Component key = {router.route} {...pageProps} />
+        </Theme >
       </>
     );
   }
-
 
   // Log client-side route changes to Google Analytics
   /*
@@ -48,9 +49,8 @@ export default function App( { Component, pageProps } ) {
 
 
   return (
-    <PageContext.Provider value = {pageProps} >
-      <GoogleAnalytics trackPageViews />
-      <container >
+    <>
+    {/* <PageContext.Provider value = {pageProps} > */}
         <Theme >
           <DefaultSeo
             title = "Michael Metzger's digital garden"
@@ -58,18 +58,23 @@ export default function App( { Component, pageProps } ) {
             openGraph = {{
               type     : 'website',
               locale   : 'en',
-              url      : 'https://www.micmetz.com/',
+              url      : 'https://micmetz.github.io',
               site_name: 'Michael Metzger'
             }}
           />
+          <GoogleAnalytics trackPageViews />
+
+          <container >
           <AnimatePresence mode = 'wait' initial = {true} >
             <Navigation ref = {navigationRef} />
             <Component Component key = {router.route} {...pageProps} />
           </AnimatePresence >
+          </container >
+
           <Footer />
         </Theme >
-      </container >
-    </PageContext.Provider >
+    {/* </PageContext.Provider > */}
+    </>
   );
 }
 
