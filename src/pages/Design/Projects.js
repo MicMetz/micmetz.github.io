@@ -1,14 +1,14 @@
 import fs                                  from "fs";
 import matter                              from "gray-matter";
 import path                                from "path";
-import React                               from 'react';
-import ProjectCard                         from "../../components/Cards/ProjectCard.js";
-import Header                              from "../../components/Layouts/Header.js";
-import { Layout }                          from "../../components/Layouts/Layout.js";
-import InDevelopment                       from "../../components/MDX/InDevelopment.js";
-import { SectionTitle }                    from "../../styles/StyledComponents.js";
-import { ProjectGrid }                     from "../../styles/StyledGridComponents.js";
-import { Subheader }                                                              from "../../styles/StyledTypography.js";
+import React                                     from 'react';
+import ProjectCard                               from "../../components/Cards/ProjectCard.js";
+import Header                                    from "../../components/Layouts/Header.js";
+import { Layout }                                from "../../components/Layouts/Layout.js";
+import InDevelopment                             from "../../components/MDX/InDevelopment.js";
+import { SectionTitle }                          from "../../styles/StyledComponents.js";
+import { ProjectGrid }                           from "../../styles/StyledGridComponents.js";
+import { Subheader }                             from "../../styles/StyledTypography.js";
 import { experimentFilePaths, EXPERIMENTS_PATH } from "../../tools/mdxUtils.js";
 
 
