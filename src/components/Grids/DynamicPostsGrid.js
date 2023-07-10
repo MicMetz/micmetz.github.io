@@ -34,7 +34,7 @@ export default function DynamicPostsGrid( { postsToShow } ) {
                 date = {updated}
               />
             );
-          } else if ( type === 'project' ) {
+          } else if ( type === 'experiment' ) {
             return (
               <ProjectCard
                 key = {i}
@@ -44,7 +44,7 @@ export default function DynamicPostsGrid( { postsToShow } ) {
                 date = {updated}
               />
             );
-          } 
+          }
         }
       )}
     </MasonryGrid >

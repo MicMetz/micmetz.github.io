@@ -31,9 +31,17 @@ export default function FilterMenu( { filter, setFilter } ) {
         className = {`${
           filter === 'lesson' && 'bg-offWhite text-darkBlue'
         } flex justify-end px-6 py-2 rounded-sm text-mediumBlue transition-all duration-300`}
-        onClick = {() => setFilter( 'plaything' )}
+        onClick = {() => setFilter( 'lesson' )}
       >
         Lessons
+      </button >
+      <button
+        className = {`${
+          filter === 'experiment' && 'bg-offWhite text-darkBlue'
+        } flex justify-end px-6 py-2 rounded-sm text-mediumBlue transition-all duration-300`}
+        onClick = {() => setFilter( 'experiment' )}
+      >
+        Experiments
       </button >
     </motion.div >
   );

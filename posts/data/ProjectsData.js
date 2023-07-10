@@ -65,7 +65,7 @@ export const ProjectsData = [
 				title       : 'SpyderHound',
 				technologies: [ 'Python', 'Tkinter', 'PyTorch', 'Scikit-Learn', 'Spyder' ],
 				description : 'A machine learning tool for data analysis of scraped NLP data.',
-				demo        : /* "../projects/spyderhound" */'/',
+				demo        : /* "../experiments/spyderhound" */'/',
 				code        : 'https://github.com/MicMetz/SpyderHound',
 				tags        : [ 'Desktop Application', 'Experiment' ],
 				image       : '/software/SpyderhoundSplash.png',

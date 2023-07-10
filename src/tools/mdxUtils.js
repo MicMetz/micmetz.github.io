@@ -13,9 +13,9 @@ const noteFilePaths = fs
 .readdirSync( NOTES_PATH )
 .filter( ( path ) => /\.mdx?$/.test( path ) );
 
-const PROJECTS_PATH    = path.join( process.cwd(), 'posts', 'projects' );
-const projectFilePaths = fs
-.readdirSync( PROJECTS_PATH )
+const EXPERIMENTS_PATH    = path.join( process.cwd(), 'posts', 'experiments' );
+const experimentFilePaths = fs
+.readdirSync( EXPERIMENTS_PATH )
 .filter( ( path ) => /\.mdx?$/.test( path ) );
 
 const LESSONS_PATH    = path.join( process.cwd(), 'posts', 'lessons' );
@@ -33,14 +33,14 @@ const patternFilePath = fs
 module.exports = {
   essayFilePaths,
   noteFilePaths,
-  projectFilePaths,
+  experimentFilePaths,
   lessonFilePaths,
   patternFilePath,
 
   PATTERNS_PATH,
   ESSAYS_PATH,
   NOTES_PATH,
-  PROJECTS_PATH,
+  EXPERIMENTS_PATH,
   LESSONS_PATH
 };
 

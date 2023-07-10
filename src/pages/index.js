@@ -1,25 +1,25 @@
-import { ArrowRightIcon }                                                                          from '@heroicons/react/20/solid';
-import { motion }                                                                                  from 'framer-motion';
-import fs                                                                                          from 'fs';
-import matter                                                                                      from 'gray-matter';
-import Link                                                                                        from 'next/link';
-import path                                                                                        from 'path';
-import React                                                                                       from 'react';
-import { ArticleList }                                                                             from '../../posts/data/Articles.js';
-import { CurrentReadings }                                                                         from '../../posts/data/CurrentReadings.js';
-import ArticleCard                                                                                 from '../components/Cards/ArticleCard.js';
-import BookCard                                                                                    from '../components/Cards/BookCard.js';
-import EssayCard                                                                                   from '../components/Cards/EssayCard.js';
-import IndexCard                                                                                   from '../components/Cards/IndexCard.js';
-import Header             from '../components/Layouts/Header.js';
-import Layout             from '../components/Layouts/Layout.js';
-import UnderlineHoverLink from '../components/Links/UnderlineHoverLink.js';
-import { Spacer }                                                                                  from '../components/MISC/Spacer.js';
-import { ReadmoreLink }                                                                            from '../styles/LinkStyledComponents.js';
-import { SectionText }                                                                             from '../styles/StyledComponents.js';
-import { GardenSection }                                                                           from '../styles/StyledSectionComponents.js';
-import { SectionHeader, Subheader, Title1, Title2 }                                                from '../styles/StyledTypography.js';
-import { essayFilePaths, ESSAYS_PATH, noteFilePaths, NOTES_PATH, projectFilePaths, PROJECTS_PATH } from '../tools/mdxUtils.js';
+import { ArrowRightIcon }                                                                                from '@heroicons/react/20/solid';
+import { motion }                                                                                        from 'framer-motion';
+import fs                                                                                                from 'fs';
+import matter                                                                                            from 'gray-matter';
+import Link                                                                                              from 'next/link';
+import path                                                                                              from 'path';
+import React                                                                                             from 'react';
+import { ArticleList }                                                                                   from '../../posts/data/Articles.js';
+import { CurrentReadings }                                                                               from '../../posts/data/CurrentReadings.js';
+import ArticleCard                                                                                       from '../components/Cards/ArticleCard.js';
+import BookCard                                                                                          from '../components/Cards/BookCard.js';
+import EssayCard                                                                                         from '../components/Cards/EssayCard.js';
+import IndexCard                                                                                         from '../components/Cards/IndexCard.js';
+import Header                                                                                            from '../components/Layouts/Header.js';
+import Layout                                                                                            from '../components/Layouts/Layout.js';
+import UnderlineHoverLink                                                                                from '../components/Links/UnderlineHoverLink.js';
+import { Spacer }                                                                                        from '../components/MISC/Spacer.js';
+import { ReadmoreLink }                                                                                  from '../styles/LinkStyledComponents.js';
+import { SectionText }                                                                                   from '../styles/StyledComponents.js';
+import { GardenSection }                                                                                 from '../styles/StyledSectionComponents.js';
+import { SectionHeader, Subheader, Title1, Title2 }                                                      from '../styles/StyledTypography.js';
+import { essayFilePaths, ESSAYS_PATH, experimentFilePaths, EXPERIMENTS_PATH, noteFilePaths, NOTES_PATH } from '../tools/mdxUtils.js';
 
 
 
@@ -266,7 +266,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
          </SectionHeader >
          </Link >
          <Subheader >
-         Software and digital storytelling projects.
+         Software and digital storytelling experiments.
          </Subheader >
          <div
          style = {{
@@ -274,7 +274,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))'
          }}
          >
-         {projects.map( ( project ) => (
+         {experiments.map( ( project ) => (
          <ProjectCard
          key = {project.slug}
          slug = {project.slug}
@@ -397,8 +397,8 @@ export function getStaticProps() {
     return new Date( b.data.updated ) - new Date( a.data.updated );
   } );
 
-  let projects = projectFilePaths.map( ( filePath ) => {
-    const source            = fs.readFileSync( path.join( PROJECTS_PATH, filePath ) );
+  let projects = experimentFilePaths.map( ( filePath ) => {
+    const source            = fs.readFileSync( path.join( EXPERIMENTS_PATH, filePath ) );
     const { content, data } = matter( source );
     const slug              = filePath.replace( /\.mdx?$/, '' );
 
@@ -407,7 +407,7 @@ export function getStaticProps() {
     };
   } );
 
-  // Sort projects by date
+  // Sort experiments by date
   const sortedProjects = projects.slice( 0, 4 ).sort( ( a, b ) => {
     return new Date( b.data.updated ) - new Date( a.data.updated );
   } );

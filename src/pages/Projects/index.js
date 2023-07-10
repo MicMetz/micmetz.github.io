@@ -8,13 +8,13 @@ import { Layout }                          from "../../components/Layouts/Layout
 import InDevelopment                       from "../../components/MDX/InDevelopment.js";
 import { SectionTitle }                    from "../../styles/StyledComponents.js";
 import { ProjectGrid }                     from "../../styles/StyledGridComponents.js";
-import { Subheader }                       from "../../styles/StyledTypography.js";
-import { projectFilePaths, PROJECTS_PATH } from "../../tools/mdxUtils.js";
+import { Subheader }                                                              from "../../styles/StyledTypography.js";
+import { experimentFilePaths, EXPERIMENTS_PATH } from "../../tools/mdxUtils.js";
 
 
 
 
-export default function ProjectsPage( { projects } ) {
+export default function ProjectsPage( { experiment } ) {
 
   return (
     <>
@@ -37,7 +37,7 @@ export default function ProjectsPage( { projects } ) {
           </Subheader >
         </header >
         <ProjectGrid >
-          {projects.map( ( project ) => (
+          {experiment.map( ( project ) => (
             <ProjectCard
               key = {project.slug}
               slug = {project.slug}
@@ -58,8 +58,8 @@ export default function ProjectsPage( { projects } ) {
 
 export function getStaticProps() {
   // Get all project posts
-  let projects = projectFilePaths.map( ( filePath ) => {
-    const source            = fs.readFileSync( path.join( PROJECTS_PATH, filePath ) );
+  let experiment = experimentFilePaths.map( ( filePath ) => {
+    const source            = fs.readFileSync( path.join( EXPERIMENTS_PATH, filePath ) );
     const { content, data } = matter( source );
     const slug              = filePath.replace( /\.mdx$/, "" );
 
@@ -71,11 +71,11 @@ export function getStaticProps() {
     };
   } );
 
-  // Sort projects by date
-  const sortedProjects = projects.sort( ( a, b ) => {
-    return new Date( b.data.updated ) - new Date( a.data.updated );
+  // Sort experiments by date
+  const sortedExperiments = experiment.sort( ( a, b ) => {
+    return new Date( b.updated ) - new Date( a.updated );
   } );
-  projects             = sortedProjects;
+  experiment             = sortedExperiments;
 
-  return { props: { projects } };
+  return { props: { experiment } };
 }
