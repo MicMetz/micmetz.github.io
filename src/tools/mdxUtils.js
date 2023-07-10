@@ -1,6 +1,5 @@
-const fs   = require( 'fs' );
-const path = require( 'path' );
-
+const fs   = require( "fs" );
+const path = require( "path" );
 
 
 const ESSAYS_PATH    = path.join( process.cwd(), 'posts', 'essays' );

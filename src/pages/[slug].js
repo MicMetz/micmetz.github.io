@@ -449,11 +449,11 @@ export const getStaticPaths = async() => {
 
   const notePaths    = getSlugParams( noteFilePaths );
   const essayPaths   = getSlugParams( essayFilePaths );
-  const projectPaths = getSlugParams( projectFilePaths );
+  const experimentPaths = getSlugParams( experimentFilePaths );
   const lessonPaths  = getSlugParams( lessonFilePaths );
 
   // Combine all paths into one array
-  const paths = notePaths.concat( essayPaths, projectPaths, notePaths );
+  const paths = notePaths.concat( essayPaths, notePaths, experimentPaths, lessonPaths );
 
   return {
     paths, fallback: false
