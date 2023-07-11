@@ -42,7 +42,7 @@ export default function ProjectsPage( { experiment } ) {
             slug = {project.slug}
             title = {project.title}
             date = {project.updated}
-            cover = {project.cover ? project.data.cover : null}
+            cover = {project.cover ?? null}
             topics = {project.topics}
           />
         ) )}

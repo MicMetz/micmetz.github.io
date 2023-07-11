@@ -57,10 +57,5 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/typography"),
-    // https://github.com/tailwindlabs/tailwindcss-typography
   ],
 };
-
-// https://tailwindcss.com/docs/theme
-
-//https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js#L7

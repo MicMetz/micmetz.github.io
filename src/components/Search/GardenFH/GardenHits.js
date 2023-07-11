@@ -22,7 +22,7 @@ function GardenHits( { hits, allPostData } ) {
 														key = {i}
 														id = {post.slug}
 														slug = {post.slug}
-														cover = {post.cover}
+              cover = {post.cover ?? null}
 														title = {post.title}
 														growthStage = {post.growthStage}
 														date = {post.updated}

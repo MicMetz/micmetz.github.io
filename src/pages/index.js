@@ -219,7 +219,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
                     small
                     subtitle = {book.header.subtitle}
                     key = {i}
-                    cover = {book.cover}
+                    cover = {book.cover ?? null}
                     title = {book.header.title}
                     author = {book.author}
                     link = {book.link}

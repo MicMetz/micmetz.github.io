@@ -18,7 +18,7 @@ export default function DynamicPostsGrid( { postsToShow } ) {
               <EssayCard
                 key = {i}
                 slug = {slug}
-                cover = {cover}
+                cover = {cover ?? null}
                 title = {title}
                 growthStage = {growthStage}
                 date = {updated}
