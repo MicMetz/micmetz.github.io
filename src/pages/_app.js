@@ -32,18 +32,6 @@ export default function App( { Component, pageProps, router } ) {
     );
   }
 
-  // Log client-side route changes to Google Analytics
-  /*
-   useEffect( () => {
-   const handleRouteChange = ( url ) => {
-   gtag.pageview( url );
-   };
-   router.events.on( 'routeChangeComplete', handleRouteChange );
-   return () => {
-   router.events.off( 'routeChangeComplete', handleRouteChange );
-   };
-   }, [ router.events ] );
-   */
 
 
   return (
