@@ -1,12 +1,12 @@
-import { motion }                                                        from 'framer-motion';
-import fs                                                                from 'fs';
-import matter                                                            from 'gray-matter';
-import path                                                              from 'path';
-import { useState } from 'react';
-import Card       from '../../components/Cards/DefaultCard.js';
-import FilterMenu from '../../components/MISC/FilterMenu.js';
-import Layout     from '../../components/Layouts/Layout.js';
-import { lessonFilePaths, LESSONS_PATH, patternFilePath, PATTERNS_PATH } from '../../tools/mdxUtils.js';
+import { motion }                                                                                               from 'framer-motion';
+import fs                                                                                                       from 'fs';
+import matter                                                                                                   from 'gray-matter';
+import path                                                                                                     from 'path';
+import { useState }                                                                                             from 'react';
+import Card                                                                                                     from '../../components/Cards/DefaultCard.js';
+import Layout                                                                                                   from '../../components/Layouts/Layout.js';
+import FilterMenu                                                                                               from '../../components/MISC/FilterMenu.js';
+import { experimentFilePaths, EXPERIMENTS_PATH, lessonFilePaths, LESSONS_PATH, patternFilePath, PATTERNS_PATH } from '../../tools/mdxUtils.js';
 
 
 
@@ -119,6 +119,24 @@ export function getStaticProps() {
   lessons                 = sortedLessonPosts;
 
 
-  const posts = [ ...patterns, ...lessons ];
+  let experiments = experimentFilePaths.map( ( filePath ) => {
+      const source            = fs.readFileSync( path.join( EXPERIMENTS_PATH, filePath ) );
+      const { content, data } = matter( source );
+      const slug              = filePath.replace( /\.mdx?$/, '' );
+
+      return {
+        content, data, slug, filePath
+      };
+    }
+  );
+
+  // Sort experiments by date
+  const sortedExperimentPosts = experiments.sort( ( a, b ) => {
+    return new Date( b.updated ) - new Date( a.updated );
+  } );
+  experiments                 = sortedExperimentPosts;
+
+
+  const posts = [ ...patterns, ...lessons, ...experiments ];
   return { props: { posts } };
 }

@@ -1,13 +1,13 @@
-import fs                                from "fs";
-import matter                            from "gray-matter";
-import path                              from "path";
+import fs                                from 'fs';
+import matter                            from 'gray-matter';
+import path                              from 'path';
 import React                             from 'react';
-import NoteCard                          from "../../components/Cards/NoteCard.js";
-import Header                            from "../../components/Layouts/Header.js";
-import Layout                            from "../../components/Layouts/Layout.js";
-import TitleWithCount                    from "../../components/MDX/TitleWithCount.js";
-import { StyledNotesGrid }               from "../../styles/StyledGridComponents.js";
-import { lessonFilePaths, LESSONS_PATH } from "../../tools/mdxUtils.js";
+import NoteCard                          from '../../components/Cards/NoteCard.js';
+import Header                            from '../../components/Layouts/Header.js';
+import Layout                            from '../../components/Layouts/Layout.js';
+import TitleWithCount                    from '../../components/MDX/TitleWithCount.js';
+import { StyledNotesGrid }               from '../../styles/StyledGridComponents.js';
+import { lessonFilePaths, LESSONS_PATH } from '../../tools/mdxUtils.js';
 
 
 
@@ -15,8 +15,8 @@ import { lessonFilePaths, LESSONS_PATH } from "../../tools/mdxUtils.js";
 export default function LessonsPage( { lessons } ) {
   return (
     <Layout >
-      <Header title = "Lessons of Michael Metzger" />
-      <header style = {{ marginBottom: "var(--space-xl)" }} >
+      <Header title = 'Lessons of Michael Metzger' />
+      <header style = {{ marginBottom: 'var(--space-xl)' }} >
         <TitleWithCount posts = {lessons} >Lessons</TitleWithCount >
       </header >
       <StyledNotesGrid >
@@ -41,15 +41,15 @@ export default function LessonsPage( { lessons } ) {
 
 export function getStaticProps() {
   let lessons = lessonFilePaths.map( ( filePath ) => {
-    const source                                                              = fs.readFileSync( path.join( LESSONS_PATH, filePath ) );
-    const { content, data }                                                   = matter( source );
-    const slug                                                                = filePath.replace( /\.mdx$/, "" );
+    const source            = fs.readFileSync( path.join( LESSONS_PATH, filePath ) );
+    const { content, data } = matter( source );
+    const slug              = filePath.replace( /\.mdx$/, '' );
 
     return {
       content,
       data,
       slug,
-      filePath,
+      filePath
     };
   } );
 
