@@ -2,11 +2,11 @@ import fs                                  from 'fs';
 import matter                              from 'gray-matter';
 import path                                from 'path';
 import styled                              from 'styled-components';
-import PatternCard                         from '../../components/Cards/PatternCard.js';
 import Header                              from '../../components/Layouts/Header.js';
 import Layout                              from '../../components/Layouts/Layout.js';
 import TitleWithCount                      from '../../components/MDX/TitleWithCount.js';
 import { Title2 }                          from '../../styles/StyledTypography.js';
+import PatternCard                         from '../../components/Cards/PatternCard.js';
 import { patternFilePaths, PATTERNS_PATH } from '../../tools/mdxUtils.js';
 
 

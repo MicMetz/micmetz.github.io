@@ -44,7 +44,7 @@ module.exports = {
         lavender: "#dadef1",
         darkBlue: "#230B5A",
         mediumBlue: "#72668D",
-        sky: "#9590B7",
+        lightBlue: "#9590B7",
         cream: "#f3f2ef",
         darkCream: "#EBE9E8",
         offWhite: "#FAFAF8",
@@ -57,5 +57,10 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/typography"),
+    // https://github.com/tailwindlabs/tailwindcss-typography
   ],
 };
+
+// https://tailwindcss.com/docs/theme
+
+//https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js#L7

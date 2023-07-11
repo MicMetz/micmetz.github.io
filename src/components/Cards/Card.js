@@ -5,8 +5,6 @@ import Link       from 'next/link';
 
 
 export default function Card( { slug, cover, title, date, topics, data, type, id } ) {
-
-
   return (
     <Link key = {id} as = {`/${slug}`} href = {`/${slug}`} >
       <a >

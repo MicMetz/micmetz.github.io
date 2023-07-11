@@ -1,7 +1,8 @@
-import React from 'react';
-import { FooterContent, FooterLinkColumn, FooterLinkItem, FooterLinkList, FooterSitemapList, FooterSocialMediaIcons, StyledFooter } from "../../styles/FooterStyles.js";
-import { GithubIcon, LinkedInIcon, TwitterIcon, } from "../Icons/SocialMediaIcons.js";
-import UnderlineHoverLink from "../Links/UnderlineHoverLink.js";
+import React                                                                                                                        from 'react';
+import { FooterContent, FooterLinkColumn, FooterLinkItem, FooterLinkList, FooterSitemapList, FooterSocialMediaIcons, StyledFooter } from '../../styles/FooterStyles.js';
+import { GithubIcon, LinkedInIcon, TwitterIcon }                                                                                    from '../Icons/SocialMediaIcons.js';
+import UnderlineHoverLink                                                                                                           from '../Links/UnderlineHoverLink.js';
+
 
 
 
@@ -11,24 +12,24 @@ export default function Footer() {
       <FooterContent >
         <FooterLinkList >
           <FooterLinkColumn >
-            <FooterLinkItem href = "mailto:mime9599@colorado.edu">
+            <FooterLinkItem href = 'mailto:mime9599@colorado.edu' >
               mime9599@colorado.edu
             </FooterLinkItem >
 
             <FooterSocialMediaIcons >
-              <FooterLinkItem href = "https://github.com/MicMetz">
+              <FooterLinkItem href = 'https://github.com/MicMetz' >
                 {/* <a rel = "me" href = "https://github.com/MicMetz"> */}
-                  <GithubIcon />
+                <GithubIcon />
                 {/* </a > */}
               </FooterLinkItem >
-              <FooterLinkItem href = "https://www.linkedin.com/in/michael-metzjer/">
+              <FooterLinkItem href = 'https://www.linkedin.com/in/michael-metzjer/' >
                 {/* <a rel = "me" href = "https://www.linkedin.com/in/michael-metzjer/"> */}
-                  <LinkedInIcon />
+                <LinkedInIcon />
                 {/* </a > */}
               </FooterLinkItem >
-              <FooterLinkItem href = "https://bsky.app/">
+              <FooterLinkItem href = 'https://bsky.app/' >
                 {/* <a rel = "me" href = "https://bsky.app/"> */}
-                  <TwitterIcon />
+                <TwitterIcon />
                 {/* </a > */}
               </FooterLinkItem >
             </FooterSocialMediaIcons >
@@ -37,22 +38,26 @@ export default function Footer() {
 
         <FooterSitemapList >
           {[
-            { text: "My Digital Garden", slug: "/Garden" },
-            { text: "About", slug: "/About" },
-            { text: "Now", slug: "/Now" },
-            { text: "Essays", slug: "/Essays" },
-            { text: "Notes", slug: "/Notes" },
-            { text: "Topics", slug: "/topics" },
-            { text: "Library", slug: "/library" },
-            { text: "Books", slug: "/library/Books" },
-            { text: "Articles", slug: "/library/Articles" },
-            { text: "Design", slug: "/Design" },
-            { text: "Contact", slug: "/Contact" },
+            { text: 'My Digital Garden', slug: '/Garden' },
+            { text: 'About', slug: '/About' },
+            { text: 'Now', slug: '/Now' },
+            { text: 'Essays', slug: '/Essays' },
+            { text: 'Notes', slug: '/Notes' },
+            { text: 'Topics', slug: '/topics' },
+            { text: 'Library', slug: '/Library' },
+            { text: 'Books', slug: '/Library/Books' },
+            { text: 'Articles', slug: '/Library/Articles' },
+            { text: 'Design', slug: '/Design' },
+            { text: 'Patterns', slug: '/Design/Patterns' },
+            { text: 'Lessons', slug: '/Design/Lessons' },
+            { text: 'Projects', slug: '/Design/Projects' },
+            { text: 'Resources', slug: '/Design/Resources' },
+            { text: 'Contact', slug: '/Contact' }
             // { text: "Changelog", slug: "/Changelog" },
           ].map( ( link, i ) => {
             return (
-              <li key = {i}>
-                <UnderlineHoverLink href = {link.slug}>
+              <li key = {i} >
+                <UnderlineHoverLink href = {link.slug} >
                   {link.text}
                 </UnderlineHoverLink >
               </li >
