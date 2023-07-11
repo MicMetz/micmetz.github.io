@@ -1,6 +1,7 @@
 import EssayCard from "../../Cards/EssayCard.js";
 import NoteCard from "../../Cards/NoteCard.js";
 import { connectInfiniteHits } from "react-instantsearch-dom";
+import PatternCard from '../../Cards/PatternCard.js';
 import MasonryGrid             from "../../Grids/MasonryGrid.js";
 
 
@@ -40,7 +41,7 @@ function GardenHits( { hits, allPostData } ) {
 										);
 								} else if ( post.type === "pattern" ) {
 										return (
-												<IdeaCard
+												<PatternCard
 														key = {i}
 														id = {post.slug}
 														slug = {post.slug}

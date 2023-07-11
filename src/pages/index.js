@@ -1,25 +1,25 @@
-import { ArrowRightIcon }                                                                                from '@heroicons/react/20/solid';
-import { motion }                                                                                        from 'framer-motion';
-import fs                                                                                                from 'fs';
-import matter                                                                                            from 'gray-matter';
-import Link                                                                                              from 'next/link';
-import path                                                                                              from 'path';
-import React                                                                                             from 'react';
-import { ArticleList }                                                                                   from '../../posts/data/Articles.js';
-import { CurrentReadings }                                                                               from '../../posts/data/CurrentReadings.js';
-import ArticleCard                                                                                       from '../components/Cards/ArticleCard.js';
-import BookCard                                                                                          from '../components/Cards/BookCard.js';
-import EssayCard                                                                                         from '../components/Cards/EssayCard.js';
-import IndexCard                                                                                         from '../components/Cards/IndexCard.js';
-import Header                                                                                            from '../components/Layouts/Header.js';
-import Layout                                                                                            from '../components/Layouts/Layout.js';
-import UnderlineHoverLink                                                                                from '../components/Links/UnderlineHoverLink.js';
-import { Spacer }                                                                                        from '../components/MISC/Spacer.js';
-import { ReadmoreLink }                                                                                  from '../styles/LinkStyledComponents.js';
-import { SectionText }                                                                                   from '../styles/StyledComponents.js';
-import { GardenSection }                                                                                 from '../styles/StyledSectionComponents.js';
-import { SectionHeader, Subheader, Title1, Title2 }                                                      from '../styles/StyledTypography.js';
-import { essayFilePaths, ESSAYS_PATH, experimentFilePaths, EXPERIMENTS_PATH, noteFilePaths, NOTES_PATH } from '../tools/mdxUtils.js';
+import { ArrowRightIcon }                                                                                                                                                from '@heroicons/react/20/solid';
+import { motion }                                                                                                                                                        from 'framer-motion';
+import fs                                                                                                                                                                from 'fs';
+import matter                                                                                                                                                            from 'gray-matter';
+import Link                                                                                                                                                              from 'next/link';
+import path                                                                                                                                                              from 'path';
+import React                                                                                                                                                             from 'react';
+import { ArticleList }                                                                                                                                                   from '../../posts/data/Articles.js';
+import { CurrentReadings }                                                                                                                                               from '../../posts/data/CurrentReadings.js';
+import ArticleCard                                                                                                                                                       from '../components/Cards/ArticleCard.js';
+import BookCard                                                                                                                                                          from '../components/Cards/BookCard.js';
+import EssayCard                                                                                                                                                         from '../components/Cards/EssayCard.js';
+import IndexCard                                                                                                                                                         from '../components/Cards/IndexCard.js';
+import Header                                                                                                                                                            from '../components/Layouts/Header.js';
+import Layout                                                                                                                                                            from '../components/Layouts/Layout.js';
+import UnderlineHoverLink                                                                                                                                                from '../components/Links/UnderlineHoverLink.js';
+import { Spacer }                                                                                                                                                        from '../components/MISC/Spacer.js';
+import { ReadmoreLink }                                                                                                                                                  from '../styles/LinkStyledComponents.js';
+import { SectionText }                                                                                                                                                   from '../styles/StyledComponents.js';
+import { GardenSection }                                                                                                                                                 from '../styles/StyledSectionComponents.js';
+import { SectionHeader, Subheader, Title1, Title2 }                                                                                                                      from '../styles/StyledTypography.js';
+import { essayFilePaths, ESSAYS_PATH, experimentFilePaths, EXPERIMENTS_PATH, lessonFilePaths, LESSONS_PATH, noteFilePaths, NOTES_PATH, patternFilePaths, PATTERNS_PATH } from '../tools/mdxUtils.js';
 
 
 
@@ -300,7 +300,7 @@ export function getStaticProps() {
   .slice( 0, 4 );
   // Sort filtered essays by date
   const sortedEssays   = filteredEssays.sort( ( a, b ) => {
-    return new Date( b.data.updated ) - new Date( a.data.updated );
+    return new Date( b.updated ) - new Date( a.updated );
   } );
 
   // Get all note posts
@@ -316,10 +316,10 @@ export function getStaticProps() {
 
   // Sort notes in reverse order by date
   const sortedNotes = notes.sort( ( a, b ) => {
-    return new Date( b.data.updated ) - new Date( a.data.updated );
+    return new Date( b.updated ) - new Date( a.updated );
   } );
 
-  let projects = experimentFilePaths.map( ( filePath ) => {
+  let experiments = experimentFilePaths.map( ( filePath ) => {
     const source            = fs.readFileSync( path.join( EXPERIMENTS_PATH, filePath ) );
     const { content, data } = matter( source );
     const slug              = filePath.replace( /\.mdx?$/, '' );
@@ -330,18 +330,58 @@ export function getStaticProps() {
   } );
 
   // Sort experiments by date
-  const sortedProjects = projects.slice( 0, 4 ).sort( ( a, b ) => {
-    return new Date( b.data.updated ) - new Date( a.data.updated );
+  const sortedExperiments = experiments.slice( 0, 4 ).sort( ( a, b ) => {
+    return new Date( b.updated ) - new Date( a.updated );
   } );
+
+
+  // Get all pattern posts
+  let patterns = patternFilePaths.map( ( filePath ) => {
+      const source            = fs.readFileSync( path.join( PATTERNS_PATH, filePath ) );
+      const { content, data } = matter( source );
+      const slug              = filePath.replace( /\.mdx?$/, '' );
+
+      return {
+        content, data, slug, filePath
+      };
+    }
+  );
+
+  // Sort patterns by date
+  const sortedPatterns = patterns.slice( 0, 4 ).sort( ( a, b ) => {
+    return new Date( b.updated ) - new Date( a.updated );
+  } );
+
+
+  // Get all lesson posts
+  let lessons = lessonFilePaths.map( ( filePath ) => {
+      const source            = fs.readFileSync( path.join( LESSONS_PATH, filePath ) );
+      const { content, data } = matter( source );
+      const slug              = filePath.replace( /\.mdx?$/, '' );
+
+      return {
+        content, data, slug, filePath
+      };
+    }
+  );
+
+  // Sort lessons by date
+  const sortedLessons = lessons.slice( 0, 4 ).sort( ( a, b ) => {
+      return new Date( b.updated ) - new Date( a.updated );
+    }
+  );
+
 
   const allPosts = [
     ...essays,
     ...notes,
-    ...projects
+    ...experiments,
+    ...patterns,
+    ...lessons
   ];
 
   return {
-    props: { sortedEssays, sortedNotes, sortedProjects }
+    props: { sortedEssays, sortedNotes, sortedExperiments, sortedPatterns, sortedLessons }
   };
 }
 

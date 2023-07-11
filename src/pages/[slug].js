@@ -1,23 +1,23 @@
-import fs                                                                                                                                                               from 'fs';
-import matter                                                                                                                                                           from 'gray-matter';
-import { serialize }                                                                                                                                                    from 'next-mdx-remote/serialize';
-import dynamic                                                                                                                                                          from 'next/dynamic';
-import path                                                                                                                                                             from 'path';
-import { Controls, PlayState, Timeline, Tween }                                                                                                                         from 'react-gsap';
-import InternalTooltipLink                                                                                                                                              from '../components/Links/InternalTooltipLink.js';
-import AssumedAudience                                                                                                                                                  from '../components/MDX/AssumedAudience.js';
-import Disclaimer                                                                                                                                                       from '../components/MDX/Disclaimer.js';
-import { EditBlue, EditGreen, EditGrey, EditPurple, EditRed, EditYellow }                                                                                               from '../components/MDX/TextEdit/AllHighlights.js';
-import { Spacer }                                                                                                                                                       from '../components/MISC/Spacer.js';
-import EssayTemplate                                                                                                                                                    from '../components/PageTemplates/EssayTemplate.js';
-import LessonTemplate                                                                                                                                                   from '../components/PageTemplates/LessonTemplate.js';
-import NoteTemplate                                                                                                                                                     from '../components/PageTemplates/NoteTemplate.js';
-import PatternTemplate                                                                                                                                                  from '../components/PageTemplates/PatternTemplate.js';
-import ProjectTemplate                                                                                                                                                  from '../components/PageTemplates/ProjectTemplate.js';
-import { SmallCaps, Subtext, Title1, Title2, Title3, Title4 }                                                                                                           from '../styles/StyledTypography.js';
-import { getHeadings }                                                                                                                                                  from '../tools/getHeadings.js';
-import getOriginalImage                                                                                                                                                 from '../tools/getOriginalImage.js';
-import { linkify }                                                                                                                                                      from '../tools/linkify.js';
+import fs                                                                                                                                                                from 'fs';
+import matter                                                                                                                                                            from 'gray-matter';
+import { serialize }                                                                                                                                                     from 'next-mdx-remote/serialize';
+import dynamic                                                                                                                                                           from 'next/dynamic';
+import path                                                                                                                                                              from 'path';
+import { Controls, PlayState, Timeline, Tween }                                                                                                                          from 'react-gsap';
+import InternalTooltipLink                                                                                                                                               from '../components/Links/InternalTooltipLink.js';
+import AssumedAudience                                                                                                                                                   from '../components/MDX/AssumedAudience.js';
+import Disclaimer                                                                                                                                                        from '../components/MDX/Disclaimer.js';
+import { EditBlue, EditGreen, EditGrey, EditPurple, EditRed, EditYellow }                                                                                                from '../components/MDX/TextEdit/AllHighlights.js';
+import { Spacer }                                                                                                                                                        from '../components/MISC/Spacer.js';
+import EssayTemplate                                                                                                                                                     from '../components/PageTemplates/EssayTemplate.js';
+import LessonTemplate                                                                                                                                                    from '../components/PageTemplates/LessonTemplate.js';
+import NoteTemplate                                                                                                                                                      from '../components/PageTemplates/NoteTemplate.js';
+import PatternTemplate                                                                                                                                                   from '../components/PageTemplates/PatternTemplate.js';
+import ProjectTemplate                                                                                                                                                   from '../components/PageTemplates/ProjectTemplate.js';
+import { SmallCaps, Subtext, Title1, Title2, Title3, Title4 }                                                                                                            from '../styles/StyledTypography.js';
+import { getHeadings }                                                                                                                                                   from '../tools/getHeadings.js';
+import getOriginalImage                                                                                                                                                  from '../tools/getOriginalImage.js';
+import { linkify }                                                                                                                                                       from '../tools/linkify.js';
 import { essayFilePaths, ESSAYS_PATH, experimentFilePaths, EXPERIMENTS_PATH, lessonFilePaths, LESSONS_PATH, noteFilePaths, NOTES_PATH, patternFilePaths, PATTERNS_PATH } from '../tools/mdxUtils.js';
 
 
@@ -473,8 +473,9 @@ export const getStaticPaths = async() => {
   const lessonPaths     = getSlugParams( lessonFilePaths );
   const patternPaths    = getSlugParams( patternFilePaths );
 
+
   // Combine all paths into one array
-  const paths = notePaths.concat( essayPaths, notePaths, experimentPaths, lessonPaths );
+  const paths = notePaths.concat( essayPaths, notePaths, experimentPaths, lessonPaths, patternPaths );
 
   return {
     paths, fallback: false

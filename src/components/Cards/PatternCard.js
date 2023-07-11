@@ -65,7 +65,7 @@ const Leaves = () => {
   );
 };
 
-export default function PatternCard( { slug, date, title, growthStage, id } ) {
+export default function PatternCard( { slug, cover, title, date, topics, data, id } ) {
   return (
     <Link key = {id} as = {`/${slug}`} href = {`/${slug}`} >
       <a >

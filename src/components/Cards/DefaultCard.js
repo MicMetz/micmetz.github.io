@@ -4,11 +4,11 @@ import Link       from 'next/link';
 
 
 
-export default function Card( { post } ) {
-  const { title, description, type, image } = post.data;
+export default function Card( { slug, cover, title, date, topics, data, type, id } ) {
+
 
   return (
-    <Link as = {`${post.filePath.replace( /\.mdx?$/, '' )}`} href = {`[slug]`} >
+    <Link key = {id} as = {`/${slug}`} href = {`/${slug}`} >
       <a >
         <motion.li
           variants = {{
@@ -16,15 +16,15 @@ export default function Card( { post } ) {
             show  : { opacity: 1, y: 0 }
           }}
           className = 'md:max-w-sm max-w-md mr-6 mb-6 bg-offWhite px-6 py-5 rounded-md shadow-sm flex flex-col h-min transform hover:-translate-y-1 hover:shadow-md transition-all duration-300 ease-in-out'
-          key = {post.filePath}
+          key = {slug}
         >
-          {image && <img src = {image} />}
+          {cover && <img src = {cover} />}
           <h3 className = 'text-xl leading-tight mb-4 hover:text-purple' >
             {title}
           </h3 >
 
           <p className = 'text-small font-body font-motion.light text-mediumBlue leading-snug mb-4' >
-            {description}
+            {data.description}
           </p >
           <div className = 'text-micro font-body font-bold uppercase w-min pt-2 text-sky tracking-wide flex flex-row items-center self-end justify-self-end' >
             {type === 'pattern' ? (

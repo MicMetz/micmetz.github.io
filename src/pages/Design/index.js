@@ -69,8 +69,18 @@ export default function DesignWorkshop( { posts } ) {
             }}
             className = {'flex flex-wrap mt-6 justify-center md:justify-start'}
           >
-            {postsToShow.map( ( post ) => (
-              <Card key = {post.data.title} post = {post} />
+            {postsToShow.map( ( post, i ) => (
+              <Card
+                key = {i}
+                id = {i}
+                type = {post.type}
+                title = {post.title}
+                description = {post.description}
+                slug = {post.slug}
+                topics = {post.topics}
+                date = {post.updated}
+                data = {post}
+              />
             ) )
             }
           </motion.ul >
@@ -84,36 +94,70 @@ export default function DesignWorkshop( { posts } ) {
 
 export function getStaticProps() {
   let patterns = patternFilePaths.map( ( filePath ) => {
-      const source            = fs.readFileSync( path.join( PATTERNS_PATH, filePath ) );
-      const { content, data } = matter( source );
+      const source                                                     = fs.readFileSync( path.join( PATTERNS_PATH, filePath ) );
+      const { content, data }                                          = matter( source );
+      const slug                                                       = filePath.replace( /\.mdx$/, '' );
+      const { title, description, growthStage, topics, type, updated } = data;
 
       return {
-        content, data, filePath
+        content,
+        title,
+        description,
+        growthStage,
+        topics,
+        type,
+        updated,
+        slug,
+        filePath
       };
     }
   );
 
   let lessons = lessonFilePaths.map( ( filePath ) => {
-      const source            = fs.readFileSync( path.join( LESSONS_PATH, filePath ) );
-      const { content, data } = matter( source );
+      const source                                                     = fs.readFileSync( path.join( LESSONS_PATH, filePath ) );
+      const { content, data }                                          = matter( source );
+      const slug                                                       = filePath.replace( /\.mdx$/, '' );
+      const { title, description, growthStage, topics, type, updated } = data;
 
       return {
-        content, data, filePath
+        content,
+        title,
+        description,
+        growthStage,
+        topics,
+        type,
+        updated,
+        slug,
+        filePath
       };
     }
   );
 
   let experiments = experimentFilePaths.map( ( filePath ) => {
-      const source            = fs.readFileSync( path.join( EXPERIMENTS_PATH, filePath ) );
-      const { content, data } = matter( source );
+      const source                                                     = fs.readFileSync( path.join( EXPERIMENTS_PATH, filePath ) );
+      const { content, data }                                          = matter( source );
+      const slug                                                       = filePath.replace( /\.mdx$/, '' );
+      const { title, description, growthStage, topics, type, updated } = data;
 
       return {
-        content, data, filePath
+        content,
+        title,
+        description,
+        growthStage,
+        topics,
+        type,
+        updated,
+        slug,
+        filePath
       };
     }
   );
 
 
-  const posts = [ ...patterns, ...lessons, ...experiments ];
-  return { props: { posts } };
+  const allPosts = [ ...patterns, ...lessons, ...experiments ];
+  return {
+    props: {
+      posts: allPosts
+    }
+  };
 }
