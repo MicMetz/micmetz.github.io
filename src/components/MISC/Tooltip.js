@@ -11,6 +11,7 @@ import "tippy.js/dist/tippy.css";
 const Tooltip = forwardRef( ( { content, children, maxWidth/* , href */ }, ref ) => {
   return (
     <StyledTippy
+      ref = {ref}
       maxWidth = {maxWidth || "320"}
       duration = "500"
       arrow = {true}

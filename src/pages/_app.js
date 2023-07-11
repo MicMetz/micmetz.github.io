@@ -1,14 +1,12 @@
 import { AnimatePresence }              from 'framer-motion';
 import { DefaultSeo }                   from 'next-seo';
-import { useRouter }                    from 'next/router';
 import { GoogleAnalytics }              from 'nextjs-google-analytics';
 import React, { createContext, useRef } from 'react';
 import Footer                           from '../components/Layouts/Footer.js';
 import { Navigation }                   from '../components/Navigation/Navigation.js';
-import Theme                            from '../themes/theme.js';
 // import * as gtag                                   from '../tools/gtag.js';
-
 import '../styles/tailwind.css';
+import Theme                            from '../themes/theme.js';
 
 
 
@@ -50,7 +48,7 @@ export default function App( { Component, pageProps, router } ) {
 
   return (
     <>
-    {/* <PageContext.Provider value = {pageProps} > */}
+      <PageContext.Provider value = {pageProps} >
         <Theme >
           <DefaultSeo
             title = "Michael Metzger's digital garden"
@@ -64,16 +62,16 @@ export default function App( { Component, pageProps, router } ) {
           />
           <GoogleAnalytics trackPageViews />
 
-          <container >
-          <AnimatePresence mode = 'wait' initial = {true} >
-            <Navigation ref = {navigationRef} />
-            <Component Component key = {router.route} {...pageProps} />
-          </AnimatePresence >
-          </container >
+          {/* <container > */}
+            <AnimatePresence mode = 'wait' initial = {true} >
+              <Navigation ref = {navigationRef} />
+              <Component Component key = {router.route} {...pageProps} />
+            </AnimatePresence >
+          {/* </container > */}
 
           <Footer />
         </Theme >
-    {/* </PageContext.Provider > */}
+      </PageContext.Provider >
     </>
   );
 }

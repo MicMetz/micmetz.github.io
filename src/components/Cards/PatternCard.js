@@ -1,6 +1,7 @@
 import { motion }       from 'framer-motion';
 import Link             from 'next/link';
 import styled           from 'styled-components';
+import GrowthIcon       from '../Icons/GrowthIcon.js';
 import { RelativeDate } from '../MISC/DatesFormat.js';
 
 
@@ -65,7 +66,7 @@ const Leaves = () => {
   );
 };
 
-export default function PatternCard( { slug, cover, title, date, topics, data, id } ) {
+export default function PatternCard( { slug, cover, title, growthStage, date, topics, data, id } ) {
   return (
     <Link key = {id} as = {`/${slug}`} href = {`/${slug}`} >
       <a >
@@ -74,11 +75,15 @@ export default function PatternCard( { slug, cover, title, date, topics, data, i
           <div >
             <h3 >{title}</h3 >
             <MetadataContainer >
-              <span >Pattern</span >
+              {growthStage && <span >{growthStage}Pattern</span >}
+              {growthStage && <GrowthIcon size = '15' growthStage = {growthStage} />}
+              <span >
+                <RelativeDate postDate = {date} />
+              </span >
+
               <svg width = '6px' height = '8px' >
                 <circle r = '3' cx = '3' cy = '3' fill = 'var(--color-gray-400)' />
               </svg >
-              <RelativeDate postDate = {date} />
             </MetadataContainer >
           </div >
         </StyledPatternCard >

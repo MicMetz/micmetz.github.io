@@ -9,7 +9,7 @@ import { Dropdown, MainNav, StyledChevronDownIcon, StyledPopoverButton } from '.
 
 
 
-function GardenPopoverLinks() {
+function GardenDropdown() {
   const router = useRouter();
 
   return (
@@ -56,7 +56,7 @@ function GardenPopoverLinks() {
 
 
 
-function LibraryPopoverLinks() {
+function LibraryDropdown() {
   const router = useRouter();
 
   return (
@@ -103,21 +103,75 @@ function LibraryPopoverLinks() {
 
 
 
+function DesignWorkshopDropdown() {
+  const router = useRouter();
+
+  return (
+    <Popover style = {{ position: 'relative' }} >
+      <HoverLink >
+        <UnderlineHoverLink href = '/Design' selected = {router.pathname === '/Design'} >
+          <Link href = '/Design' >
+            <span >Design</span >
+          </Link >
+        </UnderlineHoverLink >
+      </HoverLink >
+      <StyledPopoverButton >
+        <StyledChevronDownIcon width = '24' height = '24' />
+      </StyledPopoverButton >
+
+      <Popover.Panel >
+        <Dropdown
+          initial = {{
+            opacity        : 0,
+            rotateX        : '90deg',
+            transformOrigin: 'top'
+          }}
+          animate = {{ opacity: 1, rotateX: '0deg' }}
+          exit = {{ opacity: 0, rotateX: '90deg' }}
+          transition = {{ duration: 0.6, ease: 'easeInOut' }}
+          style = {{ position: 'absolute', zIndex: '10' }}
+          key = 'dropdown'
+        >
+          <DropdownLink >
+            <Link href = '/Design/Patterns' >
+              <span >Patterns</span >
+            </Link >
+          </DropdownLink >
+          <DropdownLink >
+            <Link href = '/Design/Lessons' >
+              <span >Lessons</span >
+            </Link >
+          </DropdownLink >
+          <DropdownLink >
+            <Link href = '/Design/Projects' >
+              <span >Projects</span >
+            </Link >
+          </DropdownLink >
+        </Dropdown >
+      </Popover.Panel >
+    </Popover >
+  );
+};
+
+
+
 export default function MainNavLinks() {
   const router = useRouter();
 
   return (
     <MainNav >
       <AnimatePresence >
-        <GardenPopoverLinks />
+        <GardenDropdown />
       </AnimatePresence >
       <AnimatePresence >
-        <LibraryPopoverLinks />
+        <DesignWorkshopDropdown />
+      </AnimatePresence >
+      <AnimatePresence >
+        <LibraryDropdown />
       </AnimatePresence >
       <div className = 'outside-dropdown' >
         <UnderlineHoverLink href = '/' selected = {router.pathname === '/'} >Home</UnderlineHoverLink >
         <UnderlineHoverLink href = '/Gallery' selected = {router.pathname === '/Gallery'} >Gallery</UnderlineHoverLink >
-        <UnderlineHoverLink href = '/Design' selected = {router.pathname === '/Design'} >Design</UnderlineHoverLink >
         <UnderlineHoverLink href = '/About' selected = {router.pathname === '/About'} >About</UnderlineHoverLink >
         <UnderlineHoverLink href = '/Contact' selected = {router.pathname === '/Contact'} >Contact</UnderlineHoverLink >
       </div >

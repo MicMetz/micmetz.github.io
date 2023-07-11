@@ -17,40 +17,38 @@ import { experimentFilePaths, EXPERIMENTS_PATH } from '../../tools/mdxUtils.js';
 export default function ProjectsPage( { experiment } ) {
 
   return (
-    <>
+    <Layout >
       <Header title = 'The Projects of Michael Metzger' />
-      <Layout >
-        <header
-          style = {{
-            display       : 'flex',
-            gap           : 'var(--space-xs)',
-            flexDirection : 'column',
-            alignContent  : 'center',
-            alignItems    : 'center',
-            justifyContent: 'center',
-            marginBottom  : '10vh'
-          }}
-        >
-          <SectionTitle main >My Projects</SectionTitle >
-          <Subheader >
-            A collection of prior works, and works in progress.
-          </Subheader >
-        </header >
-        <ProjectGrid >
-          {experiment.map( ( project ) => (
-            <ProjectCard
-              key = {project.slug}
-              slug = {project.slug}
-              title = {project.data.title}
-              date = {project.data.updated}
-              cover = {project.data.cover ? project.data.cover : null}
-              topics = {project.data.topics}
-            />
-          ) )}
-        </ProjectGrid >
-        <InDevelopment />
-      </Layout >
-    </>
+      <header
+        style = {{
+          display       : 'flex',
+          gap           : 'var(--space-xs)',
+          flexDirection : 'column',
+          alignContent  : 'center',
+          alignItems    : 'center',
+          justifyContent: 'center',
+          marginBottom  : '10vh'
+        }}
+      >
+        <SectionTitle main >My Projects</SectionTitle >
+        <Subheader >
+          A collection of prior works, and works in progress.
+        </Subheader >
+      </header >
+      <ProjectGrid >
+        {experiment.map( ( project ) => (
+          <ProjectCard
+            key = {project.slug}
+            slug = {project.slug}
+            title = {project.title}
+            date = {project.updated}
+            cover = {project.cover ? project.data.cover : null}
+            topics = {project.topics}
+          />
+        ) )}
+      </ProjectGrid >
+      <InDevelopment />
+    </Layout >
   );
 }
 

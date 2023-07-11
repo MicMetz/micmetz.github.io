@@ -74,13 +74,14 @@ export default function LessonTemplate( { source, frontMatter, components, slug,
       <HeaderSection >
         <div className = 'above-title' >
           <Link href = '/Design/Lessons' >
-            <BackHoverLink href = 'https://micmetz.github.io/Design/Lessons' >Lessons</BackHoverLink >
+            <BackHoverLink href = '/Design/Lessons' >Lessons</BackHoverLink >
           </Link >
           <GrowthIcon size = '16' growthStage = {frontMatter.growthStage} />
           <GrowthStage stage = {frontMatter.growthStage} />
         </div >
         <TitleContainer >
-          <Title1 >{frontMatter.title}</Title1 >
+          <h1 >{frontMatter.title}</h1 >
+          {frontMatter.description && <p >{frontMatter.description}</p >}
         </TitleContainer >
         <Metadata className = 'metadata' >
           {frontMatter.topics && <Topics topics = {frontMatter.topics} />}

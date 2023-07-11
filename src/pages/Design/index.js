@@ -2,9 +2,9 @@ import { motion }                                                               
 import fs                                                                                                        from 'fs';
 import matter                                                                                                    from 'gray-matter';
 import path                                                                                                      from 'path';
-import { useState }                                                                                              from 'react';
-import Card                                                                                                      from '../../components/Cards/DefaultCard.js';
-import Layout                                                                                                    from '../../components/Layouts/Layout.js';
+import { useState } from 'react';
+import Card         from '../../components/Cards/Card.js';
+import Layout       from '../../components/Layouts/Layout.js';
 import FilterMenu                                                                                                from '../../components/MISC/FilterMenu.js';
 import { experimentFilePaths, EXPERIMENTS_PATH, lessonFilePaths, LESSONS_PATH, patternFilePaths, PATTERNS_PATH } from '../../tools/mdxUtils.js';
 

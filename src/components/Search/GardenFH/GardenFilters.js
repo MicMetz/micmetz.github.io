@@ -93,7 +93,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   grid-gap: var(--space-m);
-  align-items: top;
+  align-items: center;
   justify-content: space-between;
   font-family: var(--font-sans);
   font-size: var(--font-size-xs);

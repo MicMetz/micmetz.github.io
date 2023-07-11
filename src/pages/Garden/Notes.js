@@ -14,9 +14,8 @@ import { noteFilePaths, NOTES_PATH } from '../../tools/mdxUtils.js';
 
 export default function Notes( { notes } ) {
   return (
-    <>
-      <Header title = 'Notes by Michael Metzger' />
-      <Layout >
+    <Layout >
+      <Header title = 'Notes of Michael Metzger' />
         <header style = {{ marginBottom: 'var(--space-xl)' }} >
           <TitleWithCount posts = {notes} >Notes</TitleWithCount >
           <Title2 >
@@ -37,7 +36,6 @@ export default function Notes( { notes } ) {
           ) )}
         </NotesGrid >
       </Layout >
-    </>
   );
 }
 
