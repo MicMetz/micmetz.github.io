@@ -1,38 +1,37 @@
-import { MDXRemote }                   from "next-mdx-remote";
-import Link                            from "next/link";
-import { useEffect, useRef, useState } from "react";
-import styled                          from "styled-components";
-import { breakpoints }                 from "../../constants/breakpoints.js";
-import GrowthIcon                      from "../Icons/GrowthIcon.js";
-import Header        from "../Layouts/Header.js";
-import Layout        from "../Layouts/Layout.js";
-import BackHoverLink from "../Links/BackHoverLink.js";
-import Backlinks                       from "../Links/Backlinks.js";
-import BackToTop                       from "../MDX/BackToTop.js";
-import ProseWrapper                    from "../MDX/ProseWrapper.js";
-import TableOfContents                 from "../MDX/TableOfContents.js";
-import Topics                          from "../MDX/Topics.js";
-import Dates                           from "../MISC/DatesFormat.js";
-import GrowthStage                     from "../MISC/GrowthStage.js";
+import { MDXRemote }           from 'next-mdx-remote';
+import Link                    from 'next/link';
+import { useEffect, useState } from 'react';
+import styled                  from 'styled-components';
+import { breakpoints }         from '../../constants/breakpoints.js';
+import { Title1 }              from '../../styles/StyledTypography.js';
+import GrowthIcon              from '../Icons/GrowthIcon.js';
+import Header                  from '../Layouts/Header.js';
+import BackHoverLink           from '../Links/BackHoverLink.js';
+import Backlinks               from '../Links/Backlinks.js';
+import BackToTop               from '../MDX/BackToTop.js';
+import ProseWrapper            from '../MDX/ProseWrapper.js';
+import TableOfContents         from '../MDX/TableOfContents.js';
+import Topics                  from '../MDX/Topics.js';
+import DatesFormat             from '../MISC/DatesFormat.js';
+import GrowthStage             from '../MISC/GrowthStage.js';
 
 
 
 
 export default function LessonTemplate( { source, frontMatter, components, slug, headings, toc, backlinks, ogImage } ) {
-  const [ scrollPosition, setScrollPosition ] = useState()
-  const [ chapter, setChapter ]               = useState()
-  const navRef                                = useRef()
+  const [ scrollPosition, setScrollPosition ] = useState();
+  const [ chapter, setChapter ]               = useState();
 
   const chapterList = headings.map( ( heading, i ) => {
-    return {
-      text: heading.text.toString(),
-      id  : i,
+      return {
+        text: heading.text.toString(),
+        id  : i
+      };
     }
-  } )
+  );
 
-
-  console.log( headings )
-  console.log( chapterList )
+  console.log( headings );
+  console.log( chapterList );
 
   useEffect( () => {
     window.addEventListener( 'scroll', handleScroll );
@@ -48,19 +47,19 @@ export default function LessonTemplate( { source, frontMatter, components, slug,
     const observer = new IntersectionObserver( intersections => {
       intersections.forEach( ( intersection ) => {
         if ( intersection.intersectionRatio > 0.5 ) {
-          setChapter( intersection.target.id )
+          setChapter( intersection.target.id );
         }
-      } )
+      } );
     }, {
       threshold: 0.5
-    } )
+    } );
 
     document.querySelectorAll( 'h2[id]' ).forEach( ( section ) => {
       if ( section !== null ) {
-        observer.observe( section )
+        observer.observe( section );
       }
-    } )
-  }
+    } );
+  };
 
 
 
@@ -72,33 +71,32 @@ export default function LessonTemplate( { source, frontMatter, components, slug,
         keywords = {frontMatter.topics}
         ogImage = {ogImage}
       />
-      <LessonHeaderSection >
-        <div className = "above-title" >
-          <Link href = "/Design/Lessons" >
-            <BackHoverLink href = "/lessons" >Lessons</BackHoverLink >
+      <HeaderSection >
+        <div className = 'above-title' >
+          <Link href = '/Design' >
+            <BackHoverLink href = 'https://micmetz.github.io/Design' >Designs</BackHoverLink >
           </Link >
-          <GrowthIcon size = "16" growthStage = {frontMatter.growthStage} />
+          <GrowthIcon size = '16' growthStage = {frontMatter.growthStage} />
           <GrowthStage stage = {frontMatter.growthStage} />
         </div >
-        <LessonTitleContainer >
-          <h1 >{frontMatter.title}</h1 >
-          {frontMatter.description && <p >{frontMatter.description}</p >}
-        </LessonTitleContainer >
-        <LessonMetadata >
+        <TitleContainer >
+          <Title1 >{frontMatter.title}</Title1 >
+        </TitleContainer >
+        <Metadata className = 'metadata' >
           {frontMatter.topics && <Topics topics = {frontMatter.topics} />}
-          <Dates
-            created = {frontMatter.created}
+          <DatesFormat
+            started = {frontMatter.started}
             updated = {frontMatter.updated}
           />
-        </LessonMetadata >
-      </LessonHeaderSection >
-      <LessonStyledMain >
+        </Metadata >
+      </HeaderSection >
+      <StyledMain >
         <BackToTop />
         <ProseWrapper >
           {toc && <TableOfContents headings = {headings} />}
           <MDXRemote {...source} components = {components} />
         </ProseWrapper >
-      </LessonStyledMain >
+      </StyledMain >
       {backlinks?.length ? <Backlinks backlinks = {backlinks} /> : null}
     </>
   );
@@ -108,77 +106,7 @@ export default function LessonTemplate( { source, frontMatter, components, slug,
 
 
 
-const LessonHeaderSection = styled.header`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0 0 3rem 0;
-  padding: 0 0 0 0;
-  width: 100%;
-  max-width: 52rem;
-
-
-  max-width: 800px;
-  margin: var(--space-l) auto 0;
-
-  /* div.above-title {
-  a,
-  p {
-    display: inline-block;
-    font-family: var(--font-sans);
-    font-size: var(--font-size-xs);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-weight: bold;
-    padding-right: var(--space-xs);
-  }
-
-  p {
-    padding-left: var(--space-2xs);
-  }
-
-  svg {
-    position: relative;
-    top: 3px;
-  }
-}
-
-} */
-
-  @media ${breakpoints.mediaSM} {
-    padding: 0 var(--space-xs);
-
-    margin: 0 0 4rem 0;
-  }
-
-  .above-title {
-    margin: 0 0 0.5rem 0;
-  }
-
-  .metadata {
-    display: flex;
-    align-items: center;
-    margin: 1rem 0 0 0;
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--color-text);
-
-    span {
-      display: flex;
-      align-items: center;
-      margin: 0 0.5rem 0 0;
-
-      svg {
-        margin: 0 0.25rem 0 0;
-      }
-    }
-  }
-`;
-
-const LessonTitleContainer = styled.div`
-  /*
-  margin: 0 0 1rem 0;
-  */
+const TitleContainer = styled.div`
   padding: var(--space-xs) 0 var(--space-3xs);
 
   p {
@@ -188,37 +116,53 @@ const LessonTitleContainer = styled.div`
   }
 `;
 
-const LessonMetadata = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 1rem 0 0 0;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--color-text);
 
-  /*
-  display: flex;
-  grid-gap: var(--space-3xs);
-  align-items: center;
-  */
+const HeaderSection = styled.header`
+  max-width: 800px;
+  margin: var(--space-l) auto 0;
 
-  span {
-    display: flex;
-    align-items: center;
-    margin: 0 0.5rem 0 0;
+  div.above-title {
+    a,
+    p {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: var(--font-size-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: bold;
+      padding-right: var(--space-xs);
+    }
+
+    p {
+      padding-left: var(--space-2xs);
+    }
 
     svg {
-      margin: 0 0.25rem 0 0;
+      position: relative;
+      top: 3px;
     }
+  }
+
+  @media ${breakpoints.mediaSM} {
+    padding: 0 var(--space-xs);
   }
 `;
 
-const LessonStyledMain = styled.main`
+const Metadata = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0 0 4rem 0;
-  padding: 0 0 0 0;
+  grid-gap: var(--space-3xs);
+  align-items: center;
+`;
+
+
+const StyledMain = styled.main`
+  margin-top: var(--space-xs);
+  padding: var(--space-xl) 0;
+  background-color: white;
+  background-image: linear-gradient(var(--color-cream) 0, white 110px);
+  grid-column: 1/4 !important;
   width: 100%;
-  max-width: 52rem;
+  @media ${breakpoints.mediaSM} {
+    padding: var(--space-m) var(--space-xs);
+  }
 `;

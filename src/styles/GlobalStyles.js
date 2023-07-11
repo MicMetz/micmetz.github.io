@@ -278,6 +278,11 @@ const GlobalStyles = createGlobalStyle`
   }
 
 
+  a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
+  
+
   html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -347,7 +352,7 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: var(--color-crimson);
+    //color: var(--color-crimson);
     border: none;
   }
 
@@ -527,12 +532,6 @@ const GlobalStyles = createGlobalStyle`
   }
 
 
-  
-
-  
-  
-  
-  
   /* ---------------------------------------------- List Styles ---------------------------------------------- */
   ul[role='list'],
   ol[role='list'] {

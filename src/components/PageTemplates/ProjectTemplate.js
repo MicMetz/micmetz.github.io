@@ -1,24 +1,23 @@
 import { MDXRemote }   from 'next-mdx-remote';
+import Link            from 'next/link';
 import styled          from 'styled-components';
 import { breakpoints } from '../../constants/breakpoints.js';
 import { Title1 }      from '../../styles/StyledTypography.js';
-import { TheoryIcon }  from '../Icons/AllIcons.js';
+import GrowthIcon      from '../Icons/GrowthIcon.js';
 import Header          from '../Layouts/Header.js';
 import BackHoverLink   from '../Links/BackHoverLink.js';
 import Backlinks       from '../Links/Backlinks.js';
 import BackToTop       from '../MDX/BackToTop.js';
 import ProseWrapper    from '../MDX/ProseWrapper.js';
+import TableOfContents from '../MDX/TableOfContents.js';
+import Topics          from '../MDX/Topics.js';
+import DatesFormat     from '../MISC/DatesFormat.js';
+import GrowthStage     from '../MISC/GrowthStage.js';
 
 
 
 
-export default function ProjectTemplate( { source, frontMatter, components, slug, ogImage, backlinks } ) {
-  function formattedDate( date ) {
-    return new Date( date ).toLocaleDateString( 'en', {
-      year : 'numeric',
-      month: 'long'
-    } );
-  }
+export default function ProjectTemplate( { source, frontMatter, components, slug, headings, toc, backlinks, ogImage } ) {
 
 
   return (
@@ -31,33 +30,37 @@ export default function ProjectTemplate( { source, frontMatter, components, slug
       />
       <HeaderSection >
         <div className = 'above-title' >
-          <BackHoverLink href = 'https://micmetz.github.io/Design-Workshop/' >Designs</BackHoverLink >
+          <Link href = '/Design' >
+            <BackHoverLink href = 'https://micmetz.github.io/Design' >Designs</BackHoverLink >
+          </Link >
+          <GrowthIcon size = '16' growthStage = {frontMatter.growthStage} />
+          <GrowthStage stage = {frontMatter.growthStage} />
         </div >
         <TitleContainer >
           <Title1 >{frontMatter.title}</Title1 >
         </TitleContainer >
         <Metadata className = 'metadata' >
-          {frontMatter.topics && (
-            <span style = {{ textTransform: 'capitalize' }} >
-              {frontMatter.topics}
-            </span >
-          )}
-          <TheoryIcon width = '14' height = '14' />
-          {frontMatter.updated && (
-            <span >{formattedDate( frontMatter.updated )}</span >
-          )}
+          {frontMatter.topics && <Topics topics = {frontMatter.topics} />}
+          <DatesFormat
+            started = {frontMatter.started}
+            updated = {frontMatter.updated}
+          />
         </Metadata >
       </HeaderSection >
       <StyledMain >
         <BackToTop />
         <ProseWrapper >
+          {toc && <TableOfContents headings = {headings} />}
           <MDXRemote {...source} components = {components} />
         </ProseWrapper >
       </StyledMain >
       {backlinks?.length ? <Backlinks backlinks = {backlinks} /> : null}
     </>
   );
+
 }
+
+
 
 
 

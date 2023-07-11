@@ -10,12 +10,16 @@ import { Dropdown, MainNav, StyledChevronDownIcon, StyledPopoverButton } from '.
 
 
 function GardenPopoverLinks() {
+  const router = useRouter();
+
   return (
     <Popover style = {{ position: 'relative' }} >
       <HoverLink >
-        <Link href = '/Garden/index' >
-          <span >Garden</span >
-        </Link >
+        <UnderlineHoverLink href = '/Garden' selected = {router.pathname === '/Garden'} >
+          <Link href = '/Garden' >
+            <span >Garden</span >
+          </Link >
+        </UnderlineHoverLink >
       </HoverLink >
       <StyledPopoverButton >
         <StyledChevronDownIcon width = '24' height = '24' />
@@ -35,12 +39,12 @@ function GardenPopoverLinks() {
           key = 'dropdown'
         >
           <DropdownLink >
-            <Link href = '/Garden/Essays' >
+            <Link href = '/Essays' >
               <span >Essays</span >
             </Link >
           </DropdownLink >
           <DropdownLink >
-            <Link href = '/Garden/Notes' >
+            <Link href = '/Notes' >
               <span > Notes</span >
             </Link >
           </DropdownLink >
@@ -53,12 +57,16 @@ function GardenPopoverLinks() {
 
 
 function LibraryPopoverLinks() {
+  const router = useRouter();
+
   return (
     <Popover style = {{ position: 'relative' }} >
       <HoverLink >
-        <Link href = '/Library' >
-          <span >Library</span >
-        </Link >
+        <UnderlineHoverLink href = '/Library' selected = {router.pathname === '/Library'} >
+          <Link href = '/Library' >
+            <span >Library</span >
+          </Link >
+        </UnderlineHoverLink >
       </HoverLink >
       <StyledPopoverButton >
         <StyledChevronDownIcon width = '24' height = '24' />
@@ -97,7 +105,6 @@ function LibraryPopoverLinks() {
 
 export default function MainNavLinks() {
   const router = useRouter();
-
 
   return (
     <MainNav >

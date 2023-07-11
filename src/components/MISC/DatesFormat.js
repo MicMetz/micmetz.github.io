@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 
 
-export default function DatesFormat( { created, updated } ) {
-		const relativeStartDate = parse( created, "yyyy-MM-dd", new Date() );
+export default function DatesFormat( { started, updated } ) {
+		const relativeStartDate = parse( started, "yyyy-MM-dd", new Date() );
 		const relativeUpdatedDate = parse( updated, "yyyy-MM-dd", new Date() );
 
 		const dateDifference = differenceInDays(
@@ -23,9 +23,9 @@ export default function DatesFormat( { created, updated } ) {
 		} else {
 				return (
 						<StyledDates >
-								{created && (
+								{started && (
 										<span >
-												Planted <RelativeDate postDate = {created} />
+												Planted <RelativeDate postDate = {started} />
 										</span >
 								)}
 								{updated && (

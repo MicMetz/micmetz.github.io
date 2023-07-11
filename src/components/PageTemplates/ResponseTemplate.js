@@ -10,7 +10,7 @@ import Backlinks       from "../Links/Backlinks.js";
 import BackToTop       from "../MDX/BackToTop";
 import ProseWrapper    from "../MDX/ProseWrapper";
 import Topics          from "../MDX/Topics.js";
-import Dates           from "../MISC/DatesFormat.js";
+import DatesFormat     from '../MISC/DatesFormat.js';
 import GrowthStage     from "../MISC/GrowthStage.js";
 
 
@@ -47,8 +47,8 @@ export default function ResponseTemplate( { source, frontMatter, components, slu
           ) : (
             <div />
           )}
-          <Dates
-            created = {frontMatter.created}
+          <DatesFormat
+            started = {frontMatter.started}
             updated = {frontMatter.updated}
           />
         </Metadata >

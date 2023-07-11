@@ -7,7 +7,7 @@ import ProseWrapper from "../../components/MDX/ProseWrapper.js";
 import { NoteStyledHeaderSection, NoteStyledMain, NoteStyledMetadata, NoteStyledTitleContainer } from "../../styles/StyledPageTemplates/StyledNoteTemplate.js";
 import Header from "../Layouts/Header.js";
 import Layout from "../Layouts/Layout.js";
-import Dates  from "../MISC/DatesFormat.js";
+import DatesFormat from '../MISC/DatesFormat.js';
 import GrowthStage     from "../MISC/GrowthStage.js";
 import TableOfContents from "../MDX/TableOfContents.js";
 import Topics          from "../MDX/Topics.js";
@@ -25,7 +25,7 @@ export default function NoteTemplate( { source, frontMatter, components, slug, t
       />
       <NoteStyledHeaderSection >
         <div className = "above-title">
-          <Link href = "/Garden/Notes">
+          <Link href = "/Notes">
             <BackHoverLink href = "/Notes">Notes</BackHoverLink >
           </Link >
           <GrowthIcon size = "16" growthStage = {frontMatter.growthStage}/>
@@ -37,8 +37,8 @@ export default function NoteTemplate( { source, frontMatter, components, slug, t
         </NoteStyledTitleContainer >
         <NoteStyledMetadata >
           {frontMatter.topics && <Topics topics = {frontMatter.topics}/>}
-          <Dates
-            created = {frontMatter.created}
+          <DatesFormat
+            started = {frontMatter.started}
             updated = {frontMatter.updated}
           />
         </NoteStyledMetadata >

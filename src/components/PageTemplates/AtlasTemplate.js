@@ -9,7 +9,7 @@ import Backlinks                                                                
 import BackToTop                                                                                     from "../MDX/BackToTop.js";
 import ProseWrapper                                                                                  from "../MDX/ProseWrapper.js";
 import Topics                                                                                        from "../MDX/Topics.js";
-import Dates                                                                                         from "../MISC/DatesFormat.js";
+import DatesFormat                                                                                   from '../MISC/DatesFormat.js';
 import GrowthStage                                                                                   from "../MISC/GrowthStage.js";
 
 
@@ -46,8 +46,8 @@ export default function AtlasTemplate( { source, frontMatter, components, slug, 
           ) : (
             <div />
           )}
-          <Dates
-            created = {frontMatter.created}
+          <DatesFormat
+            started = {frontMatter.started}
             updated = {frontMatter.updated}
           />
         </AtlasStyledMetadata >

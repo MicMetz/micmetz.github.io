@@ -2,12 +2,12 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import React                           from 'react';
-import EssayCard                       from "../../components/Cards/EssayCard.js";
-import Header                          from "../../components/Layouts/Header.js";
-import Layout                          from "../../components/Layouts/Layout.js";
-import MasonryGrid                     from "../../components/Grids/MasonryGrid.js";
-import TitleWithCount                  from "../../components/MDX/TitleWithCount.js";
-import { essayFilePaths, ESSAYS_PATH } from "../../tools/mdxUtils.js";
+import EssayCard                       from "../components/Cards/EssayCard.js";
+import Header                          from "../components/Layouts/Header.js";
+import Layout                          from "../components/Layouts/Layout.js";
+import MasonryGrid                     from "../components/Grids/MasonryGrid.js";
+import TitleWithCount                  from "../components/MDX/TitleWithCount.js";
+import { essayFilePaths, ESSAYS_PATH } from "../tools/mdxUtils.js";
 
 
 

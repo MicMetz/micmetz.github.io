@@ -1,5 +1,5 @@
-const fs   = require( "fs" );
-const path = require( "path" );
+const fs   = require( 'fs' );
+const path = require( 'path' );
 
 
 const ESSAYS_PATH    = path.join( process.cwd(), 'posts', 'essays' );
@@ -32,14 +32,13 @@ const patternFilePath = fs
 module.exports = {
   essayFilePaths,
   noteFilePaths,
+  ESSAYS_PATH,
+  NOTES_PATH,
   experimentFilePaths,
   lessonFilePaths,
   patternFilePath,
-
-  PATTERNS_PATH,
-  ESSAYS_PATH,
-  NOTES_PATH,
   EXPERIMENTS_PATH,
-  LESSONS_PATH
+  LESSONS_PATH,
+  PATTERNS_PATH
 };
 

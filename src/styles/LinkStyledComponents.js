@@ -68,7 +68,9 @@ export const LinkContainer = styled.div`
   top: 0;
   position: relative;
   left: 3px;
-  //top: 1px;
+
+ 
+
 `;
 
 
@@ -85,7 +87,6 @@ export const HoverLink = styled.span`
   text-decoration: none;
   outline: none;
   padding-bottom: 0.25rem;
-  
   
   span {
     color: var(--color-gray-800);
@@ -220,7 +221,7 @@ export const StyledLink = styled.a`
   span {
     display: inline-block;
     transition: all 0.5s cubic-bezier(0.2, 1, 0.8, 1);
-    color: var(--color-crimson);
+    //color: var(--color-crimson);
   }
 
   &:hover span {
