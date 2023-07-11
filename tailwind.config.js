@@ -44,7 +44,7 @@ module.exports = {
         lavender: "#dadef1",
         darkBlue: "#230B5A",
         mediumBlue: "#72668D",
-        lightBlue: "#9590B7",
+        sky: "#9590B7",
         cream: "#f3f2ef",
         darkCream: "#EBE9E8",
         offWhite: "#FAFAF8",

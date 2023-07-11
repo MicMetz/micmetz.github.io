@@ -71,7 +71,6 @@ export function getStaticProps() {
   } );
   lessons             = sortedLessons;
 
-
   return { props: { lessons } };
 }
 

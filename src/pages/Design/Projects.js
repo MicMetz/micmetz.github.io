@@ -14,7 +14,7 @@ import { experimentFilePaths, EXPERIMENTS_PATH } from '../../tools/mdxUtils.js';
 
 
 
-export default function ProjectsPage( { experiment } ) {
+export default function ProjectsPage( { experiments } ) {
 
   return (
     <Layout >
@@ -36,14 +36,15 @@ export default function ProjectsPage( { experiment } ) {
         </Subheader >
       </header >
       <ProjectGrid >
-        {experiment.map( ( project ) => (
+        {experiments.map( ( project ) => (
           <ProjectCard
+            id = {project.slug}
             key = {project.slug}
             slug = {project.slug}
-            title = {project.title}
-            date = {project.updated}
-            cover = {project.cover ?? null}
-            topics = {project.topics}
+            title = {project.data.title}
+            date = {project.data.updated}
+            cover = {project.data.cover}
+            data = {project.data}
           />
         ) )}
       </ProjectGrid >
@@ -56,10 +57,11 @@ export default function ProjectsPage( { experiment } ) {
 
 export function getStaticProps() {
   // Get all project posts
-  let experiment = experimentFilePaths.map( ( filePath ) => {
+  let experiments = experimentFilePaths.map( ( filePath ) => {
     const source            = fs.readFileSync( path.join( EXPERIMENTS_PATH, filePath ) );
     const { content, data } = matter( source );
     const slug              = filePath.replace( /\.mdx$/, '' );
+
 
     return {
       content,
@@ -70,10 +72,10 @@ export function getStaticProps() {
   } );
 
   // Sort experiments by date
-  const sortedExperiments = experiment.sort( ( a, b ) => {
+  const sortedExperiments = experiments.sort( ( a, b ) => {
     return new Date( b.updated ) - new Date( a.updated );
   } );
-  experiment              = sortedExperiments;
+  experiments             = sortedExperiments;
 
-  return { props: { experiment } };
+  return { props: { experiments } };
 }

@@ -6,7 +6,7 @@ import { RelativeDate } from "../MISC/DatesFormat.js";
 
 
 
-export default function EssayCard( { slug, cover, title, growthStage, date, variants, id } ) {
+export default function EssayCard( { slug, cover, title, growthStage, date, data, id } ) {
 		return (
 				<Link key = {id} as = {`/${slug}`} href = {`/${slug}`} >
 						<a >

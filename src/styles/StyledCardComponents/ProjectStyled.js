@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import styled     from "styled-components";
+import { motion } from 'framer-motion';
+import styled     from 'styled-components';
 
 
 
@@ -58,6 +58,7 @@ export const StyledProjectCard = styled( motion.div )`
   transition: all 0.3s ease-in-out;
   color: var(--color-gray-800);
   margin: 0 var(--space-xs) var(--space-xs) 0;
+  font-size-adjust: 0.6;
 
   img,
   div:first-child {
