@@ -11,9 +11,9 @@ import { experimentFilePaths, EXPERIMENTS_PATH, lessonFilePaths, LESSONS_PATH, p
 
 
 
-export default function DesignWorkshop( { posts } ) {
+export default function DesignWorkshop( { allPosts } ) {
   const [ filter, setFilter ] = useState( 'all' );
-  const postsToShow           = filter === 'all' ? posts : posts.filter( ( post ) => post.type.includes( filter ) );
+  const postsToShow           = filter === 'all' ? allPosts : allPosts.filter( ( post ) => post.type.includes( filter ) );
 
 
   return (
@@ -72,13 +72,13 @@ export default function DesignWorkshop( { posts } ) {
             {postsToShow.map( ( post, i ) => (
               <Card
                 key = {i}
-                id = {i}
-                type = {post.type}
-                title = {post.title}
-                description = {post.description}
+                id = {post.slug}
                 slug = {post.slug}
-                topics = {post.topics}
+                cover = {post.cover ?? null}
+                title = {post.title}
+                growthStage = {post.growthStage}
                 date = {post.updated}
+                type = {post.type}
                 data = {post}
               />
             ) )
@@ -157,7 +157,7 @@ export function getStaticProps() {
   const allPosts = [ ...patterns, ...lessons, ...experiments ];
   return {
     props: {
-      posts: allPosts
+      allPosts: allPosts
     }
   };
 }
