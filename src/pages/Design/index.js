@@ -1,19 +1,19 @@
-import { motion }                                                                                               from 'framer-motion';
-import fs                                                                                                       from 'fs';
-import matter                                                                                                   from 'gray-matter';
-import path                                                                                                     from 'path';
-import { useState }                                                                                             from 'react';
-import Card                                                                                                     from '../../components/Cards/DefaultCard.js';
-import Layout                                                                                                   from '../../components/Layouts/Layout.js';
-import FilterMenu                                                                                               from '../../components/MISC/FilterMenu.js';
-import { experimentFilePaths, EXPERIMENTS_PATH, lessonFilePaths, LESSONS_PATH, patternFilePath, PATTERNS_PATH } from '../../tools/mdxUtils.js';
+import { motion }                                                                                                from 'framer-motion';
+import fs                                                                                                        from 'fs';
+import matter                                                                                                    from 'gray-matter';
+import path                                                                                                      from 'path';
+import { useState }                                                                                              from 'react';
+import Card                                                                                                      from '../../components/Cards/DefaultCard.js';
+import Layout                                                                                                    from '../../components/Layouts/Layout.js';
+import FilterMenu                                                                                                from '../../components/MISC/FilterMenu.js';
+import { experimentFilePaths, EXPERIMENTS_PATH, lessonFilePaths, LESSONS_PATH, patternFilePaths, PATTERNS_PATH } from '../../tools/mdxUtils.js';
 
 
 
 
 export default function DesignWorkshop( { posts } ) {
   const [ filter, setFilter ] = useState( 'all' );
-  const postsToShow           = filter === 'all' ? posts : posts.filter( ( post ) => post.data.type.includes( filter ) );
+  const postsToShow           = filter === 'all' ? posts : posts.filter( ( post ) => post.type.includes( filter ) );
 
 
   return (
@@ -83,58 +83,35 @@ export default function DesignWorkshop( { posts } ) {
 
 
 export function getStaticProps() {
-  let patterns = patternFilePath.map( ( filePath ) => {
+  let patterns = patternFilePaths.map( ( filePath ) => {
       const source            = fs.readFileSync( path.join( PATTERNS_PATH, filePath ) );
       const { content, data } = matter( source );
-      const slug              = filePath.replace( /\.mdx?$/, '' );
 
       return {
-        content, data, slug, filePath
+        content, data, filePath
       };
     }
   );
-
-  // Sort patterns by date
-  const sortedPatternPosts = patterns.sort( ( a, b ) => {
-    return new Date( b.updated ) - new Date( a.updated );
-  } );
-  patterns                 = sortedPatternPosts;
-
 
   let lessons = lessonFilePaths.map( ( filePath ) => {
       const source            = fs.readFileSync( path.join( LESSONS_PATH, filePath ) );
       const { content, data } = matter( source );
-      const slug              = filePath.replace( /\.mdx?$/, '' );
 
       return {
-        content, data, slug, filePath
+        content, data, filePath
       };
     }
   );
-
-  // Sort lessons by date
-  const sortedLessonPosts = lessons.sort( ( a, b ) => {
-    return new Date( b.updated ) - new Date( a.updated );
-  } );
-  lessons                 = sortedLessonPosts;
-
 
   let experiments = experimentFilePaths.map( ( filePath ) => {
       const source            = fs.readFileSync( path.join( EXPERIMENTS_PATH, filePath ) );
       const { content, data } = matter( source );
-      const slug              = filePath.replace( /\.mdx?$/, '' );
 
       return {
-        content, data, slug, filePath
+        content, data, filePath
       };
     }
   );
-
-  // Sort experiments by date
-  const sortedExperimentPosts = experiments.sort( ( a, b ) => {
-    return new Date( b.updated ) - new Date( a.updated );
-  } );
-  experiments                 = sortedExperimentPosts;
 
 
   const posts = [ ...patterns, ...lessons, ...experiments ];

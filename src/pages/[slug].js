@@ -1,23 +1,24 @@
-import fs                                                                                                                               from 'fs';
-import matter                                                                                                                           from 'gray-matter';
-import { serialize }                                                                                                                    from 'next-mdx-remote/serialize';
-import dynamic                                                                                                                          from 'next/dynamic';
-import path                                                                                                                             from 'path';
-import { Controls, PlayState, Timeline, Tween }                                                                                         from 'react-gsap';
-import InternalTooltipLink                                                                                                              from '../components/Links/InternalTooltipLink.js';
-import AssumedAudience                                                                                                                  from '../components/MDX/AssumedAudience.js';
-import Disclaimer                                                                                                                       from '../components/MDX/Disclaimer.js';
-import { EditBlue, EditGreen, EditGrey, EditPurple, EditRed, EditYellow }                                                               from '../components/MDX/TextEdit/AllHighlights.js';
-import { Spacer }                                                                                                                       from '../components/MISC/Spacer.js';
-import EssayTemplate                                                                                                                    from '../components/PageTemplates/EssayTemplate.js';
-import LessonTemplate                                                                                                                   from '../components/PageTemplates/LessonTemplate.js';
-import NoteTemplate                                                                                                                     from '../components/PageTemplates/NoteTemplate.js';
-import ProjectTemplate                                                                                                                  from '../components/PageTemplates/ProjectTemplate.js';
-import { SmallCaps, Subtext, Title1, Title2, Title3, Title4 }                                                                           from '../styles/StyledTypography.js';
-import { getHeadings }                                                                                                                  from '../tools/getHeadings.js';
-import getOriginalImage                                                                                                                 from '../tools/getOriginalImage.js';
-import { linkify }                                                                                                                      from '../tools/linkify.js';
-import { essayFilePaths, ESSAYS_PATH, experimentFilePaths, EXPERIMENTS_PATH, lessonFilePaths, LESSONS_PATH, noteFilePaths, NOTES_PATH } from '../tools/mdxUtils.js';
+import fs                                                                                                                                                               from 'fs';
+import matter                                                                                                                                                           from 'gray-matter';
+import { serialize }                                                                                                                                                    from 'next-mdx-remote/serialize';
+import dynamic                                                                                                                                                          from 'next/dynamic';
+import path                                                                                                                                                             from 'path';
+import { Controls, PlayState, Timeline, Tween }                                                                                                                         from 'react-gsap';
+import InternalTooltipLink                                                                                                                                              from '../components/Links/InternalTooltipLink.js';
+import AssumedAudience                                                                                                                                                  from '../components/MDX/AssumedAudience.js';
+import Disclaimer                                                                                                                                                       from '../components/MDX/Disclaimer.js';
+import { EditBlue, EditGreen, EditGrey, EditPurple, EditRed, EditYellow }                                                                                               from '../components/MDX/TextEdit/AllHighlights.js';
+import { Spacer }                                                                                                                                                       from '../components/MISC/Spacer.js';
+import EssayTemplate                                                                                                                                                    from '../components/PageTemplates/EssayTemplate.js';
+import LessonTemplate                                                                                                                                                   from '../components/PageTemplates/LessonTemplate.js';
+import NoteTemplate                                                                                                                                                     from '../components/PageTemplates/NoteTemplate.js';
+import PatternTemplate                                                                                                                                                  from '../components/PageTemplates/PatternTemplate.js';
+import ProjectTemplate                                                                                                                                                  from '../components/PageTemplates/ProjectTemplate.js';
+import { SmallCaps, Subtext, Title1, Title2, Title3, Title4 }                                                                                                           from '../styles/StyledTypography.js';
+import { getHeadings }                                                                                                                                                  from '../tools/getHeadings.js';
+import getOriginalImage                                                                                                                                                 from '../tools/getOriginalImage.js';
+import { linkify }                                                                                                                                                      from '../tools/linkify.js';
+import { essayFilePaths, ESSAYS_PATH, experimentFilePaths, EXPERIMENTS_PATH, lessonFilePaths, LESSONS_PATH, noteFilePaths, NOTES_PATH, patternFilePaths, PATTERNS_PATH } from '../tools/mdxUtils.js';
 
 
 
@@ -349,6 +350,18 @@ export default function PostPage( { source, frontMatter, slug, headings, backlin
         ogImage = {ogImage}
       />
     );
+  } else if ( frontMatter.type === 'pattern' ) {
+    return ( <PatternTemplate
+        slug = {slug}
+        source = {source}
+        toc = {toc}
+        frontMatter = {frontMatter}
+        components = {components}
+        backlinks = {backlinks}
+        headings = {headings}
+        ogImage = {ogImage}
+      />
+    );
   }
 };
 
@@ -372,6 +385,7 @@ export const getStaticProps = async( { params } ) => {
   const notes       = fs.readdirSync( NOTES_PATH );
   const experiments = fs.readdirSync( EXPERIMENTS_PATH );
   const lessons     = fs.readdirSync( LESSONS_PATH );
+  const patterns    = fs.readdirSync( PATTERNS_PATH );
 
 
   // determine the type of file to load
@@ -384,6 +398,8 @@ export const getStaticProps = async( { params } ) => {
     type = 'note';
   } else if ( lessons.find( ( file ) => file.includes( params.slug ) ) ) {
     type = 'lesson';
+  } else if ( patterns.find( ( file ) => file.includes( params.slug ) ) ) {
+    type = 'pattern';
   }
 
   // switch case statement to determine which file to load
@@ -403,6 +419,10 @@ export const getStaticProps = async( { params } ) => {
     }
     case 'lesson': {
       filePath = path.join( LESSONS_PATH, `${params.slug}.mdx` );
+      break;
+    }
+    case 'pattern': {
+      filePath = path.join( PATTERNS_PATH, `${params.slug}.mdx` );
       break;
     }
   }
@@ -451,6 +471,7 @@ export const getStaticPaths = async() => {
   const essayPaths      = getSlugParams( essayFilePaths );
   const experimentPaths = getSlugParams( experimentFilePaths );
   const lessonPaths     = getSlugParams( lessonFilePaths );
+  const patternPaths    = getSlugParams( patternFilePaths );
 
   // Combine all paths into one array
   const paths = notePaths.concat( essayPaths, notePaths, experimentPaths, lessonPaths );

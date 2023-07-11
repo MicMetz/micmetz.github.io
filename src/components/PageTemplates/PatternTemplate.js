@@ -2,14 +2,12 @@ import { MDXRemote }   from 'next-mdx-remote';
 import Link            from 'next/link';
 import styled          from 'styled-components';
 import { breakpoints } from '../../constants/breakpoints.js';
-import { Title1 }      from '../../styles/StyledTypography.js';
 import GrowthIcon      from '../Icons/GrowthIcon.js';
 import Header          from '../Layouts/Header.js';
 import BackHoverLink   from '../Links/BackHoverLink.js';
 import Backlinks       from '../Links/Backlinks.js';
 import BackToTop       from '../MDX/BackToTop.js';
 import ProseWrapper    from '../MDX/ProseWrapper.js';
-import TableOfContents from '../MDX/TableOfContents.js';
 import Topics          from '../MDX/Topics.js';
 import DatesFormat     from '../MISC/DatesFormat.js';
 import GrowthStage     from '../MISC/GrowthStage.js';
@@ -17,9 +15,7 @@ import GrowthStage     from '../MISC/GrowthStage.js';
 
 
 
-export default function ProjectTemplate( { source, frontMatter, components, slug, headings, toc, backlinks, ogImage } ) {
-
-
+export default function PatternTemplate( { source, frontMatter, components, slug, backlinks, ogImage } ) {
   return (
     <>
       <Header
@@ -30,19 +26,28 @@ export default function ProjectTemplate( { source, frontMatter, components, slug
       />
       <HeaderSection >
         <div className = 'above-title' >
-          <Link href = '/Design/Projects' >
-            <BackHoverLink href = 'https://micmetz.github.io/Design/Projects' >Projects</BackHoverLink >
+          <Link href = '/Design/Patterns' >
+            <BackHoverLink href = 'https://micmetz.github.io/Design/Patterns' >Patterns</BackHoverLink >
           </Link >
-          <GrowthIcon size = '16' growthStage = {frontMatter.growthStage} />
-          <GrowthStage stage = {frontMatter.growthStage} />
+          {frontMatter.growthStage && (
+            <>
+              <GrowthIcon size = '16' growthStage = {frontMatter.growthStage} />
+              <GrowthStage stage = {frontMatter.growthStage} />
+            </>
+          )}
         </div >
         <TitleContainer >
-          <Title1 >{frontMatter.title}</Title1 >
+          <h1 >{frontMatter.title}</h1 >
+          {frontMatter.description && <p >{frontMatter.description}</p >}
         </TitleContainer >
-        <Metadata className = 'metadata' >
-          {frontMatter.topics && <Topics topics = {frontMatter.topics} />}
+        <Metadata >
+          {frontMatter.topics ? (
+            <Topics topics = {frontMatter.topics} />
+          ) : (
+            <div />
+          )}
           <DatesFormat
-            started = {frontMatter.started}
+            startDate = {frontMatter.startDate}
             updated = {frontMatter.updated}
           />
         </Metadata >
@@ -50,30 +55,41 @@ export default function ProjectTemplate( { source, frontMatter, components, slug
       <StyledMain >
         <BackToTop />
         <ProseWrapper >
-          {toc && <TableOfContents headings = {headings} />}
           <MDXRemote {...source} components = {components} />
         </ProseWrapper >
       </StyledMain >
-      {backlinks?.length ? <Backlinks backlinks = {backlinks} /> : null}
+
+      {backlinks && backlinks.length ? (
+        <Backlinks backlinks = {backlinks} />
+      ) : null}
+      {/* <WebMentions postSlug={slug} hasBacklinks={backlinks && backlinks.length > 0} /> */}
     </>
   );
-
 }
 
 
-
-
-
 const TitleContainer = styled.div`
-  padding: var(--space-xs) 0 var(--space-3xs);
+  padding: var(--space-s) 0 var(--space-l);
+  border-bottom: 1px solid var(--color-tinted-cream);
+
+  h1 {
+    font-size: var(--font-size-2xl);
+    line-height: var(--leading-tighter);
+    max-width: 100%;
+    @media screen and (max-width: 425px) {
+      font-size: var(--font-size-xl);
+    }
+  }
 
   p {
     font-size: var(--font-size-md);
     margin: var(--space-s) 0 0 0;
     color: var(--color-gray-600);
+    @media screen and (max-width: 425px) {
+      font-size: var(--font-size-base);
+    }
   }
 `;
-
 
 const HeaderSection = styled.header`
   max-width: 800px;
@@ -107,20 +123,22 @@ const HeaderSection = styled.header`
 `;
 
 const Metadata = styled.div`
+  justify-content: space-between;
   display: flex;
-  grid-gap: var(--space-3xs);
-  align-items: center;
+  flex-direction: row;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+  }
 `;
 
-
 const StyledMain = styled.main`
-  margin-top: var(--space-xs);
   padding: var(--space-xl) 0;
-  background-color: white;
-  background-image: linear-gradient(var(--color-cream) 0, white 110px);
+  background: linear-gradient(var(--color-cream) 0, white 110px);
   grid-column: 1/4 !important;
   width: 100%;
-  @media ${breakpoints.mediaSM} {
-    padding: var(--space-m) var(--space-xs);
+  @media (max-width: 768px) {
+    padding: var(--space-xl) var(--space-xs);
   }
 `;

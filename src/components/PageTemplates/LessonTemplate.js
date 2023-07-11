@@ -73,8 +73,8 @@ export default function LessonTemplate( { source, frontMatter, components, slug,
       />
       <HeaderSection >
         <div className = 'above-title' >
-          <Link href = '/Design' >
-            <BackHoverLink href = 'https://micmetz.github.io/Design' >Designs</BackHoverLink >
+          <Link href = '/Design/Lessons' >
+            <BackHoverLink href = 'https://micmetz.github.io/Design/Lessons' >Lessons</BackHoverLink >
           </Link >
           <GrowthIcon size = '16' growthStage = {frontMatter.growthStage} />
           <GrowthStage stage = {frontMatter.growthStage} />
