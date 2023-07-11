@@ -148,7 +148,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             animate = 'visible'
           >
             <section style = {{ gridArea: 'essays' }} >
-              <Link href = '/Essays' >
+              <Link href = '/Garden/Essays' >
                 <SectionHeader >
                   Essays
                   <ArrowRightIcon width = '18' height = '18' />
@@ -180,7 +180,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             </section >
 
             <section style = {{ gridArea: 'notes', marginLeft: '' }} >
-              <Link href = '/Notes' >
+              <Link href = '/Garden/Notes' >
                 <SectionHeader >
                   Notes
                   <ArrowRightIcon width = '18' height = '18' />

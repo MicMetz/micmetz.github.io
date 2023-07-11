@@ -25,7 +25,7 @@ export default function NoteTemplate( { source, frontMatter, components, slug, t
       />
       <NoteStyledHeaderSection >
         <div className = "above-title">
-          <Link href = "/Notes">
+          <Link href = "/Garden/Notes">
             <BackHoverLink href = "/Notes">Notes</BackHoverLink >
           </Link >
           <GrowthIcon size = "16" growthStage = {frontMatter.growthStage}/>

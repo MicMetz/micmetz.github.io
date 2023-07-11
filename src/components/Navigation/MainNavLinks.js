@@ -39,12 +39,12 @@ function GardenPopoverLinks() {
           key = 'dropdown'
         >
           <DropdownLink >
-            <Link href = '/Essays' >
+            <Link href = '/Garden/Essays' >
               <span >Essays</span >
             </Link >
           </DropdownLink >
           <DropdownLink >
-            <Link href = '/Notes' >
+            <Link href = '/Garden/Notes' >
               <span > Notes</span >
             </Link >
           </DropdownLink >
