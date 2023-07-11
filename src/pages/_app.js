@@ -62,12 +62,12 @@ export default function App( { Component, pageProps, router } ) {
           />
           <GoogleAnalytics trackPageViews />
 
-          {/* <container > */}
+          <container >
             <AnimatePresence mode = 'wait' initial = {true} >
               <Navigation ref = {navigationRef} />
               <Component Component key = {router.route} {...pageProps} />
             </AnimatePresence >
-          {/* </container > */}
+          </container >
 
           <Footer />
         </Theme >

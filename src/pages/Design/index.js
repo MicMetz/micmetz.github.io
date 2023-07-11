@@ -23,8 +23,7 @@ export default function DesignWorkshop( { allPosts } ) {
         title = 'Design Workshop of Michael Metzger'
         description = 'A collection of various design patterns and experiments by Michael Metzger'
       />
-      <div className = {'mt-16 md:mt-20 xl:px-20'} >
-        <div className = {'flex flex-row justify-between '} >
+
           <motion.div
             className = 'mb-8'
             initial = 'hidden'
@@ -49,7 +48,6 @@ export default function DesignWorkshop( { allPosts } ) {
               A collection of various design patterns and experiments by Michael Metzger
             </h2 >
           </motion.div >
-        </div >
         <motion.div >
           <FilterMenu filter = {filter} setFilter = {setFilter} />
         </motion.div >
@@ -85,7 +83,6 @@ export default function DesignWorkshop( { allPosts } ) {
           ) )
           }
         </motion.ul >
-      </div >
     </Layout >
   );
 }

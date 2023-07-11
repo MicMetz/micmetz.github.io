@@ -43,7 +43,7 @@ export default function Layout( { children, type, title, description } ) {
         )
       }[ type ] || (
         <StyledLayout >
-          <main className = 'container mt-10 mb-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-full mx-auto px-4 xl:px-8' >
+          <main >
             {children}
           </main >
         </StyledLayout >
