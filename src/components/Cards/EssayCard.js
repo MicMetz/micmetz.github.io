@@ -10,7 +10,7 @@ export default function EssayCard( { slug, cover, title, growthStage, date, data
 		return (
 				<Link key = {id} as = {`/${slug}`} href = {`/${slug}`} >
 						<a >
-								<StyledEssayCard variants = {variants} >
+								<StyledEssayCard >
 										{cover && (
 												<EssayImageWrapper >
 														<Image src = {cover} alt = {title} width = {400} height = {400} />
