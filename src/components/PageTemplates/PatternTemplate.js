@@ -27,9 +27,9 @@ export default function PatternTemplate( { source, frontMatter, components, slug
       />
       <HeaderSection >
         <div className = 'above-title' >
-          <Link href = '/design/patterns' as = '/design/patterns' > {/* TODO: Fix this link */}
-            <BackHoverLink href = 'https://micmetz.github.io/Design/Patterns' >Patterns</BackHoverLink >
-          </Link >
+          {/* <Link href = '/design/patterns'  > /!* TODO: Fix this link *!/ */}
+            <BackHoverLink href = '/design/patterns' >Patterns</BackHoverLink >
+          {/* </Link > */}
           {frontMatter.growthStage && (
             <>
               <GrowthIcon size = '16' growthStage = {frontMatter.growthStage} />

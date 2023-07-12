@@ -1,7 +1,6 @@
-import PropTypes        from 'prop-types';
-import styled           from 'styled-components';
-import { transformSrc } from '../../tools/transformSrc.js';
-import ObjectSection    from '../Grids/ObjectSection.js';
+import PropTypes     from 'prop-types';
+import styled        from 'styled-components';
+import ObjectSection from '../Grids/ObjectSection.js';
 
 
 
@@ -20,7 +19,7 @@ export default function TopicHeader( { topic } ) {
       <ImageWrapper >
         < TopicHeaderImage
           className = {styles.image}
-          src = {transformSrc( `/images/topics/${topic.slug}.jpg` )}
+          src = {topic.image}
           alt = ''
         />
       </ImageWrapper >

@@ -3,7 +3,6 @@ import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import styled                                                   from 'styled-components';
 import { PageContext }                                          from '../../pages/_app.js';
 import { useSectionWidth }                                      from '../Grids/ObjectSection.js';
-// import { transformSrc }                                         from '../tools/transformSrc.js';
 import ClickableObject                                          from './ClickableObject.js';
 import Markdownify                                              from './Markdownify.js';
 // import Markdownify from "../Markdownify";
