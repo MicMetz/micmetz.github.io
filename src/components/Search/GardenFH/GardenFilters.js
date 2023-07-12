@@ -51,10 +51,10 @@ export default function GardenFilters() {
           />
         </RightMenus >
       </TopicsContainer >
-
     </Container >
   );
 }
+
 
 
 const MobileTopics = styled.div`
@@ -64,13 +64,16 @@ const MobileTopics = styled.div`
   }
 `;
 
+
 const RightMenus = styled.div`
   display: flex;
   flex-direction: row;
   grid-gap: var(--space-3xs);
+
   @media (max-width: 768px) {
     justify-content: center;
   }
+
   @media (max-width: 500px) {
     flex-direction: column;
   }
@@ -82,6 +85,7 @@ const RightMenus = styled.div`
     color: var(--color-gray-700);
     background-color: var(--color-cream);
     transition: all 0.3s ease-in-out;
+
     @media (max-width: 768px) {
       width: 100%;
     }
@@ -93,6 +97,7 @@ const RightMenus = styled.div`
   }
 `;
 
+
 const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -103,6 +108,8 @@ const Container = styled.div`
   font-size: var(--font-size-xs);
   color: var(--color-gray-800);
   margin-bottom: var(--space-xl);
+
+
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -120,6 +127,8 @@ const Container = styled.div`
   }
 `;
 
+
+
 const TopicLabel = styled.div`
   display: flex;
   padding: var(--space-3xs) var(--space-2xs) var(--space-3xs) 0;
@@ -134,6 +143,8 @@ const TopicLabel = styled.div`
   margin-right: var(--space-3xs);
 `;
 
+
+
 const TopicsContainer = styled.div`
   display: inline-flex;
   flex-direction: row;
@@ -142,8 +153,6 @@ const TopicsContainer = styled.div`
   }
 
   .ais-Menu {
-    /* display: inline-flex; */
-    /* flex-direction: row; */
     align-items: start;
     transition: all 0.4s ease;
   }
@@ -154,6 +163,7 @@ const TopicsContainer = styled.div`
     flex-direction: row;
     grid-gap: 4px;
     transition: all 0.4s ease;
+
     @media (max-width: 768px) {
       max-width: 70vw;
       flex-wrap: nowrap;
@@ -216,6 +226,7 @@ const TopicsContainer = styled.div`
     text-transform: uppercase;
     letter-spacing: 0.04rem;
     color: var(--color-tangerine);
+
     @media (max-width: 768px) {
       display: none;
     }
