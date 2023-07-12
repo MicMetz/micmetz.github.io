@@ -1,13 +1,10 @@
-import fs                                    from 'fs';
-import matter                                from 'gray-matter';
-import path                                  from 'path';
-import styled                                from 'styled-components';
-import ResourceCard                          from '../../components/Cards/ResourceCard.js';
-import Header                                from '../../components/Layouts/Header.js';
-import Layout                                from '../../components/Layouts/Layout.js';
-import TitleWithCount                        from '../../components/MISC/TitleWithCount.js';
-import { Title2 }                            from '../../styles/StyledTypography.js';
-import { resourceFilePaths, RESOURCES_PATH } from '../../tools/mdxUtils.js';
+import styled         from 'styled-components';
+import ResourceCard   from '../../components/Cards/ResourceCard.js';
+import Header         from '../../components/Layouts/Header.js';
+import Layout         from '../../components/Layouts/Layout.js';
+import TitleWithCount from '../../components/MISC/TitleWithCount.js';
+import { Title2 }     from '../../styles/StyledTypography.js';
+// import { resourceFilePaths, RESOURCES_PATH } from '../../tools/mdxUtils.js';
 
 
 
@@ -50,31 +47,32 @@ const ResourceGrid = styled.section`
 
 
 export function getStaticProps() {
-  let resources = resourceFilePaths.map( ( filePath ) => {
-      const source            = fs.readFileSync( path.join( RESOURCES_PATH, filePath ) );
-      const { content, data } = matter( source );
-      const slug              = filePath.replace( /\.mdx$/, '' );
+  // let resources = resourceFilePaths.map( ( filePath ) => {
+  //     const source            = fs.readFileSync( path.join( RESOURCES_PATH, filePath ) );
+  //     const { content, data } = matter( source );
+  //     const slug              = filePath.replace( /\.mdx$/, '' );
+  //
+  //     return {
+  //       content, data, slug, filePath
+  //     };
+  //   }
+  // );
+  //
+  // resources.sort( ( a, b ) => {
+  //     if ( a.data.title < b.data.title ) {
+  //       return -1;
+  //
+  //     } else if ( a.data.title > b.data.title ) {
+  //       return 1;
+  //
+  //     } else {
+  //       return 0;
+  //     }
+  //
+  //   }
+  // );
 
-      return {
-        content, data, slug, filePath
-      };
-    }
-  );
-
-  resources.sort( ( a, b ) => {
-      if ( a.data.title < b.data.title ) {
-        return -1;
-
-      } else if ( a.data.title > b.data.title ) {
-        return 1;
-
-      } else {
-        return 0;
-      }
-
-    }
-  );
-
+  const resources = [];
   return {
     props: {
       resources
