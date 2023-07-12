@@ -24,10 +24,10 @@ export default function EssaysPage( { essays } ) {
             key = {i}
             id = {essay.slug}
             slug = {essay.slug}
-            cover = {essay.data.cover}
-            title = {essay.data.title}
-            growthStage = {essay.data.growthStage}
-            date = {essay.data.updated}
+            cover = {essay.cover}
+            title = {essay.title}
+            growthStage = {essay.growthStage}
+            date = {essay.updated}
           />
         ) )}
       </MasonryGrid >

@@ -1,7 +1,8 @@
-import React              from 'react'
-import styled             from "styled-components";
-import { DefaultDetails } from "../styles/LibraryStyledComponents.js";
-import { SectionText }    from "../styles/StyledComponents.js";
+import React              from 'react';
+import styled             from 'styled-components';
+import { DefaultDetails } from '../../styles/LibraryStyledComponents.js';
+import { SectionText }    from '../../styles/StyledComponents.js';
+
 
 
 
@@ -17,13 +18,13 @@ export function DescriptionParser( book ) {
                   {item}
                   <br />
                 </span >
-              )
+              );
             } )}
           </BookDescription >
-        )
+        );
       } )}
     </DefaultDetails >
-  )
+  );
 }
 
 

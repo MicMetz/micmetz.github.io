@@ -26,12 +26,12 @@ const Children = styled.div`
 `;
 
 const StyledLinkCard = styled.div`
-  margin: var(--space-3xs) auto var(--space-m);
+  margin: var(--space-3xs) auto var(--space-md);
   box-shadow: var(--box-shadow-sm);
   border-radius: var(--border-radius-lg);
   border: 1px solid var(--color-tinted-cream);
   justify-content: center;
-  padding: var(--space-s) var(--space-m);
+  padding: var(--space-s) var(--space-md);
   grid-column: 1/4 !important;
   display: flex;
   flex-direction: column;

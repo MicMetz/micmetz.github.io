@@ -1,5 +1,5 @@
-import BasicImage from "./BasicImage";
-import ImageFrame from "./ImageFrame";
+import BasicImage from "./BasicImage.js";
+import ImageFrame from "./ImageFrame.js";
 
 
 

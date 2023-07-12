@@ -1,9 +1,9 @@
-import EditBlue   from "./EditBlue";
-import EditGreen  from "./EditGreen";
-import EditGrey   from "./EditGrey";
-import EditPurple from "./EditPurple";
-import EditRed    from "./EditRed";
-import EditYellow from "./EditYellow";
+import EditBlue   from "./EditBlue.js";
+import EditGreen  from "./EditGreen.js";
+import EditGrey   from "./EditGrey.js";
+import EditPurple from "./EditPurple.js";
+import EditRed    from "./EditRed.js";
+import EditYellow from "./EditYellow.js";
 
 
 

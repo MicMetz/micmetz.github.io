@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { ArticleList } from '../../../posts/data/Articles.js'
-import Header from "../../components/Layouts/Header.js";
-import LibraryLayout from '../../components/Layouts/LibraryLayout.js'
-import { Spacer } from "../../components/MISC/Spacer.js";
+import { ArticleList }                        from '../../../data/Articles.js'
+import Header                                 from "../../components/Layouts/Header.js";
+import LibraryLayout                                                 from '../../components/Layouts/LibraryLayout.js'
+import { Spacer }                                                    from "../../components/Base/Spacer.js";
 import { LibrarySectionTitle, LibraryStyledBody, LibraryStyledMain } from '../../styles/LibraryStyledComponents.js'
 
 

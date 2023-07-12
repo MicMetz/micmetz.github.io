@@ -1,17 +1,17 @@
-import { MDXRemote }   from "next-mdx-remote";
-import Link            from "next/link";
-import styled          from "styled-components";
-import { breakpoints } from "../../constants/breakpoints";
-import GrowthIcon      from "../Icons/GrowthIcon";
-import Header        from "../Layouts/Header.js";
-import Layout        from "../Layouts/Layout.js";
-import BackHoverLink from "../Links/BackHoverLink";
-import Backlinks       from "../Links/Backlinks.js";
-import BackToTop       from "../MDX/BackToTop";
-import ProseWrapper    from "../MDX/ProseWrapper";
-import Topics          from "../MDX/Topics.js";
-import DatesFormat     from '../MISC/DatesFormat.js';
-import GrowthStage     from "../MISC/GrowthStage.js";
+import { MDXRemote }   from 'next-mdx-remote';
+import Link            from 'next/link';
+import styled          from 'styled-components';
+import { breakpoints } from '../../constants/breakpoints';
+import BackToTop       from '../MDX/BackToTop';
+import ProseWrapper    from '../MDX/ProseWrapper';
+import TableOfContents from '../MDX/TableOfContents.js';
+import Topics          from '../MDX/Topics.js';
+import DatesFormat     from '../Base/DatesFormat.js';
+import GrowthStage from '../MISC/GrowthStage.js';
+import GrowthIcon  from '../Icons/GrowthIcon';
+import Header          from '../Layouts/Header.js';
+import BackHoverLink   from '../Links/BackHoverLink';
+import Backlinks       from '../Links/Backlinks.js';
 
 
 
@@ -26,13 +26,13 @@ export default function ResponseTemplate( { source, frontMatter, components, slu
         ogImage = {ogImage}
       />
       <HeaderSection >
-        <div className = "above-title" >
-          <Link href = "/Responses" >
-            <BackHoverLink href = "/Responses" >Responses</BackHoverLink >
+        <div className = 'above-title' >
+          <Link href = '/Responses' >
+            <BackHoverLink href = '/Responses' >Responses</BackHoverLink >
           </Link >
           {frontMatter.growthStage && (
             <>
-              <GrowthIcon size = "16" growthStage = {frontMatter.growthStage} />
+              <GrowthIcon size = '16' growthStage = {frontMatter.growthStage} />
               <GrowthStage stage = {frontMatter.growthStage} />
             </>
           )}
@@ -56,7 +56,11 @@ export default function ResponseTemplate( { source, frontMatter, components, slu
       <StyledMain >
         <BackToTop />
         <ProseWrapper >
-          <MDXRemote {...source} components = {components} />
+          {toc && <TableOfContents headings = {headings} />}
+          <MDXRemote
+            {...source}
+            components = {{ ...components }}
+          />
         </ProseWrapper >
       </StyledMain >
       {backlinks?.length ? <Backlinks backlinks = {backlinks} /> : null}

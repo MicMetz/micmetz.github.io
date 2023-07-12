@@ -1,6 +1,6 @@
 // import React from "react";
 import FullWidthBackground from "../MDX/FullWidthBackground";
-import styled from "styled-components";
+import styled              from "styled-components";
 
 
 

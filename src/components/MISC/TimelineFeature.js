@@ -1,6 +1,6 @@
-import { TimelineData } from '../../../posts/data/TimelineData.js';
+import { TimelineData }                       from '../../../data/TimelineData.js';
 import React, { useEffect, useRef, useState } from 'react';
-import styled from "styled-components";
+import styled                                 from "styled-components";
 import { Section, SectionText, SectionTitle } from '../../styles/StyledComponents.js';
 
 

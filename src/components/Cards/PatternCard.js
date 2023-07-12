@@ -2,7 +2,7 @@ import { motion }       from 'framer-motion';
 import Link             from 'next/link';
 import styled           from 'styled-components';
 import GrowthIcon       from '../Icons/GrowthIcon.js';
-import { RelativeDate } from '../MISC/DatesFormat.js';
+import { RelativeDate } from '../Base/DatesFormat.js';
 
 
 

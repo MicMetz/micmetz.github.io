@@ -15,10 +15,8 @@ function GardenDropdown() {
   return (
     <Popover style = {{ position: 'relative' }} >
       <HoverLink >
-        <UnderlineHoverLink href = '/Garden' selected = {router.pathname === '/Garden'} >
-          <Link href = '/Garden' >
-            <span >Garden</span >
-          </Link >
+        <UnderlineHoverLink href = '/garden' selected = {router.pathname === '/garden'} >
+          Garden
         </UnderlineHoverLink >
       </HoverLink >
       <StyledPopoverButton >
@@ -39,12 +37,12 @@ function GardenDropdown() {
           key = 'dropdown'
         >
           <DropdownLink >
-            <Link href = '/Garden/Essays' >
+            <Link href = '/garden/essays' >
               <span >Essays</span >
             </Link >
           </DropdownLink >
           <DropdownLink >
-            <Link href = '/Garden/Notes' >
+            <Link href = '/garden/notes' >
               <span > Notes</span >
             </Link >
           </DropdownLink >
@@ -62,10 +60,8 @@ function LibraryDropdown() {
   return (
     <Popover style = {{ position: 'relative' }} >
       <HoverLink >
-        <UnderlineHoverLink href = '/Library' selected = {router.pathname === '/Library'} >
-          <Link href = '/Library' >
-            <span >Library</span >
-          </Link >
+        <UnderlineHoverLink href = '/library' selected = {router.pathname === '/library'} >
+          Library
         </UnderlineHoverLink >
       </HoverLink >
       <StyledPopoverButton >
@@ -86,12 +82,12 @@ function LibraryDropdown() {
           key = 'dropdown'
         >
           <DropdownLink >
-            <Link href = '/Library/Books' >
+            <Link href = '/library/books' >
               <span >Books</span >
             </Link >
           </DropdownLink >
           <DropdownLink >
-            <Link href = '/Library/Articles' >
+            <Link href = '/library/articles' >
               <span >Articles</span >
             </Link >
           </DropdownLink >
@@ -109,10 +105,8 @@ function DesignWorkshopDropdown() {
   return (
     <Popover style = {{ position: 'relative' }} >
       <HoverLink >
-        <UnderlineHoverLink href = '/Design' selected = {router.pathname === '/Design'} >
-          <Link href = '/Design' >
-            <span >Design</span >
-          </Link >
+        <UnderlineHoverLink href = '/design' selected = {router.pathname === '/design'} >
+          Design
         </UnderlineHoverLink >
       </HoverLink >
       <StyledPopoverButton >
@@ -133,17 +127,17 @@ function DesignWorkshopDropdown() {
           key = 'dropdown'
         >
           <DropdownLink >
-            <Link href = '/Design/Patterns' >
+            <Link href = '/design/patterns' >
               <span >Patterns</span >
             </Link >
           </DropdownLink >
           <DropdownLink >
-            <Link href = '/Design/Lessons' >
+            <Link href = '/design/lessons' >
               <span >Lessons</span >
             </Link >
           </DropdownLink >
           <DropdownLink >
-            <Link href = '/Design/Projects' >
+            <Link href = '/design/projects' >
               <span >Projects</span >
             </Link >
           </DropdownLink >

@@ -1,37 +1,37 @@
-import { ConceptIcon, HypothesisIcon, TheoryIcon } from "./AllIcons";
-import { Phyllotaxis }                             from "./Phyllotaxis.js";
+import { ConceptIcon, HypothesisIcon, TheoryIcon } from './AllIcons';
+import { Phyllotaxis }                             from './Phyllotaxis.js';
 
 
 
 
 export default function GrowthIcon( { growthStage, size } ) {
-  if ( growthStage === "Concept" || growthStage === "In Developing" ) {
+  if ( growthStage === 'Concept' || growthStage === 'In Developing' ) {
     return (
       <ConceptIcon
-        width = {size ? size : "22"}
-        height = {size ? size : "22"}
+        width = {size ? size : '22'}
+        height = {size ? size : '22'}
       />
     );
-  } else if ( growthStage === "Hypothesis" ) {
+  } else if ( growthStage === 'Hypothesis' ) {
     return (
       <HypothesisIcon
-        width = {size ? size : "22"}
-        height = {size ? size : "22"}
+        width = {size ? size : '22'}
+        height = {size ? size : '22'}
       />
     );
-  } else if ( growthStage === "Theory" ) {
+  } else if ( growthStage === 'Theory' ) {
     return (
       <TheoryIcon
-        width = {size ? size : "22"}
-        height = {size ? size : "22"}
+        width = {size ? size : '22'}
+        height = {size ? size : '22'}
       />
     );
-  } else if ( growthStage === "Law" ) {
+  } else if ( growthStage === 'Law' ) {
     return (
       <Phyllotaxis
-        width = {size ? size : "22"}
-        height = {size ? size : "22"}
-        radius = {size ? size : "1"}
+        width = {size ? size : '22'}
+        height = {size ? size : '22'}
+        radius = {size ? size : '1'}
       />
 
     );

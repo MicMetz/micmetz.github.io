@@ -41,7 +41,7 @@ const AssumedAudienceContainer = styled.div`
     letter-spacing: 0.05rem;
   }
   @media (max-width: 768px) {
-    margin: 0 0 var(--space-m) 0;
+    margin: 0 0 var(--space-md) 0;
     flex-direction: column;
     grid-gap: var(--space-3xs);
   }

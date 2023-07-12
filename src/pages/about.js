@@ -1,10 +1,10 @@
 import CoverImage                             from '/public/images/photography/QuietWeek.jpg';
 import Image                                  from 'next/image';
 import Link                                   from 'next/link';
-import React              from 'react';
-import Layout             from '../components/Layouts/Layout.js';
-import UnderlineHoverLink from '../components/Links/UnderlineHoverLink.js';
-import { Spacer }                             from '../components/MISC/Spacer.js';
+import React                                  from 'react';
+import { Spacer }                             from '../components/Base/Spacer.js';
+import Layout                                 from '../components/Layouts/Layout.js';
+import UnderlineHoverLink                     from '../components/Links/UnderlineHoverLink.js';
 import { Section, SectionText, SectionTitle } from '../styles/StyledComponents.js';
 
 

@@ -38,22 +38,22 @@ export default function Footer() {
 
         <FooterSitemapList >
           {[
-            { text: 'My Digital Garden', slug: '/Garden' },
-            { text: 'About', slug: '/About' },
+            { text: 'My Digital garden', slug: '/garden' },
+            { text: 'About', slug: '/about' },
             { text: 'Now', slug: '/Now' },
-            { text: 'Essays', slug: '/Essays' },
-            { text: 'Notes', slug: '/Notes' },
+            { text: 'Essays', slug: '/essays' },
+            { text: 'Notes', slug: '/notes' },
             { text: 'Topics', slug: '/topics' },
-            { text: 'Library', slug: '/Library' },
-            { text: 'Books', slug: '/Library/Books' },
-            { text: 'Articles', slug: '/Library/Articles' },
-            { text: 'Design', slug: '/Design' },
-            { text: 'Patterns', slug: '/Design/Patterns' },
-            { text: 'Lessons', slug: '/Design/Lessons' },
-            { text: 'Projects', slug: '/Design/Projects' },
-            { text: 'Resources', slug: '/Design/Resources' },
-            { text: 'Contact', slug: '/Contact' }
-            // { text: "Changelog", slug: "/Changelog" },
+            { text: 'library', slug: '/library' },
+            { text: 'Books', slug: '/library/books' },
+            { text: 'Articles', slug: '/library/articles' },
+            { text: 'design', slug: '/design' },
+            { text: 'Patterns', slug: '/design/patterns' },
+            { text: 'Lessons', slug: '/design/lessons' },
+            { text: 'Projects', slug: '/design/projects' },
+            { text: 'Resources', slug: '/design/resources' },
+            { text: 'Contact', slug: '/contact' },
+            { text: 'Changelog', slug: '/Now/changelog' }
           ].map( ( link, i ) => {
             return (
               <li key = {i} >

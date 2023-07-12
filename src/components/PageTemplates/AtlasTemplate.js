@@ -1,5 +1,6 @@
 import { MDXRemote }                                                                                 from "next-mdx-remote";
 import Link                                                                                          from "next/link";
+import TableOfContents                                                                               from '../MDX/TableOfContents.js';
 import { AtlasStyledHeaderSection, AtlasStyledMain, AtlasStyledMetadata, AtlasStyledTitleContainer } from "../../styles/StyledPageTemplates/StyledAtlasTemplate.js";
 import GrowthIcon                                                                                    from "../Icons/GrowthIcon.js";
 import Header        from "../Layouts/Header.js";
@@ -9,13 +10,13 @@ import Backlinks                                                                
 import BackToTop                                                                                     from "../MDX/BackToTop.js";
 import ProseWrapper                                                                                  from "../MDX/ProseWrapper.js";
 import Topics                                                                                        from "../MDX/Topics.js";
-import DatesFormat                                                                                   from '../MISC/DatesFormat.js';
-import GrowthStage                                                                                   from "../MISC/GrowthStage.js";
+import DatesFormat                                                                                   from '../Base/DatesFormat.js';
+import GrowthStage from "../MISC/GrowthStage.js";
 
 
 
 
-export default function AtlasTemplate( { source, frontMatter, components, slug, backlinks, ogImage } ) {
+export default function AtlasTemplate( { source, frontMatter, components, slug, backlinks, ogImage, toc, headings } ) {
   return (
     <>
       <Header
@@ -26,7 +27,7 @@ export default function AtlasTemplate( { source, frontMatter, components, slug, 
       />
       <AtlasStyledHeaderSection >
         <div className = "above-title" >
-          <Link href = "/Atlas" >
+          <Link href = "/atlas" >
             <BackHoverLink href = "/Atlas" >Atlas</BackHoverLink >
           </Link >
           {frontMatter.growthStage && (
@@ -55,7 +56,11 @@ export default function AtlasTemplate( { source, frontMatter, components, slug, 
       <AtlasStyledMain >
         <BackToTop />
         <ProseWrapper >
-          <MDXRemote {...source} components = {components} />
+          {toc && <TableOfContents headings = {headings} />}
+          <MDXRemote
+            {...source}
+            components = {{ ...components }}
+          />
         </ProseWrapper >
       </AtlasStyledMain >
       {backlinks?.length ? <Backlinks backlinks = {backlinks} /> : null}

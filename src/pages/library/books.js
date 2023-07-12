@@ -1,4 +1,4 @@
-import { ReadingList } from '/posts/data/ReadingList.js'
+import { ReadingList } from '/data/ReadingList.js'
 import React, {
   useEffect,
   useRef,
@@ -6,13 +6,13 @@ import React, {
 }                      from 'react'
 import LibraryBookCard from "../../components/Cards/LibraryBookCard.js";
 import Header          from "../../components/Layouts/Header.js";
-import LibraryLayout   from "../../components/Layouts/LibraryLayout.js";
-import { Spacer }      from "../../components/MISC/Spacer.js";
+import LibraryLayout from "../../components/Layouts/LibraryLayout.js";
+import { Spacer }    from "../../components/Base/Spacer.js";
 import {
   LibrarySectionTitle,
   LibraryStyledBody,
   LibraryStyledMain
-}                      from '../../styles/LibraryStyledComponents.js'
+}                    from '../../styles/LibraryStyledComponents.js'
 
 
 

@@ -13,7 +13,7 @@ const Container = styled.section`
   max-width: ${( props ) => props.width || '1000vw'};
   z-index: 0;
   grid-column: 1 / 4 !important;
-  margin: ${( props ) => props.margin || 'var(--space-2xs) auto var(--space-m)'};
+  margin: ${( props ) => props.margin || 'var(--space-2xs) auto var(--space-md)'};
   background: ${( props ) => props.background || 'inherit'};
   display: flex;
   flex-direction: column;

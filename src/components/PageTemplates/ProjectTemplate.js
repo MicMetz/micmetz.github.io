@@ -11,8 +11,8 @@ import BackToTop       from '../MDX/BackToTop.js';
 import ProseWrapper    from '../MDX/ProseWrapper.js';
 import TableOfContents from '../MDX/TableOfContents.js';
 import Topics          from '../MDX/Topics.js';
-import DatesFormat     from '../MISC/DatesFormat.js';
-import GrowthStage     from '../MISC/GrowthStage.js';
+import DatesFormat     from '../Base/DatesFormat.js';
+import GrowthStage from '../MISC/GrowthStage.js';
 
 
 
@@ -30,7 +30,7 @@ export default function ProjectTemplate( { source, frontMatter, components, slug
       />
       <HeaderSection >
         <div className = 'above-title' >
-          <Link href = '/Design/Projects' >
+          <Link href = '/design/projects' >
             <BackHoverLink href = 'https://micmetz.github.io/Design/Projects' >Projects</BackHoverLink >
           </Link >
           <GrowthIcon size = '16' growthStage = {frontMatter.growthStage} />
@@ -51,7 +51,10 @@ export default function ProjectTemplate( { source, frontMatter, components, slug
         <BackToTop />
         <ProseWrapper >
           {toc && <TableOfContents headings = {headings} />}
-          <MDXRemote {...source} components = {components} />
+          <MDXRemote
+            {...source}
+            components = {{ ...components }}
+          />
         </ProseWrapper >
       </StyledMain >
       {backlinks?.length ? <Backlinks backlinks = {backlinks} /> : null}

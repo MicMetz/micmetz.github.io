@@ -1,13 +1,13 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 
 
 
-const theta = Math.PI * (3 - Math.sqrt( 6 ))
+const theta = Math.PI * ( 3 - Math.sqrt( 6 ) );
 
 
 export function Phyllotaxis( props ) {
-  let { size, step, length, radius } = props
+  let { size, step, length, radius } = props;
 
   useEffect( () => {
     if ( !length ) {
@@ -22,7 +22,7 @@ export function Phyllotaxis( props ) {
     if ( !radius ) {
       radius = 1.5;
     }
-  }, [] )
+  }, [] );
 
   return (
     <svg
@@ -37,8 +37,8 @@ export function Phyllotaxis( props ) {
       }}
     >
       {Array.from( { length } ).map( ( _, index ) => {
-        const r = step * Math.sqrt( (index += 0.5) )
-        const a = theta * index
+        const r = step * Math.sqrt( ( index += 0.5 ) );
+        const a = theta * index;
         return (
           <circle
             // eslint-disable-next-line react/no-array-index-key
@@ -48,8 +48,8 @@ export function Phyllotaxis( props ) {
             cy = {size / 2 + r * Math.sin( a )}
             r = {radius}
           />
-        )
+        );
       } )}
     </svg >
-  )
+  );
 }

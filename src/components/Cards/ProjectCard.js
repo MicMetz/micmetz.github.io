@@ -2,8 +2,8 @@ import Image                                                                from
 import Link                                                                 from 'next/link';
 import { ProjectImageWrapper, ProjectMetadataContainer, StyledProjectCard } from '../../styles/StyledCardComponents/ProjectStyled.js';
 import GrowthIcon                                                           from '../Icons/GrowthIcon.js';
-import TheoryIcon                                                           from '../Icons/TheoryIcon.js';
-import { RelativeDate }                                                     from '../MISC/DatesFormat.js';
+import TheoryIcon       from '../Icons/TheoryIcon.js';
+import { RelativeDate } from '../Base/DatesFormat.js';
 
 
 

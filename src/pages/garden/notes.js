@@ -4,9 +4,9 @@ import path                          from 'path';
 import styled                        from 'styled-components';
 import NoteCard                      from '../../components/Cards/NoteCard.js';
 import Header                        from '../../components/Layouts/Header.js';
-import Layout                        from '../../components/Layouts/Layout.js';
-import TitleWithCount                from '../../components/MISC/TitleWithCount.js';
-import { Title2 }                    from '../../styles/StyledTypography.js';
+import Layout         from '../../components/Layouts/Layout.js';
+import TitleWithCount from '../../components/MISC/TitleWithCount.js';
+import { Title2 }     from '../../styles/StyledTypography.js';
 import { noteFilePaths, NOTES_PATH } from '../../tools/mdxUtils.js';
 
 
@@ -29,9 +29,9 @@ export default function Notes( { notes } ) {
               key = {i}
               id = {note.slug}
               slug = {note.slug}
-              title = {note.data.title}
-              growthStage = {note.data.growthStage}
-              date = {note.data.updated}
+              title = {note.title}
+              growthStage = {note.growthStage}
+              date = {note.updated}
             />
           ) )}
         </NotesGrid >
@@ -64,7 +64,7 @@ export function getStaticProps() {
 
   // Sort notes by date
   const sortedNotes = notes.sort( ( a, b ) => {
-    return new Date( b.data.updated ) - new Date( a.data.updated );
+    return new Date( b.updated ) - new Date( a.updated );
   } );
   notes             = sortedNotes;
 

@@ -1,15 +1,16 @@
-import { motion } from "framer-motion";
-import styled from "styled-components";
+import { motion } from 'framer-motion';
+import styled     from 'styled-components';
+
 
 
 
 export default function TitleWithCount( { posts, children } ) {
-		return (
-				<StyledContainer >
-						<span >{getPostCount( posts )}</span >
-						<h1 >{children}</h1 >
-				</StyledContainer >
-		);
+  return (
+    <StyledContainer >
+      <span >{getPostCount( posts )}</span >
+      <h1 >{children}</h1 >
+    </StyledContainer >
+  );
 }
 
 const StyledContainer = styled( motion.div )`
@@ -35,5 +36,9 @@ const StyledContainer = styled( motion.div )`
 
 // For an array of posts, return the number of posts
 const getPostCount = ( posts ) => {
-		return posts.length;
+  if ( posts ) {
+    return posts.length;
+  }
+
+  return '';
 };

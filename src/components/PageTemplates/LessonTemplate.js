@@ -7,13 +7,13 @@ import { Title1 }              from '../../styles/StyledTypography.js';
 import GrowthIcon              from '../Icons/GrowthIcon.js';
 import Header                  from '../Layouts/Header.js';
 import BackHoverLink           from '../Links/BackHoverLink.js';
-import Backlinks               from '../Links/Backlinks.js';
-import BackToTop               from '../MDX/BackToTop.js';
-import ProseWrapper            from '../MDX/ProseWrapper.js';
-import TableOfContents         from '../MDX/TableOfContents.js';
-import Topics                  from '../MDX/Topics.js';
-import DatesFormat             from '../MISC/DatesFormat.js';
-import GrowthStage             from '../MISC/GrowthStage.js';
+import Backlinks       from '../Links/Backlinks.js';
+import BackToTop       from '../MDX/BackToTop.js';
+import ProseWrapper    from '../MDX/ProseWrapper.js';
+import TableOfContents from '../MDX/TableOfContents.js';
+import Topics          from '../MDX/Topics.js';
+import DatesFormat     from '../Base/DatesFormat.js';
+import GrowthStage from '../MISC/GrowthStage.js';
 
 
 
@@ -30,8 +30,6 @@ export default function LessonTemplate( { source, frontMatter, components, slug,
     }
   );
 
-  console.log( headings );
-  console.log( chapterList );
 
   useEffect( () => {
     window.addEventListener( 'scroll', handleScroll );
@@ -73,7 +71,7 @@ export default function LessonTemplate( { source, frontMatter, components, slug,
       />
       <HeaderSection >
         <div className = 'above-title' >
-          <Link href = '/Design/Lessons' >
+          <Link href = '/design/lessons' >
             <BackHoverLink href = '/Design/Lessons' >Lessons</BackHoverLink >
           </Link >
           <GrowthIcon size = '16' growthStage = {frontMatter.growthStage} />
@@ -95,7 +93,10 @@ export default function LessonTemplate( { source, frontMatter, components, slug,
         <BackToTop />
         <ProseWrapper >
           {toc && <TableOfContents headings = {headings} />}
-          <MDXRemote {...source} components = {components} />
+          <MDXRemote
+            {...source}
+            components={{ ...components}}
+          />
         </ProseWrapper >
       </StyledMain >
       {backlinks?.length ? <Backlinks backlinks = {backlinks} /> : null}

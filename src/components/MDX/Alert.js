@@ -44,7 +44,7 @@ const AlertContainer = styled.div`
     margin: var(--space-xs) auto var(--space-s);
   }
   svg {
-    margin: var(--space-m) auto var(--space-xs);
+    margin: var(--space-md) auto var(--space-xs);
   }
   div.innerContainer {
     p {

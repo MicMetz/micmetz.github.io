@@ -1,11 +1,11 @@
-import styled from "styled-components";
-import { breakpoints } from "../../constants/breakpoints";
+import styled          from "styled-components";
+import { breakpoints } from "../../constants/breakpoints.js";
 
 
 
 const ProseWrapper = styled.article`
   display: grid;
-  grid-auto-flow: columns;
+  grid-auto-flow: column;
   grid-template-columns:
     1fr
     min(92ch, 100%)
@@ -22,7 +22,7 @@ const ProseWrapper = styled.article`
     //width: 100%;
     font-size: var(--font-size-base);
     line-height: var(--leading-looser);
-    margin-bottom: var(--space-m);
+    margin-bottom: var(--space-md);
     @media (max-width: 767px) {
       line-height: var(--leading-loose);
     }

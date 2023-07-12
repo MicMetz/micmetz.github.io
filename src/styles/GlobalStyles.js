@@ -158,6 +158,7 @@ const GlobalStyles = createGlobalStyle`
     --space-xs: calc(((var(--fc-xs-min) / 16) * 1.3rem) + (var(--fc-xs-max) - var(--fc-xs-min)) * var(--fluid-bp));
     --space-s: calc(((var(--fc-s-min) / 16) * 1.3rem) + (var(--fc-s-max) - var(--fc-s-min)) * var(--fluid-bp));
     --space-m: calc(((var(--fc-m-min) / 16) * 1.3rem) + (var(--fc-m-max) - var(--fc-m-min)) * var(--fluid-bp));
+    --space-md: calc(((var(--fc-m-min) / 16) * 1.3rem) + (var(--fc-m-max) - var(--fc-m-min)) * var(--fluid-bp));
     --space-l: calc(((var(--fc-l-min) / 16) * 1.3rem) + (var(--fc-l-max) - var(--fc-l-min)) * var(--fluid-bp));
     --space-xl: calc(((var(--fc-xl-min) / 16) * 1.3rem) + (var(--fc-xl-max) - var(--fc-xl-min)) * var(--fluid-bp));
     --space-2xl: calc(((var(--fc-2xl-min) / 16) * 1.3rem) + (var(--fc-2xl-max) - var(--fc-2xl-min)) * var(--fluid-bp));
@@ -169,7 +170,9 @@ const GlobalStyles = createGlobalStyle`
     --space-2xs-xs: calc(((var(--fc-2xs-min) / 16) * 1.3rem) + (var(--fc-xs-max) - var(--fc-2xs-min)) * var(--fluid-bp));
     --space-xs-s: calc(((var(--fc-xs-min) / 16) * 1.3rem) + (var(--fc-s-max) - var(--fc-xs-min)) * var(--fluid-bp));
     --space-s-m: calc(((var(--fc-s-min) / 16) * 1.3rem) + (var(--fc-m-max) - var(--fc-s-min)) * var(--fluid-bp));
+    --space-s-md: calc(((var(--fc-s-min) / 16) * 1.3rem) + (var(--fc-m-max) - var(--fc-s-min)) * var(--fluid-bp));
     --space-m-l: calc(((var(--fc-m-min) / 16) * 1.3rem) + (var(--fc-l-max) - var(--fc-m-min)) * var(--fluid-bp));
+    --space-md-l: calc(((var(--fc-m-min) / 16) * 1.3rem) + (var(--fc-l-max) - var(--fc-m-min)) * var(--fluid-bp));
     --space-l-xl: calc(((var(--fc-l-min) / 16) * 1.3rem) + (var(--fc-xl-max) - var(--fc-l-min)) * var(--fluid-bp));
     --space-xl-2xl: calc(((var(--fc-xl-min) / 16) * 1.3rem) + (var(--fc-2xl-max) - var(--fc-xl-min)) * var(--fluid-bp));
     --space-2xl-3xl: calc(((var(--fc-2xl-min) / 16) * 1.3rem) + (var(--fc-3xl-max) - var(--fc-2xl-min)) * var(--fluid-bp));
@@ -179,6 +182,7 @@ const GlobalStyles = createGlobalStyle`
     --font-size-2xl: 2.5rem;
     --font-size-xl: 2rem;
     --font-size-l: 1.5rem;
+    --font-size-md: 1.25rem;
     --font-size-m: 1.25rem;
     --font-size-s: 1rem;
     --font-size-xs: 0.75rem;
@@ -236,6 +240,25 @@ const GlobalStyles = createGlobalStyle`
     --font-size-4xl: calc(((var(--f-6-min) / 16) * 1.3rem) + (var(--f-6-max) - var(--f-6-min)) *
     var(--fluid-bp));
 
+
+    /* _________________________________________________________________________________________ RE-DESIGN _________________________________________________________________________________________ */
+
+    --tablet: 1200px;
+    --phone: 700px;
+
+    // line spacing
+    --base-spacing: 1.75;
+
+    // transitions
+    --transition-fast: 0.2s ease;
+    --transition-slow: 0.5s ease;
+
+    // page content column width
+    --page-content-column-base: 1100px;
+    --page-content-column-narrow: 800px;
+    --page-content-column-wide: 1500px;
+    --page-content-column-full: 100%;
+
   }
 
 
@@ -281,7 +304,7 @@ const GlobalStyles = createGlobalStyle`
   a, a:visited, a:hover, a:active {
     color: inherit;
   }
-  
+
 
   html {
     font-size: 62.5%;

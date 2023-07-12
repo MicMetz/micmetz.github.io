@@ -1,5 +1,5 @@
 import styled     from 'styled-components';
-import { Spacer } from '../MISC/Spacer.js';
+import { Spacer } from '../Base/Spacer.js';
 
 
 
@@ -42,7 +42,7 @@ const Blockquote = styled.blockquote`
   }
 
   & > p {
-    margin: var(--space-m) auto var(--space-s) !important;
+    margin: var(--space-md) auto var(--space-s) !important;
   }
 
   & ::after {

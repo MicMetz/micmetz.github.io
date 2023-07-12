@@ -68,9 +68,6 @@ export const LinkContainer = styled.div`
   top: 0;
   position: relative;
   left: 3px;
-
- 
-
 `;
 
 

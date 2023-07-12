@@ -39,7 +39,7 @@ export const Subheader = styled.p`
   font-size: var(--font-size-base);
   font-weight: 300;
   color: var(--color-gray-800);
-  margin-bottom: var(--space-m);
+  margin-bottom: var(--space-md);
 `;
 
 
@@ -49,7 +49,7 @@ export const Title1 = styled( motion.h1 )`
   font-family: var(--font-serif);
   line-height: var(--leading-tighter);
   font-weight: ${( props ) => props.fontWeight ? props.fontWeight : 'normal'};
-  margin-bottom: var(--space-m);
+  margin-bottom: var(--space-md);
   max-width: 1200px;
 
   @media ${breakpoints.mediaMD} {
@@ -115,5 +115,5 @@ export const Subtext = styled.aside`
   font-family: var(--font-sans);
   text-align: center;
   color: var(--color-gray-600);
-  margin-bottom: var(--space-m);
+  margin-bottom: var(--space-md);
 `;

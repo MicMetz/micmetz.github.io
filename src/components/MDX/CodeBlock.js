@@ -1,4 +1,4 @@
-import Highlight, { defaultProps } from 'prism-react-renderer';
+import Highlight, { defaultProps } from "prism-react-renderer";
 import theme                       from 'prism-react-renderer/themes/nightOwl';
 import * as React                  from 'react';
 import styled                      from 'styled-components';
@@ -11,11 +11,10 @@ export default function CodeBlock( { children } ) {
   return (
     <>
       <Highlight
-        props = {{ ...defaultProps }}
-        theme = {theme}
-        code = {children.props.children.trim()}
-        language = {language}
-        Prism = {Prism}
+        {...defaultProps}
+        theme={theme}
+        code={children.props.children.trim()}
+        language={language}
       >
         {( { className, style, tokens, getLineProps, getTokenProps } ) => (
           <StyledCodeWrapper >

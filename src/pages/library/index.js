@@ -2,17 +2,17 @@ import {
   useEffect,
   useState
 }                          from "react";
-import { CurrentReadings } from "../../../posts/data/CurrentReadings.js";
+import { CurrentReadings } from "../../../data/CurrentReadings.js";
 import LibraryBookCard     from "../../components/Cards/LibraryBookCard.js";
 import Header              from "../../components/Layouts/Header.js";
-import LibraryLayout       from "../../components/Layouts/LibraryLayout.js";
-import { Spacer }          from "../../components/MISC/Spacer.js";
-import SplashScreen        from "../../components/MISC/Splash.js";
+import LibraryLayout from "../../components/Layouts/LibraryLayout.js";
+import { Spacer }   from "../../components/Base/Spacer.js";
+import SplashScreen from "../../components/MISC/Splash.js";
 import {
   LibrarySectionTitle,
   LibraryStyledBody,
   LibraryStyledMain
-}                          from "../../styles/LibraryStyledComponents.js";
+}                   from "../../styles/LibraryStyledComponents.js";
 
 
 

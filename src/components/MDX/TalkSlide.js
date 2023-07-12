@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Video from "./Video";
+import Video  from "./Video.js";
 
 
 

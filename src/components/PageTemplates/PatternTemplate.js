@@ -2,20 +2,21 @@ import { MDXRemote }   from 'next-mdx-remote';
 import Link            from 'next/link';
 import styled          from 'styled-components';
 import { breakpoints } from '../../constants/breakpoints.js';
-import GrowthIcon      from '../Icons/GrowthIcon.js';
+import BackToTop       from '../MDX/BackToTop.js';
+import ProseWrapper    from '../MDX/ProseWrapper.js';
+import TableOfContents from '../MDX/TableOfContents.js';
+import Topics          from '../MDX/Topics.js';
+import DatesFormat     from '../Base/DatesFormat.js';
+import GrowthStage from '../MISC/GrowthStage.js';
+import GrowthIcon  from '../Icons/GrowthIcon.js';
 import Header          from '../Layouts/Header.js';
 import BackHoverLink   from '../Links/BackHoverLink.js';
 import Backlinks       from '../Links/Backlinks.js';
-import BackToTop       from '../MDX/BackToTop.js';
-import ProseWrapper    from '../MDX/ProseWrapper.js';
-import Topics          from '../MDX/Topics.js';
-import DatesFormat     from '../MISC/DatesFormat.js';
-import GrowthStage     from '../MISC/GrowthStage.js';
 
 
 
 
-export default function PatternTemplate( { source, frontMatter, components, slug, backlinks, ogImage } ) {
+export default function PatternTemplate( { source, frontMatter, components, slug, backlinks, ogImage, toc, headings } ) {
   return (
     <>
       <Header
@@ -26,7 +27,7 @@ export default function PatternTemplate( { source, frontMatter, components, slug
       />
       <HeaderSection >
         <div className = 'above-title' >
-          <Link href = '/Design/Patterns' >
+          <Link href = '/design/patterns' as = '/design/patterns' > {/* TODO: Fix this link */}
             <BackHoverLink href = 'https://micmetz.github.io/Design/Patterns' >Patterns</BackHoverLink >
           </Link >
           {frontMatter.growthStage && (
@@ -55,7 +56,11 @@ export default function PatternTemplate( { source, frontMatter, components, slug
       <StyledMain >
         <BackToTop />
         <ProseWrapper >
-          <MDXRemote {...source} components = {components} />
+          {toc && <TableOfContents headings = {headings} />}
+          <MDXRemote
+            {...source}
+            components = {{ ...components }}
+          />
         </ProseWrapper >
       </StyledMain >
 

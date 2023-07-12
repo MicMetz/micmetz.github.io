@@ -106,7 +106,7 @@ export const StyledNavbar = styled( motion.nav )`
   width: 100%;
   padding: var(--space-s) var(--space-l);
 
-  font-size-adjust: 0.75;
+  font-size-adjust: 0.70;
 `;
 
 

@@ -11,9 +11,9 @@ export default function UnderlineHoverLink( { href, children, selected } ) {
       <Link href = {href} >
         {selected ? (
           <SelectedStyle >
-            <a href = {href} >
-              {children}
-            </a >
+            {/* <a href = {href} > */}
+            {children}
+            {/* </a > */}
           </SelectedStyle >
         ) : (
           <StyledLink href = {href} >
@@ -28,6 +28,10 @@ export default function UnderlineHoverLink( { href, children, selected } ) {
 
 
 const SelectedStyle = styled.span`
-  border-bottom: 0.2em solid var(--color-secondary) !important;
+  border-bottom: 0.2em solid var(--color-primary) !important;
+
+  a {
+
+  }
 `;
 

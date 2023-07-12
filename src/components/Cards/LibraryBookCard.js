@@ -2,8 +2,8 @@ import Link                                                                     
 import styled                                                                                                    from "styled-components";
 import { BookAtrribution, BookByline, BookCoverContainer, BookCoverImage, BookSubtitle, BookTagline, BookTitle } from "../../styles/BookStyledComponents.js";
 import { LibraryBookStyledComponent }                                                                            from "../../styles/LibraryStyledComponents.js";
-import { ReadmoreLink }                                                                      from "../../styles/LinkStyledComponents.js";
-import { DescriptionParser }                                                                 from "../../tools/DescriptionParser.js";
+import { ReadmoreLink }      from "../../styles/LinkStyledComponents.js";
+import { DescriptionParser } from "../Base/DescriptionParser.js";
 
 
 

@@ -1,0 +1,49 @@
+- name: Calculus
+  slug: calculus
+  description: Visual introductions to the core ideas of derivatives, integrals, limits and more
+  lessons:
+    - essence-of-calculus
+    - derivatives
+    - derivatives-power-rule
+    - derivatives-trig-functions
+    - chain-rule-and-product-rule
+    - eulers-number
+    - implicit-differentiation
+    - limits
+    - epsilon-delta
+    - l-hopitals-rule
+    - integration
+    - area-and-slope
+    - higher-order-derivatives
+    - taylor-series
+    - derivatives-and-transforms
+- name: Probability
+  slug: probability
+  description: An assortment of introductory ideas in probability
+  lessons:
+    - clt
+    - gaussian-integral
+    - convolutions2
+    - bayes-theorem
+    - better-bayes
+    - binomial-distributions
+    - pdfs
+- name: Computer Science
+  slug: computer-science
+  description: An assortment of topics related to algorithms and computer systems
+  lessons:
+    - binary arithmetic
+    - floating-point-arithmetic
+    - assembly-language
+    - memory
+    - cpu-caches
+    - threads-and-processes
+- name: Miscellaneous
+  slug: miscellaneous
+  description: Odd videos that defy categorization elsewhere
+  lessons:
+- name: design
+  slug: design
+  description: A collection of personal design ideas and experiments
+  lessons:
+

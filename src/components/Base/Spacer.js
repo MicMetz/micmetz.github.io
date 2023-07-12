@@ -35,7 +35,7 @@ const handleSize = ( size ) => {
     case "s":
       return "var(--space-s)";
     case "m":
-      return "var(--space-m)";
+      return "var(--space-md)";
     case "l":
       return "var(--space-l)";
     case "xl":

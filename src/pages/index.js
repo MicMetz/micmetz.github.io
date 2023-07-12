@@ -5,8 +5,9 @@ import matter                                                                   
 import Link                                                                                                                                                              from 'next/link';
 import path                                                                                                                                                              from 'path';
 import React                                                                                                                                                             from 'react';
-import { ArticleList }                                                                                                                                                   from '../../posts/data/Articles.js';
-import { CurrentReadings }                                                                                                                                               from '../../posts/data/CurrentReadings.js';
+import { ArticleList }                                                                                                                                                   from '../../data/Articles.js';
+import { CurrentReadings }                                                                                                                                               from '../../data/CurrentReadings.js';
+import { Spacer }                                                                                                                                                        from '../components/Base/Spacer.js';
 import ArticleCard                                                                                                                                                       from '../components/Cards/ArticleCard.js';
 import BookCard                                                                                                                                                          from '../components/Cards/BookCard.js';
 import EssayCard                                                                                                                                                         from '../components/Cards/EssayCard.js';
@@ -14,7 +15,6 @@ import IndexCard                                                                
 import Header                                                                                                                                                            from '../components/Layouts/Header.js';
 import Layout                                                                                                                                                            from '../components/Layouts/Layout.js';
 import UnderlineHoverLink                                                                                                                                                from '../components/Links/UnderlineHoverLink.js';
-import { Spacer }                                                                                                                                                        from '../components/MISC/Spacer.js';
 import { ReadmoreLink }                                                                                                                                                  from '../styles/LinkStyledComponents.js';
 import { SectionText }                                                                                                                                                   from '../styles/StyledComponents.js';
 import { GardenSection }                                                                                                                                                 from '../styles/StyledSectionComponents.js';
@@ -48,10 +48,7 @@ const itemAnimation = {
 
 
 
-export default function Index( { sortedEssays: essays, sortedNotes: notes, sortedProjects: projects } ) {
-
-
-
+export default function Index( { sortedEssays: essays, sortedNotes: notes, sortedProjects: projects, sortedExperiments: experiments, sortedLessons: lessons } ) {
   return (
     <>
       <Header title = 'Michael Metzger | Portfolio' />
@@ -136,7 +133,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
           <Subheader >
             A collection of essays, notes, and responses to readings.{' '}
             <Spacer />
-            <ReadmoreLink href = '/Garden' >
+            <ReadmoreLink href = '/garden' >
               Learn more
               <ArrowRightIcon width = '18' height = '18' />
             </ReadmoreLink >
@@ -148,7 +145,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             animate = 'visible'
           >
             <section style = {{ gridArea: 'essays' }} >
-              <Link href = '/Garden/Essays' >
+              <Link href = '/garden/essays' >
                 <SectionHeader >
                   Essays
                   <ArrowRightIcon width = '18' height = '18' />
@@ -180,7 +177,7 @@ export default function Index( { sortedEssays: essays, sortedNotes: notes, sorte
             </section >
 
             <section style = {{ gridArea: 'notes', marginLeft: '' }} >
-              <Link href = '/Garden/Notes' >
+              <Link href = '/garden/notes' >
                 <SectionHeader >
                   Notes
                   <ArrowRightIcon width = '18' height = '18' />

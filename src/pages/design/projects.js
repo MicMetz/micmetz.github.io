@@ -4,9 +4,9 @@ import path                                      from 'path';
 import React                                     from 'react';
 import ProjectCard                               from '../../components/Cards/ProjectCard.js';
 import Header                                    from '../../components/Layouts/Header.js';
-import Layout                                    from '../../components/Layouts/Layout.js';
-import InDevelopment                             from '../../components/MDX/InDevelopment.js';
-import { SectionTitle }                          from '../../styles/StyledComponents.js';
+import Layout           from '../../components/Layouts/Layout.js';
+import InDevelopment    from '../../components/MDX/InDevelopment.js';
+import { SectionTitle } from '../../styles/StyledComponents.js';
 import { ProjectGrid }                           from '../../styles/StyledGridComponents.js';
 import { Subheader }                             from '../../styles/StyledTypography.js';
 import { experimentFilePaths, EXPERIMENTS_PATH } from '../../tools/mdxUtils.js';
@@ -41,9 +41,9 @@ export default function ProjectsPage( { experiments } ) {
             id = {project.slug}
             key = {project.slug}
             slug = {project.slug}
-            title = {project.data.title}
-            date = {project.data.updated}
-            cover = {project.data.cover}
+            title = {project.title}
+            date = {project.updated}
+            cover = {project.cover}
             data = {project.data}
           />
         ) )}

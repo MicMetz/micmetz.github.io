@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { breakpoints } from "../../constants/breakpoints";
+import styled          from "styled-components";
+import { breakpoints } from "../../constants/breakpoints.js";
 
 
 
@@ -99,10 +99,10 @@ const DraftContainer = styled.div`
     width: 50ch;
     max-width: 90%;
     font-weight: 300;
-    margin-top: var(--space-m);
+    margin-top: var(--space-md);
   }
   @media ${breakpoints.mediaSM} {
-    margin: var(--space-m) var(--space-3xs);
+    margin: var(--space-md) var(--space-3xs);
     div {
       flex-direction: column;
       svg {

@@ -1,8 +1,8 @@
 import GrowthIcon from "../../components/Icons/GrowthIcon";
 import { EssayImageWrapper, EssayMetadataContainer, StyledEssayCard } from "../../styles/StyledCardComponents/EssayStyled.js";
 import Image from "next/image";
-import Link from "next/link";
-import { RelativeDate } from "../MISC/DatesFormat.js";
+import Link             from "next/link";
+import { RelativeDate } from "../Base/DatesFormat.js";
 
 
 

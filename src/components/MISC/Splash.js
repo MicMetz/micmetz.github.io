@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React, { useRef, useState } from "react";
-import LogoHookWhite from "../../../public/icons/logo-hook-white.svg";
+import LogoHookWhite               from "../../../public/icons/logo-hook-white.svg";
 
 
 

@@ -1,6 +1,5 @@
 import { AnimatePresence }              from 'framer-motion';
 import { DefaultSeo }                   from 'next-seo';
-import { GoogleAnalytics }              from 'nextjs-google-analytics';
 import React, { createContext, useRef } from 'react';
 import Footer                           from '../components/Layouts/Footer.js';
 import { Navigation }                   from '../components/Navigation/Navigation.js';
@@ -35,32 +34,29 @@ export default function App( { Component, pageProps, router } ) {
 
 
   return (
-    <>
-      <PageContext.Provider value = {pageProps} >
-        <Theme >
-          <DefaultSeo
-            title = "Michael Metzger's digital garden"
-            description = "Michael's digital garden of visual essays"
-            openGraph = {{
-              type     : 'website',
-              locale   : 'en',
-              url      : 'https://micmetz.github.io',
-              site_name: 'Michael Metzger'
-            }}
-          />
-          <GoogleAnalytics trackPageViews />
+    <PageContext.Provider value = {pageProps} >
+      <Theme >
+        <DefaultSeo
+          title = "Michael Metzger's digital garden"
+          description = "Michael's digital garden of visual essays"
+          openGraph = {{
+            type     : 'website',
+            locale   : 'en',
+            url      : 'https://micmetz.github.io',
+            site_name: 'Michael Metzger'
+          }}
+        />
 
-          <container >
-            <AnimatePresence mode = 'wait' initial = {true} >
-              <Navigation ref = {navigationRef} />
-              <Component Component key = {router.route} {...pageProps} />
-            </AnimatePresence >
-          </container >
+        <container >
+          <AnimatePresence mode = 'wait' initial = {true} >
+            <Navigation ref = {navigationRef} />
+            <Component Component key = {router.route} {...pageProps} />
+          </AnimatePresence >
+        </container >
 
-          <Footer />
-        </Theme >
-      </PageContext.Provider >
-    </>
+        <Footer />
+      </Theme >
+    </PageContext.Provider >
   );
 }
 

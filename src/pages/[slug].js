@@ -4,11 +4,11 @@ import { serialize }                                                            
 import dynamic                                                                                                                                                           from 'next/dynamic';
 import path                                                                                                                                                              from 'path';
 import { Controls, PlayState, Timeline, Tween }                                                                                                                          from 'react-gsap';
+import { Spacer }                                                                                                                                                        from '../components/Base/Spacer.js';
 import InternalTooltipLink                                                                                                                                               from '../components/Links/InternalTooltipLink.js';
 import AssumedAudience                                                                                                                                                   from '../components/MDX/AssumedAudience.js';
 import Disclaimer                                                                                                                                                        from '../components/MDX/Disclaimer.js';
 import { EditBlue, EditGreen, EditGrey, EditPurple, EditRed, EditYellow }                                                                                                from '../components/MDX/TextEdit/AllHighlights.js';
-import { Spacer }                                                                                                                                                        from '../components/MISC/Spacer.js';
 import EssayTemplate                                                                                                                                                     from '../components/PageTemplates/EssayTemplate.js';
 import LessonTemplate                                                                                                                                                    from '../components/PageTemplates/LessonTemplate.js';
 import NoteTemplate                                                                                                                                                      from '../components/PageTemplates/NoteTemplate.js';
@@ -142,7 +142,7 @@ export const components = {
       ssr: false
     }
   ),
-  TweetEmbed         : dynamic( () => import('../components/MDX/TweetEmbed'), {
+  ContentEmbed       : dynamic( () => import('../components/MDX/ContentEmbed'), {
       ssr: false, loading: () => <div >Loading...</div >
     }
   ),
@@ -251,6 +251,10 @@ export const components = {
       ssr: false
     }
   ),
+  /* Tooltip                : dynamic( () => import('../components/Misc/Tooltip'), {
+      ssr: false
+    }
+  ), */
   Hardware               : dynamic( () => import('../components/Unique/apps/Hardware'), {
       ssr: false
     }
@@ -296,8 +300,21 @@ export const components = {
     }
   ),
   NoteTrigger            : dynamic( () => import('../components/Unique/programmatic-notes/NoteTrigger'), {
-    ssr: false
-  } )
+      ssr: false
+    }
+  ),
+  ClickableObject        : dynamic( () => import('../components/MDX/ClickableObject'), {
+      ssr: false
+    }
+  ),
+  Figure                 : dynamic( () => import('../components/MDX/Figure'), {
+      ssr: false
+    }
+  ),
+  InteractiveObject      : dynamic( () => import('../components/MDX/InteractiveObject'), {
+      ssr: false
+    }
+  )
 };
 
 
@@ -462,9 +479,9 @@ export const getStaticProps = async( { params } ) => {
 
 
 export const getStaticPaths = async() => {
-  // Get slugs for all file paths passed in
+  // Get slugs for all file paths
   const getSlugParams = ( filePaths ) => filePaths
-  // Remove the .MDX extension
+  // Remove extension
   .map( ( path ) => path.replace( /\.mdx?$/, '' ) )
   .map( ( slug ) => ( { params: { slug } } ) );
 
@@ -474,8 +491,7 @@ export const getStaticPaths = async() => {
   const lessonPaths     = getSlugParams( lessonFilePaths );
   const patternPaths    = getSlugParams( patternFilePaths );
 
-
-  // Combine all paths into one array
+  // Coalesce
   const paths = notePaths.concat( essayPaths, notePaths, experimentPaths, lessonPaths, patternPaths );
 
   return {

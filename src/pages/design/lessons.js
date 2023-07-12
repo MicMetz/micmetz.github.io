@@ -4,9 +4,9 @@ import path                              from 'path';
 import React                             from 'react';
 import Card                              from '../../components/Cards/Card.js';
 import Header                            from '../../components/Layouts/Header.js';
-import Layout                            from '../../components/Layouts/Layout.js';
-import TitleWithCount                    from '../../components/MDX/TitleWithCount.js';
-import { StyledNotesGrid }               from '../../styles/StyledGridComponents.js';
+import Layout              from '../../components/Layouts/Layout.js';
+import TitleWithCount      from '../../components/MDX/TitleWithCount.js';
+import { StyledNotesGrid } from '../../styles/StyledGridComponents.js';
 import { Title2 }                        from '../../styles/StyledTypography.js';
 import { lessonFilePaths, LESSONS_PATH } from '../../tools/mdxUtils.js';
 

@@ -1,15 +1,15 @@
 export async function getHeadings( source ) {
   // Get each line individually, and filter out anything that
   // isn't a heading.
-  const headingLines = source.split( "\n" ).filter( ( line ) => {
+  const headingLines = source.split( '\n' ).filter( ( line ) => {
     return line.match( /^###*\s/ ) || line.match( /^<h[1-6]/ );
   } );
   // Transform the string '## Some text' into an object
   // with the shape '{ text: 'Some text', level: 2 }'
   return headingLines.map( ( raw ) => {
-    const text = raw.replace( /^###*\s/, "" )
-    .replace( /^<h[1-6][^>]*>/, "" )
-    .replace( /<\/h[1-6]>/, "" )
+    const text = raw.replace( /^###*\s/, '' )
+    .replace( /^<h[1-6][^>]*>/, '' )
+    .replace( /<\/h[1-6]>/, '' )
     .replace( '</h1 >', '' )
     .replace( '</h2 >', '' )
     .replace( '</h3 >', '' )

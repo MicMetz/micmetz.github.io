@@ -1,17 +1,17 @@
 import { MDXRemote }                                                                                 from 'next-mdx-remote';
 import Link                                                                                          from 'next/link';
 import { useEffect, useRef, useState }                                                               from 'react';
-import { EssayStyledHeaderSection, EssayStyledMain, EssayStyledMetadata, EssayStyledTitleContainer } from '../../styles/StyledPageTemplates/StyledEssayTemplate.js';
-import GrowthIcon                                                                                    from '../Icons/GrowthIcon.js';
-import Header                                                                                        from '../Layouts/Header.js';
-import BackHoverLink                                                                                 from '../Links/BackHoverLink.js';
-import Backlinks                                                                                     from '../Links/Backlinks.js';
 import BackToTop                                                                                     from '../MDX/BackToTop.js';
 import ProseWrapper                                                                                  from '../MDX/ProseWrapper.js';
 import TableOfContents                                                                               from '../MDX/TableOfContents.js';
 import Topics                                                                                        from '../MDX/Topics.js';
-import DatesFormat                                                                                   from '../MISC/DatesFormat.js';
-import GrowthStage                                                                                   from '../MISC/GrowthStage.js';
+import { EssayStyledHeaderSection, EssayStyledMain, EssayStyledMetadata, EssayStyledTitleContainer } from '../../styles/StyledPageTemplates/StyledEssayTemplate.js';
+import DatesFormat from '../Base/DatesFormat.js';
+import GrowthStage from '../MISC/GrowthStage.js';
+import GrowthIcon  from '../Icons/GrowthIcon.js';
+import Header                                                                                        from '../Layouts/Header.js';
+import BackHoverLink                                                                                 from '../Links/BackHoverLink.js';
+import Backlinks                                                                                     from '../Links/Backlinks.js';
 
 
 
@@ -29,8 +29,6 @@ export default function EssayTemplate( { source, frontMatter, components, slug, 
       };
     }
   );
-  console.log( headings );
-  console.log( chapterList );
 
 
   useEffect( () => {
@@ -76,7 +74,7 @@ export default function EssayTemplate( { source, frontMatter, components, slug, 
       />
       <EssayStyledHeaderSection >
         <div className = 'above-title' >
-          <Link href = '/Garden/Essays' >
+          <Link href = '/garden/essays' >
             <BackHoverLink href = '/Essays' >Essays</BackHoverLink >
           </Link >
           <GrowthIcon size = '16' growthStage = {frontMatter.growthStage} />
@@ -98,7 +96,10 @@ export default function EssayTemplate( { source, frontMatter, components, slug, 
         <BackToTop />
         <ProseWrapper >
           {toc && <TableOfContents headings = {headings} />}
-          <MDXRemote {...source} components = {components} />
+          <MDXRemote
+            {...source}
+            components = {{ ...components }}
+          />
         </ProseWrapper >
       </EssayStyledMain >
 
