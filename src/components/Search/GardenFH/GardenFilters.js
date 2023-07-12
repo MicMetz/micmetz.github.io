@@ -1,57 +1,61 @@
-import { Menu, MenuSelect } from "react-instantsearch-dom";
-import styled from "styled-components";
+import { Menu, MenuSelect } from 'react-instantsearch-dom';
+import styled               from 'styled-components';
+
 
 
 
 export default function GardenFilters() {
-		return ( <Container >
-				<TopicsContainer >
-						<TopicLabel >
-								<span >Topics</span >
-								<svg width = "2" height = "14" fill = "var(--color-sea-blue)" >
-										<rect width = "2" height = "14" />
-								</svg >
-						</TopicLabel >
-						<Menu facetOrdering attribute = "topics" limit = {7} showMore />
-				</TopicsContainer >
+  return ( <Container >
+      <TopicsContainer >
+        <TopicLabel >
+          <span >Topics</span >
+          <svg width = '2' height = '14' fill = 'var(--color-sea-blue)' >
+            <rect width = '2' height = '14' />
+          </svg >
+        </TopicLabel >
+        <Menu facetOrdering attribute = 'topics' limit = {7} showMore />
 
-				<RightMenus >
-						<MobileTopics >
-								<MenuSelect
-										aria-label = "Topics"
-										limit = {20}
-										translations = {{
-												seeAllOption: "All Topics",
-										}}
-										transformItems = {( items ) => items.map( ( item ) => ( {
-												...item, label: _.capitalize( item.label ),
-										} ) )}
-										attribute = "topics"
-								/>
-						</MobileTopics >
-						<MenuSelect
-								aria-label = "Growth Stages"
-								translations = {{
-										seeAllOption: "All Growth Stages",
-								}}
-								transformItems = {( items ) => items.map( ( item ) => ( {
-										...item, label: _.capitalize( item.label ),
-								} ) )}
-								attribute = "growthStage"
-						/>
-						<MenuSelect
-								aria-label = "Types"
-								translations = {{
-										seeAllOption: "All Types",
-								}}
-								transformItems = {( items ) => items.map( ( item ) => ( {
-										...item, label: `${_.capitalize( item.label )}s`,
-								} ) )}
-								attribute = "type"
-						/>
-				</RightMenus >
-		</Container > );
+        <RightMenus >
+          <MobileTopics >
+            <MenuSelect
+              aria-label = 'Topics'
+              limit = {20}
+              translations = {{
+                seeAllOption: 'All Topics'
+              }}
+              transformItems = {( items ) => items.map( ( item ) => ( {
+                ...item, label: _.capitalize( item.label )
+              } ) )}
+              attribute = 'topics'
+            />
+          </MobileTopics >
+          <MenuSelect
+            aria-label = 'Growth Stages'
+            translations = {{
+              seeAllOption: 'All Growth Stages'
+            }}
+            transformItems = {( items ) => items.map( ( item ) => ( {
+              ...item, label: _.capitalize( item.label )
+            } ) )}
+            attribute = 'growthStage'
+          />
+          <MenuSelect
+            aria-label = 'Types'
+            translations = {{
+              seeAllOption: 'All Types'
+            }}
+            transformItems = {( items ) => items.map( ( item ) => ( {
+              ...item, label: `${_.capitalize( item.label )}s`
+            } ) )}
+            attribute = 'type'
+          />
+        </RightMenus >
+      </TopicsContainer >
+
+    </Container >
+  );
 }
+
 
 const MobileTopics = styled.div`
   display: none;

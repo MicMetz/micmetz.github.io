@@ -193,7 +193,7 @@ function DesignWorkshopDropdown() {
     }
   }, [ router.pathname ] );
 
-  
+
   return (
     <Popover style = {{ position: 'relative' }} >
       <Link href = '/design' >
